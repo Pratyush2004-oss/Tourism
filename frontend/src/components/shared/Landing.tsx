@@ -30,7 +30,7 @@ export function Landing() {
             <div className="w-full relative">
               <Card className="p-0">
                 <CardContent className="flex aspect-video items-center justify-center p-0 relative">
-                  <div className="absolute top-1/2 text-white font-mono md:text-4xl text-center font-bold">
+                  <div className="absolute top-1/2 text-white font-mono sm:text-2xl md:text-4xl text-center font-bold">
                     <p className="">Explore, Discover, Travel</p>
                     <p>{image.content}</p>
                     <Link href={"/"}>

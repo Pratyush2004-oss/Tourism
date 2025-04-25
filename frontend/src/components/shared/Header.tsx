@@ -15,7 +15,11 @@ function Header() {
   return (
     <div className="flex justify-between items-center py-5 px-6 border-b-2 max-w-7xl mx-auto">
       <div className="contents">
-        <h2 className="font-bold text-[2rem] sm:text-[2.5rem] lg:text-[3rem] bg-gradient-to-l from-white via-orange-400 to-orange-700 bg-clip-text">Explore India View</h2>
+        <Link href={"/"} className="flex items-center gap-2">
+          <h2 className="font-bold text-[2rem] sm:text-[2.5rem] lg:text-[3rem] bg-gradient-to-l from-white via-orange-400 to-orange-700 bg-clip-text">
+            Explore India View
+          </h2>
+        </Link>
       </div>
       <div className="lg:flex items-center gap-10 hidden">
         <Link href={"/"} className="text-2xl font-bold ">
@@ -28,21 +32,40 @@ function Header() {
           Hotels
         </Link>
         <Link href={"/"} className="text-2xl font-bold ">
-          <Button className="text-2xl font-bold" variant={'outline'}>Login</Button>
-        </Link>   
+          <Button className="text-2xl font-bold" variant={"outline"}>
+            Login
+          </Button>
+        </Link>
       </div>
       <div className="lg:hidden block">
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger className="cursor-pointer">
             <Menu />
           </SheetTrigger>
           <SheetContent className="w-72">
             <SheetHeader>
-              <SheetTitle>Are you absolutely sure?</SheetTitle>
-              <SheetDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </SheetDescription>
+              <SheetTitle className="text-2xl font-bold">
+                Explore India View
+              </SheetTitle>
+              <div className="flex flex-col gap-5 mt-10 font-mono ">
+                <Link href={"/"} className="text-xl font-semibold">
+                  About
+                </Link>
+                <Link href={"/"} className="text-xl font-semibold ">
+                  Package
+                </Link>
+                <Link href={"/"} className="text-xl font-semibold ">
+                  Hotels
+                </Link>
+                <Link href={"/"}>
+                  <Button
+                    className="text-xl font-semibold cursor-pointer"
+                    variant={"outline"}
+                  >
+                    Login
+                  </Button>
+                </Link>
+              </div>
             </SheetHeader>
           </SheetContent>
         </Sheet>
