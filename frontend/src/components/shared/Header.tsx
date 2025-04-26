@@ -2,7 +2,6 @@ import React from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -22,16 +21,16 @@ function Header() {
         </Link>
       </div>
       <div className="lg:flex items-center gap-10 hidden">
-        <Link href={"/"} className="text-2xl font-bold ">
+        <Link href={"/about"} className="text-2xl font-bold ">
           About
         </Link>
-        <Link href={"/"} className="text-2xl font-bold ">
+        <Link href={"/package"} className="text-2xl font-bold ">
           Package
         </Link>
-        <Link href={"/"} className="text-2xl font-bold ">
+        <Link href={"/hotels"} className="text-2xl font-bold ">
           Hotels
         </Link>
-        <Link href={"/"} className="text-2xl font-bold ">
+        <Link href={"/login"} className="text-2xl font-bold ">
           <Button className="text-2xl font-bold" variant={"outline"}>
             Login
           </Button>
@@ -48,16 +47,16 @@ function Header() {
                 Explore India View
               </SheetTitle>
               <div className="flex flex-col gap-5 mt-10 font-mono ">
-                <Link href={"/"} className="text-xl font-semibold">
+                <Link href={"/about"} className="text-xl font-semibold">
                   About
                 </Link>
-                <Link href={"/"} className="text-xl font-semibold ">
+                <Link href={"/package"} className="text-xl font-semibold ">
                   Package
                 </Link>
-                <Link href={"/"} className="text-xl font-semibold ">
+                <Link href={"/hotels"} className="text-xl font-semibold ">
                   Hotels
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/login"}>
                   <Button
                     className="text-xl font-semibold cursor-pointer"
                     variant={"outline"}

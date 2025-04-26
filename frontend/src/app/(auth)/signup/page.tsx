@@ -2,7 +2,11 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React, { useState } from "react";
-import * as countryCodes from "country-codes-list";
+import "react-phone-number-input/style.css";
+import {
+  getCountries,
+  getCountryCallingCode,
+} from "react-phone-number-input";
 import {
   Select,
   SelectContent,
@@ -13,7 +17,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader } from "lucide-react";
+import Link from "next/link";
 function SignIn() {
   const [input, setinput] = useState({
     name: "",
@@ -22,23 +27,28 @@ function SignIn() {
     mobile: "",
     password: "",
   });
-  const [countryIso, setcountryIso] = useState<Record<string, string>>({});
+  const [loading, setloading] = useState<boolean>(false);
+  const countries = getCountries();
+
+  const handleCountryChange = (country: any) => {
+    if (country) {
+      setinput({ ...input, isoCode: `+${getCountryCallingCode(country)}` });
+    } else {
+      setinput({ ...input, isoCode: "" });
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({...input});
+    console.log({ ...input });
   };
-  const myCountryCodesObject = countryCodes.customList(
-    "countryCode",
-    "+{countryCallingCode}"
-  );
-  React.useEffect(() => {
-    setcountryIso(myCountryCodesObject);
-  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center h-[calc(100vh-7rem)] bg-gray-100">
       <div className="p-6 bg-white rounded-lg shadow-md w-full max-w-sm ">
-        <h1 className="text-3xl font-bold mb-4 text-center">Sign Up</h1>
+        <h1 className="text-3xl font-bold mb-4 text-center border-b-4 border-blue-100">
+          Sign Up
+        </h1>
         <form onSubmit={handleSubmit} className="flex flex-col ">
           {/* Name */}
           <div className="mb-4 flex flex-col gap-1">
@@ -74,20 +84,16 @@ function SignIn() {
               Mobile
             </Label>
             <div className="flex items-center gap-1">
-              <Select
-                onValueChange={(value) =>
-                  setinput({ ...input, isoCode: value })
-                }
-              >
+              <Select onValueChange={(value) => handleCountryChange(value)}>
                 <SelectTrigger className="w-[90px]">
                   <SelectValue placeholder="Select ISO code" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Country Code</SelectLabel>
-                    {Object.entries(countryIso).map(([key, value]) => (
-                      <SelectItem key={key} value={key}>
-                        {key} {value}
+                    {countries.map((country) => (
+                      <SelectItem key={country} value={country}>
+                        {country} (+{getCountryCallingCode(country)})
                       </SelectItem>
                     ))}
                   </SelectGroup>
@@ -120,9 +126,21 @@ function SignIn() {
             />
           </div>
           <Button className="flex items-center gap-1 justify-center w-full mt-4 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 cursor-pointer">
-            Continue <ArrowRight />
+            {loading ? (
+              <Loader className="animate-spin" />
+            ) : (
+              <>
+                Continue <ArrowRight />
+              </>
+            )}
           </Button>
         </form>
+        <div className="mt-4 text-center text-sm text-gray-600">
+          Already have an account?{" "}
+          <Link href="/login" className="text-blue-500 hover:underline">
+            Sign In
+          </Link>
+        </div>
       </div>
     </div>
   );

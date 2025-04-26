@@ -16,3 +16,11 @@ export type Itinerary = {
   name: string;
   description?: string;
 };
+
+export interface User {
+  _id: string;
+  name: string;
+  username: string;
+  email: string;
+  mobile: string;
+}
