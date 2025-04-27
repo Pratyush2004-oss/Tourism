@@ -19,7 +19,7 @@ app.use(express.json()); // parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // parse URL-encoded request bodies
 job.start(); // Start the cron job
 
-app.use('/api/auth', authRouter); // Use the auth router for authentication routes
+app.use('/api/v1/auth', authRouter); // Use the auth router for authentication routes
 
 // error handling route
 app.use((err, req, res, next) => {

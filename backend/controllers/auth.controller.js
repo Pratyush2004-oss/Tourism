@@ -1,6 +1,8 @@
 import User from "../models/auth.model.js";
 import jwt from "jsonwebtoken";
 import twilio from 'twilio';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID; // Your Account SID from www.twilio.com/console
 const authToken = process.env.TWILIO_AUTH_TOKEN; // Your Auth Token from www.twilio.com/console
@@ -14,17 +16,12 @@ const generateToken = (userId) => {
 // SignUp controller
 export const signUp = async (req, res, next) => {
     try {
-        const { username, fullname, password, mobile } = req.body;
+        const { fullname, password, mobile } = req.body;
 
-        if (!username || !fullname || !password || !mobile) {
+        if (!fullname || !password || !mobile) {
             return res.status(400).json({ message: "All fields are required" });
         }
 
-        // check if mobile number is valid
-        const mobileRegex = /^[0-9]{10}$/; // Example regex for 10-digit mobile number
-        if (!mobileRegex.test(mobile)) {
-            return res.status(400).json({ message: "Invalid mobile number" });
-        }
 
         // check if user already exists
         const existingUser = await User.findOne({ mobile });
@@ -36,15 +33,20 @@ export const signUp = async (req, res, next) => {
         const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
 
         // send OTP to mobile number (you can use a service like Twilio or Nexmo for this)
-        await twilioClient.messages.create({
-            body: `Your OTP for Explore-India_View is ${otp}`,
-            to: mobile,  // Text this number
-            from: process.env.TWILIO_PHONE_NUMBER // From a valid Twilio number
-        })
+        let messageOptions = {
+            body: `Your OTP for Explore-India-View is ${otp}. Please verify your mobile number.`,
+            from: process.env.TWILIO_PHONE_NUMBER, // Your Twilio phone number
+            to: mobile, // The user's mobile number
+        }
+        await twilioClient.messages.create(messageOptions)
+            .then(message => console.log("OTP sent successfully:", message.sid))
+            .catch(error => {
+                console.error("Error sending OTP:", error);
+                return res.status(500).json({ message: "Error sending OTP" });
+            });
 
         // create new user
         const newUser = new User({
-            username,
             fullname,
             password,
             mobile,
@@ -57,7 +59,6 @@ export const signUp = async (req, res, next) => {
             message: "Otp sent successfully, please verify your mobile number",
             user: {
                 id: newUser._id,
-                username: newUser.username,
                 fullname: newUser.fullname,
                 mobile: newUser.mobile,
                 isVerified: newUser.isVerified,
