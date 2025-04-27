@@ -7,6 +7,7 @@ import { toast } from "sonner";
 interface AuthStore {
   isAuthenticated: boolean;
   isAdmin: boolean;
+  checkingAuth: boolean;
   error: string | null;
   user: User | null;
   token: string | null;
@@ -26,6 +27,7 @@ export const useAuthStore = create<AuthStore>((set) => ({
   error: null,
   user: null,
   token: null,
+  checkingAuth: true,
   // signup function to register the user
   signup: async (userInput) => {
     set({ error: null });
@@ -84,7 +86,7 @@ export const useAuthStore = create<AuthStore>((set) => ({
   },
   // checkAuth function to check if the user is authenticated
   checkAuth: async () => {
-    set({ error: null });
+    set({ error: null, checkingAuth: true });
     try {
       const token = localStorage.getItem("token");
       if (!token)
@@ -98,9 +100,14 @@ export const useAuthStore = create<AuthStore>((set) => ({
       set({
         isAuthenticated: true,
         user: response.data.user,
-        token: response.data.token,
+        token: response.data.token || token,
       });
-    } catch (error: any) {}
+    } catch (error: any) {
+      console.log(error);
+    }
+    finally {
+      set({ checkingAuth: false });
+    }
   },
   // verifyOtp function to verify the OTP sent to the user
   verifyOtp: async (otp, mobile) => {

@@ -134,7 +134,7 @@ function SignIn() {
                   placeholder="Enter Password"
                 />
               </div>
-              <Button className="flex items-center gap-1 justify-center w-full mt-4 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 cursor-pointer">
+              <Button disabled={loading} type="submit" className="flex items-center gap-1 justify-center w-full mt-4 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 cursor-pointer">
                 {loading ? (
                   <Loader className="animate-spin" />
                 ) : (

@@ -2,25 +2,30 @@
 import { useAuthStore } from "@/store/auth.store";
 import React, { ReactNode, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { Loader } from "lucide-react";
 function RedirectIfAuthenticated({ children }: { children: ReactNode }) {
-  const { checkAuth, user } = useAuthStore();
+  const { checkAuth, user, token, checkingAuth } = useAuthStore();
   useEffect(() => {
     if (!user) checkAuth();
-  }, [user]);
+  }, [user, checkAuth]);
 
   // redirecting login and signup path if user is already authenticated
   const pathname = usePathname();
   const router = useRouter();
   const isLoginOrSignupPath = pathname === "/login" || pathname === "/signup";
   useEffect(() => {
-    if (user && user.isVerified && isLoginOrSignupPath) {
+    if (user && token && user.isVerified && isLoginOrSignupPath) {
       router.push("/");
-    }
-    else if(user && !user.isVerified && isLoginOrSignupPath) {
-      
+    } else if (user && !user.isVerified && isLoginOrSignupPath) {
     }
   }, [user, isLoginOrSignupPath, router]);
-
+  if (checkingAuth) {
+    return (
+      <div className="flex justify-center items-center h-[calc(100vh-64px)]">
+        <Loader className="size-28 animate-spin text-green-500" />
+      </div>
+    )
+  }
   return <>{children}</>;
 }
 

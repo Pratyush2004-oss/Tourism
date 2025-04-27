@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useAuthStore } from "@/store/auth.store";
+import { Loader } from "lucide-react";
 function Login() {
   const [input, setinput] = useState({
     isoCode: "",
@@ -108,8 +109,12 @@ function Login() {
           </div>
 
           {/* Login Button */}
-          <Button className="w-full mt-1 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 cursor-pointer">
-            Login
+          <Button
+            className="w-full mt-1 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 cursor-pointer"
+            disabled={loading}
+            type="submit"
+          >
+            {loading ? <Loader className="animate-spin size-4" /> : "Login"}
           </Button>
         </form>
         <div className="mt-4 text-center">
