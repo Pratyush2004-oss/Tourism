@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useAuthStore } from "@/store/auth.store";
 function Login() {
   const [input, setinput] = useState({
     isoCode: "",
@@ -22,6 +23,7 @@ function Login() {
     password: "",
   });
   const [loading, setloading] = useState<boolean>(false);
+  const { login, error } = useAuthStore();
 
   const countries = getCountries();
   const handleCountryChange = (country: any) => {
@@ -32,9 +34,18 @@ function Login() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({ ...input });
+    try {
+      setloading(true);
+      // Call your login function here with the input data
+      await login(input);
+      // For example: await login(input);
+    } catch (error) {
+      // Handle error
+    } finally {
+      setloading(false);
+    }
   };
   return (
     <div className="flex flex-col items-center justify-center h-[calc(100vh-7rem)] bg-gray-100">
@@ -43,6 +54,12 @@ function Login() {
           Login
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col ">
+          {error && (
+            <div className="mb-4 text-red-500 text-sm text-center font-mono">
+              {error}
+            </div>
+          )}
+          {/* ISO code */}
           {/* Mobile number */}
           <div className="mb-4 flex flex-col gap-1">
             <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">

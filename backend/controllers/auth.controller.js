@@ -22,16 +22,60 @@ export const signUp = async (req, res, next) => {
             return res.status(400).json({ message: "All fields are required" });
         }
 
-
         // check if user already exists
         const existingUser = await User.findOne({ mobile });
-        if (existingUser) {
+        if (existingUser && existingUser.isVerified) {
             return res.status(400).json({ message: "User already exists" });
         }
 
-        // generate OTP
+        // if existing user is not verified, resend OTP to the user and then update the new user
+        if (existingUser && !existingUser.isVerified) {
+            // If user exists but is not verified, resend OTP
+            const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
+
+            existingUser.otp = otp; // Update the existing user's OTP
+            existingUser.isVerified = false; // Ensure the user is not verified
+            existingUser.fullname = fullname; // Update the user's fullname if needed
+            existingUser.password = password; // Update the user's password if needed
+            // Save the updated user
+            await existingUser.save();
+
+            // send OTP to mobile number (you can use a service like Twilio or Nexmo for this)
+            let messageOptions = {
+                body: `Your OTP for Explore-India-View is ${otp}. Please verify your mobile number.`,
+                from: process.env.TWILIO_PHONE_NUMBER, // Your Twilio phone number
+                to: mobile, // The user's mobile number
+            }
+            await twilioClient.messages.create(messageOptions)
+                .then(message => console.log("OTP sent successfully:", message.sid))
+                .catch(error => {
+                    console.error("Error sending OTP:", error);
+                    return res.status(500).json({ message: "Error sending OTP" });
+                });
+            return res.status(200).json({
+                message: "Otp sent successfully, please verify your mobile number",
+                user: {
+                    id: existingUser._id,
+                    fullname: existingUser.fullname,
+                    mobile: existingUser.mobile,
+                    isVerified: existingUser.isVerified,
+                },
+            });
+        }
+
+        // generate OTP for new user
         const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
 
+        // create new user
+        const newUser = new User({
+            fullname,
+            password,
+            mobile,
+            otp,
+            isVerified: false, // Set to false initially
+        });
+
+        await newUser.save();
         // send OTP to mobile number (you can use a service like Twilio or Nexmo for this)
         let messageOptions = {
             body: `Your OTP for Explore-India-View is ${otp}. Please verify your mobile number.`,
@@ -44,17 +88,6 @@ export const signUp = async (req, res, next) => {
                 console.error("Error sending OTP:", error);
                 return res.status(500).json({ message: "Error sending OTP" });
             });
-
-        // create new user
-        const newUser = new User({
-            fullname,
-            password,
-            mobile,
-            otp,
-            isVerified: false, // Set to false initially
-        });
-
-        await newUser.save();
         return res.status(201).json({
             message: "Otp sent successfully, please verify your mobile number",
             user: {
@@ -85,6 +118,11 @@ export const verifyOTP = async (req, res, next) => {
             return res.status(404).json({ message: "User not found" });
         }
 
+        // if user is already verified
+        if (user.isVerified) {
+            return res.status(400).json({ message: "User already verified" });
+        }
+
         // check if OTP is correct
         if (user.otp !== otp) {
             return res.status(400).json({ message: "Invalid OTP" });
@@ -94,6 +132,7 @@ export const verifyOTP = async (req, res, next) => {
         user.isVerified = true;
         user.otp = null; // Clear OTP after verification
         await user.save();
+        const token = generateToken(user._id); // Assuming you have a method to generate a token
 
         return res.status(200).json({
             message: "OTP verified successfully",
@@ -104,9 +143,73 @@ export const verifyOTP = async (req, res, next) => {
                 mobile: user.mobile,
                 isVerified: user.isVerified,
             },
+            token, // Send the token back to the client
         });
     } catch (error) {
         console.log("Error in verifyOTP controller:", error);
+        next(error);
+    }
+}
+
+export const resendOTP = async (req, res, next) => {
+    try {
+        const { mobile } = req.body;
+
+        if (!mobile) {
+            return res.status(400).json({ message: "Mobile number is required" });
+        }
+
+        // check if user exists
+        const user = await User.findOne({ mobile });
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        if (user.isVerified) {
+            return res.status(400).json({ message: "User already verified" });
+        }
+
+        // generate new OTP
+        const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
+
+        // send OTP to mobile number (you can use a service like Twilio or Nexmo for this)
+        let messageOptions = {
+            body: `Your OTP for Explore-India-View is ${otp}. Please verify your mobile number.`,
+            from: process.env.TWILIO_PHONE_NUMBER, // Your Twilio phone number
+            to: mobile, // The user's mobile number
+        }
+        await twilioClient.messages.create(messageOptions)
+            .then(message => console.log("OTP sent successfully:", message.sid))
+            .catch(error => {
+                console.error("Error sending OTP:", error);
+                return res.status(500).json({ message: "Error sending OTP" });
+            });
+
+        // update user with new OTP
+        user.otp = otp;
+        await user.save();
+
+        return res.status(200).json({
+            message: "New OTP sent successfully",
+            user: {
+                id: user._id,
+                fullname: user.fullname,
+                mobile: user.mobile,
+                isVerified: user.isVerified,
+            },
+        });
+    } catch (error) {
+        console.log("Error in resendOTP controller:", error);
+        next(error);
+    }
+}
+
+// reset password controller to-do
+export const resetPassword = async (req, res, next) => {
+    try {
+
+    } catch (error) {
+        console.log("Error in resetPassword controller:", error);
         next(error);
     }
 }
@@ -145,6 +248,28 @@ export const signIn = async (req, res, next) => {
         });
     } catch (error) {
         console.log("Error in signIn controller:", error);
+        next(error);
+    }
+}
+
+// check authentication controller
+export const checkAuth = async (req, res, next) => {
+    try {
+        const user = req.user; // The user object is set in the ProtectRoute middleware
+        if (!user) {
+            return res.status(401).json({ message: "Unauthorized" });
+        }
+        return res.status(200).json({
+            message: "User is authenticated",
+            user: {
+                id: user._id,
+                fullname: user.fullname,
+                mobile: user.mobile,
+                isVerified: user.isVerified,
+            },
+        });
+    } catch (error) {
+        console.log("Error in checkAuth controller:", error);
         next(error);
     }
 }

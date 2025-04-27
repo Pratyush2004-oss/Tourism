@@ -19,8 +19,20 @@ export type Itinerary = {
 
 export interface User {
   _id: string;
-  name: string;
-  username: string;
-  email: string;
+  fullname: string;
   mobile: string;
+  isVerified: boolean;
 }
+
+export type UserInput = {
+  fullname: string;
+  mobile: string;
+  password: string;
+  isoCode: string;
+};
+
+export type LoginInput = {
+  mobile: string;
+  password: string;
+  isoCode: string;
+};

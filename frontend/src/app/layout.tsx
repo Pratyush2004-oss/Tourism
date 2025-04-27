@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
+import { Toaster } from "sonner";
+import RedirectIfAuthenticated from "@/components/shared/RedirectIfAuthenticated";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
+        <RedirectIfAuthenticated>
+          <Header />
+          {children}
+          <Toaster />
+        </RedirectIfAuthenticated>
       </body>
     </html>
   );
