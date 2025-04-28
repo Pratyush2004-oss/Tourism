@@ -10,8 +10,10 @@ import {
 import { PACKAGETYPE } from "@/services/types";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
+  const navigate = useRouter();
   return (
     <Card>
       <CardHeader>
@@ -20,7 +22,7 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
           alt={pack.name}
           height={100}
           width={100}
-          className="w-full h-48 object-cover rounded-lg"
+          className="w-full h-90 object-cover rounded-lg"
         />
       </CardHeader>
       <CardContent>
@@ -36,8 +38,11 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
           size={"lg"}
           variant={"default"}
           className="font-mono text-lg cursor-pointer"
+          onClick={() => {
+            navigate.push(`/packages/${pack.__id}`);
+          }}
         >
-          Book Now
+          View Package
         </Button>
       </CardFooter>
     </Card>

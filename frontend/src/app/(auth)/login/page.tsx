@@ -60,7 +60,6 @@ function Login() {
               {error}
             </div>
           )}
-          {/* ISO code */}
           {/* Mobile number */}
           <div className="mb-4 flex flex-col gap-1">
             <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">

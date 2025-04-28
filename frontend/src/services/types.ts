@@ -4,8 +4,8 @@ export interface PACKAGETYPE {
   image: string;
   days: number;
   nights: number;
-  Overview: string | undefined; 
-  Highlight?: string[] | undefined;
+  Overview: string[] | undefined; 
+  Highlights?: string[] | undefined;
   Inclusion: string[] | undefined;
   Exclusion: string[] | undefined;
   Itinerary: Itinerary[] | undefined;
