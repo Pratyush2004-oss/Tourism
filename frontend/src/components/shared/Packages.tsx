@@ -2,8 +2,10 @@
 import { PACKAGES } from "@/services/Options";
 import { Button } from "../ui/button";
 import PlaceCard from "./PlaceCard";
+import { useRouter } from "next/navigation";
 
 function Packages() {
+  const router = useRouter();
   return (
     <div>
       {PACKAGES.length > 0 && (
@@ -11,13 +13,16 @@ function Packages() {
           <h1 className="text-2xl md:text-4xl mb-5 font-bold text-center font-serif border-b-4">
             Packages
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {PACKAGES.map(
               (pack, idx) => idx < 6 && <PlaceCard key={idx} pack={pack} />
             )}
           </div>
           <div className="flex justify-end">
             <Button
+              onClick={() => {
+                router.push("/package");
+              }}
               variant={"default"}
               size={"lg"}
               className="mt-5 bg-gray-600 text-white cursor-pointer"

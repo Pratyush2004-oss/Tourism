@@ -73,7 +73,7 @@ function PackageDetail() {
                         return {__html: DOMPurify.sanitize(item.description || "")}
                     }
                     return (
-                      <div key={idx}>
+                      <div key={idx} className=" mb-3">
                         <div className="flex items-center gap-2">
                           <Star className="ml-2 size-4 text-purple-700 fill-purple-600" />
                           <h2 className="text-lg font-bold">{item.name}</h2>

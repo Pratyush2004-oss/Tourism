@@ -892,52 +892,355 @@ export const PACKAGES = [
     Exclusion: [],
     FAQs: [],
   },
-  // {
-  //   __id: "7",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "8",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
+  {
+    __id: "7",
+    name: "Rajasthan Fort and Places Tour",
+    image:
+      "https://cdn.pixabay.com/photo/2018/02/05/15/03/rajasthan-3132408_640.jpg",
+    days: 15,
+    nights: 14,
+    Overview: [
+      `"A Rajasthan Fort & Palaces Tour" would typically cover some of the most popular and iconic destinations in the state of Rajasthan, India. This type of tour would typically last around 15 days and would cover the following destinations:`,
+      `New Delhi: The capital city of India, known for its rich history, cultural heritage and bustling markets.`,
+      `agra: Home to the iconic Taj Mahal, one of the Seven Wonders of the World.`,
+      `jaipur: The pink city, known for its forts, palaces and temples.`,
+      `pushkar: A holy city known for its annual Pushkar Camel Fair and the only temple of Lord Brahma in the world`,
+      `udaipur: The city of lakes, known for its beautiful palaces, temples and havelis.`,
+      `jodhpur: The blue city, known for its magnificent Mehrangarh Fort and Jaswant Thada.`,
+      `jaisalmer: The golden city, known for its golden fort and havelis.`,
+      `bikaner: Known for its Junagarh Fort, temples and camel breeding farm.`,
+      `mandawa: Known for its beautiful havelis and frescoes.`,
+      `Experience the beauty of Rajasthan with our Rajasthan Forts & Palaces tour. This tour will provide you with a bird's eye view of the most iconic forts in Rajasthan, especially Jaisalmer Fort and Manvar.`,
+      `The forts are surrounded by beautiful landscapes, citrus farms and warm hospitality. This trip is specially crafted for those seeking an adventurous and exciting journey around India, who want to explore the country from a different perspective.`,
+      `The Rajasthan is a place of legends and myths, sacred temples and palaces. With its rich culture, it's a place where one can discover the best of everything. Explore the historic cities of Jaipur, Udaipur, Ajmer and a lot more while staying in deluxe hotels with purpose built facilities. Join our tour of Rajasthan for 15 Days / 14 Nights and discover these magnificent sites including Jaisalmer, Udaipur, and Bikaner. You will also experience sights like palki gardens of Jaipur, king Kheragarh Fort and Shekhawat Palace at Jodhpur, Amber Fort in Jaipur, and much more. Discover Rajasthan’s history with an all-inclusive tour covering Jaipur, Shekawati and Kuchaman, Bundi and Udaipur. See the world’s largest marble carvings in Bikaner, enjoy a fort or two in Jaisalmer and Jodhpur, and keep your eyes peeled for wildlife at Manvar National Park.
+      `,
+      `During this tour, you would have the opportunity to explore the rich culture and history of Rajasthan, visit famous landmarks and monuments, experience local customs and traditions, and indulge in delicious local cuisine.`,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: "Day 1: Arrive Delhi – Jaipur",
+        description: `Welcome to India, You will be received by Incredible Tour To India representative at airport and assisted to your hotel. In the Hotel you will have a brief description of your tour and the representative will hand over your documents regarding the tour, Rest of the time at leisure. Overnight in Hotel. <br/><br/>
+
+        <h1><strong>Delhi</strong></h1>
+        Jama Masjid, Delhi After breakfast take sightseeing tour of historic city visiting Old Delhi visiting the a marvel in red sandstone, Jama Masjid, Qutub Minar, Humayun’s tomb,Victorian Delhi , parliament house, president house, India Gate & then Return to the hotel for overnight at the hotel.
+        `,
+      },
+      {
+        name: "Day 2: Jaipur",
+        description: `
+        <h1><strong>City Palace</strong></h1> 
+        The City Palace of Jaipur is located in the heart of the old city of Jaipur in Rajasthan, India. It is spread over a large area, split into a series of courtyards, gardens, and buildings. The outer wall was built by Maharaja Jai Singh II, but other additions are much more recent, some dating back to the beginning of the 20th century. The palace is a wonderful blend of Rajasthani and Mughal architectural style. The City Place of Jaipur is a major tourist attraction in Rajasthan. <br/><br/>
+        
+        Between 1727 and 1734 Maharajah Jai Singh II of Jaipur constructed five astronomical observatories in west central India. The observatories, or “Jantar Mantars” as they are commonly known, incorporate multiple buildings of unique form, each with a specialized function for astronomical measurement. These structures with their striking combinations of geometric forms at large scale, have captivated the attention of architects, artists, and art historians world wide, yet remain largely unknown to the general public. <br/><br/>
+        
+        Jantar Mantar presents the observatories through a variety of media and information sources, making it possible to explore and learn about these historic sites through interactive panoramic “VR” photographs, time lapse sequences, and 3D models as well as articles, drawings, and historic texts. It is a comprehensive resource for exploring the observatories in depth.
+        
+        `,
+      },
+      {
+        name: "Day 3: Jaipur – Shekawati",
+        description: `
+        
+        <h1><strong>Amer Fort</strong></h1>
+        The Amer Fort is situated in Amer, which is 11 kilometers from Jaipur. Amer, originally, was the capital of the state before Jaipur. It is an old fort, built in 1592 by Raja Man Singh. This fort is also very popularly known as the Amer Palace. The Amer Fort was built in red sandstone and marble and the Maotha Lake adds a certain charm to the entire Fort. <br/><br/>
+        
+        Though the fort is quite old and may even look so from the outside, it is beautiful on the inside and boasts of various buildings of prominence like the ‘Diwan-i-Aam’, the ‘Sheesh Mahal’ and even the ‘Sukh Mahal’. The Amer Fort has influences of both Hindu and Muslim architecture. This fort also has the ‘Shila Devi’ Temple and the ‘Ganesh Pol’ which is a gate that leads to the private palaces of the kings. The Amer Fort has many pavilions and halls of great interest and other popular attractions. <br/><br/>
+
+        <h1><strong>Amer Fort</strong></h1>
+        The Jaigarh fort is the most spectacular of the three-hilltop forts that overlook Jaipur. In Mughal times, the Jaipur region was a major weapon-producing center for the Mughal and Rajput rulers, several of the weapons being on display in the fort’s museum. It is one of the few military structures of medieval India preserved almost intact, containing palaces, a granary, a well-planned cannon foundry, several temples, a tall tower and giant mounted cannon-the Jai Ban (Jaivan) which is the largest cannon on wheels in the world. Jaigarh Fort is also known as the fort of victory. The display includes a collection of canons, many of which are exquisitely decorated and were used in the Mughal campaigns led by the Rajput King, Raja Man Singh. <br/><br/>
+        
+        Of Jaipur’s three forts, Jaigarh is perhaps the most imposing. It does not have those delicate structures or palaces like that of Amber but if you want a quick look at a hard-core fortress, this is it. Jaigarh means ‘Victory Fort’ and was built between the 15th and the 18th century AD, and stands 15 km from Jaipur, amidst rock-strewn, thorn-scrub covered hills, its forbidding stone ramparts being visible from the Jaipur town. A steep road goes up to the main gate, the Dungar Darwaza, from where the view is are inspiring. <br/><br/>
+        
+        
+        <h1><strong>Nahargarh Fort</strong></h1> 
+        Nahargarh Fort is located on the rugged ridge of Aravali Hills and it forms an impressive northern backdrop of Jaipur. It looks most classy when floodlit at night. The fort overlooks the city and presents a glittering view of the city lights. It was built in 1734 and extended in 1868. Nahargarh meaning abode of the tigers was built by Jai Singh to bolster the defence of Amber. The legend has it that it was named Nahargarh after Nahar Singh, a prince whose spirit would destroy the construction and stall its progress. So after a tantrik invoked the spirit, it agreed to withdraw on condition that the fort would be named after him. <br/><br/>
+        
+        The Madhavendra Bhawan, built by Sawai Madho Singh has a unique cluster of 12 identical suites for queens and at the head is a suite for the king himself. The rooms are linked by corridors and retain some delicate frescoes as well as toilets and kitchen hearths. It was used by members of the royal family for excursion in summers and is even now a favoured picnic spot. Durg Cafeteria just above the entrance sells meals and refreshments, while Padao Restaurant on the west sells drinks around sunset.
+        `,
+      },
+      {
+        name: "Day 4: Shekawati (Mandawa) – Kuchaman Fort",
+        description: `
+        Mandawa is located in the Shekhawati region of the Rajasthan. The presence of a number of forts, mansions and Haveli’s also make it a great tourist destination. Mandawa used to a busy market town for Rajput merchants. It was during that period, the Rajputs built a number of palatial mansions. <br/><br/>
+        
+        It was their initiative to build the archways, murals etc. as well. This actually helped in imparting a royal ambiance and vintage charm to the place. The traders used to work in different parts of the country. However, whenever there was a question of building a palatial mansion, they built it in Mandawa. These mansions marked their wealth and prosperity.
+        
+        `,
+      },
+      {
+        name: "Day 5: Kuchaman Fort – Bikaner Via Nagaur Fort",
+        description: `The Kuchaman Fort, a Heritage Hotel near Jaipur, Rajasthan. Ideally situated with a proximity to key tourist destinations in India Pushkar, Ajmer, Jaipur and Samode. The scenic beauty and picturesque setting of this fort makes you travel back in time. This Heritage Hotel and Resort offers more than just accommodation activities include Horse Safaris, Camel Safaris, Village Safaris, Bird watching and Temple excursions. Our special Kuchaman City excursion takes you through old heritage Haveli’s and other memorable lanes. <br/><br/>
+        
+        The resort itself offers Five-star comfort. An indoor Pool, Yoga Centre, Kerala Massages and a multi-cuisine restaurant. This Heritage Hotel and Fort with its high and massive ramparts, 32 bastions, 10 gates and various defenses is a formidable fort unique in its architecture. One of the finest Heritage Hotels in Rajasthan, The Kuchaman Fort is rapidly becoming the favorite choice for the discerning traveler. <br/><br/>
+        
+        As you go winding up an undulating mountain road, towards the massive portals of this magnificient fort, you travel back to in time, only to be swallowed into the inside of this ancient world of strange mysteries, of secret chants and mantras, of classical music and ragas, and of fine arts and murals. The Kuchaman Fort. Beckoning, inviting, waiting to welcome you as it rises proudly int the clear skies at the top of a 1000 feet high rock cliff. <br/><br/>
+        
+        The Kuchaman Fort, a rare jewel set in a glittering sea of golden sands, as though a million year old rock itself changed its shape, to record the extraordinary era of kuchaman glory. The Kuchaman Fort, where with echoing, reverberating step, you peel away successive layers of timeless history, perfectly preserved, frozen in rock and time.`,
+      },
+      {
+        name: "Day 6: Bikaner Via Nagaur Fort – Jaisalmer",
+        description: `Just over five centuries old, Bikaner was founded by a scion of the house of Marwar (Jodhpur). The fort of Bikaner, Junagadh, however, was built in 1593 by Raja Rai Singh who also served as a general in the army of Emperor Akbar. Made from red sandstone and encircled by a moat around which the modern city of Bikaner has spread in a somewhat erratic fashion, Junagadh consists of several palaces and apartments in a remarkable state of preservation. <br/><br/>
+        
+        The art of mason and sculptor is most obvious in the recreation of delicate stone screens, kiosks, pavilions and series of arched entrances to buildings reached from corridors that have windows overlooking the city beyond. <br/><br/>
+        
+        Some of the palaces are among the most richly decorated in Rajasthan and include Anup Mahal, Chandra Mahal and Phool Mahal. They give the impression of rich inlay of pietra dura, though in fact the apartments are merely richly painted. The paintings have been preserved as good as new because of extremely dry heat conditions of the desert town. <br/><br/>
+        
+        Another palace, Badal Mahal recreated painting of clouds on its walls, a reminder of the monsoon that often failed the settlement. The Anup Mahal courtyard has a throne set in a pool of water. Bringing alive the sensitivity the rulers showed in their building environment.`,
+      },
+      {
+        name: "Day 7: Jaisalmer",
+        description: `Morning sightseeing tour of Jaisalmer The golden rays of the setting sun, the colorfully adorned locals, the massive forts and mansions, the extremely fascinating craftsmanship, Rajput havelis, all these make Jaisalmer a place of must visit in Rajasthan. <br/><br/>
+        
+        Moreover a visit to the Jaisalmer Fort (the second oldest fort in Rajasthan after Chittaur), Patwon ki Haweli, (the grandest haweli of Jaisalmer), Desert Culture center and museums gives you some glimpse of this small town’s past. The Jain temples meet your religious taste; Salim Singh ki haweli and Nathmal-ki-haweli give you some more idea of the haweli architecture of the town. Besides these, Gadsisar Lake is also an interesting spot that you must visit in this desert city. <br/><br/>
+        
+        Afternoon visit Sam Sand Dunes, Ideal for viewing sunsets, these sites will also give you a chance to capture the picturesque sand dunes in your camera. Overnight in Hotel. / Night at Desert Camp.`,
+      },
+      {
+        name: "Day 8: Jaisalmer – Manvar",
+        description: `Rajasthan is presently one of the most enchanting tourist destinations in the world. Among all the cities in Rajasthan, Jodhpur is also experiencing a huge number of tourist footfalls in the recent past Tours to Manvar is one such attraction that is located in the midst of the Thar Desert, Manvar lying exactly between the Jodhpur, Jaisalmer and Bikaner. <br/><br/>
+        
+        It will surely give a great experience for the tourists by offering the beauty of desert of at its best. It becomes a must visit during excursions from Jodhpur. <br/><br/>
+        
+        Manvar is an excellent destination to have a thoroughly enjoyable holiday. Manvar is one of the perfect options for those who wish to get the true feel of deserts. It is such a fascinating place that offers the raw beauty of nature. It will let you explore the various parts of the desert to enjoy its kaleidoscopic beauty. Sightseeing Manvar provides you an opportunity to enjoy the enthusiasm of wilderness in desert. Manvar has the sprawling resort that built on 5 acres of land reflecting the true ambiance of the traditional village. <br/><br/>
+        
+        The best time to visit here is between the months of September to March. During this time, you will be able to get to see a large number of migratory demoiselle cranes. Ride on Jeep safaris gives you an enjoyable experience for the tourists.
+        
+        `,
+      },
+      {
+        name: "Day 9: Manvar – Jodhpur",
+        description: `Rajasthan is one of the most prominent tourist destinations that offer a lot of tourist attractions. The variety of tourist attraction helps in making Rajasthan one of the most sought after tourist attraction. In fact, Rajasthan is currently one of the most popular tourist destinations in the world. The unique charm appeals similarly to the domestic tourists as well as foreign tourists. <br/><br/>
+        
+        Among the various cities in Rajasthan that manages to attract a large number of tourists, Jodhpur is a prominent one. Jodhpur is tourist place in Rajasthan that has a variety of tourist places. These tourist places experiences a huge number of tourist footfall. However, in the recent past Jodhpur is also experiencing a huge number of tourist footfalls as the tourists are coming down to place to go for excursions from Jodhpur. Presence of a number of tourist attractions in close proximity to the Jodhpur helps in making Jodhpur excursions a thoroughly enjoyable excursion for the tourists. <br/><br/>
+        
+        These excursions take you for a number of tours. Tours to Manvar is one such attraction that will surely be a great experience for the tourists. Offering the beauty of desert of at its best, it is a must visit during excursions from Jodhpur.`,
+      },
+      {
+        name: "Day 10: Jodhpur (Maharangarh Fort with Jaswantarda) via Osian – Bundi",
+        description: `Morning full day sightseeing tour of Delhi. Visit: Raj Ghat – the cremation sites of Mahatma Gandhi, Jama Masjid and Red Fort. Free time for Lunch. <br/><br/>
+        
+        Afternoon visit Qutub Minar (built by Qutub-ud-Din Aibek in 1199), Lotus Temple, Indira Gandhi Museum, India Gate (a memorial to the Indian soldiers killed in World War I), Also drive past President’s House, Parliament House, Government Secretariat Buildings and Connaught Place shopping center. <br/><br/>
+        
+        Late evening transfer to airport to connect flight for onward destination.Having arranged many mobile camel safaris in the usual mainstream and busy destinations we realized that a more exclusive destination was missing from this fun experience. A location was sourced and what better than on the first sand dune of the famous Thar Desert of Rajasthan. With expansive views of the vast desert on one side and the intricate temples of Osian on the other, this camp, the first of its kind in India, offers easy access to the local desert villages. Venturing out on camel one can meet the proud local tribes, the Bishnois and Bhils, potters and weavers and shepherds in their natural surroundings, not to mention the various varieties of desert wildlife such as bluebulls, gazelles, foxes, peacocks and partridges to name but a few. <br/><br/>
+        
+        The nearby ancient village of Osian is legendary for it’s mesmerizing 6th / 8th century temples, sand-dunes and diversity of Rajasthani culture and tradition and Jodhpur, with its magnificent Meherangarh Fort, is just 60 kms away. Being a permanent structure we also have the additional bonus of a refreshing swimming pool, a feat of architectural engineering in a sand dune ! and the safari bar, a wonderful place to relax in the evenings over a drink and cigar to the gentle strains of jazz music. <br/><br/>
+        
+        Once at the camp -nestled in the dunes your host Reggie Singh, grandson of Maharaj Ratan Singh of Jodhpur will invite you for an evening of cocktails, folk entertainment and a semi formal candle lit dinner.`,
+      },
+      {
+        name: "Day 11: Jodhpur – Udaipur",
+        description: `This morning after breakfast drive to Udaipur . Enroot Visit Ranakpur famous for Jain Temples. The Ranakpur Jain Temples were built during the reign of the liberal and gifted monarch Rana Kumbha in the 15th century. An enormous basement covers 48,000 sq. feet area. There are four subsidiary shrines, twenty-four pillared halls and eligibly domes supported by over four hundred columns. <br/><br/>
+        
+        Visit Muchhal Mahaveer Temple – The distinctive feature of this Jain temple is the statue of Lord Mahavira with a moustache. From here proceed to Udaipur. check into your hotel. Rest of the day is at your leisure you may rest in the hotel Or visit the Udaipur city in the evening. Overnight in Udaipur Overnight at hotel.`,
+      },
+      {
+        name: "Day 12: Udaipur City Tour",
+        description: `This morning after breakfast City tour of Udaipur also known as the city of Lakes . It is the historic capital of the former kingdom of Mewar in Rajasthan Agency. Lake Pichola , fateh Sagar Lake , udai sagar and Swaroop sagar in the city are considered some of the most beautiful lakes in the state. Places you visit CITY PALACE . Udaipur is a palaces complex in Udaipur in the Indian state Rajasthan. <br/><br/>
+        
+        It was built by the Maharana udai Mirza Singh as the capital of the sisodia Rajput clan in 1559, after he moved from chittor. It is located on the east bank of the Lake pichola and has several palaces built within its complex. Udaipur was the historic capital of the former kingdom of Mewar in the Rajputana Agency and its last capital. JAGDISH TEMPLE is one of the famous temples of Udaipur . <br/><br/>
+        
+        Located in the city palaces compel of Udaipur , this temple is made in the Indo Aryan style of architecture. In 1651, Jagdish temple was built by Maharana jagat Singh, who ruled Udaipur during 1628-53. The temple is dedicated to Lord Vishnu (Laxmi Narayan), the preserver of the universe.JAG MANDIR is a palace built on an island in the Lake pichola . It is also called the “Lake Garden Palace”. <br/><br/>
+        
+        Its construction is credited to three Maharana of the sisodia Rajputs of Mewar kingdom. It is named as “Jagat Mandir” in honour of the last named Maharana jagat Singh.SAHELION KI BARI is one the most beautiful gardens and a major tourist destination in Udaipur . The garden is famous for its lush green lawns marble art and fountains. English translation of saheliyon ki bari means Garden of maids. By evening you may take a walking tour on your own through the narrow lanes and back streets of Udaipur up to the Washing Ghats at the lake Pichola . by late evening return to your hotel. Overnight in Udaipur.
+        
+        `,
+      },
+      {
+        name: "Day 13: Bundi",
+        description: `Built in the 14th century, the Taragarh Fort is the star attraction in Bundi. With the entry being free and souvenir shops fortunately absent, the fort provides an option of peaceful ramble round its premises. Inside the instant eye-catchers include the Bhim Burj, a large battlement with a cannon placed on it and a large reservoir carved out of single piece of rock. The views from the fort are exceptional, specially during the sunset when the rays seems to lend a lovely grace to the entire area. <br/><br/>
+        
+        In Chittorgarh, the Chittorgarh Fort is the imposing structure atop a hill of 300 m which has many palaces and monuments. This fort is situated 1 km from the new town and is spread over an area of around 692 acres. <br/><br/>
+        
+        Inside the large fort, is a road that connects the different gates, viz. the main gate or Ram Pol, Padan Pol, Bhairon Pol, Hanuman Pol, Ganesh Pol, Laxman Pol and Jodla Pol. <br/><br/>
+        
+        These gates were built for security and fortification of the area. There are around 84 water bodies and many small palaces, important ones being Rana Kumbha Palace, Rani Padmini’s Palace, etc. <br/><br/>
+        
+        Besides these structures, the fort is known for the Kirti Stambha, in honour of the 1st Jain Thirthankara, the victory tower or Vijay Stambha, Meera temple, Kalika Mata temple and the various sculptures and carvings on the monuments.`,
+      },
+      {
+        name: "Day 14: Jaipur",
+        description: `After breakfast explore the Pink City with an excursion to Amber Fort, situated just outside the city, enjoy the experience of ride on elephant back to and from the top of the hill on which the fort is situated. Afternoon sightseeing tour of City Palace in the heart of Jaipur is known for its blend of Rajasthani and Mughal architecture. Not far away is the Central Museum. <br/><br/>
+        
+        Jantar Mantar is the largest of the five observatories built by Sawai Jai Singh. The Hawa Mahal or the Palace of Winds was constructed for the royal ladies to watch the royal processions without being seen, all monuments are located in the vicinity of City Palace Complex of Jaipur. Later late afternoon is kept free to visit the famous Markets of Textiles, Gems, Carpets, and handicrafts. One can also visit Nahargarh Fort to see it illuminated over the floodlights. Return to the hotel for overnight.`,
+      },
+      {
+        name: "Day 15: Agra",
+        description: `After breakfast drive to Jaipur en route visit Old deserted town of Mughal Dynasty – Fatehpur Sikri built in red sandstone in honour of Saint Salim Chisti who foretold the birth of 3 sons to Emperor Akbar, is an example of robust stability combined with originality. Each important edifice here represents a type by itself. Notable among them is the Diwan-e-Khas, Punch Mahal, the Tomb of Salim Chisti, and the Bulund Darwaza. Later continue to proceed to Jaipur. <br/><br/>
+        
+        Rest of the day at leisure, in the evening hours enjoy walking in the colorful streets and bazaars of Jaipur City. The beauty of Jaipur is that its unique architecture and town planning is visible at even the most common places such as its squares and lanes. Overnight at Hotel.`,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing as per the above Itinerary by air-conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bed room",
+      "Elephant ride at amber fort",
+      "Boat ride at Udaipur",
+      "Flight ticket from Jodhpur to New Delhi",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [],
+  },
+  {
+    __id: "8",
+    name: "Rajasthan with South India Tour",
+    image:
+      "https://cdn.pixabay.com/photo/2018/02/05/15/03/rajasthan-3132408_640.jpg",
+    days: 23,
+    nights: 22,
+    Overview: [
+      `The Rajasthan with South India Tour is designed to give you a memorable vacation. You will be exploring the most beautiful regions of India and will travel through scenic areas that have been inhabited for centuries, but still remain unspoiled and untouched by the modern world.`,
+      `During your tour you will stay in 5 star quality hotels and experience true Indian hospitality. You will visit Delhi and see the "Red Fort" or take a train ride through Hampi; spend some time at Jaipur, Bikaner or Jodhpur; discover a colourful city like Udaipur in the desert;" The Taj Mahal at Agra.; enjoy 4 course food in India's most famous cities like Jaisalmer, Jodhpur, Udaipur, Cochin & Trichy; go back in time via Munnar Rainforest or Kumbakonam to Pondicherry."`,
+      `Rajasthan with South India Tour package of Kerala is designed to offer you the best of both worlds. This tour is perfect for people who want to combine the resplendent grandeur of Rajasthan and the more scenic beauty of South India. In addition, you can benefit from visiting important religious places such as Shri Venkateshwara Temple in Tirupati and Guruvayur Temple in Trichy. This trip will take you through some of the most iconic heritage sites in India that have been witness to various historical events over the centuries.`,
+      `Rajasthan with South India Tour, you will have ample opportunity to explore ancient ruins and monuments along with the modern marvels that are associated with its rich cultural heritage. This is an exclusive tour package for those who have an open mind and love exploring new destinations.`,
+      `Rajasthan with South India Tour offers a wealth of various experiences and will give you an opportunity to see the highlights of Rajasthan with your own eyes, enjoy the royal welcome by the royal families, mosques and tombs. You will also be able to visit some exotic locales like Jaisalmer, Ranthambore National Park and Bikaner.`,
+      `The itinerary for our 23-Day/22-Night Rajasthan tour is designed to transport you to India’s classic city-states, from New Delhi in the north and Jaipur, Bikaner and Jodhpur in the west to Cochin and Munnar on the southern tip, before exploring traditional villages and a wealth of archaeological sites.`,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: "Day 01: New Delhi",
+        description: `Welcome to India, You will be received by Incredible tour to India representative at international airport, we will be waiting for you, and by holding you play card in his hand. He will assist you to check in your hotel. In the Hotel you will have a brief description of your tour and the representative will hand over your documents regarding the tour. Overnight hotel in Delhi for relaxing.`,
+      },
+      {
+        name: "Day 02: New Delhi – Jaipur",
+        description: `After breakfast sightseeing of New Delhi where you Visit the 11th century Qutab Minar, India Gate and The Presidents House, Red fort, Mahatma Gandhi Memorial. Also visit Laxmi Narayan temple popularly known as Birla Temple. Over night at hotel.`,
+      },
+      {
+        name: "Day 03: New Delhi - Agra",
+        description: `After breakfast drive to Agra, on arrival check in hotel and take leisure rest. After rest, visit the Agra fort and Taj Mahal. Overnight at hotel.`,
+      },
+      {
+        name: "Day 04: Agra - Jaipur",
+        description: `Early Morning visit the Sunrise Tajmahal and then take breakfast at Hotel. After breakfast drive to Jaipur, en route visit Fatehpur Sikri. On arrival check in hotel and take rest. Overnight at hotel. (Invited at home for dinner).`,
+      },
+      {
+        name: "Day 05: Jaipur",
+        description: `After breakfast take a visit full day sightseeing include Amber Fort. Here at Amber, you’ll ascend till the gates of majestic Amber fort on elephant back (This is optional on direct payment basis). The fort displays a beautiful mix of Mughal and Rajput styles of architecture. <br/><br/>
+        
+        Hawa Mahal (Palace of Winds). The beauty of Jaipur is that its unique architecture and town planning is visible at even the most common places such as its squares and lanes. City Palace, Jantar Mantar observatory. Overnight stay at the hotel.`,
+      },
+      {
+        name: "Day 06: Jaipur - Bikaner",
+        description: `After breakfast drive to Bikaner, en route visit rate temple, on arrival check in hotel and rest. After leisure rest visit the Junagarh fort and evening visit the camel breeding centre. Overnight at hotel.`,
+      },
+      {
+        name: "Day 07: Jaisalmer",
+        description: `After breakfast drive to Jaisalmer. On arrival check in hotel and take rest, after fresh n up visit Badda wagh & Gaddisar Lake. Overnight at hotel.`,
+      },
+      {
+        name: "Day 08: Jaisalmer",
+        description: `After breakfast visit the magnificent fort, the Patwon Ki Haveli ( Mansion) and Salim singh Ki Haveli, with their carved balconies and brackets which are supreme examples of the art. Afternoon drive to desert and evening enjoy the camel ride and jeep safari in desert. Overnight at desert camp.`,
+      },
+      {
+        name: "Day 09: Jodhpur",
+        description: `After breakfast drive to Jodhpur. On arrival check in Hotel and relax. Overnight at hotel.`,
+      },
+      {
+        name: "Day 10: Jodhpur",
+        description: `After breakfast visit Mehrangarh fort, Jaswant tharra & clock tower market evening visit Mandore Garden for leisure. Overnight at hotel.`,
+      },
+      {
+        name: "Day 11: Udaipur",
+        description: `After breakfast drive to Udaipur. En route visit the Ranakpur jain temple. On arrival check in hotel and take rest. Overnight at hotel.
+        
+        `,
+      },
+      {
+        name: "Day 12: Udaipur",
+        description: `After breakfast enjoy the Boat ride in Lake Pichhola. Visit the City Palace, Sahelion-ki-bari gardens, the Jagdish temple and the local Museum. Overnight in Udaipur.`,
+      },
+      {
+        name: "Day 13: Udaipur - Cochin",
+        description: `After breakfast drive to airport for flight to Cochin. On arrival assist by driver and direct to hotel.`,
+      },
+      {
+        name: "Day 14: Cochin - Munnar",
+        description: `Morning after breakfast, Transfer to Munnar. Munnar, the picturesque hill stations in India is situated at the confluence of three mountain streams – Mudrapuzha, Nallathanni and Kundala. <br/><br/>
+        
+        Sprawling tea plantations, picture book towns, winding lanes, trekking and holiday facilities make this destination a popular resort town. Munnar is home of Nilgiri Tahrs, an endangered species of wild goat. On arrival, check in to the hotel with rest of the day to spend as you please- either relaxing or exploring tea city. Overnight at the at Hotel in Munnar.`,
+      },
+      {
+        name: "Day 15: Munnar",
+        description: `You will be taken for a sightseeing tour of Munnar. Sightseeing tour around Munnar takes one to tea gardens where picturesque colonial towns and meandering mountain streams present photo opportunities galore. <br/><br/>
+        
+        You will be taken for a visit to Rajamalai where you can watch Nilgiri Tahrs in their natural habitat. You will also be visiting the nearby Mattuppetty Dam, Kundala lake, Exho point, Blossom park. Later scroll at the local market. Overnight at Hotel`,
+      },
+      {
+        name: "Day 16: Munnar - Thekkaddy",
+        description: `After breakfast, drive to Thekkady. The very sound of the word Thekkady conjures up images of elephants, unending chains of hills and spice scented plantations. <br/><br/>
+        
+        In the Periyar forest of Thekkady is one of the finest wildlife reserves in India, and spread across the entire district are picturesque plantations and hill towns that hold great opportunities for treks and mountain walks. Evening enjoy the boating at the periyar lake(own expense). Overnight at resort in Thekkaddy.`,
+      },
+      {
+        name: "Day 17: Thekkaddy - Madurai",
+        description: `After breakfast check out from Hotel and drive to Madurai, on arrival check into Hotel. Afternoon proceed for sightseeing of Madurai– visit Sri Meenakshi Sundereswar Temple, Thirumalanaikar Palace, Thiruppurakundram Temple, Alagar Koil and Gandhi Museum. Overnight stay at the Hotel in Madurai.`,
+      },
+      {
+        name: "Day 18: Madurai - Trichy",
+        description: `After breakfast proceed for a day excursion to Trichy – visit Rockfort Temple, Tiruvanaikkaval Temple, Elakurichi and Vayaloor. Overnight stay at the Hotel in Trichy.`,
+      },
+      {
+        name: "Day 19: Trichy - Kumbakonam",
+        description: `After breakfast checkout hotel, Drive to Kumbakonam and visit Navagraha Temples. Overnight stay at Kumbakonam.`,
+      },
+      {
+        name: "Day 20: Kumbakonam - Pondy",
+        description: `Morning after breakfast proceeds for Pondy. After check-in proceed for sightseeing of Pondicherry– visit Shri.Aurobindo Ashram, Aurovillie, Arikamedu, Pondicherry Beach, Botanical Garden and Bharati Park. Overnight stay at the Hotel in Pondicherry.`,
+      },
+      {
+        name: "Day 21: Pondy - Mahabalipuram",
+        description: `Morning after breakfast, proceed to Mahabalipuram. After fresh-n-up time for relaxation. After lunch we will go on city sightseeing tour of Mahabalipuram which will include: <br/><br/>
+        
+        Shore Temple: The oldest structure in the area, build c. 700 AD, this temple has been here for more than 1400 years. The area around the temple is now a landscaped park, with guards keeping the hordes of souvenir hawkers at bay. <br/><br/>
+        
+        Five Rathas (Pancha Pandava Rathas): This site contains five Rathas, literally chariots, dating from the 7th century. The sculptures are complemented by some enormous stone animals, including a large elephant. Evening Return back to the hotel. Overnight stay at Mahabalipuram`,
+      },
+      {
+        name: "Day 22: Mahabalipuram",
+        description: `Morning at leisure. After breakfast full day sightseeing tour of Mahabalipuram which will include: Thirukadalmallai: This temple dedicated to Lord Vishnu. It was also built by Pallava King in order to safeguard the sculptures from the ocean. <br/><br/>
+        
+        It is told that after building this temple, the remaining architecture was preserved and was not corroded by sea. & Sculpture museum. You also can chill on the sandy beach for relaxation or can enjoy Boat rides in the Bay of Bengal with life guards, fishing trips to the sea & Turtle walk at the sea shore. Evening Return back to the hotel. Overnight stay at Mahabalipuram.`,
+      },
+      {
+        name: "Day 22: Mahabalipuram - Chennai",
+        description: `After breakfast transfer to airport and then back to Home with sweet and incredible memories.`,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing as per the above Itinerary by air-conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bed room",
+      "Elephant ride at amber fort",
+      "Boat ride at Udaipur",
+      "Flight ticket from Jodhpur to New Delhi",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [],
+  },
   // {
   //   __id: "9",
   //   name: "Rajasthan Culture Tour",
@@ -1125,8 +1428,281 @@ export const PACKAGES = [
 ];
 
 // Our services
+export const SERVICES = [
+  {
+    __id: "1",
+    name: "Train Service",
+    image: [
+      {
+        image: "/images/train.jpg",
+        content: "Train Service",
+      },
+      {
+        image: "/images/train-2.jpg",
+        content: "Train Service",
+      },
+      {
+        image: "/images/train-1.jpg",
+        content: "Train Service",
+      },
+    ],
+    Overview: `With railways being the popular mode of travel in India, not many people here can deny having been part of a train journey. Though a train journey can prove to be a great experience, the ticket booking process is usually a depressing affair. To save yourself from the troubles of rail ticket booking, you can avail our reliable Railway Ticketing Services. Our team will take note of all the essential details like the journey date, preferred train you would like to travel by, coach type, etc. as well as any special needs & book a ticket accordingly. We offer effective and reliable services with 100% customer satisfaction being our ultimate goal.`,
+  },
+  {
+    __id: "2",
+    name: "Airline Service",
+    image: [
+      {
+        image: "/images/airline.jpg",
+        content: "Airline Service",
+      },
+      {
+        image: "/images/airline-2.jpg",
+        content: "Airline Service",
+      },
+      {
+        image: "/images/airline-1.jpg",
+        content: "Airline Service",
+      },
+    ],
+    Overview: `Travelling by air can be a fun experience & it saves time too, which is why many prefer this mode of travel. But booking air tickets can be a frustrating task, however you don’t need to worry as we offer excellent Airline Ticketing Services all over India. As reliable Airline Ticketing Agents in Jaipur, we will ensure that the flight tickets are booked on time & as per your specific instructions. By availing our service, you can escape all the hassles of booking an air ticket yourself. For any queries that you may regarding any airlines, the flight ticket rates, flight schedule, etc. just contact us & we will be happy to help.`,
+  },
+  {
+    __id: "3",
+    name: "Event Organizer",
+    image: [
+      {
+        image: "/images/him.jpg",
+        content: "Event Organizer",
+      },
+      {
+        image: "/images/event-2.jpg",
+        content: "Event Organizer",
+      },
+      {
+        image: "/images/event-1.jpg",
+        content: "Event Organizer",
+      },
+    ],
+    Overview: `We are one of the reputed Event Organizers In Jaipur having expertise in organizing Private & Corporate Events. Our team has arranged a variety of events for clients in Jaipur (Rajasthan). We have expertise in all aspects of arranging an event. With us to help you & guide you, the event is guaranteed to be a success. We take care of every step – right from sending out invites , guest management, venue arrangement, finalizing the menu etc. Our expert team ensures that our customers are saved from the hassles of arranging the event, as we efficiently take care of all the aspects on their behalf.`,
+  },
+  {
+    __id: "4",
+    name: "Car and Bike",
+    image: [
+      {
+        image: "/images/camp-2.jpg",
+        content: "Car and Bike",
+      },
+      {
+        image: "/images/car-2.jpg",
+        content: "Car and Bike",
+      },
+      {
+        image: "/images/bike.jpg",
+        content: "Car and Bike",
+      },
+    ],
+    Overview: `ExploreIndiaView Tours (Tour Operator in India) is one of the oldest tour Operators & Holiday Planner in India. We remain as committed to serving travellers today as when they first opened their doors. In its working years ExploreIndiaView Tours has made business ventures with various companies to add the power of the world's leading Holidays and Tour expense management company. Steady growth and intelligent partnerships allow ExploreIndiaView Tours to care for the needs of any traveller, whether corporate or individual. The core values of ExploreIndiaView Tours are communication, motivation, satisfaction and partnership. Whether you are an individual or a seasoned business traveller, we offer the same level of service. Today most of the people who come to India or want to visit places like Jaipur Agra or even North & south India for long tours or for business trips prefer the Rajasthan Royal Tours The company has a fleet of cars ranging from luxury to standard with A/C and Non A/C facilities. The entire cars are well maintained and are driven by educated, multilingual and generous chauffeurs. Almost all our drivers are experienced and they know each and every route of New Delhi, Agra, Jaipur and the Main destination of India. we make your travel easier, and hassle-free and make you reach any place, destination, Monument, airport, railway station and office on time. If you are looking for car hire services in India or pickup and drop facilities to the airport or a car for a short trip to Agra and Jaipur OR Rajasthan, we are going to provide you with the best car at the most competitive rate. We give you great value for your hard money and charge a competitive market price for the service we deliver to you. With Rajasthan Royal Tours, you can book luxury cars for rent in India like BMW, Benz, Mercedes, Audi A6, and many other high-end models depending on various needs. So, enjoy the journey in style with the best taxi booking service provider in India.`,
+  },
+  {
+    __id: "5",
+    name: "Hotel Booking",
+    image: [
+      {
+        image: "/images/hotel.jpg",
+        content: "Hotel Booking",
+      },
+      {
+        image: "/images/hotel-2.jpg",
+        content: "Hotel Booking",
+      },
+      {
+        image: "/images/hotel-1.jpg",
+        content: "Hotel Booking",
+      },
+    ],
+    Overview: ``,
+  },
+  {
+    __id: "6",
+    name: "Tour Guide Service",
+    image: [
+      {
+        image: "/images/guide.jpg",
+        content: "Tour Guide Service",
+      },
+      {
+        image: "/images/guide-2.jpg",
+        content: "Tour Guide Service",
+      },
+      {
+        image: "/images/guide-1.jpg",
+        content: "Tour Guide Service",
+      },
+    ],
+    Overview: ``,
+  },
+  {
+    __id: "7",
+    name: "Travel Insurance",
+    image: [
+      {
+        image: "/images/insurance.jpg",
+        content: "Travel Insurance",
+      },
+      {
+        image: "/images/insurance-2.jpg",
+        content: "Travel Insurance",
+      },
+      {
+        image: "/images/insurance-1.jpg",
+        content: "Travel Insurance",
+      },
+    ],
+    Overview: `Travel insurance is a must whether you are on a business or leisure trip. Travel insurance safeguards you from any untoward incidents like luggage theft/loss, medical emergencies en route, etc. It is not enough to have travel insurance, it is essential that you have chosen the right travel insurance plan for Tour to India. At Rajasthan Royal Tours we offer the best Travel Insurance Services in Rajasthan. Here, we have experts who will guide you & offer reliable advice regarding the best travel insurance as per your budget and travel requirements. We work in the best interests of our customers & ensure that they understand all the nitty-gritty details of the travel insurance plan that they are an option for.`,
+  },
+];
 
-export const SERVICES = [];
+// Hotels Data
+export const HOTELSDATA = {
+  images: [
+    {
+      image: "/images/hotel.jpg",
+      content: "Our Partners Hotels",
+    },
+    {
+      image: "/images/hotel-2.jpg",
+      content: "Our Partners Hotels",
+    },
+    {
+      image: "/images/hotel-1.jpg",
+      content: "Our Partners Hotels",
+    },
+  ],
+  hotels: [
+    {
+      __id: "1",
+      city: "Udaipur",
+      hotels: [
+        {
+          name: "Brahma Niwas",
+          image:
+            "https://pix8.agoda.net/hotelImages/13857570/-1/6e87c656a42cd5d881401625ad6f6b36.jpg?ce=0&s=1024x",
+          desc: `Get your trip off to a great start with a stay at this property, which offers car park free of charge. Conveniently situated in the Lake City part of Udaipur, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous City Palace of Udaipur. Rated with 4 stars, this high-quality property provides guests with access to restaurant and outdoor pool on-site.`,
+        },
+        {
+          name: "Sterling Jaisinghgarh Udaipur",
+          image:
+            "https://pix8.agoda.net/hotelImages/879882/-1/9c47ddd2ea4a5a2aff5085ae461e6ebe.jpg?ce=0&s=1024x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Lake City part of Udaipur, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous City Palace of Udaipur. Rated with 4 stars, this high-quality property provides guests with access to restaurant, indoor pool and outdoor pool on-site.`,
+        },
+        {
+          name: "The Oberoi Udaivilas, Udaipur",
+          image:
+            "https://pix8.agoda.net/hotelImages/1061960/-1/e97dbf900b9239783587743871df7cd8.jpg?ca=29&ce=0&s=600x",
+          desc: `Fondly known as the "City of Lakes", Udaipur, the erstwhile capital of the Kingdom of Mewar, is resplendent with vast hilltop forts, palaces, temples and gardens that serve as reminders of its majestic history. Falling in love with the charm of the “City of Lakes” is easy when you are staying at the best hotel in Udaipur: The Oberoi Udaivilas. Located on the banks of Lake Pichola, our 5 star hotel is spread over 1,21,406 square metres of luxuriant gardens, with an intricate layout of interconnecting domes and corridors that reflect the layout of Udaipur itself; whose seven lakes are linked by canals. Superior accommodations, fine restaurants serving signature cuisine and a quiet emphasis on your wellbeing with daily yoga and personally curated spa therapies.`,
+        },
+      ],
+    },
+    {
+      __id: "2",
+      city: "Jaipur",
+      hotels: [
+        {
+          name: "Holiday Inn Jaipur City Centre",
+          image:
+            "https://cf.bstatic.com/xdata/images/hotel/max1280x900/273748308.jpg?k=f280555938bfb341be627a32e148dc6be52a794a787b02f8d205b356de94c154&o=&hp=1",
+          desc: `Offering an outdoor swimming pool, a fitness center and a spa and wellness center, Holiday Inn Jaipur City Center is within 2.2 mi from the architectural marvel of the City Palace and the Amer Fort. Each elegant air-conditioned room here will provide you with a satellite TV, seating area and a mini-bar. Featuring a shower, private bathroom also comes with a hairdryer and free toiletries. Extras include an iPod dock. Guest can also request for amenities like pen drive and snack basket/ fruit basket.`,
+        },
+        {
+          name: "Laxmi Palace Heritage Boutique Hotel",
+          image:
+            "https://cf.bstatic.com/xdata/images/hotel/max1280x900/189255024.jpg?k=44d94947bf36bff8cb5b0020c6384a33d889b3fed31b1476d19a8d6e9ae709a0&o=&hp=1",
+          desc: `You're eligible for a Genius discount at Laxmi Palace Heritage Boutique Hotel! To save at this property, all you have to do is sign in. Built in heritage style with transitional theme, Laxmi Palace, located in Jaipur has beautifully paintings with great architecture, attractive lobby, open terraces, lovely ambiance and comfortable rooms with antique furnishings. It offers Fresco Miniature paintings and a rooftop restaurant. Free WiFi and parking are provided.`,
+        },
+        {
+          name: "The Oberoi Raj Vilas, Jaipur",
+          image:
+            "https://pix8.agoda.net/hotelImages/1061960/-1/e97dbf900b9239783587743871df7cd8.jpg?ca=29&ce=0&s=600x",
+          desc: `Experience a sincerely warm welcome when you stay with us at our 5-star hotel in Jaipur: The Oberoi Rajvilas. Spread over 1,29,499 square meters of beautifully landscaped gardens, with traditional architecture, flaming mashaal torches and reflection pools. Exquisite accommodation, including luxury tents inspired by the era of Maharajas, fine restaurants serving authentic Rajasthani and international cuisines, specially curated romantic experiences for couples and our sincere hospitality. The perfect setting for the holiday of a lifetime at the best 5-star luxury hotel in Jaipur.`,
+        },
+      ],
+    },
+    {
+      __id: "3",
+      city: "Jaiselmer",
+      hotels: [
+        {
+          name: "Chokhi Dhani - The Palace Hotel",
+          image:
+            "https://pix8.agoda.net/hotelImages/730328/-1/19e512f6136648bad7805e7dfcc6963d.jpg?ca=7&ce=1&s=600x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Suthar Para part of Jaisalmer, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Jaisalmer Fort. Rated with 3 stars, this high-quality property provides guests with access to restaurant and fitness center on-site.`,
+        },
+        {
+          name: "Golden Star Desert Camp",
+          image:
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/503929610.jpg?k=1fb6e74e50a2db94d78782ac5ffc63a2059639119df606a7b7e1853ab174b6b4&o=&s=116x",
+          desc: `Get your trip off to a great start with a stay at this property, which offers free Wi-Fi in all rooms. Conveniently situated in the Sam Sand Dunes part of Jaisalmer, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Jaisalmer Fort. This 5-star property is packed with in-house facilities to improve the quality and joy of your stay.`,
+        },
+        {
+          name: "Sky Desert Safari Camp Jaisalmer",
+          image:
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/324469633.jpg?k=a1789b6d4e5d53b55512ea71d45c629d8099ab510c0a21faa656dc4fcad156e0&o=&s=600x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Sam Sand Dunes part of Jaisalmer, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Jaisalmer Fort. This 4-star property features massage to make your stay more indulgent and memorable.`,
+        },
+      ],
+    },
+    {
+      __id: "4",
+      city: "Jodhpur",
+      hotels: [
+        {
+          name: "Krishna Prakash Heritage Haveli Hotel",
+          image:
+            "https://pix8.agoda.net/hotelImages/283921/-1/d75080f6ca045059310bb9910b151975.jpg?ca=16&ce=1&s=600x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Strategically situated in Gulab Sagar, allowing you access and proximity to local attractions and sights. Don't leave before paying a visit to the famous Mehrangarh Fort. Rated with 3 stars, this high-quality property provides guests with access to massage, restaurant and indoor pool on-site.`,
+        },
+        {
+          name: "Radisson Jodhpur",
+          image:
+            "https://pix8.agoda.net/hotelImages/9455137/0/339b55207b46763f75ab41db030014c6.jpg?ca=9&ce=1&s=1024x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Air Force Area part of Jodhpur, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Mehrangarh Fort. Rated with 3.5 stars, this high-quality property provides guests with access to restaurant, fitness center and indoor pool on-site.`,
+        },
+        {
+          name: "Bijolai Place Jodhpur – Inde Hotel",
+          image:
+            "https://pix8.agoda.net/hotelImages/288261/-1/ca6a5fe9723251c126f17801df946e2d.png?ca=0&ce=1&s=375x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Kayalana Lake part of Jodhpur, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Mehrangarh Fort. This 3.5-star property features restaurant to make your stay more indulgent and memorable.`,
+        },
+      ],
+    },
+    {
+      __id: "5",
+      city: "Agra",
+      hotels: [
+        {
+          name: "Holiday Inn Agra MG Road",
+          image:
+            "https://pix8.agoda.net/hotelImages/7545956/0/1fdada58ee31d9022836b8f09e1e695c.jpg?ca=23&ce=0&s=600x",
+          desc: `In addition to the standard of IHG Clean Promise, all guests get free Wi-Fi in all rooms and free parking if arriving by car. Conveniently situated in the Dayal Bagh part of Agra, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Taj Mahal. Rated with 5 stars, this high-quality property provides guests with access to restaurant, fitness center and indoor pool on-site.`,
+        },
+        {
+          name: "Radisson Hotel Agra",
+          image:
+            "https://pix8.agoda.net/hotelImages/1177534/-1/08c2836b4099ca31ccd37fb430191bb1.jpg?ca=9&ce=1&s=600x",
+          desc: `The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Strategically situated in Tajganj, allowing you access and proximity to local attractions and sights. Don't leave before paying a visit to the famous Taj Mahal. Rated with 5 stars, this high-quality property provides guests with access to massage, restaurant and fitness center on-site.`,
+        },
+        {
+          name: "The Oberoi Amarvilas, Agra",
+          image:
+            "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/47406124.jpg?k=e033dd8dd176f693648a8ab488388f411b46ce34d68950117aa49423c0daf79c&o=&s=600x",
+          desc: `The capital of the Mughal Empire in the 16th and 17th centuries, Agra is home to three UNESCO world heritage sites: the Taj Mahal, Agra Fort and the ancient city of Fatehpur Sikri; all of which are legacies from Mughal times. Located just 600 meters from the Taj Mahal, the world’s most exquisite testimony to undying love, it is easy to rekindle romance at The Oberoi Amarvilas. The best hotel in Agra is inspired by Mughal palace designs; with fountains, terraced lawns, reflection pools and pavilions. The Oberoi Amarvilas is a five star hotel that offers unrestricted views of Taj Mahal from all rooms and suites, complemented by our warm, personalised hospitality.`,
+        },
+      ],
+    },
+  ],
+};
 
 export const CAROUSELIMAGE = [
   {

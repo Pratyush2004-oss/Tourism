@@ -26,7 +26,7 @@ function Header() {
     <div className="flex justify-between items-center py-5 px-6 border-b-2 max-w-7xl mx-auto">
       <div className="contents">
         <Link href={"/"} className="flex items-center gap-2">
-          <h2 className="font-bold text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] bg-gradient-to-l from-white via-orange-400 to-orange-700 bg-clip-text">
+          <h2 className="font-bold text-[1.5rem] sm:text-[2rem] lg:text-[2.3rem] bg-gradient-to-l from-white via-orange-400 to-orange-700 bg-clip-text">
             Explore India View
           </h2>
         </Link>
@@ -34,13 +34,13 @@ function Header() {
 
       {/* Desktop View */}
       <div className="lg:flex items-center gap-10 hidden">
-        <Link href={"/about"} className="text-2xl font-bold ">
+        <Link href={"/about"} className="text-xl font-bold ">
           About
         </Link>
-        <Link href={"/package"} className="text-2xl font-bold ">
+        <Link href={"/package"} className="text-xl font-bold ">
           Package
         </Link>
-        <Link href={"/hotels"} className="text-2xl font-bold ">
+        <Link href={"/hotels"} className="text-xl font-bold ">
           Hotels
         </Link>
         {user && token ? (

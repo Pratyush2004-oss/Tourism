@@ -9,12 +9,13 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-import { CAROUSELIMAGE } from "@/services/Options";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { CarouselImage } from "@/services/types";
 
-export function Landing() {
+
+export function Landing({IMAGES} : {IMAGES: CarouselImage[]}) {
   return (
     <Carousel
       plugins={[
@@ -25,7 +26,7 @@ export function Landing() {
       className=""
     >
       <CarouselContent className="">
-        {CAROUSELIMAGE.map((image, idx) => (
+        {IMAGES.map((image, idx) => (
           <CarouselItem key={idx}>
             <div className="w-full relative">
               <Card className="p-0">
@@ -39,7 +40,7 @@ export function Landing() {
                   </div>
                   <Image
                     src={image.image}
-                    alt="landing"
+                    alt={image.content}
                     width={500}
                     height={500}
                     className="w-full h-full object-cover aspect-video "
