@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 function Packages() {
   const router = useRouter();
   return (
-    <div>
+    <div className="md:px-16">
       {PACKAGES.length > 0 && (
         <div className="p-5">
           <h1 className="text-2xl md:text-4xl mb-5 font-bold text-center font-serif border-b-4">

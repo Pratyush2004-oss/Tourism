@@ -15,14 +15,14 @@ import { useRouter } from "next/navigation";
 function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
   const navigate = useRouter();
   return (
-    <Card>
+    <Card className="rounded-4xl shadow-xl">
       <CardHeader>
         <Image
           src={pack.image}
           alt={pack.name}
           height={100}
           width={100}
-          className="w-full h-56 sm:h-64 lg:h-96 object-cover rounded-lg"
+          className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-t-2xl"
         />
       </CardHeader>
       <CardContent>

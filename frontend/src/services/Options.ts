@@ -1244,7 +1244,7 @@ export const PACKAGES = [
   // {
   //   __id: "9",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1267,7 +1267,7 @@ export const PACKAGES = [
   // {
   //   __id: "10",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1290,7 +1290,7 @@ export const PACKAGES = [
   // {
   //   __id: "11",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1313,7 +1313,7 @@ export const PACKAGES = [
   // {
   //   __id: "12",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1336,7 +1336,7 @@ export const PACKAGES = [
   // {
   //   __id: "13",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1359,7 +1359,7 @@ export const PACKAGES = [
   // {
   //   __id: "14",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1382,7 +1382,7 @@ export const PACKAGES = [
   // {
   //   __id: "15",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1405,7 +1405,7 @@ export const PACKAGES = [
   // {
   //   __id: "16",
   //   name: "Rajasthan Culture Tour",
-  //   image: "",
+  //   image: "/images/slide-3.jpg",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1504,25 +1504,6 @@ export const SERVICES = [
       },
     ],
     Overview: `ExploreIndiaView Tours (Tour Operator in India) is one of the oldest tour Operators & Holiday Planner in India. We remain as committed to serving travellers today as when they first opened their doors. In its working years ExploreIndiaView Tours has made business ventures with various companies to add the power of the world's leading Holidays and Tour expense management company. Steady growth and intelligent partnerships allow ExploreIndiaView Tours to care for the needs of any traveller, whether corporate or individual. The core values of ExploreIndiaView Tours are communication, motivation, satisfaction and partnership. Whether you are an individual or a seasoned business traveller, we offer the same level of service. Today most of the people who come to India or want to visit places like Jaipur Agra or even North & south India for long tours or for business trips prefer the Rajasthan Royal Tours The company has a fleet of cars ranging from luxury to standard with A/C and Non A/C facilities. The entire cars are well maintained and are driven by educated, multilingual and generous chauffeurs. Almost all our drivers are experienced and they know each and every route of New Delhi, Agra, Jaipur and the Main destination of India. we make your travel easier, and hassle-free and make you reach any place, destination, Monument, airport, railway station and office on time. If you are looking for car hire services in India or pickup and drop facilities to the airport or a car for a short trip to Agra and Jaipur OR Rajasthan, we are going to provide you with the best car at the most competitive rate. We give you great value for your hard money and charge a competitive market price for the service we deliver to you. With Rajasthan Royal Tours, you can book luxury cars for rent in India like BMW, Benz, Mercedes, Audi A6, and many other high-end models depending on various needs. So, enjoy the journey in style with the best taxi booking service provider in India.`,
-  },
-  {
-    __id: "5",
-    name: "Hotel Booking",
-    image: [
-      {
-        image: "/images/hotel.jpg",
-        content: "Hotel Booking",
-      },
-      {
-        image: "/images/hotel-2.jpg",
-        content: "Hotel Booking",
-      },
-      {
-        image: "/images/hotel-1.jpg",
-        content: "Hotel Booking",
-      },
-    ],
-    Overview: ``,
   },
   {
     __id: "6",
@@ -2080,64 +2061,54 @@ export const ADVENTURE = {
   ],
   data: [
     {
-      iamge: "",
+      image: "/images/slide-3.jpg",
       name: "Hot Air Ballooning Ride",
       desc: `Flying of in the air, tethered by a hot air balloon is one of the best adventures to try, truly an experience of a lifetime. When it comes to exploring the beautiful landscape of Rajasthan, a hot air balloon ride is one of the best options. Not just adventurous it’s truly romantic. Soar above the vibrant Pushkar Festival and treat yourself to out-of-the-world views. Jaipur offers sunrise and sunset hot air balloon rides.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Camping",
       desc: `Camping in Rajasthan is amazing. Imagine the fun you could have spending the night a tented accommodation under the sky full of stars. Relive your Arabian tale as you try camping in the desert state. Sam sand dunes in Jaisalmer, Pushkar, Bikaner, Samode, and Osian are the most popular of camping areas in the desert state. Desert camps in Rajasthan are set amidst the fascinating sand dunes and under the starlit skies, are something you must try once in life. Offering comfy beddings, luxury amenities and the finest Rajasthani cuisines, these accommodations are an extraordinary experience. Even better is, that there is live entertainment for guests. Folk performers croon their haunting melodies which skilled dances and acrobats show off their talents.`,
     },
     {
-      image: "",
-      name: "Desert and Camel Safari",
-      desc: ``,
-    },
-    {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Desert and Camel Safari",
       desc: `The Thar Desert is the untitled crown of Rajasthan, therefore the most popular adventure in the area is desert safari. Camels, the ship of the desert are the only beasts who can navigate and survive the tough desert conditions. Camel safaris are exciting at you get to sit atop the loving beast and navigate the golden sand dunes. The desert safari tours range from few hours to a couple of weeks. Enjoy the ocean of sand dunes and through rural villages and revealing the spectacular sunset sights. Desert safaris in Rajasthan are popular in the sand dunes of Jaisalmer, Osian, Jodhpur, Bikaner and Pushkar.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Wildlife Safari",
       desc: `Apart from safaris to the desert, the desert state offers exhilarating wildlife in India. It has lush pockets of green which are inhabited by wildlife of all kinds. From birds of all kinds, wild ass to roaring Tigers, a plethora of species from the animal world inhabit the wildlife sanctuaries. Formerly the hunting grounds of royalty, these parks are now thriving with wilderness and the excitement to explore it all. Bharatpur National Park in the marshlands of Rajasthan is an UNESCO World Heritage Site, a haven of migratory birds. Ranthambore National Park, Wild Ass Sanctuary, Nahargarh Forests, Jhalana Leopard Reserve, Sariska National Park, etc. are some of the most popular names for the adventure sport in Rajasthan. Enjoy wildlife safari with this package.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Paragliding",
       desc: `Flying like a bird is a dream for many and this dream can be fulfilled with paragliding. It can be enjoyed by almost anyone but with a trained expertise. Paragliding in Rajasthan is getting popular among more and more adventure enthusiasts. There are organizers offering the sport in Jaipur, Jodhpur, Jaisalmer and Pushkar. You can fly over the hills of Mount Abu, colorful cities, majestic forts and the golden Thar Desert.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Watersports",
       desc: `Rajasthan and water sports do not go hand in hand but you will be surprised to know that Rajasthan does have water activities for you to enjoy. Several cities in Rajasthan have a fair share of water in the form of lakes where you can indulge in boating, gliding, and rafting. It will offer you a great time on your next adventure tour to Rajasthan. Water-sports places in Rajasthan: Ramgarh Lake near Jaipur, Fateh Sagar Lake in Udaipur, rafting in the Gomati River, Siliserh Lake in Alwar.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Trekking",
       desc: `Trekking is one of the secret yet quite exciting adventure activities in Rajasthan. The Aravalis in the state offer quite amazing trails. Also, most of the forts are set atop hills, which makes trekking to the indomitable forts all the more exhilarating. On the hill forts trekking trails you can combine adventure with history and incredible sightseeing. Walk through lush green environs, getting to the very top of the fabulous vantage points. Enjoy the view of spots of green, beautiful lakes, etc. In Mount Abu you can trek to the stunning Dilwara Jain temples.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Water Sports",
       desc: `There is no dearth of water bodies or lakes in the state of Rajasthan. At present, the activities near lakes are increasing with a drastic number. You can actively participate in these adventurous sports in Rajasthan if you so wish. You can try parasailing or boating on the lakes. Some trainers can guide in this process. The visitors are also provided with life-saving jackets so that they can be prevented from certain risks. However, it is better to know swimming before trying the various types of water sports in Rajasthan. Earlier there were no such options for water sports. But over time, there have been wide options for water sports. The options are a few, but you will certainly enjoy them.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Zip Lining",
       desc: `It is another one of the adventure sports to do in Rajasthan that is not for the faint hearted. If you want to explore any place from a certain height, then it will e a wise choice to choose zip line. With the help of a zip line, you can fly high over the outer battlements of Jodhpur. It will be an amazing experience to view the whole place from a great height. You will enjoy every moment and time with this sport adventure. Zip Line is a great way to refresh your body and soul and satisfy your adrenaline rush. You will always relish this beautiful moment in your whole life. Some trainers or instructors can assist you properly in this game.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Jeep Safari",
       desc: `A jeep safari is one of the most noted adventure sports in Rajasthan that must be tried by everyone. A simple round in a jeep along the desert will give you a fabulous experience. It is mandatory for the visitors because it will take you to some unexplored destinations. You can also use jeep safari for sightseeing. Most of the people opt for a jeep safari to view the villages of Rajasthan that are hard to explore by any other means. Sometimes, they are also used for exploring the historical monuments of Rajasthan. Jeep safari, dunes, and village jeep safari are quite famous in Rajasthan. Most of such safaris are organized by various hotels and resorts. If you want, you can contact them for such trips.`,
-    },
-    {
-      image: "",
-      name: "",
-      desc: ``,
     },
   ],
 };
@@ -2146,7 +2117,7 @@ export const CAMPING = {
   images: [
     {
       image: "/images/slide-3.jpg",
-      content: ``,
+      content: ` Make your trip worthwhile`,
     },
     {
       image: "/images/slide-5.jpg",
@@ -2159,32 +2130,32 @@ export const CAMPING = {
   ],
   data: [
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Luxury overnight safari",
       desc: `While desert safaris are a great way to get off the beaten path, they can be uncomfortable and leave travelers less than well-rested. This overnight desert safari solves that problem by offering sleeping quarters in luxury tents. Head out deep into the desert, enjoy a “Rajasthani welcome,” camel rides, a Jeep safari, and dinner—and have a full night’s rest in a real bed.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Two-Night Camel Safari and Desert Camping",
       desc: `Experience true desert life with our two-night camel safari! Perfect for adventurous explorers, allowing you to explore hidden gems among the desert dunes and immerse yourself in desert life. With more time, you will have the chance to really delve into the secrets of the Thar Desert - perhaps meeting local communities or catching glimpses of native wildlife, and witnessing incredible sunsets and sunrises. With jeep back up, delicious food and safe drinking water, our safaris are the perfect way to explore the desert in comfort and style, with clean, comfortable bedding to sleep in at the end of each day. We are a family owned camel safari and desert camping tour operator based in Jaisalmer and the Thar desert, passionate about providing the best possible experience for our customers. We treat our camel friends like members of the family and put animal welfare and customer experience at the heart of our business.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Overnight Camel Safari at Non-Touristic Route",
       desc: `Enjoy the peace and quiet of the Thar Desert without the crowds of other tourists when you join an overnight camel safari on less-visited routes. You’ll be picked up in Jaisalmer in the mid-afternoon and driven out to the desert. Take a scenic sunset camel ride over the dunes before gathering around the camp bonfire to eat a freshly cooked dinner and relaxing for the night.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Jaipur Trekking and Hiking Tour with Guide",
       desc: `Get off the beaten track and explore the valleys and forests surrounding Jaipur during this guided sunrise trekking excursion. Listen to a lively overview of the region from an English-speaking trekking guide. Spot local flora and fauna and observe shepherds and their herds. Hiking routes are suitable for all levels, including beginners.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Overnight Stay in a luxury Camp with a cultural show & dinner",
       desc: `The massive Thar Desert and its “ghost” villages need to be seen to be believed. On this discovery tour, you’ll start your journey at an abandoned 18th-century outpost, hearing wild stories of the past. You’ll move to a modern-day village, meeting locals, exploring the dunes, and enjoying a meal prepared by your desert guide over the campfire. As night falls, watch the stars before adjourning to your luxury tent.`,
     },
     {
-      image: "",
+      image: "/images/slide-3.jpg",
       name: "Desert Camel & Jeep Safari Private Tour From Jodhpur",
       desc: `This tour takes you far away from the bustling life of Jodhpur city to the tranquility of golden sand dunes where you can enjoy desert safari, sunset view, Rajasthani cooked dinner and Rajasthani Culture Folk Dance. Your tour starts with pickup in Jodhpur at your hotel, or the airport, train station or bus station. Travel by private car to Osian where you have the chance to independently visit the Sachiya Mata Temple. After taking in the temple, head to the starting point for the camel safari. The camel ride is considered a peak experience in Rajasthan. Stay to watch the skies and sands change colors during the sunset hour, then return to your private vehicle for transfer back to Jodhpur.`,
     },

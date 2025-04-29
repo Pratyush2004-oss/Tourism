@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 function Services() {
   const router = useRouter();
   return (
-    <div>
+    <div className="md:px-16">
       {TOPSERVICES.length > 0 && (
         <div className="p-5">
           <h1 className="text-2xl md:text-4xl mb-5 font-bold text-center font-serif border-b-4">
@@ -22,7 +22,7 @@ function Services() {
                   alt={service.name}
                   width={500}
                   height={500}
-                  className="w-full h-56 sm:h-64 lg:h-96 object-cover rounded-lg"
+                  className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-t-lg"
                 />
                 <h2 className="text-xl md:text-2xl font-bold my-4 text-center">
                   {service.name}
@@ -44,7 +44,7 @@ function Services() {
                   alt={service.name}
                   width={500}
                   height={500}
-                  className="w-full h-56 sm:h-64 lg:h-96 object-cover rounded-lg"
+                  className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-t-lg"
                 />
                 <h2 className="text-xl md:text-2xl font-bold my-4 text-center">
                   {service.name}
