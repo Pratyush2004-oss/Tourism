@@ -18,6 +18,9 @@ app.use(cors());
 app.use(express.json()); // parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // parse URL-encoded request bodies
 job.start(); // Start the cron job
+app.get('/', (req, res) => {
+    res.status(200).send('Welcome to the Explore India!'); // Send a welcome message for the root route
+});
 
 app.use('/api/v1/auth', authRouter); // Use the auth router for authentication routes
 
