@@ -10,8 +10,8 @@ function page() {
     <div>
       <Landing IMAGES={CAROUSELIMAGE} />
       <Packages />
-      <Services/>
-      <AboutUs/>
+      <Services />
+      <AboutUs />
     </div>
   );
 }

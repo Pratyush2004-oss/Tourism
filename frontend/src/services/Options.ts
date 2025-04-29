@@ -1722,3 +1722,471 @@ export const CAROUSELIMAGE = [
     content: `Explore new Places`,
   },
 ];
+
+// Top Services
+export const TOPSERVICES = [
+  {
+    name: "One Day Tour",
+    image: "/images/slide-3.jpg",
+    path: "/onedaytour",
+  },
+  {
+    name: "Adventure",
+    image: "/images/slide-3.jpg",
+    path: "/adventure",
+  },
+  {
+    name: "Camping Hiking",
+    image: "/images/slide-3.jpg",
+    path: "/camping_hiking",
+  },
+];
+
+// One Day Tour
+export const ONEDAYTOUR = {
+  images: [
+    {
+      image: "/images/slide-3.jpg",
+      content: "Top Day Tour",
+    },
+    {
+      image: "/images/slide-5.jpg",
+      content: "Discover new Places",
+    },
+    {
+      image: "/images/slide-7.jpg",
+      content: "Make your trip worthwhile",
+    },
+  ],
+  cities: [
+    {
+      name: "Udaipur",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Udaipur",
+          description: `formerly the capital of the Mewar Kingdom, is a city in the western Indian state of Rajasthan. Founded by Maharana Udai Singh II in 1559, it’s set around a series of artificial lakes and is known for its lavish royal residences. City Palace, overlooking Lake Pichola, is a monumental complex of 11 palaces, courtyards and gardens, famed for its intricate peacock mosaic.`,
+        },
+        {
+          name: "city palace",
+          description: `Udaipur is a palace complex situated in the city of Udaipur in the Indian state of Rajasthan. It was built over a period of nearly 400 years, with contributions from several rulers of the Mewar dynasty. Its construction began in 1553, started by Maharana Udai Singh II of the Sisodia Rajput family as he shifted his capital from the erstwhile Chittor to the newfound city of Udaipur. The palace is located on the east bank of Lake Pichola and has several palaces built within its complex.`,
+        },
+        {
+          name: "lake pichola",
+          description: `This is a lake situated in the Lake City, Udaipur, Rajasthan. The true reflection of the grandeur of Rajasthan, Lake Pichola is amongst the top places to visit in Udaipur. Lake Pichola is a man-made freshwater lake, Lake Pichola Best Tourist Attraction in Udaipur, founded in 1362 AD, it was named after the adjacent Picholi village. It is one of the several contiguous lakes and developed over the last few centuries in and around the city of Udaipur. The lakes around Udaipur were mostly constructed by building dams to meet the drinking water and irrigation requirements of the city and its locality. Inside the Lake, two islands, Jag Niwas and Jag Mandir are situated and have been extended with several palaces to provide views of the lake.`,
+        },
+        {
+          name: "Saheliyon Ki Bari",
+          description: `Saheliyon Ki Bari was laid for a group of forty-eight maidens. This garden is located on the banks of the Fateh Sagar Lake, presenting a green retreat in the dry lands of Rajasthan. It was built from 1710 to 1734 by Maharana Sangram Singh for the royal ladies. As per legend, the garden was designed by the king himself and he presented this garden to his queen. The queen was accompanied by 48 maids in her marriage. To offer all of them pleasurable moments away from the political intrigues of the court, this garden was made. This patterned garden used to be the popular relaxing spot of the royal ladies. The queen with her maids and female companions used to come here for a stroll and spend their time in leisure
+          `,
+        },
+        {
+          name: "Jagdish Temple",
+          description: `Jagdish Temple is one of the best architectural wonders of the Mewar dynasty. Jagdish temple showcases the Indo- Aryan architectural style. The temple is built keeping the rules of Vastushastra, the Hindu architectural science in mind. This three-storied temple is built on raised platform flaunting magnificently carved pillars, huge airy halls and painted walls that are adorned with vibrant colors and intricately decorated ceilings. At the entrance, there are two massive elephants statues of stone, installed to welcome the visitors. An inscription engraved on the stone slab is found at the entry. Mahara Jagat Singh installed the inscription to record his contributions to the temple.`,
+        },
+      ],
+    },
+    {
+      name: "Jaipur",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Jaipur",
+          description: `We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market`,
+        },
+        {
+          name: "Amber Fort",
+          description: `Visit Amber Fort with an Elephant ride. The fort is situated on a hill 12Kms from the city,`,
+        },
+        {
+          name: "Nahargarh Fort ",
+          description: `he smallest of the three forts, notable primarily for excellent views over Man Sagar lake and the vast sprawl of Jaipur.`,
+        },
+        {
+          name: "Jantar Mantar ",
+          description: `The Jantar Mantar is the largest of five astronomical observatory built by Maharaja Jai Singh during the period 1727-1734 in north India. It is located very close to the City Palace.`,
+        },
+        {
+          name: "Hawa Mahal",
+          description: ``,
+        },
+        {
+          name: "Albert Hall Museum,",
+          description: ``,
+        },
+        {
+          name: "Local Market of Jaipur",
+          description: ``,
+        },
+      ],
+    },
+    {
+      name: "Jodhpur",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "",
+          description: `Showcasing various shades of blue, Jodhpur is one of the best places to visit in India. The royal city of Rajasthan is fondly called ‘Blue city’. Jodhpur tours offer exciting opportunities to explore numerous palaces, forts and havelis that add to the charm of the city. Commended as one of the largest cities in Rajasthan, days fall short in the royal pleasures. Also, the city is known as the ‘gateway to the Thar’ as it lies of the edge of the golden desert. For a tryst with history as well as delights of the desert, Jodhpur Tour Packages by Indian Holiday offers memorable holidays. Flowing out of the walls, the city has become one of the popular tourist spots in Rajasthan which is cherished by architecture lovers. Embracing the numerous palaces, forts, and havelis, even the lanes of the city ooze out a different vibe, something that can be cherished in Jodhpur tour only. Besides, the lakes, gardens, and mausoleums also pull in travelers who like less crowded places. Choose your favorite Jodhpur tour packages and enjoy wonderful family holidays in this beautiful ‘Blue City’. A myriad of attractions like towering Mehrangarh Fort, Umaid Bhawan Palace, Moti Mahal, etc. adorns the city. The Jaswant Thada, Mandore Gardens and Rao Jodha Desert Rock Park are some other highlights of the Jodhpur that render the visitors in a state of awe. While the charms are many, one of the must visit places in Jodhpur is the Bishnoi Village. Embark on safari and here you can witness the authentic bliss of Rajasthan, its culture and other charms. Book any of Jodhpur Tour packages and get ready for a superb experience. Savor delicious Jodhpuri food. Shop for traditional women footwear called ‘Jodhpuri Mojari’. Partake in popular festivals celebrated in Jodhpur like Gangaur, Teej, Rajasthan International Folk Festival and many more. A trip to Jodhpur is replete with many delightful moments to be cherished forever. Make the charm of the exploring the royal city all the more amazing with stay at the wonderful heritage hotels of Jodhpur. While the options are abundant, few match to the thrill of staying at the Umaid Bhavan Place, the newest royal palace in India. Also, it has the reputation of hosting some of the grandest royal weddings in India.`,
+        },
+        {
+          name: "Mehrangarh Fort",
+          description: `The Fort of Jodhpur crowns a rocky hill that rises 400 feet above the surrounding plain, and appears both to command and to meld with the landscape. One of the largest forts in Rajasthan, it contains some of the finest palaces and preserves in its museum many priceless relics of Indian courtly life. For over five centuries Mehrangarh has been the headquarters of the senior branch of Rajput clan known as the Rathores. According to their bards, the ruling dynasty of this clan had at an earlier period controlled Kanauj (in what is known as Uttar Pradesh). Like other prominent medieval Rajput rulers – including the famous Prithviraj Chauhan – they were defeated by the invaders from Afghanistan at the end of the 12th century.`,
+        },
+        {
+          name: "Umaid Bhawan Palace",
+          description: `Umaid Bhawan Palace, located in Jodhpur, Rajasthan, India, is one of the world’s largest private residences. A part of the palace is managed by Taj Hotels. It is named after Maharaja Umaid Singh, grandfather of the present owner, Gaj Singh. The palace has 347 rooms and is the principal residence of the former Jodhpur royal family. A part of the palace is not a residence The groundbreaking for the foundations of the building was carried out on 18 November 1929 by Maharaja Umaid Singh and the construction work was completed in 1943.`,
+        },
+        {
+          name: "Taj Mahal of Marwar",
+          description: `The beautiful memorial in marble often described as the “Taj Mahal of Marwar” was built in memory of Maharaja Jaswant Singhjill of Jodhpur (1873-1895) by his son Maharaja Sardar Singhji (1895-1911) and completed in 1906 A.D. The main hall has been built like a temple where puja (ritual) is also performed. The worship of ancestors is common to the Rajput clans. Today, Jaswant Thada is managed and looked after by the Mehrangarh Museum Trust (MMT) and is open to the public. The Trust is operating a Museum in Jaswant Thada displaying portraits of Marwar rulers along with informative didactics – the information serves as an orientation space to understand the history of Marwar through the Portraits. Its grounds serve as a serene venue for morning concerts during music festivals such as the Rajasthan International Folk Festival and the World Sacred Spirit Festival.`,
+        },
+      ],
+    },
+    {
+      name: "Jaisalmer",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "",
+          description: `Jaisalmer, also known as the "Golden City" is a popular tourist destination in Rajasthan, India, known for its stunning architecture, rich culture, and beautiful desert landscapes. A private day tour of Jaisalmer can include the following highlights:`,
+        },
+        {
+          name: "Jaisalmer Fort:",
+          description: `Also known as the "Sonar Quila", this UNESCO World Heritage Site is a must-see attraction in Jaisalmer. The fort is a stunning example of Rajasthani architecture and offers panoramic views of the city.`,
+        },
+        {
+          name: "Havelis",
+          description: `Jaisalmer is known for its beautiful havelis, traditional Rajasthani mansions, many of which have been converted into hotels and guesthouses. Some of the famous havelis are Patwon Ki Haveli, Salim Singh Ki Haveli, and Nathmal Ji Ki Haveli.`,
+        },
+        {
+          name: "Jain Temples",
+          description: `Jaisalmer is home to a number of Jain temples, including the Parsvanath Temple and the Rishabhdeo Temple, known for their intricate carvings and beautiful architecture.`,
+        },
+        {
+          name: "Desert Safari",
+          description: `Jaisalmer is located in the heart of the Thar Desert and a desert safari is a must-do activity. You can explore the desert on camelback or in a jeep and enjoy a traditional Rajasthani dinner under the stars.`,
+        },
+        {
+          name: "Local Bazaar",
+          description: `Visiting the local bazaar is an excellent way to experience the local culture and buy some souvenirs. The bazaar is famous for its textiles, handicrafts, and traditional jewelry.`,
+        },
+        {
+          name: "Sam Sand Dunes",
+          description: `Sam Sand Dunes is a popular spot for a sunset view, where you can see the beautiful desert landscape and enjoy a traditional Rajasthani cultural program.`,
+        },
+        {
+          name: "",
+          description: `It's always a good idea to check with the local authorities for any restriction or permit needed for traveling to some areas of the state. Keep in mind that the best time to visit Jaisalmer depends on your personal preferences and the kind of experience you are looking for. If you want to enjoy the desert activities, then the winter months are the best time to go. But if you're interested in sightseeing and other activities like trekking, then the summer months are the best time to go.
+          
+          `,
+        }
+      ],
+    },
+    {
+      name: "Agra",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Agra Tour Package",
+          description: `Agra - the city of Taj Mahal was a special place to explore. There is something special in the air of Agra that speaks about its glorious past. I was overwhelmed with the first sight of Taj Mahal and tours to Itmad-Ud-Daula's tomb and Agra fort made my stay absolutely unforgettable. Today I am leaving this great city only with a firm desire to return back here very soon.`,
+        },
+        {
+          name: "Factfile",
+          description: `
+          <strong>location</strong>: Uttar Pradesh<br/>
+          <strong>Best Time to visit</strong>: September-March<br/>
+          <strong>Must Visit Attraction</strong>: Taj Mahal<br/>
+          <strong>Excursions</strong>: Fatehpur Sikri<br/>
+          `,
+        },
+        {
+          name: "A word about Agra",
+          description: `Once the capital of Mughal empire in India, today Agra is a major tourist hub because of Taj Mahal. It boasts of a number of buildings that exhibit the fine craftsmanship of the Mughal era. Moreover its narrow lanes filled with the aroma of mughlai cuisine and exquisite handcrafted items made of fine leather also catch the attention of tourists.`,
+        },
+        {
+          name: "Taj Mahal, Agra India",
+          description: `The day started with a visit to Taj Mahal- an edifice, which I always wanted to explore. The incredible building was like a precious marble box inlaid with beautiful stones. I along with a Japanese guy headed towards the north entrance gate to watch the sunrise. The inner courtyard opens from an archway lined walkway into greenness. The beautiful details taken on the Taj made me speechless. Mughal floral patterns and Arabic writing adorn the arches, the flowers beautiful blues and reds of lapis lazuli, turquoise. I thought the Taj was all white but the subtlety of color was the best surprise. I left the place but kept looking back at it from my cab's window till the time it disappeared completely from my eyes.`,
+        },
+        {
+          name: "Itmad-Ud-Daula's tomb",
+          description: `I had seen the similar structure at Lahore that was also built by Nurjahan for Jehangir. The tomb, however was a delight to look at. The inlay designs and carvings were no less than the same at Taj Mahal but it was the beautiful marble lattice work that gave it a distinct charm. By the time I completed the visit to this beautiful architectural wonder, it was late night so I returned back to the hotel savoring the memories of a day well spent.`,
+        },
+        {
+          name: "Agra Red Fort",
+          description: `Next morning I headed directly to the Red Fort en route paying a short visit to Taj Mahal again. The mammoth fort had a variety of attractions including Diwan-E-Aam, Diwane-E-Khas, Octagonal Tower, Jehangir Palace, Mina Masjid, Moti Masjid, Sheesh Mahal and Golden Pavilions.`,
+        },
+        {
+          name: "Shopping at Agra",
+          description: `Exploring the extremely colorful markets of Agra was a great experience. I bought replicas of Taj Mahal as souvenirs for my friends and relatives. But the leather items including leather chappals (sandals), purses, bags and other decorative items were just irresistible.`,
+        },
+      ],
+    },
+    {
+      name: "Ajmer",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Ajmer Tour Package",
+          description: `Ajmer gave me the first glimpse of the unity in diversity in India. Ajmer is the place where I learned how people from different religions live with each other in total peace and harmony. Specially, in the present circumstances, it was surprising to see people from different religions visiting the dargah with same devotion. I came here to watch the blend of Sufi culture and Hindu religion and Ajmer offered me just the same.`,
+        },
+        {
+          name: "Factfile",
+          description: `
+          <strong>location</strong>: Rajasthan<br/>
+          <strong>Best Time to visit</strong>: September-March<br/>
+          <strong>Must Visit Attraction</strong>: Dargah<br/>
+          <strong>Excursions</strong>: Pushkar<br/>
+          `,
+        },
+        {
+          name: "A word about ajmer",
+          description: `Ajmer represents India's true face of secularism and tolerance. It is a city that attracts thousands of devotees of different religion who come here to seek the blessings of Khwaja Moinuddin Chishti. It is place where only faith matters and that faith is represented by the threads which are tied to the shrine of Khwaja Moinuddin Chishti.`,
+        },
+        {
+          name: "Dargah of Khwaja Moinuddin Chishti",
+          description: `As soon as I reached Ajmer, I dint waste a single minute and reached to the Dargah passing through the colorful bylanes of the city. The entry to the Dargah was through the Buland Darwaza that leads to the inner courtyard. The high gateway has beautifully carved silver doors. In the courtyard there were two huge cauldrons with capacity of 2240 kg and 4480 kg. Suddenly a saw a group of young peoples carrying threads and tying them to the shrine of the saint. Inquisitive, I asked them the reason and they told me that by doing so Khwaja will fulfill all their desires. But it was particularly heartening to see that the devotees were not just the Muslims but they represented all the major religions.`,
+        },
+        {
+          name: "The Museum of Ajmer",
+          description: `Exploring the Ajmer museum was like visiting the past of Rajasthan. The various galleries here exhibited a fine collection of important exhibits from almost all the princely states in Rajasthan. The museum's main sections were devoted to sculptures, epigraphs, prehistoric antiquities, arms and weapons. There was also a library with a collection of rare books and other historical publications.`,
+        },
+      ],
+    },
+    {
+      name: "Bikaner",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Bikaner Tour Package",
+          description: `I had expected Bikaner to be a city with princely charm and it came out just the same. The forts and palaces of Bikaner reminded me the royal past of the city. The colorful markets provided me all the stuff that I could take back home as souvenirs. But at the end of trip I realized more than anything else, it was the hospitality of the people here that touched the core of my heart.`,
+        },
+        {
+          name: "Factfile",
+          description: `
+          <strong>location</strong>: Rajasthan<br/>
+          <strong>Best Time to visit</strong>: November-March<br/>
+          <strong>Must Visit Attraction</strong>: Junagarh Fort<br/>
+          <strong>Excursions</strong>: Bhandeshwar & Sandeshwar Temples<br/>
+          `,
+        },
+        {
+          name: "A word about Bikaner",
+          description: `Bikaner, the royal walled city is a part of the desert tourist triangle lying on the northern tip of the triangle. The Bikaner city is named after Rathore prince, Rao Bikaji who founded it in 1486 AD. A seven-kilometers wall with five entrances surrounds he city protecting it from vagaries of the desert and any external aggression.`,
+        },
+        {
+          name: "Junagarh Fort in Bikaner",
+          description: `I wanted to see this unconquered fort and what an imposing site it was! The exquisite beauty of the Junagarh fort was best reflected by a high wall and deep moats that surrounded the fort. The 37 bastions guarded the Junagarh fort but there were only two gates providing access inside the fort. I chose Suraj Pol or the Sun Gate to enter into the fort and was surprised by the inside beauty. There was a profusion of 37 palaces, temples and pavilions made of red sandstone. The exquisitely carved windows, balconies, towers and mirrors, paintings and carved marble panels in the Moon Palace were enough for me to comprehend the architect's zest for excellence.`,
+        },
+        {
+          name: "Lalgarh Palace in Bikaner",
+          description: `The next destination was the glorious Lalgarh Palace. The very first sight of the palace was spellbinding terraced lawns and the Bougainvillea bushes adding to its beauty. The intricate filigree work and latticework exhibited the excellence of yesteryear's architecture. The Lalgarh palace museum displayed well preserved hunting trophies and old photographs.`,
+        },
+        {
+          name: "The Ganga Golden Jubilee Museum",
+          description: `The museum was divided into various parts that enabled me to visit it according to my preferences. The various sections here included Local Arts and Crafts, History, Sculpture, Terracotta and Bronzes, Armory, Miniature Paintings and Folk-Arts, Dr. L.P. Tessitori Memorial Section and Lithoprints of the British interpretation of the war of Independence 1857.`,
+        },
+      ],
+    },
+    {
+      name: "Bharatpur",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Bharatpur Tour Package",
+          description: `Visiting the tranquil place like Bharatpur Bird Sanctuary was an eye opener. I reached here on my way to the famous Keoladeo Bird Sanctuary but the village itself was no less charming. The colorful chops here selling exquisite handcrafted items and the smiling faces of local people who are always willing to help is something I will remember for the rest of my life. I strongly recommend everyone to spend some time here in the village before heading to the Bharatpur Bird Sanctuary.`,
+        },
+        {
+          name: "Factfile",
+          description: `
+          <strong>location</strong>: Rajasthan<br/>
+          <strong>Best time to visit</strong>: November-February<br/>
+          <strong>Must visit attraction</strong>: Keoladeo Bird Sanctuary<br/>
+          <strong>Excursions</strong>: Deeg<br/>`,
+        },
+        {
+          name: "A word about Bharatpur",
+          description: `Bharatpur is popular for its bird sanctuary near the Keoladeo Ghana National Park, which is the finest in Asia with a rich avian variety. Every year, the rare Siberian cranes come to spend the winter in the warmer climate of Bharatpur the best place for Birdwatching in India. Of the remnants of the royal past remain the marvelous Bharatpur Palace housing a rich repository of a large number of ancient exhibits that date back to the early 15th century.`,
+        },
+        {
+          name: "Bharatpur Bird Sanctuary",
+          description: `I was aware of the fact the best time to watch birds in early morning so I hired an accommodation near the sanctuary. Early morning I started for the sanctuary on a rented bicycle. The actual sanctuary started 2 kms inside the gate. Once inside the main sanctuary, I could view countless birds including Indian More Hen, Snake bird, Saras crane, Grey Haron, Sleeping Heron, Weaver bird, Falcon, Owl and the all famous Siberian Cranes. I took a lot of photos of the birds and the landscape, which was also very attractive. The Siberian Cranes were deep in the mashes and were not visible clearly. So I headed towards the Python Point and was lucky to view atleast 20 pythons together. By the time I returned back, it beginning to dark and I returned back to my hotel room with enchanting memories of birds.`,
+        },
+        {
+          name: "Lohagarh Fort in Bharatpur",
+          description: `Next morning I wanted to visit the Bharatpur bird sanctuary again but time didn't permit me and I headed directly towards the Lohagarh Fort. As soon as I reached there a small kid came to me and offered his services as a guide. I accepted the offer and came to know that it was built in early 18 century and due to its impregnable defense, it sustained British attacks. I explored all the three palaces within its precincts - Kishori Mahal, Mahal Khas and Kothi Khas that left me speechless with their exquisite architecture.`,
+        },
+        {
+          name: "The Palace of Bharatpur",
+          description: `My next destination was the palace and it surprised me with its grand look. The architecture exhibited a unique fusion of Mughal and Rajput architectural styles with magnificent apartments and intricately designed floor tiles having interesting patterns.`,
+        },
+        {
+          name: "Government Museum of Bharatpur",
+          description: `A museum located in the central pan was a delight to explore. The whole museum was divided into various sections including archaeology, arts, crafts and industry, children gallery and miscellaneous. I was particularly impressed by the collection of paintings, manuscripts, zoological specimens and specimens of miniature paintings on leaves of the peepal tree, mica and old lithopapers.`,
+        },
+      ],
+    },
+    {
+      name: "Chittaurgarh",
+      image: "/images/slide-3.jpg",
+      Overview: [
+        {
+          name: "Chittaurgarh Tour Package",
+          description: `A fabulous place with countless places to see and admire! Here the palaces, forts and other ancient monuments provided me a glimpse of what must have been Rajpitana's greatest citadel. Chittaurgarh was such a wonderful experience that I would cherish for the rest of my life.`,
+        },
+        {
+          name: "Factfile",
+          description: `
+          <strong>location</strong>: Rajasthan<br/>
+          <strong>Best Time to visit</strong>: November-February<br/>
+          <strong>Must Visit Attraction</strong>: The Fort <br/>
+          <strong>Excursions</strong>: Nagari, Bassi Wildlife Sanctuary, Matri Kundia Temple<br/>
+          `,
+        },
+        {
+          name: "A word about Chittaurgarh",
+          description: `Chittaurgarh exhibits the pride and glory of Rajasthan in the form of its various forts and monuments. It is a ruined citadel where the royal past lives in the imposing forts, graceful palaces and spectacular chhatris. The entire city echoes with the tales of romance and valor unique to the Rajput tradition.`,
+        },
+        {
+          name: "The Chittaurgarh Fort",
+          description: `The trip to this fascinating city began with a visit to the Chittorgarh Fort, which was perched on a height of 180m high hill. I approached the fort on the back of an elephant, which was an exhilarating experience. The main gates to enter into the fort were Padal Pol, Bhairon Pol, Hanuman Pol and Ram Pol. Inside the Chittaurgarh Fort there were exquisitely carved chhatris and tablets that reminded me the Rajput heroism.`,
+        },
+        {
+          name: "Vijay Stambh, Chittaurgarh",
+          description: `While driving towards the next destination I came across the magnificent Vijay Stambh. Though I had no plans to visit this but it was such a glorious monument that I decided to pay a short visit. The imposing 37 meter high structure was covered with exquisite sculpture of Hindu deities and depicting episodes from the two great epics- Ramayana and Mahabharata.`,
+        },
+        {
+          name: "Rana Kumbha's Palace",
+          description: `Driving through the colorful street of the city, I reached at Rana Kumbha Palace where Rani Padmini and other women committed Jauhar. It was the most massive monument in the fort of Chittaur.`,
+        },
+      ],
+    },
+  ],
+};
+
+export const ADVENTURE = {
+  images: [
+    {
+      image: "/images/slide-3.jpg",
+      content: `Make your trip worthwhile`,
+    },
+    {
+      image: "/images/slide-5.jpg",
+      content: `Top Adventure`,
+    },
+    {
+      image: "/images/slide-6.jpg",
+      content: `Discover new Places`,
+    },
+  ],
+  data: [
+    {
+      iamge: "",
+      name: "Hot Air Ballooning Ride",
+      desc: `Flying of in the air, tethered by a hot air balloon is one of the best adventures to try, truly an experience of a lifetime. When it comes to exploring the beautiful landscape of Rajasthan, a hot air balloon ride is one of the best options. Not just adventurous it’s truly romantic. Soar above the vibrant Pushkar Festival and treat yourself to out-of-the-world views. Jaipur offers sunrise and sunset hot air balloon rides.`,
+    },
+    {
+      image: "",
+      name: "Camping",
+      desc: `Camping in Rajasthan is amazing. Imagine the fun you could have spending the night a tented accommodation under the sky full of stars. Relive your Arabian tale as you try camping in the desert state. Sam sand dunes in Jaisalmer, Pushkar, Bikaner, Samode, and Osian are the most popular of camping areas in the desert state. Desert camps in Rajasthan are set amidst the fascinating sand dunes and under the starlit skies, are something you must try once in life. Offering comfy beddings, luxury amenities and the finest Rajasthani cuisines, these accommodations are an extraordinary experience. Even better is, that there is live entertainment for guests. Folk performers croon their haunting melodies which skilled dances and acrobats show off their talents.`,
+    },
+    {
+      image: "",
+      name: "Desert and Camel Safari",
+      desc: ``,
+    },
+    {
+      image: "",
+      name: "Desert and Camel Safari",
+      desc: `The Thar Desert is the untitled crown of Rajasthan, therefore the most popular adventure in the area is desert safari. Camels, the ship of the desert are the only beasts who can navigate and survive the tough desert conditions. Camel safaris are exciting at you get to sit atop the loving beast and navigate the golden sand dunes. The desert safari tours range from few hours to a couple of weeks. Enjoy the ocean of sand dunes and through rural villages and revealing the spectacular sunset sights. Desert safaris in Rajasthan are popular in the sand dunes of Jaisalmer, Osian, Jodhpur, Bikaner and Pushkar.`,
+    },
+    {
+      image: "",
+      name: "Wildlife Safari",
+      desc: `Apart from safaris to the desert, the desert state offers exhilarating wildlife in India. It has lush pockets of green which are inhabited by wildlife of all kinds. From birds of all kinds, wild ass to roaring Tigers, a plethora of species from the animal world inhabit the wildlife sanctuaries. Formerly the hunting grounds of royalty, these parks are now thriving with wilderness and the excitement to explore it all. Bharatpur National Park in the marshlands of Rajasthan is an UNESCO World Heritage Site, a haven of migratory birds. Ranthambore National Park, Wild Ass Sanctuary, Nahargarh Forests, Jhalana Leopard Reserve, Sariska National Park, etc. are some of the most popular names for the adventure sport in Rajasthan. Enjoy wildlife safari with this package.`,
+    },
+    {
+      image: "",
+      name: "Paragliding",
+      desc: `Flying like a bird is a dream for many and this dream can be fulfilled with paragliding. It can be enjoyed by almost anyone but with a trained expertise. Paragliding in Rajasthan is getting popular among more and more adventure enthusiasts. There are organizers offering the sport in Jaipur, Jodhpur, Jaisalmer and Pushkar. You can fly over the hills of Mount Abu, colorful cities, majestic forts and the golden Thar Desert.`,
+    },
+    {
+      image: "",
+      name: "Watersports",
+      desc: `Rajasthan and water sports do not go hand in hand but you will be surprised to know that Rajasthan does have water activities for you to enjoy. Several cities in Rajasthan have a fair share of water in the form of lakes where you can indulge in boating, gliding, and rafting. It will offer you a great time on your next adventure tour to Rajasthan. Water-sports places in Rajasthan: Ramgarh Lake near Jaipur, Fateh Sagar Lake in Udaipur, rafting in the Gomati River, Siliserh Lake in Alwar.`,
+    },
+    {
+      image: "",
+      name: "Trekking",
+      desc: `Trekking is one of the secret yet quite exciting adventure activities in Rajasthan. The Aravalis in the state offer quite amazing trails. Also, most of the forts are set atop hills, which makes trekking to the indomitable forts all the more exhilarating. On the hill forts trekking trails you can combine adventure with history and incredible sightseeing. Walk through lush green environs, getting to the very top of the fabulous vantage points. Enjoy the view of spots of green, beautiful lakes, etc. In Mount Abu you can trek to the stunning Dilwara Jain temples.`,
+    },
+    {
+      image: "",
+      name: "Water Sports",
+      desc: `There is no dearth of water bodies or lakes in the state of Rajasthan. At present, the activities near lakes are increasing with a drastic number. You can actively participate in these adventurous sports in Rajasthan if you so wish. You can try parasailing or boating on the lakes. Some trainers can guide in this process. The visitors are also provided with life-saving jackets so that they can be prevented from certain risks. However, it is better to know swimming before trying the various types of water sports in Rajasthan. Earlier there were no such options for water sports. But over time, there have been wide options for water sports. The options are a few, but you will certainly enjoy them.`,
+    },
+    {
+      image: "",
+      name: "Zip Lining",
+      desc: `It is another one of the adventure sports to do in Rajasthan that is not for the faint hearted. If you want to explore any place from a certain height, then it will e a wise choice to choose zip line. With the help of a zip line, you can fly high over the outer battlements of Jodhpur. It will be an amazing experience to view the whole place from a great height. You will enjoy every moment and time with this sport adventure. Zip Line is a great way to refresh your body and soul and satisfy your adrenaline rush. You will always relish this beautiful moment in your whole life. Some trainers or instructors can assist you properly in this game.`,
+    },
+    {
+      image: "",
+      name: "Jeep Safari",
+      desc: `A jeep safari is one of the most noted adventure sports in Rajasthan that must be tried by everyone. A simple round in a jeep along the desert will give you a fabulous experience. It is mandatory for the visitors because it will take you to some unexplored destinations. You can also use jeep safari for sightseeing. Most of the people opt for a jeep safari to view the villages of Rajasthan that are hard to explore by any other means. Sometimes, they are also used for exploring the historical monuments of Rajasthan. Jeep safari, dunes, and village jeep safari are quite famous in Rajasthan. Most of such safaris are organized by various hotels and resorts. If you want, you can contact them for such trips.`,
+    },
+    {
+      image: "",
+      name: "",
+      desc: ``,
+    },
+  ],
+};
+
+export const CAMPING = {
+  images: [
+    {
+      image: "/images/slide-3.jpg",
+      content: ``,
+    },
+    {
+      image: "/images/slide-5.jpg",
+      content: `Top Adventure`,
+    },
+    {
+      image: "/images/slide-6.jpg",
+      content: `Discover new Places`,
+    },
+  ],
+  data: [
+    {
+      image: "",
+      name: "Luxury overnight safari",
+      desc: `While desert safaris are a great way to get off the beaten path, they can be uncomfortable and leave travelers less than well-rested. This overnight desert safari solves that problem by offering sleeping quarters in luxury tents. Head out deep into the desert, enjoy a “Rajasthani welcome,” camel rides, a Jeep safari, and dinner—and have a full night’s rest in a real bed.`,
+    },
+    {
+      image: "",
+      name: "Two-Night Camel Safari and Desert Camping",
+      desc: `Experience true desert life with our two-night camel safari! Perfect for adventurous explorers, allowing you to explore hidden gems among the desert dunes and immerse yourself in desert life. With more time, you will have the chance to really delve into the secrets of the Thar Desert - perhaps meeting local communities or catching glimpses of native wildlife, and witnessing incredible sunsets and sunrises. With jeep back up, delicious food and safe drinking water, our safaris are the perfect way to explore the desert in comfort and style, with clean, comfortable bedding to sleep in at the end of each day. We are a family owned camel safari and desert camping tour operator based in Jaisalmer and the Thar desert, passionate about providing the best possible experience for our customers. We treat our camel friends like members of the family and put animal welfare and customer experience at the heart of our business.`,
+    },
+    {
+      image: "",
+      name: "Overnight Camel Safari at Non-Touristic Route",
+      desc: `Enjoy the peace and quiet of the Thar Desert without the crowds of other tourists when you join an overnight camel safari on less-visited routes. You’ll be picked up in Jaisalmer in the mid-afternoon and driven out to the desert. Take a scenic sunset camel ride over the dunes before gathering around the camp bonfire to eat a freshly cooked dinner and relaxing for the night.`,
+    },
+    {
+      image: "",
+      name: "Jaipur Trekking and Hiking Tour with Guide",
+      desc: `Get off the beaten track and explore the valleys and forests surrounding Jaipur during this guided sunrise trekking excursion. Listen to a lively overview of the region from an English-speaking trekking guide. Spot local flora and fauna and observe shepherds and their herds. Hiking routes are suitable for all levels, including beginners.`,
+    },
+    {
+      image: "",
+      name: "Overnight Stay in a luxury Camp with a cultural show & dinner",
+      desc: `The massive Thar Desert and its “ghost” villages need to be seen to be believed. On this discovery tour, you’ll start your journey at an abandoned 18th-century outpost, hearing wild stories of the past. You’ll move to a modern-day village, meeting locals, exploring the dunes, and enjoying a meal prepared by your desert guide over the campfire. As night falls, watch the stars before adjourning to your luxury tent.`,
+    },
+    {
+      image: "",
+      name: "Desert Camel & Jeep Safari Private Tour From Jodhpur",
+      desc: `This tour takes you far away from the bustling life of Jodhpur city to the tranquility of golden sand dunes where you can enjoy desert safari, sunset view, Rajasthani cooked dinner and Rajasthani Culture Folk Dance. Your tour starts with pickup in Jodhpur at your hotel, or the airport, train station or bus station. Travel by private car to Osian where you have the chance to independently visit the Sachiya Mata Temple. After taking in the temple, head to the starting point for the camel safari. The camel ride is considered a peak experience in Rajasthan. Stay to watch the skies and sands change colors during the sunset hour, then return to your private vehicle for transfer back to Jodhpur.`,
+    },
+  ],
+};

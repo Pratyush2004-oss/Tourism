@@ -22,7 +22,7 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
           alt={pack.name}
           height={100}
           width={100}
-          className="w-full h-90 object-cover rounded-lg"
+          className="w-full h-56 sm:h-64 lg:h-96 object-cover rounded-lg"
         />
       </CardHeader>
       <CardContent>

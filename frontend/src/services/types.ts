@@ -13,7 +13,7 @@ export interface PACKAGETYPE {
 }
 
 export type Itinerary = {
-  name: string;
+  name?: string;
   description?: string;
 };
 
@@ -60,3 +60,24 @@ export type ServiceType = {
   Overview: string;
   image: CarouselImage[];
 };
+
+export interface DAYTOUR {
+  iamge: CarouselImage[];
+  cities: CITIESTYPE[];
+}
+
+export type CITIESTYPE = {
+  name: string;
+  Overview: Itinerary[];
+};
+
+export type ADVENTUREDATA = {
+  name:string;
+  iamge:string;
+  desc:string
+};
+
+export type ADVENTURETYPE = {
+  iamges: CarouselImage[],
+  data: ADVENTUREDATA[]
+}
