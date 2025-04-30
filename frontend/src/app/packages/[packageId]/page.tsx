@@ -28,7 +28,7 @@ function PackageDetail() {
               {Package.name}
             </h1>
           </div>
-          <div className="w-full flex flex-col justify-center px-2 max-w-3/4">
+          <div className="w-full flex flex-col justify-center px-2 lg:w-3/4">
             {/* Overview  section*/}
             {Package.Overview && Package.Overview.length > 0 && (
               <>
