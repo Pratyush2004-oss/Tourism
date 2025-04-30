@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/shared/Header";
 import { Toaster } from "sonner";
 import RedirectIfAuthenticated from "@/components/shared/RedirectIfAuthenticated";
+import Footer from "@/components/shared/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Toaster />
+          <Footer />
         </RedirectIfAuthenticated>
       </body>
     </html>

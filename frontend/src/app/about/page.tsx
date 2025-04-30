@@ -13,7 +13,7 @@ function About() {
           alt="AboutUs"
           height={500}
           width={500}
-          className="rounded-t-sm shadow-lg w-full"
+          className="rounded-t-sm shadow-lg w-full lg:h-[600px]"
         />
         <h1 className="text-4xl md:text-6xl mt-5 font-bold font-serif absolute top-1/2 right-0 left-0 text-white text-center">
           About Us
@@ -21,7 +21,7 @@ function About() {
       </div>
 
       <div>
-        <div className="flex flex-col justify-center p-8 pb-3">
+        <div className="flex flex-col justify-center py-3">
           <h1 className="text-2xl md:text-4xl mt-5 font-bold font-serif text-center text-gray-800">
             About Us
           </h1>
