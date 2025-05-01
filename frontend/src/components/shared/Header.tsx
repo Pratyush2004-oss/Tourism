@@ -34,6 +34,9 @@ function Header() {
 
       {/* Desktop View */}
       <div className="lg:flex items-center gap-10 hidden">
+        <Link href={"/"} className="text-xl font-bold ">
+          Home
+        </Link>
         <Link href={"/about"} className="text-xl font-bold ">
           About
         </Link>
@@ -155,6 +158,9 @@ function Header() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 )}
+                <Link href={"/"} className="text-xl font-semibold">
+                  Home
+                </Link>
                 <Link href={"/about"} className="text-xl font-semibold">
                   About
                 </Link>

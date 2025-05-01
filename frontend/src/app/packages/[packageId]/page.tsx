@@ -35,7 +35,7 @@ function PackageDetail() {
                 <h1 className="text-xl mt-5 font-bold">OverView</h1>
                 <div className="flex flex-col gap-3 mt-4">
                   {Package.Overview?.map((item, idx) => (
-                    <p key={idx} className="text-justify">
+                    <p key={idx} className="text-justify camelCase font-medium text-sm text-gray-500">
                       {item}
                     </p>
                   ))}
@@ -47,13 +47,13 @@ function PackageDetail() {
             {Package.Highlights && Package.Highlights.length > 0 && (
               <>
                 <h1 className="text-xl mt-5 font-bold">Highlights</h1>
-                <div className="flex flex-col gap-3 mt-4">
+                <div className="flex flex-col gap-3 mt-4 camelCase">
                   {Package?.Highlights?.map((item, idx) => (
                     <div className="flex items-center gap-2" key={idx}>
                       <Star className="ml-2 size-4 text-purple-700 fill-purple-600" />
                       <p
                         key={idx}
-                        className="text-justify list-decimal list-inside"
+                        className="text-justify list-decimal list-inside text-sm font-medium text-gray-500 "
                       >
                         {item}
                       </p>
@@ -76,9 +76,9 @@ function PackageDetail() {
                       <div key={idx} className=" mb-3">
                         <div className="flex items-center gap-2">
                           <Star className="ml-2 size-4 text-purple-700 fill-purple-600" />
-                          <h2 className="text-lg font-bold">{item.name}</h2>
+                          <h2 className="text-lg font-bold camelCase w-4/5">{item.name}</h2>
                         </div>
-                        <p key={idx} className="text-justify px-2 ml-5" dangerouslySetInnerHTML={sanitizedContent()}></p>
+                        <p key={idx} className="text-justify px-2 ml-5 camelCase font-medium text-sm text-gray-500" dangerouslySetInnerHTML={sanitizedContent()}></p>
                       </div>
                     );
                   })}
@@ -94,7 +94,7 @@ function PackageDetail() {
                   {Package?.Inclusion?.map((item, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <Star className="size-4 fill-purple-600 text-purple-700" />
-                      <p key={idx} className="text-justify line-clamp-1">
+                      <p key={idx} className="max-md:text-justify line-clamp-1 camelCase w-4/5 font-medium text-sm text-gray-500">
                         {item}
                       </p>
                     </div>
@@ -111,7 +111,7 @@ function PackageDetail() {
                   {Package?.Exclusion?.map((item, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <Star className="size-4 fill-purple-600 text-purple-700" />
-                      <p key={idx} className="text-justify line-clamp-1">
+                      <p key={idx} className="text-justify line-clamp-1 camelCase w-4/5 font-medium text-sm text-gray-500">
                         {item}
                       </p>
                     </div>
@@ -127,11 +127,11 @@ function PackageDetail() {
                 <div className="flex flex-col gap-3 mt-4">
                   {Package?.FAQs?.map((item, idx) => (
                     <div key={idx} className="px-2">
-                      <div className="flex items-center gap-2">
+                      <div className="inline-flex items-center gap-2">
                         <Star className=" size-4 text-purple-700 fill-purple-600" />
-                        <h2 className="text-lg font-bold">{item.name}</h2>
+                        <h2 className="text-lg font-bold camelCase">{item.name}</h2>
                       </div>
-                      <p key={idx} className="text-justify px-2 ml-3">
+                      <p key={idx} className="text-justify px-2 ml-3 font-medium text-sm text-gray-500">
                         {item.description}
                       </p>
                     </div>

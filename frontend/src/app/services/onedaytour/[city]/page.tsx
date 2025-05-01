@@ -33,7 +33,7 @@ function page() {
               };
               return (
                 <div key={idx}>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-2">
                     <Star
                       className={`size-4 text-purple-700 fill-purple-600 ${
                         item?.name ? "" : "hidden"
@@ -45,7 +45,7 @@ function page() {
                   </div>
                   <p
                     key={idx}
-                    className="text-justify px-2 ml-5 text-gray-600 font-medium"
+                    className="text-justify px-2 ml-5 text-gray-600 font-medium text-sm"
                     dangerouslySetInnerHTML={sanitizedContent()}
                   ></p>
                 </div>

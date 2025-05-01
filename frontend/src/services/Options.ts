@@ -1,9 +1,12 @@
+import { getRandomAdventureImage, getRandomIndexedImage, IMAGES } from "./Images";
+
+
+
 export const PACKAGES = [
   {
     __id: "1",
     name: "Best Tour of Rajasthan",
-    image:
-      "https://cdn.pixabay.com/photo/2023/03/18/17/12/chittorgarh-7860987_640.jpg",
+    image: getRandomIndexedImage(),
     days: 10,
     nights: 9,
     Overview: [
@@ -86,8 +89,7 @@ export const PACKAGES = [
   {
     __id: "2",
     name: "Colorful Rajasthan Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123_640.jpg",
+    image: getRandomIndexedImage(),
     days: 18,
     nights: 17,
     Overview: [
@@ -253,8 +255,7 @@ export const PACKAGES = [
   {
     __id: "3",
     name: "Incredible Rajasthan with Varanasi Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2018/02/05/15/03/rajasthan-3132408_640.jpg",
+    image: getRandomIndexedImage(),
     days: 21,
     nights: 20,
     Overview: [
@@ -406,8 +407,7 @@ export const PACKAGES = [
   {
     __id: "4",
     name: "Incredible Rajasthan with Varanasi Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2022/01/13/10/48/palace-6934942_640.jpg",
+    image: getRandomIndexedImage(),
     days: 18,
     nights: 17,
     Overview: [
@@ -551,8 +551,7 @@ export const PACKAGES = [
   {
     __id: "5",
     name: "Rajasthan Culture Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2015/02/28/05/57/amber-653180_640.jpg",
+    image: getRandomIndexedImage(),
     days: 15,
     nights: 14,
     Overview: [
@@ -767,8 +766,7 @@ export const PACKAGES = [
   {
     __id: "6",
     name: "Rajasthan With North India Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2018/02/05/15/03/rajasthan-3132408_640.jpg",
+    image: getRandomIndexedImage(),
     days: 15,
     nights: 14,
     Overview: [
@@ -895,8 +893,7 @@ export const PACKAGES = [
   {
     __id: "7",
     name: "Rajasthan Fort and Places Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2018/02/05/15/03/rajasthan-3132408_640.jpg",
+    image: getRandomIndexedImage(),
     days: 15,
     nights: 14,
     Overview: [
@@ -1096,8 +1093,7 @@ export const PACKAGES = [
   {
     __id: "8",
     name: "Rajasthan with South India Tour",
-    image:
-      "https://cdn.pixabay.com/photo/2018/02/05/15/03/rajasthan-3132408_640.jpg",
+    image: getRandomIndexedImage(),
     days: 23,
     nights: 22,
     Overview: [
@@ -1244,7 +1240,7 @@ export const PACKAGES = [
   // {
   //   __id: "9",
   //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
+  //   image: getRandomIndexedImage(),
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1267,7 +1263,7 @@ export const PACKAGES = [
   // {
   //   __id: "10",
   //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
+  //   image: getRandomIndexedImage(),
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1290,7 +1286,7 @@ export const PACKAGES = [
   // {
   //   __id: "11",
   //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
+  //   image: "getRandomIndexedImage()",
   //   days: 15,
   //   nights: 14,
   //   Overview: ``,
@@ -1434,15 +1430,15 @@ export const SERVICES = [
     name: "Train Service",
     image: [
       {
-        image: "/images/train.jpg",
+        image: "/images/train1.jpg",
         content: "Train Service",
       },
       {
-        image: "/images/train-2.jpg",
+        image: "/images/train2.jpg",
         content: "Train Service",
       },
       {
-        image: "/images/train-1.jpg",
+        image: "/images/train3.jpg",
         content: "Train Service",
       },
     ],
@@ -1453,15 +1449,15 @@ export const SERVICES = [
     name: "Airline Service",
     image: [
       {
-        image: "/images/airline.jpg",
+        image: "/images/airline1.jpg",
         content: "Airline Service",
       },
       {
-        image: "/images/airline-2.jpg",
+        image: "/images/airline2.jpg",
         content: "Airline Service",
       },
       {
-        image: "/images/airline-1.jpg",
+        image: "/images/airline3.jpg",
         content: "Airline Service",
       },
     ],
@@ -1472,15 +1468,15 @@ export const SERVICES = [
     name: "Event Organizer",
     image: [
       {
-        image: "/images/him.jpg",
+        image: "/images/event.jpg",
         content: "Event Organizer",
       },
       {
-        image: "/images/event-2.jpg",
+        image: "/images/event2.jpg",
         content: "Event Organizer",
       },
       {
-        image: "/images/event-1.jpg",
+        image: "/images/event3.jpg",
         content: "Event Organizer",
       },
     ],
@@ -1491,15 +1487,15 @@ export const SERVICES = [
     name: "Car and Bike",
     image: [
       {
-        image: "/images/camp-2.jpg",
+        image: "/images/bike1.jpg",
         content: "Car and Bike",
       },
       {
-        image: "/images/car-2.jpg",
+        image: "/images/car.jpg",
         content: "Car and Bike",
       },
       {
-        image: "/images/bike.jpg",
+        image: "/images/bike2.jpg",
         content: "Car and Bike",
       },
     ],
@@ -1510,15 +1506,15 @@ export const SERVICES = [
     name: "Tour Guide Service",
     image: [
       {
-        image: "/images/guide.jpg",
+        image: "/images/guide1.jpg",
         content: "Tour Guide Service",
       },
       {
-        image: "/images/guide-2.jpg",
+        image: "/images/guide2.jpg",
         content: "Tour Guide Service",
       },
       {
-        image: "/images/guide-1.jpg",
+        image: "/images/guide3.jpg",
         content: "Tour Guide Service",
       },
     ],
@@ -1529,15 +1525,15 @@ export const SERVICES = [
     name: "Travel Insurance",
     image: [
       {
-        image: "/images/insurance.jpg",
+        image: "/images/travel1.jpg",
         content: "Travel Insurance",
       },
       {
-        image: "/images/insurance-2.jpg",
+        image: "/images/travel2.jpg",
         content: "Travel Insurance",
       },
       {
-        image: "/images/insurance-1.jpg",
+        image: "/images/travel3.jpg",
         content: "Travel Insurance",
       },
     ],
@@ -1687,20 +1683,20 @@ export const HOTELSDATA = {
 
 export const CAROUSELIMAGE = [
   {
-    image: "/images/slide-3.jpg",
+    image: "/images/landing1.jpg",
     content: `Make your trip worthwhile`,
   },
   {
-    image: "/images/slide-5.jpg",
+    image: "/images/landing2.jpg",
     content: `Top Adventure`,
   },
   {
-    image: "/images/slide-6.jpg",
-    content: `Discover new Places`,
+    image: "/images/landing3.jpg",
+    content: `Explore new Places`,
   },
   {
-    image: "/images/slide-7.jpg",
-    content: `Explore new Places`,
+    image: "/images/landing4.jpg",
+    content: `Discover new Things`,
   },
 ];
 
@@ -1708,17 +1704,17 @@ export const CAROUSELIMAGE = [
 export const TOPSERVICES = [
   {
     name: "One Day Tour",
-    image: "/images/slide-3.jpg",
+    image: getRandomIndexedImage(),
     path: "/onedaytour",
   },
   {
     name: "Adventure",
-    image: "/images/slide-3.jpg",
+    image: getRandomAdventureImage(),
     path: "/adventure",
   },
   {
     name: "Camping Hiking",
-    image: "/images/slide-3.jpg",
+    image: "/images/camping1.jpg",
     path: "/camping_hiking",
   },
 ];
@@ -1742,7 +1738,7 @@ export const ONEDAYTOUR = {
   cities: [
     {
       name: "Udaipur",
-      image: "/images/slide-3.jpg",
+      image: "/images/package7.jpg",
       Overview: [
         {
           name: "Udaipur",
@@ -1769,7 +1765,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Jaipur",
-      image: "/images/slide-3.jpg",
+      image: "/images/package5.jpg",
       Overview: [
         {
           name: "Jaipur",
@@ -1803,7 +1799,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Jodhpur",
-      image: "/images/slide-3.jpg",
+      image: "/images/package11.jpg",
       Overview: [
         {
           name: "",
@@ -1825,7 +1821,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Jaisalmer",
-      image: "/images/slide-3.jpg",
+      image: "/images/package4.jpg",
       Overview: [
         {
           name: "",
@@ -1860,12 +1856,12 @@ export const ONEDAYTOUR = {
           description: `It's always a good idea to check with the local authorities for any restriction or permit needed for traveling to some areas of the state. Keep in mind that the best time to visit Jaisalmer depends on your personal preferences and the kind of experience you are looking for. If you want to enjoy the desert activities, then the winter months are the best time to go. But if you're interested in sightseeing and other activities like trekking, then the summer months are the best time to go.
           
           `,
-        }
+        },
       ],
     },
     {
       name: "Agra",
-      image: "/images/slide-3.jpg",
+      image: "/images/package19.jpg",
       Overview: [
         {
           name: "Agra Tour Package",
@@ -1904,7 +1900,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Ajmer",
-      image: "/images/slide-3.jpg",
+      image: "/images/package21.jpg",
       Overview: [
         {
           name: "Ajmer Tour Package",
@@ -1935,7 +1931,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Bikaner",
-      image: "/images/slide-3.jpg",
+      image: "/images/package22.jpg",
       Overview: [
         {
           name: "Bikaner Tour Package",
@@ -1970,7 +1966,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Bharatpur",
-      image: "/images/slide-3.jpg",
+      image: "/images/package23.jpg",
       Overview: [
         {
           name: "Bharatpur Tour Package",
@@ -2008,7 +2004,7 @@ export const ONEDAYTOUR = {
     },
     {
       name: "Chittaurgarh",
-      image: "/images/slide-3.jpg",
+      image: "/images/package24.jpg",
       Overview: [
         {
           name: "Chittaurgarh Tour Package",
@@ -2047,66 +2043,66 @@ export const ONEDAYTOUR = {
 export const ADVENTURE = {
   images: [
     {
-      image: "/images/slide-3.jpg",
+      image: getRandomAdventureImage(),
       content: `Make your trip worthwhile`,
     },
     {
-      image: "/images/slide-5.jpg",
+      image: getRandomAdventureImage(),
       content: `Top Adventure`,
     },
     {
-      image: "/images/slide-6.jpg",
+      image: getRandomAdventureImage(),
       content: `Discover new Places`,
     },
   ],
   data: [
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure1.jpg",
       name: "Hot Air Ballooning Ride",
       desc: `Flying of in the air, tethered by a hot air balloon is one of the best adventures to try, truly an experience of a lifetime. When it comes to exploring the beautiful landscape of Rajasthan, a hot air balloon ride is one of the best options. Not just adventurous it’s truly romantic. Soar above the vibrant Pushkar Festival and treat yourself to out-of-the-world views. Jaipur offers sunrise and sunset hot air balloon rides.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure7.jpg",
       name: "Camping",
       desc: `Camping in Rajasthan is amazing. Imagine the fun you could have spending the night a tented accommodation under the sky full of stars. Relive your Arabian tale as you try camping in the desert state. Sam sand dunes in Jaisalmer, Pushkar, Bikaner, Samode, and Osian are the most popular of camping areas in the desert state. Desert camps in Rajasthan are set amidst the fascinating sand dunes and under the starlit skies, are something you must try once in life. Offering comfy beddings, luxury amenities and the finest Rajasthani cuisines, these accommodations are an extraordinary experience. Even better is, that there is live entertainment for guests. Folk performers croon their haunting melodies which skilled dances and acrobats show off their talents.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/camping4.jpg",
       name: "Desert and Camel Safari",
       desc: `The Thar Desert is the untitled crown of Rajasthan, therefore the most popular adventure in the area is desert safari. Camels, the ship of the desert are the only beasts who can navigate and survive the tough desert conditions. Camel safaris are exciting at you get to sit atop the loving beast and navigate the golden sand dunes. The desert safari tours range from few hours to a couple of weeks. Enjoy the ocean of sand dunes and through rural villages and revealing the spectacular sunset sights. Desert safaris in Rajasthan are popular in the sand dunes of Jaisalmer, Osian, Jodhpur, Bikaner and Pushkar.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure4.jpg",
       name: "Wildlife Safari",
       desc: `Apart from safaris to the desert, the desert state offers exhilarating wildlife in India. It has lush pockets of green which are inhabited by wildlife of all kinds. From birds of all kinds, wild ass to roaring Tigers, a plethora of species from the animal world inhabit the wildlife sanctuaries. Formerly the hunting grounds of royalty, these parks are now thriving with wilderness and the excitement to explore it all. Bharatpur National Park in the marshlands of Rajasthan is an UNESCO World Heritage Site, a haven of migratory birds. Ranthambore National Park, Wild Ass Sanctuary, Nahargarh Forests, Jhalana Leopard Reserve, Sariska National Park, etc. are some of the most popular names for the adventure sport in Rajasthan. Enjoy wildlife safari with this package.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure5.jpg",
       name: "Paragliding",
       desc: `Flying like a bird is a dream for many and this dream can be fulfilled with paragliding. It can be enjoyed by almost anyone but with a trained expertise. Paragliding in Rajasthan is getting popular among more and more adventure enthusiasts. There are organizers offering the sport in Jaipur, Jodhpur, Jaisalmer and Pushkar. You can fly over the hills of Mount Abu, colorful cities, majestic forts and the golden Thar Desert.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure6.jpg",
       name: "Watersports",
       desc: `Rajasthan and water sports do not go hand in hand but you will be surprised to know that Rajasthan does have water activities for you to enjoy. Several cities in Rajasthan have a fair share of water in the form of lakes where you can indulge in boating, gliding, and rafting. It will offer you a great time on your next adventure tour to Rajasthan. Water-sports places in Rajasthan: Ramgarh Lake near Jaipur, Fateh Sagar Lake in Udaipur, rafting in the Gomati River, Siliserh Lake in Alwar.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure2.jpg",
       name: "Trekking",
       desc: `Trekking is one of the secret yet quite exciting adventure activities in Rajasthan. The Aravalis in the state offer quite amazing trails. Also, most of the forts are set atop hills, which makes trekking to the indomitable forts all the more exhilarating. On the hill forts trekking trails you can combine adventure with history and incredible sightseeing. Walk through lush green environs, getting to the very top of the fabulous vantage points. Enjoy the view of spots of green, beautiful lakes, etc. In Mount Abu you can trek to the stunning Dilwara Jain temples.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure10.jpg",
       name: "Water Sports",
       desc: `There is no dearth of water bodies or lakes in the state of Rajasthan. At present, the activities near lakes are increasing with a drastic number. You can actively participate in these adventurous sports in Rajasthan if you so wish. You can try parasailing or boating on the lakes. Some trainers can guide in this process. The visitors are also provided with life-saving jackets so that they can be prevented from certain risks. However, it is better to know swimming before trying the various types of water sports in Rajasthan. Earlier there were no such options for water sports. But over time, there have been wide options for water sports. The options are a few, but you will certainly enjoy them.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure8.jpg",
       name: "Zip Lining",
       desc: `It is another one of the adventure sports to do in Rajasthan that is not for the faint hearted. If you want to explore any place from a certain height, then it will e a wise choice to choose zip line. With the help of a zip line, you can fly high over the outer battlements of Jodhpur. It will be an amazing experience to view the whole place from a great height. You will enjoy every moment and time with this sport adventure. Zip Line is a great way to refresh your body and soul and satisfy your adrenaline rush. You will always relish this beautiful moment in your whole life. Some trainers or instructors can assist you properly in this game.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure9.jpg",
       name: "Jeep Safari",
       desc: `A jeep safari is one of the most noted adventure sports in Rajasthan that must be tried by everyone. A simple round in a jeep along the desert will give you a fabulous experience. It is mandatory for the visitors because it will take you to some unexplored destinations. You can also use jeep safari for sightseeing. Most of the people opt for a jeep safari to view the villages of Rajasthan that are hard to explore by any other means. Sometimes, they are also used for exploring the historical monuments of Rajasthan. Jeep safari, dunes, and village jeep safari are quite famous in Rajasthan. Most of such safaris are organized by various hotels and resorts. If you want, you can contact them for such trips.`,
     },
@@ -2116,46 +2112,46 @@ export const ADVENTURE = {
 export const CAMPING = {
   images: [
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/camping1.jpg",
       content: ` Make your trip worthwhile`,
     },
     {
-      image: "/images/slide-5.jpg",
+      image: "/images/adventure7.jpg",
       content: `Top Adventure`,
     },
     {
-      image: "/images/slide-6.jpg",
+      image: "/images/camping3.jpg",
       content: `Discover new Places`,
     },
   ],
   data: [
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure7.jpg",
       name: "Luxury overnight safari",
       desc: `While desert safaris are a great way to get off the beaten path, they can be uncomfortable and leave travelers less than well-rested. This overnight desert safari solves that problem by offering sleeping quarters in luxury tents. Head out deep into the desert, enjoy a “Rajasthani welcome,” camel rides, a Jeep safari, and dinner—and have a full night’s rest in a real bed.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/camping4.jpg",
       name: "Two-Night Camel Safari and Desert Camping",
       desc: `Experience true desert life with our two-night camel safari! Perfect for adventurous explorers, allowing you to explore hidden gems among the desert dunes and immerse yourself in desert life. With more time, you will have the chance to really delve into the secrets of the Thar Desert - perhaps meeting local communities or catching glimpses of native wildlife, and witnessing incredible sunsets and sunrises. With jeep back up, delicious food and safe drinking water, our safaris are the perfect way to explore the desert in comfort and style, with clean, comfortable bedding to sleep in at the end of each day. We are a family owned camel safari and desert camping tour operator based in Jaisalmer and the Thar desert, passionate about providing the best possible experience for our customers. We treat our camel friends like members of the family and put animal welfare and customer experience at the heart of our business.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/camel1.jpg",
       name: "Overnight Camel Safari at Non-Touristic Route",
       desc: `Enjoy the peace and quiet of the Thar Desert without the crowds of other tourists when you join an overnight camel safari on less-visited routes. You’ll be picked up in Jaisalmer in the mid-afternoon and driven out to the desert. Take a scenic sunset camel ride over the dunes before gathering around the camp bonfire to eat a freshly cooked dinner and relaxing for the night.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/guide1.jpg",
       name: "Jaipur Trekking and Hiking Tour with Guide",
       desc: `Get off the beaten track and explore the valleys and forests surrounding Jaipur during this guided sunrise trekking excursion. Listen to a lively overview of the region from an English-speaking trekking guide. Spot local flora and fauna and observe shepherds and their herds. Hiking routes are suitable for all levels, including beginners.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure7.jpg",
       name: "Overnight Stay in a luxury Camp with a cultural show & dinner",
       desc: `The massive Thar Desert and its “ghost” villages need to be seen to be believed. On this discovery tour, you’ll start your journey at an abandoned 18th-century outpost, hearing wild stories of the past. You’ll move to a modern-day village, meeting locals, exploring the dunes, and enjoying a meal prepared by your desert guide over the campfire. As night falls, watch the stars before adjourning to your luxury tent.`,
     },
     {
-      image: "/images/slide-3.jpg",
+      image: "/images/adventure9.jpg",
       name: "Desert Camel & Jeep Safari Private Tour From Jodhpur",
       desc: `This tour takes you far away from the bustling life of Jodhpur city to the tranquility of golden sand dunes where you can enjoy desert safari, sunset view, Rajasthani cooked dinner and Rajasthani Culture Folk Dance. Your tour starts with pickup in Jodhpur at your hotel, or the airport, train station or bus station. Travel by private car to Osian where you have the chance to independently visit the Sachiya Mata Temple. After taking in the temple, head to the starting point for the camel safari. The camel ride is considered a peak experience in Rajasthan. Stay to watch the skies and sands change colors during the sunset hour, then return to your private vehicle for transfer back to Jodhpur.`,
     },

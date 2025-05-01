@@ -6,9 +6,9 @@ function PrivacyPolicy() {
   return (
     <>
       <Landing IMAGES={CAROUSELIMAGE} />
-      <div className="flex flex-col gap-5 p-5">
+      <div className="flex flex-col gap-5 p-5 md:p-10">
         <div>
-          <h1 className="text-xl font-bold font-serif">Our Liabilities and Limitations</h1>
+          <h1 className="text-center text-xl font-bold font-serif">Our Liabilities and Limitations</h1>
           <p className="text-sm text-justify font-medium text-gray-500">
             Please note that after the finalization of the Tour/ service Cost,
             if there are any Hike in entrance fees of monuments / museums,
@@ -23,7 +23,7 @@ function PrivacyPolicy() {
           </p>
         </div>
         <div>
-          <h1 className="text-xl font-bold font-serif">Privacy Policy</h1>
+          <h1 className="text-center text-xl font-bold font-serif">Privacy Policy</h1>
           <p className="text-sm text-justify font-medium text-gray-500">
             N Cube Tour (Explore India Tour) values the trust you place in
             Incredible tour to India. This statement discloses the information
@@ -33,7 +33,7 @@ function PrivacyPolicy() {
           </p>
         </div>
         <div>
-          <h1 className="text-xl font-bold font-serif">Collection of Personally identifiable information</h1>
+          <h1 className="text-center text-xl font-bold font-serif">Collection of Personally identifiable information</h1>
           <p className="text-sm text-justify font-medium text-gray-500">
             Incredible tour to India collects your personal information for the
             purpose of site security and to ensure our service remains available
@@ -54,7 +54,7 @@ function PrivacyPolicy() {
           </ul>
         </div>
         <div>
-          <h1 className="text-xl font-bold font-serif">Cancellation Policy</h1>
+          <h1 className="text-center text-xl font-bold font-serif">Cancellation Policy</h1>
           <p className="text-sm text-justify font-medium text-gray-500">
             In the event of cancellation of tour/travel services due to any
             avoidable/unavoidable reason/s, we must be notified of the same in
@@ -70,7 +70,7 @@ function PrivacyPolicy() {
           </ul>
         </div>
         <div>
-          <h1 className="text-xl font-bold font-serif">Less than 72 hours or No Show: No Refund </h1>
+          <h1 className="text-center text-xl font-bold font-serif">Less than 72 hours or No Show: No Refund </h1>
           <p className="text-sm text-justify font-medium text-gray-500">
             In the case of Special Trains Journeys and peak season hotel
             bookings a separate cancellation policy is applicable (which can be
@@ -78,7 +78,7 @@ function PrivacyPolicy() {
           </p>
         </div>
         <div>
-          <h1 className="text-xl font-bold font-serif">Some cancellation and refund policies are out of our tender:</h1>
+          <h1 className="text-center text-xl font-bold font-serif">Some cancellation and refund policies are out of our tender:</h1>
           <ul className="list-disc ml-4 font-medium text-sm text-gray-700 my-1 text-justify">
             <li>
               Refunds for hotel payments will follow the hotel’s cancellation

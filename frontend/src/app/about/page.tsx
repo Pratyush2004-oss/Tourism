@@ -34,11 +34,11 @@ function About() {
             Tour Operators In Jaipur, Rajasthan. We provide:- India Tours,
             Rajasthan Tours.
           </span>
-          <span className="block mb-4">
+          <span className="block mb-4 camelCase">
             We are a Reliable tour Operator in India and an expert for Rajasthan
             tours.
           </span>
-          <span className="block mb-4">
+          <span className="block mb-4 camelCase">
             We also provide hotel booking, car rental, flight tickets and India
             tour Packages with flexible tour itineraries. We offer to all
             travelers experiences beyond anything that they have ever known

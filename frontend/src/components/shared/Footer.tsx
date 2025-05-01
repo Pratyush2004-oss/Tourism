@@ -14,7 +14,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-[url(https://img.freepik.com/free-photo/abstract-wave-cyan-color-black-background_1268-28760.jpg?t=st=1706202170~exp=1706205770~hmac=c064fc4e73ad1a1e01a1f0782257b32e7a155abf6f8c97fe918c827d1c953e32&w=1060)] p-5  text-white bg-no-repeat bg-cover">
+    <div className="bg-[url(https://img.freepik.com/free-photo/abstract-wave-cyan-color-black-background_1268-28760.jpg?t=st=1706202170~exp=1706205770~hmac=c064fc4e73ad1a1e01a1f0782257b32e7a155abf6f8c97fe918c827d1c953e32&w=1060)] p-5 text-white bg-cover bg-no-repeat">
       {/* content */}
       <div className="grid grid-cols-1 lg:grid-cols-3">
         {/* Quick Links */}
@@ -166,7 +166,7 @@ function Footer() {
         </div>
       </div>
       {/* Copyright */}
-      <div className="font-serif text-sm">
+      <div className="font-serif text-sm mt-2">
         <p className="text-center">
           &copy; {new Date().getFullYear()} Incredible Tour To India. All rights
           reserved.
