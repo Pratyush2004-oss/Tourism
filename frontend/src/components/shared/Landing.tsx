@@ -31,19 +31,20 @@ export function Landing({IMAGES} : {IMAGES: CarouselImage[]}) {
             <div className="w-full relative">
               <Card className="p-0">
                 <CardContent className="flex aspect-video items-center justify-center p-0 relative">
-                  <div className="absolute top-1/3 text-white font-mono sm:text-2xl md:text-4xl text-center font-bold">
+                  <div className="absolute top-1/3 text-white font-serif sm:text-2xl md:text-4xl lg:text-5xl text-center font-bold gap-2">
                     <p className="">Explore, Discover, Travel</p>
-                    <p>{image.content}</p>
-                    <Link href={"/"}>
+                    <p className="mt-3">{image.content}</p>
+                    {/* <Link href={"/"}>
                       <Button size={'lg'} className="md:text-xl mt-2 md:mt-5">Discover More</Button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <Image
                     src={image.image}
                     alt={image.content}
-                    width={500}
+                    layout="responsive"
+                    width={600}
                     height={400}
-                    className="w-full h-full object-cover aspect-video "
+                    className="object-cover aspect-video "
                   />
                 </CardContent>
               </Card>

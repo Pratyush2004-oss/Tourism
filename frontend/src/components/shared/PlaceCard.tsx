@@ -20,9 +20,10 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
         <Image
           src={pack.image}
           alt={pack.name}
-          height={100}
+          layout="responsive"
+          height={150}
           width={100}
-          className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-t-2xl"
+          className=" object-cover rounded-t-2xl"
         />
       </CardHeader>
       <CardContent>
@@ -37,7 +38,7 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
         <Button
           size={"lg"}
           variant={"default"}
-          className="font-mono text-lg cursor-pointer"
+          className="bg-gray-600 text-white cursor-pointer"
           onClick={() => {
             navigate.push(`/packages/${pack.__id}`);
           }}

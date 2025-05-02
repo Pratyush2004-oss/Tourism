@@ -29,13 +29,6 @@ function ServiceDetails() {
             {selectedService.name}
           </h1>
           <div className="border rounded-lg shadow-md p-4">
-            <Image
-              src={selectedService.image[0].image}
-              alt={selectedService.name}
-              width={500}
-              height={500}
-              className="w-full h-60 md:h-80 xl:h-[500px] object-cover rounded-t-lg mb-4"
-            />
             <p className="p-3 text-sm font-medium text-gray-500 text-justify">{selectedService.Overview}</p>
           </div>
         </div>

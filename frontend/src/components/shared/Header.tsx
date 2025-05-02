@@ -19,16 +19,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 
 function Header() {
   const { user, logout, token } = useAuthStore();
   return (
-    <div className="flex justify-between items-center py-5 px-6 border-b-2 max-w-7xl mx-auto">
+    <div className="flex justify-between items-center p-2 px-6 border-b-2 max-w-[1700px] mx-auto sticky top-0 z-20 bg-gray-100">
       <div className="contents">
         <Link href={"/"} className="flex items-center gap-2">
-          <h2 className="font-bold text-[1.5rem] sm:text-[2rem] lg:text-[2.3rem] bg-gradient-to-l from-white via-orange-400 to-orange-700 bg-clip-text">
-            Explore India View
-          </h2>
+          <Image src="/images/logo.png" width={200} height={150} alt="logo" />
         </Link>
       </div>
 

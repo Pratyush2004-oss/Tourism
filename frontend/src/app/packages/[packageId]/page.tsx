@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import BookingCard from "@/components/shared/BookingCard";
+import Image from "next/image";
 function PackageDetail() {
   const { packageId } = useParams();
   const [Package, setPackage] = useState<PACKAGETYPE | null>(null);
@@ -20,12 +21,15 @@ function PackageDetail() {
       <div className="p-6 md:p-10">
         <div className="flex flex-col gap-6 ">
           <div className="w-full relative">
-            <img
+            <Image
               src={Package.image}
               alt={Package.name}
-              className="w-full h-96 object-cover rounded-lg"
+              layout="responsive"
+              width={150}
+              height={120}
+              className="w-full h-[500px] object-cover rounded-lg"
             />
-            <h1 className="text-3xl font-bold absolute top-4/6 ml-3 text-white  p-2 rounded-lg">
+            <h1 className="text-3xl font-bold absolute top-3/5 md:top-4/5 ml-3 text-white  p-2 rounded-lg">
               {Package.name}
             </h1>
           </div>

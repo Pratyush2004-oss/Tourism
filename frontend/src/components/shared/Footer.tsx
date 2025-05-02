@@ -14,9 +14,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-[url(https://img.freepik.com/free-photo/abstract-wave-cyan-color-black-background_1268-28760.jpg?t=st=1706202170~exp=1706205770~hmac=c064fc4e73ad1a1e01a1f0782257b32e7a155abf6f8c97fe918c827d1c953e32&w=1060)] p-5 text-white bg-cover bg-no-repeat">
+    <div className="bg-[url(https://img.freepik.com/free-photo/abstract-wave-cyan-color-black-background_1268-28760.jpg?t=st=1706202170~exp=1706205770~hmac=c064fc4e73ad1a1e01a1f0782257b32e7a155abf6f8c97fe918c827d1c953e32&w=1060)] p-5 text-white bg-cover bg-no-repeat mt-5">
       {/* content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {/* Quick Links */}
         <div className="p-3">
           <h1 className="text-xl font-bold font-serif">Quick Links</h1>

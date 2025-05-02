@@ -213,22 +213,21 @@ function BookingCard({ props }: { props: Props }) {
 
         {/* Date Picker */}
         <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
-          <Label className="text-xl font-bold justify-center">Start Date</Label>
+          <Label className="text-xl font-bold sm:justify-center">Start Date</Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
                 variant={"outline"}
-                size={"lg"}
                 className={cn(
-                  "justify-start font-medium",
+                  "justify-start font-medium p-4 md:p-5",
                   !input.startDate && "text-muted-foreground"
                 )}
               >
-                <CalendarIcon className="mr-2 h-4 w-4" />
+                <CalendarIcon className="h-3 w-3" />
                 {input.startDate ? (
-                  new Date(input.startDate).toDateString()
+                  <span className="text-sm md:text-base">{new Date(input.startDate).toDateString()}</span>
                 ) : (
-                  <span>Pick a date</span>
+                  <span className="text-muted-foreground text-sm md:text-base">Pick a date</span>
                 )}
               </Button>
             </PopoverTrigger>
@@ -247,7 +246,7 @@ function BookingCard({ props }: { props: Props }) {
 
         {/* Price */}
         <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
-          <Label className="text-xl font-bold justify-center">Price</Label>
+          <Label className="text-xl font-bold sm:justify-center">Price</Label>
           <span className="text-xl lg:text-2xl font-bold border px-5 py-2 rounded-lg">
             ₹ {input.PackagePrice}
           </span>
