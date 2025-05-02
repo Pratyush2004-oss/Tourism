@@ -5,7 +5,7 @@ import dotendv from "dotenv";
 
 dotendv.config();
 
-
+// Create tour and get the order id from razorpay
 export const createTour = async (req, res, next) => {
     const user = req.user;
     const { PackageName, PackageDays, PackagePrice, people, startDate } = req.body;
@@ -70,6 +70,35 @@ export const verifyPayment = async (req, res, next) => {
         }
     } catch (error) {
         console.log("Error in verify Payment controller:", error);
+        next(error);
+    }
+}
+
+// get Bookings of the user
+export const getBookings = async (req, res, next) => {
+    try {
+        const user = req.user;
+        const bookings = await Booking.find({ user: user._id }).sort({ createdAt: -1 }).populate(
+            "user",
+            "fullname mobile isVerified _id",
+        );
+        return res.status(200).json({ message: "Bookings fetched successfully", bookings });
+    } catch (error) {
+        console.log("Error in getBookings controller:", error);
+        next(error);
+    }
+}
+
+// Get Booking Details for the Admin
+export const getBookingsForAdmin = async (req, res, next) => {
+    try {
+        const bookings = await Booking.find().sort({ createdAt: -1 }).populate(
+            "user",
+            "fullname mobile isVerified _id",
+        );
+        return res.status(200).json({ message: "Bookings fetched successfully", bookings });
+    } catch (error) {
+        console.log("Error in getBookingsForAdmin controller:", error);
         next(error);
     }
 }

@@ -13,10 +13,10 @@ function RedirectIfAuthenticated({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const isLoginOrSignupPath = pathname === "/login" || pathname === "/signup";
+  const isBooking = pathname === "/bookings";
   useEffect(() => {
     if (user && token && user.isVerified && isLoginOrSignupPath) {
       router.push("/");
-    } else if (user && !user.isVerified && isLoginOrSignupPath) {
     }
   }, [user, isLoginOrSignupPath, router]);
   if (checkingAuth) {
@@ -24,7 +24,7 @@ function RedirectIfAuthenticated({ children }: { children: ReactNode }) {
       <div className="flex justify-center items-center h-[calc(100vh-64px)]">
         <Loader className="size-28 animate-spin text-green-500" />
       </div>
-    )
+    );
   }
   return <>{children}</>;
 }

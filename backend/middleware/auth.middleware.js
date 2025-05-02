@@ -24,4 +24,8 @@ const ProtectRoute = async (req, res, next) => {
     }
 }
 
+export const AuthorizedRoute = async (req, res, next) => {
+    const user = req.user;
+}
+
 export default ProtectRoute;

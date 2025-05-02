@@ -17,12 +17,12 @@ export type Itinerary = {
   description?: string;
 };
 
-export interface User {
+export type User = {
   _id: string;
   fullname: string;
   mobile: string;
   isVerified: boolean;
-}
+};
 
 export type UserInput = {
   fullname: string;
@@ -72,12 +72,22 @@ export type CITIESTYPE = {
 };
 
 export type ADVENTUREDATA = {
-  name:string;
-  iamge:string;
-  desc:string
+  name: string;
+  iamge: string;
+  desc: string;
 };
 
 export type ADVENTURETYPE = {
-  iamges: CarouselImage[],
-  data: ADVENTUREDATA[]
-}
+  iamges: CarouselImage[];
+  data: ADVENTUREDATA[];
+};
+
+export type BOOKINGTYPE = {
+  _id: string;
+  PackageName: string;
+  PackageDays: number;
+  people: number;
+  PackagePrice: number;
+  startDate: Date;
+  user: User;
+};

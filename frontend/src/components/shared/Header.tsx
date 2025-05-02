@@ -71,10 +71,7 @@ function Header() {
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="font-bold text-lg">
-                Profile
-              </DropdownMenuItem>
-              <DropdownMenuItem className="font-bold text-lg">
-                Billing
+                <Link href={"/bookings"}>Bookings</Link>
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={logout}
@@ -144,10 +141,7 @@ function Header() {
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem className="font-bold text-lg">
-                        Profile
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="font-bold text-lg">
-                        Billing
+                        <Link href={"/bookings"}>Bookings</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem
                         onClick={logout}

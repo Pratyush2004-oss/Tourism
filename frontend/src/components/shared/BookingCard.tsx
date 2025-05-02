@@ -109,7 +109,7 @@ function BookingCard({ props }: { props: Props }) {
             .then((resp) => {
               if (resp.status === 400) throw new Error(resp.data.message);
               toast.success(resp.data.message || "Payment verified");
-              // router.push("/bookings");
+              router.push("/bookings");
             })
             .catch((error: any) => {
               toast.error(

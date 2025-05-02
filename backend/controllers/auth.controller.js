@@ -138,7 +138,6 @@ export const verifyOTP = async (req, res, next) => {
             message: "OTP verified successfully",
             user: {
                 id: user._id,
-                username: user.username,
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
@@ -239,7 +238,6 @@ export const signIn = async (req, res, next) => {
             message: "Login successful",
             user: {
                 id: user._id,
-                username: user.username,
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
