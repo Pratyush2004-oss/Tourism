@@ -28,7 +28,7 @@ function Camping() {
             <CardTitle className="text-lg md:text-xl font-bold text-center">
               {item.name}
             </CardTitle>
-            <CardDescription className="text-center font-medium text-sm max-sm:line-clamp-5">{item.desc}</CardDescription>
+            <CardDescription className="text-justify font-medium text-sm max-sm:line-clamp-5">{item.desc}</CardDescription>
           </CardHeader>
           <CardFooter className="flex items-center justify-center mt-auto">
             <Button className="w-1/2">View</Button>

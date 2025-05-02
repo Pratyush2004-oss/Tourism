@@ -2,11 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectToDb } from './config/dbConn.js';
+import job from './config/cronJob.js';
 
 
 // impporting routes
 import authRouter from './routers/auth.router.js';
-import job from './config/cronJob.js';
+import bookingRouter from './routers/booking.router.js';
 
 dotenv.config();
 
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/auth', authRouter); // Use the auth router for authentication routes
-
+app.use('/api/v1/booking', bookingRouter); // Use the booking router for booking routes)
 // error handling route
 app.use((err, req, res, next) => {
     res.status(500).json({ message: process.env.NODE_ENV === 'production' ? "Internal Server Error" + err.message : "Internal Server Error : " + err.message })

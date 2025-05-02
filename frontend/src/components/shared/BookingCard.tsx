@@ -13,7 +13,6 @@ import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/auth.store";
 import { useRouter } from "next/navigation";
-import { toast } from "sonner";
 
 interface Props {
   PackageName: string;
@@ -26,8 +25,6 @@ type BookingInput = {
   packagePrice: number;
   people: number;
   startDate: Date;
-  name: string;
-  mobile: string;
 };
 
 function BookingCard({ props }: { props: Props }) {
@@ -38,21 +35,15 @@ function BookingCard({ props }: { props: Props }) {
     packagePrice: 0,
     people: 1,
     startDate: new Date(),
-    name: user?.fullname ?? "",
-    mobile: user?.mobile ?? "",
   });
   const [loading, setloading] = useState(false);
   const router = useRouter();
 
   const handleBooking = async () => {
     console.log(input);
-    if (!input.name || !input.mobile) {
-      toast.error("Please Verify your details first");
-      return;
-    }
   };
   return (
-    <div className="w-full border rounded-lg shadow-md p-4">
+    <div className="w-full mt-5 border rounded-lg shadow-md p-4 md:sticky md:top-10">
       <h1 className="text-xl font-bold text-center font-serif my-2">
         {props.PackageName}
       </h1>
@@ -151,7 +142,7 @@ function BookingCard({ props }: { props: Props }) {
               <Calendar
                 mode="single"
                 selected={input.startDate}
-                onSelect={(date) => {
+                onSelect={(date: any) => {
                   if (!date) return;
                   setInput({ ...input, startDate: date });
                 }}
@@ -164,7 +155,7 @@ function BookingCard({ props }: { props: Props }) {
         {/* Button */}
         {user ? (
           <Button
-            disabled={loading || !input.name || !input.mobile}
+            disabled={loading || !user}
             onClick={handleBooking}
             variant={"outline"}
             className="w-full text-white max-w-96 mx-auto bg-gradient-to-r from-green-500 via-emerald-500 to-emerald-600 cursor-pointer"

@@ -33,7 +33,7 @@ function Adventure() {
                 <CardTitle className="text-xl md:text-2xl font-bold text-center">
                   {item.name}
                 </CardTitle>
-                <CardDescription className="text-center font-medium ">
+                <CardDescription className="text-justify font-medium ">
                   {item.desc}
                 </CardDescription>
               </CardHeader>
