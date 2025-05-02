@@ -8,7 +8,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/auth.store";
@@ -72,7 +71,7 @@ function BookingCard({ props }: { props: Props }) {
 
   const handleBooking = async () => {
     try {
-      console.log(input);
+      setloading(true);
       const response = await axios.post(
         `${API_URL}/api/v1/booking/create-tour`,
         { ...input, startDate: input.startDate.toISOString() },
@@ -82,22 +81,24 @@ function BookingCard({ props }: { props: Props }) {
           },
         }
       );
-      const data = await response.data;
-      console.log(response.data);
+      const data = response.data.order;
       if (response.status === 400) throw new Error(response.data.message);
 
       const paymentObject = new (window as any).Razorpay({
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        order_id: data.order.id,
+        order_id: data.id,
         ...data,
         handler: async function (response: any) {
-          console.log(response);
-
           // verify payment
           const options2 = {
-            order_id: response.razorpay_order.id,
+            order_id: response.razorpay_order_id,
             payment_id: response.razorpay_payment_id,
-            razorpay_signature: response.razorpay_signature,
+            signature: response.razorpay_signature,
+            PackageName: input.PackageName,
+            PackageDays: input.PackageDays,
+            PackagePrice: input.PackagePrice,
+            people: input.people,
+            startDate: input.startDate.toISOString(),
           };
           await axios
             .post(`${API_URL}/api/v1/booking/verify-payment`, options2, {
@@ -105,16 +106,15 @@ function BookingCard({ props }: { props: Props }) {
                 Authorization: `Bearer ${token}`,
               },
             })
-            .then(() => {
-              if (response.status === 400)
-                throw new Error(response.data.message);
-              toast.success(response.data.message || "Payment verified");
+            .then((resp) => {
+              if (resp.status === 400) throw new Error(resp.data.message);
+              toast.success(resp.data.message || "Payment verified");
               // router.push("/bookings");
             })
             .catch((error: any) => {
-              console.log(error);
               toast.error(
-                error.response.data.message || "Something went wrong"
+                (error.resp && error.resp.data.message) ||
+                  "Something went wrong"
               );
             });
         },
@@ -122,11 +122,12 @@ function BookingCard({ props }: { props: Props }) {
 
       paymentObject.open();
     } catch (error: any) {
-      console.log(error);
       toast.error(
         (error.response && error.response.data.message) ||
           "Something went wrong"
       );
+    } finally {
+      setloading(false);
     }
   };
   return (
@@ -225,7 +226,7 @@ function BookingCard({ props }: { props: Props }) {
               >
                 <CalendarIcon className="mr-2 h-4 w-4" />
                 {input.startDate ? (
-                  format(input.startDate, "PPP")
+                  new Date(input.startDate).toDateString()
                 ) : (
                   <span>Pick a date</span>
                 )}
@@ -235,9 +236,8 @@ function BookingCard({ props }: { props: Props }) {
               <Calendar
                 mode="single"
                 selected={input.startDate}
-                onSelect={(date: any) => {
-                  if (!date) return;
-                  setInput({ ...input, startDate: date });
+                onSelect={(date) => {
+                  date && setInput({ ...input, startDate: new Date(date) });
                 }}
                 initialFocus
               />

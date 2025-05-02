@@ -21,9 +21,20 @@ const BookingSchema = new mongoose.Schema({
         required: true,
     },
     paymentStatus: {
-        type: Boolean,
-        default: false,
-    }
+        order_id: {
+            type: String,
+            required: true,
+        },
+        payment_id: {
+            type: String,
+            required: true,
+        },
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
 }, { timestamps: true });
 
 const Booking = mongoose.model('Booking', BookingSchema);
