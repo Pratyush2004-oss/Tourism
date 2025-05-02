@@ -7,14 +7,14 @@ dotendv.config();
 
 export const createTour = async (req, res, next) => {
     const user = req.user;
-    const { PackageName, PackageDate, PackagePrice, people, startDate } = req.body;
+    const { PackageName, PackageDays, PackagePrice, people, startDate } = req.body;
 
-    if (!PackageName || !PackageDate || !PackagePrice || !people || !startDate || !user) {
+    if (!PackageName || !PackageDays || !PackagePrice || !people || !startDate) {
         return res.status(400).json({ message: "All fields are required" });
     }
 
     const options = {
-        amount: amount * 100,  // amount in the smallest currency unit
+        amount: PackagePrice * 100,  // amount in the smallest currency unit
         currency: "INR",
         receipt: "receipt_order_1"
     };

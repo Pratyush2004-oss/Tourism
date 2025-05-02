@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Label } from "../ui/label";
 import { CalendarIcon, Loader2, MinusCircle, PlusCircle } from "lucide-react";
 import { Button } from "../ui/button";
@@ -13,6 +13,9 @@ import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/auth.store";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+import axios from "axios";
+import { API_URL } from "@/services/API";
 
 interface Props {
   PackageName: string;
@@ -22,25 +25,109 @@ interface Props {
 type BookingInput = {
   PackageName: string;
   PackageDays: number;
-  packagePrice: number;
+  PackagePrice: number;
   people: number;
   startDate: Date;
 };
 
 function BookingCard({ props }: { props: Props }) {
-  const { user } = useAuthStore();
+  const { user, token } = useAuthStore();
   const [input, setInput] = useState<BookingInput>({
     PackageName: props.PackageName,
     PackageDays: props.PackageDays,
-    packagePrice: 0,
+    PackagePrice: props.PackageDays * 1000,
     people: 1,
     startDate: new Date(),
   });
   const [loading, setloading] = useState(false);
   const router = useRouter();
 
+  // Loading any scripts
+  const loadScript = (src: string) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  };
+
+  // loading checkout script
+  useEffect(() => {
+    loadScript("https://checkout.razorpay.com/v1/checkout.js");
+  }, []);
+
+  // change package price
+  useEffect(() => {
+    setInput({
+      ...input,
+      PackagePrice: input.people * input.PackageDays * 1000,
+    });
+  }, [input.PackageDays, input.people]);
+
   const handleBooking = async () => {
-    console.log(input);
+    try {
+      console.log(input);
+      const response = await axios.post(
+        `${API_URL}/api/v1/booking/create-tour`,
+        { ...input, startDate: input.startDate.toISOString() },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      const data = await response.data;
+      console.log(response.data);
+      if (response.status === 400) throw new Error(response.data.message);
+
+      const paymentObject = new (window as any).Razorpay({
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        order_id: data.order.id,
+        ...data,
+        handler: async function (response: any) {
+          console.log(response);
+
+          // verify payment
+          const options2 = {
+            order_id: response.razorpay_order.id,
+            payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature,
+          };
+          await axios
+            .post(`${API_URL}/api/v1/booking/verify-payment`, options2, {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            })
+            .then(() => {
+              if (response.status === 400)
+                throw new Error(response.data.message);
+              toast.success(response.data.message || "Payment verified");
+              // router.push("/bookings");
+            })
+            .catch((error: any) => {
+              console.log(error);
+              toast.error(
+                error.response.data.message || "Something went wrong"
+              );
+            });
+        },
+      });
+
+      paymentObject.open();
+    } catch (error: any) {
+      console.log(error);
+      toast.error(
+        (error.response && error.response.data.message) ||
+          "Something went wrong"
+      );
+    }
   };
   return (
     <div className="w-full mt-5 border rounded-lg shadow-md p-4 md:sticky md:top-10">
@@ -96,7 +183,10 @@ function BookingCard({ props }: { props: Props }) {
               className="cursor-pointer"
               onClick={() => {
                 if (input.PackageDays <= 1) return;
-                setInput({ ...input, PackageDays: input.PackageDays - 1 });
+                setInput({
+                  ...input,
+                  PackageDays: input.PackageDays - 1,
+                });
               }}
             >
               <MinusCircle className="size-7" strokeWidth={1} />
@@ -109,7 +199,10 @@ function BookingCard({ props }: { props: Props }) {
               variant={"ghost"}
               className="cursor-pointer"
               onClick={() => {
-                setInput({ ...input, PackageDays: input.PackageDays + 1 });
+                setInput({
+                  ...input,
+                  PackageDays: input.PackageDays + 1,
+                });
               }}
             >
               <PlusCircle className="size-7" strokeWidth={1} />
@@ -150,6 +243,14 @@ function BookingCard({ props }: { props: Props }) {
               />
             </PopoverContent>
           </Popover>
+        </div>
+
+        {/* Price */}
+        <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
+          <Label className="text-xl font-bold justify-center">Price</Label>
+          <span className="text-xl lg:text-2xl font-bold border px-5 py-2 rounded-lg">
+            ₹ {input.PackagePrice}
+          </span>
         </div>
 
         {/* Button */}
