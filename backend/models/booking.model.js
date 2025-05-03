@@ -23,11 +23,9 @@ const BookingSchema = new mongoose.Schema({
     paymentStatus: {
         order_id: {
             type: String,
-            required: true,
         },
         payment_id: {
             type: String,
-            required: true,
         },
     },
     user: {

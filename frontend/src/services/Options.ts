@@ -1,6 +1,4 @@
-import { getRandomAdventureImage, getRandomIndexedImage, IMAGES } from "./Images";
-
-
+import { getRandomAdventureImage, getRandomIndexedImage } from "./Images";
 
 export const PACKAGES = [
   {

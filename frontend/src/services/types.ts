@@ -90,4 +90,10 @@ export type BOOKINGTYPE = {
   PackagePrice: number;
   startDate: Date;
   user: User;
+  paymentStatus: PAYMENTSTATUSTYPE;
+};
+
+type PAYMENTSTATUSTYPE = {
+  order_id: string;
+  payment_id: string;
 };

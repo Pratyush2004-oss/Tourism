@@ -74,6 +74,27 @@ export const verifyPayment = async (req, res, next) => {
     }
 }
 
+// Booking without payment
+export const bookTourWithoutPayment = async (req, res, next) => {
+    try {
+        const user = req.user;
+        const { PackageName, PackageDays, PackagePrice, people, startDate } = req.body;
+        const newBooking = new Booking({
+            user: user._id,
+            PackageName,
+            PackageDays,
+            PackagePrice,
+            people,
+            startDate,
+        });
+        await newBooking.save();
+        return res.status(200).json({ message: "Tour Booked Successfully" });
+    } catch (error) {
+        console.log("Error in bookTourWithoutPayment controller:", error);
+        next(error);
+    }
+}
+
 // get Bookings of the user
 export const getBookings = async (req, res, next) => {
     try {

@@ -74,6 +74,19 @@ function page() {
                     <p className="text-lg font-bold col-span-2 text-center">
                       Number of People: {booking.people}
                     </p>
+                    {booking.paymentStatus &&
+                    booking.paymentStatus.order_id &&
+                    booking.paymentStatus.payment_id ? (
+                      <p className="text-lg font-bold col-span-2 text-center">
+                        <span>Payment Status:</span>{" "}
+                        <span className="text-green-500">Paid</span>
+                      </p>
+                    ) : (
+                      <p className="text-lg font-bold col-span-2 text-center">
+                        <span>Payment Status:</span>{" "}
+                        <span className="text-red-500">Payment Pending</span>
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
