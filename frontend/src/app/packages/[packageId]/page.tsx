@@ -24,7 +24,7 @@ function PackageDetail() {
             <Image
               src={Package.image}
               alt={Package.name}
-              layout="responsive"
+              // layout="responsive"
               width={150}
               height={120}
               className="w-full h-[500px] object-cover rounded-lg"

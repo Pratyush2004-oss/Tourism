@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Label } from "../ui/label";
 import {
   CalendarIcon,
-  Check,
   Loader2,
   MinusCircle,
   PlusCircle,
@@ -22,8 +21,6 @@ import { toast } from "sonner";
 import axios from "axios";
 import { API_URL } from "@/services/API";
 import { Checkbox } from "../ui/checkbox";
-import { spawn } from "child_process";
-import { headers } from "next/headers";
 
 interface Props {
   PackageName: string;

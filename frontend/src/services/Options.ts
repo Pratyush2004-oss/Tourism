@@ -1721,15 +1721,15 @@ export const TOPSERVICES = [
 export const ONEDAYTOUR = {
   images: [
     {
-      image: "/images/slide-3.jpg",
+      image: getRandomIndexedImage(),
       content: "Top Day Tour",
     },
     {
-      image: "/images/slide-5.jpg",
+      image: getRandomIndexedImage(),
       content: "Discover new Places",
     },
     {
-      image: "/images/slide-7.jpg",
+      image: getRandomIndexedImage(),
       content: "Make your trip worthwhile",
     },
   ],

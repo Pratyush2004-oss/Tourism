@@ -21,9 +21,9 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
           src={pack.image}
           alt={pack.name}
           // layout="responsive"
-          height={150}
-          width={100}
-          className=" object-cover rounded-t-2xl w-full"
+          height={1000}
+          width={500}
+          className=" object-cover rounded-t-2xl aspect-video h-56 md:h-72"
         />
       </CardHeader>
       <CardContent>

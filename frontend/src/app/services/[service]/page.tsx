@@ -2,7 +2,6 @@
 import { Landing } from "@/components/shared/Landing";
 import { SERVICES } from "@/services/Options";
 import { ServiceType } from "@/services/types";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 

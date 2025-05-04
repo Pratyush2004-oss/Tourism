@@ -10,8 +10,6 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 import Image from "next/image";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import { CarouselImage } from "@/services/types";
 
 
@@ -41,7 +39,7 @@ export function Landing({IMAGES} : {IMAGES: CarouselImage[]}) {
                   <Image
                     src={image.image}
                     alt={image.content}
-                    layout="responsive"
+                    // layout="responsive"
                     width={600}
                     height={400}
                     className="object-cover aspect-video "
