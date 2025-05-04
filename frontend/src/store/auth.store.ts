@@ -146,7 +146,7 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
       set({
         isAuthenticated: true,
         user: response.data.user,
-        token: response.data.token || token,
+        token: token,
       });
       response.status === 200 && get().checkAdmin();
     } catch (error: any) {

@@ -67,7 +67,7 @@ function Login() {
             </Label>
             <div className="flex items-center gap-1">
               <Select onValueChange={(value) => handleCountryChange(value)}>
-                <SelectTrigger className="w-[90px]">
+                <SelectTrigger className="w-[150px]">
                   <SelectValue placeholder="Select ISO code" />
                 </SelectTrigger>
                 <SelectContent>

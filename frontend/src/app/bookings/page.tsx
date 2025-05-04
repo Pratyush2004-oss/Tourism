@@ -17,7 +17,7 @@ function page() {
     try {
       setloading(true);
       const response = await axios.get(
-        `${API_URL}/api/v1/booking/get-bookings`,
+        `${API_URL}/api/v1/booking/get-bookings-admin`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

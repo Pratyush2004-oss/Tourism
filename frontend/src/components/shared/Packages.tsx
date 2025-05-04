@@ -18,14 +18,14 @@ function Packages() {
               (pack, idx) => idx < 6 && <PlaceCard key={idx} pack={pack} />
             )}
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <Button
               onClick={() => {
                 router.push("/package");
               }}
-              variant={"default"}
+              variant={"link"}
               size={"lg"}
-              className="mt-5 bg-gray-600 text-white cursor-pointer"
+              className="mt-5 te cursor-pointer"
             >
               Show More
             </Button>

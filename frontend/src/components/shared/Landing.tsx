@@ -39,7 +39,7 @@ export function Landing({IMAGES} : {IMAGES: CarouselImage[]}) {
                   <Image
                     src={image.image}
                     alt={image.content}
-                    // layout="responsive"
+                    layout="responsive"
                     width={600}
                     height={400}
                     className="object-cover aspect-video "

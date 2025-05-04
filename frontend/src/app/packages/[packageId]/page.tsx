@@ -7,6 +7,14 @@ import React, { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import BookingCard from "@/components/shared/BookingCard";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import PlaceCard from "@/components/shared/PlaceCard";
+import Autoplay from "embla-carousel-autoplay";
+
 function PackageDetail() {
   const { packageId } = useParams();
   const [Package, setPackage] = useState<PACKAGETYPE | null>(null);
@@ -24,7 +32,7 @@ function PackageDetail() {
             <Image
               src={Package.image}
               alt={Package.name}
-              // layout="responsive"
+              layout="responsive"
               width={150}
               height={120}
               className="w-full h-[500px] object-cover rounded-lg"
@@ -176,6 +184,33 @@ function PackageDetail() {
               />
             </div>
           </div>
+
+          {/* Carousel of other packages */}
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 1500,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="p-7">
+              {PACKAGES.map(
+                (_, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="pl-1 md:basis-1/2 lg:basis-1/3"
+                  >
+                    <PlaceCard
+                      pack={PACKAGES[index]}
+                      key={index}
+                      lineclamp={true}
+                    />
+                  </CarouselItem>
+                )
+              )}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     )

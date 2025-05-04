@@ -44,7 +44,7 @@ function BookingCard({ props }: { props: Props }) {
     people: 1,
     startDate: new Date(),
   });
-  const [payOnline, setpayOnline] = useState(false);
+  const [payOnline, setpayOnline] = useState(true);
   const [loading, setloading] = useState(false);
   const router = useRouter();
 

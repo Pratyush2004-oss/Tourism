@@ -12,7 +12,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
+function PlaceCard({ pack, lineclamp }: { pack: PACKAGETYPE, lineclamp?: boolean }) {
   const navigate = useRouter();
   return (
     <Card className="rounded-4xl shadow-xl">
@@ -20,23 +20,23 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
         <Image
           src={pack.image}
           alt={pack.name}
-          // layout="responsive"
+          layout="responsive"
           height={1000}
           width={500}
-          className=" object-cover rounded-t-2xl aspect-video h-56 md:h-72"
+          className=" object-cover rounded-t-2xl aspect-video"
         />
       </CardHeader>
       <CardContent>
-        <CardTitle className="text-2xl font-bold text-center">
+        <CardTitle className={`font-bold text-center ${lineclamp ? "line-clamp-1 text-xl" : "text-2xl"}`}>
           {pack.name}
         </CardTitle>
-        <CardDescription className="text-center font-bold font-mono text-xl">
+        <CardDescription className={`text-center font-bold font-mono ${lineclamp ? "text-lg" : "text-xl"}`}>
           {pack.days} days / {pack.nights} nights
         </CardDescription>
       </CardContent>
       <CardFooter className="mt-auto flex justify-center ">
         <Button
-          size={"lg"}
+          size={lineclamp ? "default" : "lg"}
           variant={"default"}
           className="bg-gray-600 text-white cursor-pointer"
           onClick={() => {

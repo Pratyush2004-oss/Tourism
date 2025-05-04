@@ -113,7 +113,13 @@ export const getBookings = async (req, res, next) => {
 // Get Booking Details for the Admin
 export const getBookingsForAdmin = async (req, res, next) => {
     try {
-        const bookings = await Booking.find().sort({ createdAt: -1 }).populate(
+        const page = req.query.page || 1;
+        const limit = req.query.limit || 15;
+        const skip = (page - 1) * limit;
+        const bookings = await Booking.find().sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate(
             "user",
             "fullname mobile isVerified _id",
         );
