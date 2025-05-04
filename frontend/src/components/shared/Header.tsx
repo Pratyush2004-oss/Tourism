@@ -22,12 +22,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 
 function Header() {
-  const { user, logout, token } = useAuthStore();
+  const { user, logout, token, isAdmin } = useAuthStore();
   return (
     <div className="flex justify-between items-center p-2 px-6 border-b-2 max-w-[1700px] mx-auto sticky top-0 z-20 bg-gray-100">
       <div className="contents">
         <Link href={"/"} className="flex items-center gap-2">
-          <Image src="/images/logo.png" width={200} height={150} alt="logo" />
+          <Image 
+          src="/images/logo.png" 
+          width={200} 
+          height={150} 
+          alt="logo" />
         </Link>
       </div>
 
@@ -72,6 +76,11 @@ function Header() {
               <DropdownMenuItem className="font-bold text-lg">
                 <Link href={"/bookings"}>Bookings</Link>
               </DropdownMenuItem>
+              {isAdmin && (
+                <DropdownMenuItem className="font-bold text-lg">
+                  <Link href={"/admin"}>Admin</Link>
+                </DropdownMenuItem>
+              )}
               <DropdownMenuItem
                 onClick={logout}
                 className="text-red-600 font-bold text-lg flex items-center gap-2"
@@ -142,6 +151,11 @@ function Header() {
                       <DropdownMenuItem className="font-bold text-lg">
                         <Link href={"/bookings"}>Bookings</Link>
                       </DropdownMenuItem>
+                      {isAdmin && (
+                        <DropdownMenuItem className="font-bold text-lg">
+                          <Link href={"/admin"}>Admin</Link>
+                        </DropdownMenuItem>
+                      )}
                       <DropdownMenuItem
                         onClick={logout}
                         className="text-red-600 font-bold text-lg flex items-center gap-2"

@@ -271,3 +271,24 @@ export const checkAuth = async (req, res, next) => {
         next(error);
     }
 }
+
+// checking admin
+export const checkAdmin = async (req, res, next) => {
+    try {
+        const user = req.user;
+
+        return res.status(200).json({
+            message: "Admin is authenticated",
+            user: {
+                id: user._id,
+                fullname: user.fullname,
+                mobile: user.mobile,
+                isVerified: user.isVerified,
+            },
+        });
+    }
+    catch (error) {
+        console.log("Error in Check-admin controller : " + error.message);
+        next(error);
+    }
+}

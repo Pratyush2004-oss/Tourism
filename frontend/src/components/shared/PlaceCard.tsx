@@ -20,10 +20,10 @@ function PlaceCard({ pack }: { pack: PACKAGETYPE }) {
         <Image
           src={pack.image}
           alt={pack.name}
-          layout="responsive"
+          // layout="responsive"
           height={150}
           width={100}
-          className=" object-cover rounded-t-2xl"
+          className=" object-cover rounded-t-2xl w-full"
         />
       </CardHeader>
       <CardContent>

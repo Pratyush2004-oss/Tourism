@@ -24,8 +24,20 @@ const ProtectRoute = async (req, res, next) => {
     }
 }
 
-export const AuthorizedRoute = async (req, res, next) => {
-    const user = req.user;
-}
-
 export default ProtectRoute;
+
+export const requireAdmin = async (req, res, next) => {
+    try {
+        const currentUser = req.user;
+        const isAdmin = process.env.ADMIN_NUMBERS.includes(currentUser.mobile);
+
+        if (!isAdmin) {
+            return res.status(401).json({ message: "Unauthorized - User is not an admin", currentUser });
+        }
+        req.user = currentUser;
+        next();
+
+    } catch (error) {
+        next(error);
+    }
+}
