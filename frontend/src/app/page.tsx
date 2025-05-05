@@ -8,6 +8,7 @@ import { CAROUSELIMAGE } from "@/services/Options";
 import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import InquirySection from "@/components/shared/InquirySection";
 
 
 function page() {
@@ -25,6 +26,7 @@ function page() {
       <Packages />
       <Services />
       <AboutUs />
+      <InquirySection/>
     </div>
   );
 }
