@@ -1,8 +1,5 @@
-import { API_URL } from "@/services/API";
-import { BOOKINGTYPE } from "@/services/types";
-import axios from "axios";
-import { LoaderCircle } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -12,37 +9,18 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+import { BOOKINGTYPE } from "@/services/types";
+import { LoaderCircle } from "lucide-react";
+import React from "react";
 import { UserAvatar } from "./UserAvatar";
-import { Button } from "@/components/ui/button";
 
-function BookingTable({ token }: { token: string }) {
-  const [bookings, setbookings] = useState<BOOKINGTYPE[]>([]);
-  const [loading, setloading] = useState(false);
-  const [pageNumber, setpageNumber] = useState<number>(1);
-
-  const fetchAllBookings = async () => {
-    try {
-      setloading(true);
-      const response = await axios.get(
-        `${API_URL}/api/v1/booking/get-bookings-admin?page=${pageNumber}&limit=10`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      if (response.status === 400) throw new Error(response.data.message);
-      setbookings(response.data.bookings);
-    } catch (error) {
-    } finally {
-      setloading(false);
-    }
-  };
-  useEffect(() => {
-    fetchAllBookings();
-  }, [pageNumber]);
-
+interface BookingTableProps {
+  bookings: BOOKINGTYPE[];
+  pageNumber: number;
+  setpageNumber: React.Dispatch<React.SetStateAction<number>>;
+  loading: boolean;
+}
+function BookingTable({bookings, pageNumber, setpageNumber, loading}: BookingTableProps) {
   if (loading)
     <div className="h-[calc(100vh-11rem)] w-full bg-gray-300/50">
       <LoaderCircle className="mx-auto animate-spin size-16 text-emerald-500" />
@@ -51,7 +29,7 @@ function BookingTable({ token }: { token: string }) {
     <div className="min-h-[calc(100vh-10rem)] w-full bg-gray-300/50 p-2">
       <Table className="h-full">
         <TableHeader className="border-2 border-black">
-          <TableRow className="border-2 border-black">
+          <TableRow className="border-2 border-black bg-gray-400">
             <TableHead className="w-[100px] border border-black">
               Package Name
             </TableHead>
@@ -67,7 +45,7 @@ function BookingTable({ token }: { token: string }) {
           </TableRow>
         </TableHeader>
         <TableBody className="border-2 border-black">
-          {bookings.length > 0 &&
+          {bookings.length > 0 ?
             bookings.map((bookings, idx) => (
               <TableRow key={idx}>
                 <TableCell className="font-medium border border-black">
@@ -88,8 +66,8 @@ function BookingTable({ token }: { token: string }) {
                 <TableCell className=" border border-black">
                   <UserAvatar User={bookings.user} />
                 </TableCell>
-                <TableCell className=" border border-black">
-                  {bookings.PackagePrice}
+                <TableCell className=" border border-black font-bold">
+                  ₹{bookings.PackagePrice}
                 </TableCell>
                 <TableCell className="text-right border border-black">
                   {bookings.paymentStatus && bookings.paymentStatus.order_id ? (
@@ -104,7 +82,13 @@ function BookingTable({ token }: { token: string }) {
                   )}
                 </TableCell>
               </TableRow>
-            ))}
+            )) : (
+              <TableRow>
+                <TableCell colSpan={8} className="text-center">
+                  No Bookings Found.
+                </TableCell>
+              </TableRow>
+            )}
         </TableBody>
         <TableCaption className="text-center mb-0">
           <div className="mt-5 flex items-center justify-between w-2/3 mx-auto">

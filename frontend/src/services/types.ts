@@ -93,7 +93,21 @@ export type BOOKINGTYPE = {
   paymentStatus: PAYMENTSTATUSTYPE;
 };
 
+export type QUERIESTYPE = {
+  user: User;
+  message: string;
+  _id: string;
+};
+
 type PAYMENTSTATUSTYPE = {
   order_id: string;
   payment_id: string;
+};
+
+export type DETAILTYPES = {
+  Users: number;
+  Queries: number;
+  Verified: number;
+  Bookings: number;
+  Unpaid: number;
 };
