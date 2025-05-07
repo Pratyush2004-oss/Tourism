@@ -1444,25 +1444,6 @@ export const SERVICES = [
   },
   {
     __id: "2",
-    name: "Airline Service",
-    image: [
-      {
-        image: "/images/airline1.jpg",
-        content: "Airline Service",
-      },
-      {
-        image: "/images/airline2.jpg",
-        content: "Airline Service",
-      },
-      {
-        image: "/images/airline3.jpg",
-        content: "Airline Service",
-      },
-    ],
-    Overview: `Travelling by air can be a fun experience & it saves time too, which is why many prefer this mode of travel. But booking air tickets can be a frustrating task, however you don’t need to worry as we offer excellent Airline Ticketing Services all over India. As reliable Airline Ticketing Agents in Jaipur, we will ensure that the flight tickets are booked on time & as per your specific instructions. By availing our service, you can escape all the hassles of booking an air ticket yourself. For any queries that you may regarding any airlines, the flight ticket rates, flight schedule, etc. just contact us & we will be happy to help.`,
-  },
-  {
-    __id: "3",
     name: "Event Organizer",
     image: [
       {
@@ -1481,7 +1462,7 @@ export const SERVICES = [
     Overview: `We are one of the reputed Event Organizers In Jaipur having expertise in organizing Private & Corporate Events. Our team has arranged a variety of events for clients in Jaipur (Rajasthan). We have expertise in all aspects of arranging an event. With us to help you & guide you, the event is guaranteed to be a success. We take care of every step – right from sending out invites , guest management, venue arrangement, finalizing the menu etc. Our expert team ensures that our customers are saved from the hassles of arranging the event, as we efficiently take care of all the aspects on their behalf.`,
   },
   {
-    __id: "4",
+    __id: "3",
     name: "Car and Bike",
     image: [
       {
@@ -1500,7 +1481,7 @@ export const SERVICES = [
     Overview: `ExploreIndiaView Tours (Tour Operator in India) is one of the oldest tour Operators & Holiday Planner in India. We remain as committed to serving travellers today as when they first opened their doors. In its working years ExploreIndiaView Tours has made business ventures with various companies to add the power of the world's leading Holidays and Tour expense management company. Steady growth and intelligent partnerships allow ExploreIndiaView Tours to care for the needs of any traveller, whether corporate or individual. The core values of ExploreIndiaView Tours are communication, motivation, satisfaction and partnership. Whether you are an individual or a seasoned business traveller, we offer the same level of service. Today most of the people who come to India or want to visit places like Jaipur Agra or even North & south India for long tours or for business trips prefer the Rajasthan Royal Tours The company has a fleet of cars ranging from luxury to standard with A/C and Non A/C facilities. The entire cars are well maintained and are driven by educated, multilingual and generous chauffeurs. Almost all our drivers are experienced and they know each and every route of New Delhi, Agra, Jaipur and the Main destination of India. we make your travel easier, and hassle-free and make you reach any place, destination, Monument, airport, railway station and office on time. If you are looking for car hire services in India or pickup and drop facilities to the airport or a car for a short trip to Agra and Jaipur OR Rajasthan, we are going to provide you with the best car at the most competitive rate. We give you great value for your hard money and charge a competitive market price for the service we deliver to you. With Rajasthan Royal Tours, you can book luxury cars for rent in India like BMW, Benz, Mercedes, Audi A6, and many other high-end models depending on various needs. So, enjoy the journey in style with the best taxi booking service provider in India.`,
   },
   {
-    __id: "6",
+    __id: "4",
     name: "Tour Guide Service",
     image: [
       {
@@ -1519,7 +1500,7 @@ export const SERVICES = [
     Overview: ``,
   },
   {
-    __id: "7",
+    __id: "5",
     name: "Travel Insurance",
     image: [
       {
@@ -1715,7 +1696,54 @@ export const TOPSERVICES = [
     image: "/images/camping1.jpg",
     path: "/camping_hiking",
   },
+  {
+    name:"Airline Service",
+    image: "/images/airline1.jpg",
+    path:"/airline"
+  }
 ];
+
+export const AIRLINESERVICES = [
+  {
+    name:"Delhi - Jaipur",
+  },
+  {
+    name:"Jaipur - Delhi",
+  },
+  {
+    name:"Delhi - Agra",
+  },
+  {
+    name:"Agra - Delhi",
+  },
+  {
+    name:"Mumbai - Jaipur",
+  },
+  {
+    name:"Jaipur - Mumbai",
+  },
+  {
+    name:"Mumbai - Agra",
+  },
+  {
+    name:"Agra - Mumbai",
+  },
+]
+
+export const AIRLINEIMAGES = [
+      {
+        image: "/images/airline1.jpg",
+        content: "Airline Service",
+      },
+      {
+        image: "/images/airline2.jpg",
+        content: "Airline Service",
+      },
+      {
+        image: "/images/airline3.jpg",
+        content: "Airline Service",
+      },
+    ]
 
 // One Day Tour
 export const ONEDAYTOUR = {

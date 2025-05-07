@@ -5,6 +5,7 @@ import Header from "@/components/shared/Header";
 import { Toaster } from "sonner";
 import RedirectIfAuthenticated from "@/components/shared/RedirectIfAuthenticated";
 import Footer from "@/components/shared/Footer";
+import ChatBotPopover from "@/components/shared/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <RedirectIfAuthenticated>
           <Header />
+          <ChatBotPopover />
           {children}
           <Toaster />
           <Footer />

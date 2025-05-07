@@ -53,10 +53,10 @@ function InquirySection() {
   };
   return (
     <Dialog open={openDialog} onOpenChange={setopenDialog}>
-      <DialogTrigger className="mt-5 cursor-pointer w-full" asChild>
+      <DialogTrigger className=" cursor-pointer w-full" asChild>
         <Button
           size="lg"
-          className="font-bold md:text-xl bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent mx-auto"
+          className="font-bold  bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent mx-auto"
           variant="secondary"
         >
           Raise your Query

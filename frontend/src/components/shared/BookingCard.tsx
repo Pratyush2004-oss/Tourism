@@ -1,12 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Label } from "../ui/label";
-import {
-  CalendarIcon,
-  Loader2,
-  MinusCircle,
-  PlusCircle,
-} from "lucide-react";
+import { CalendarIcon, Loader2, MinusCircle, PlusCircle } from "lucide-react";
 import { Button } from "../ui/button";
 import {
   Popover,
@@ -21,6 +16,7 @@ import { toast } from "sonner";
 import axios from "axios";
 import { API_URL } from "@/services/API";
 import { Checkbox } from "../ui/checkbox";
+import InquirySection from "./InquirySection";
 
 interface Props {
   PackageName: string;
@@ -330,6 +326,7 @@ function BookingCard({ props }: { props: Props }) {
             </p>
           </>
         )}
+        <InquirySection />
       </div>
     </div>
   );
