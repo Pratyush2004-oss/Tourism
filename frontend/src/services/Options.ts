@@ -1424,25 +1424,6 @@ export const PACKAGES = [
 // Our services
 export const SERVICES = [
   {
-    __id: "1",
-    name: "Train Service",
-    image: [
-      {
-        image: "/images/train1.jpg",
-        content: "Train Service",
-      },
-      {
-        image: "/images/train2.jpg",
-        content: "Train Service",
-      },
-      {
-        image: "/images/train3.jpg",
-        content: "Train Service",
-      },
-    ],
-    Overview: `With railways being the popular mode of travel in India, not many people here can deny having been part of a train journey. Though a train journey can prove to be a great experience, the ticket booking process is usually a depressing affair. To save yourself from the troubles of rail ticket booking, you can avail our reliable Railway Ticketing Services. Our team will take note of all the essential details like the journey date, preferred train you would like to travel by, coach type, etc. as well as any special needs & book a ticket accordingly. We offer effective and reliable services with 100% customer satisfaction being our ultimate goal.`,
-  },
-  {
     __id: "2",
     name: "Event Organizer",
     image: [
@@ -1697,11 +1678,31 @@ export const TOPSERVICES = [
     path: "/camping_hiking",
   },
   {
-    name:"Airline Service",
+    name:"Flight Service",
     image: "/images/airline1.jpg",
     path:"/airline"
+  },
+  {
+    name:"Railway Service",
+    image: "/images/train1.jpg",
+    path:"/train"
   }
 ];
+
+export const RAILWAYIMAGES = [
+  {
+    image: "/images/train1.jpg",
+    content: "Train Service",
+  },
+  {
+    image: "/images/train2.jpg",
+    content: "Train Service",
+  },
+  {
+    image: "/images/train3.jpg",
+    content: "Train Service",
+  },
+]
 
 export const AIRLINESERVICES = [
   {
@@ -1729,6 +1730,15 @@ export const AIRLINESERVICES = [
     name:"Agra - Mumbai",
   },
 ]
+
+export const TRAINSERVICES = [
+  { name: "Delhi - Jaipur Express" },
+  { name: "Mumbai - Jaipur Superfast" },
+  { name: "Chennai - Jaipur Rajdhani" },
+  { name: "Kolkata - Jaipur Duronto" },
+  { name: "Hyderabad - Jaipur Special" },
+  { name: "Ahmedabad - Jaipur Intercity" },
+];
 
 export const AIRLINEIMAGES = [
       {

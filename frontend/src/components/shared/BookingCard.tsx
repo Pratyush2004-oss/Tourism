@@ -151,10 +151,10 @@ function BookingCard({ props }: { props: Props }) {
   };
   return (
     <div className="w-full mt-5 border rounded-lg shadow-md p-4 md:sticky md:top-10">
-      <h1 className="text-xl font-bold text-center font-serif my-2">
+      <h1 className="text-lg font-bold text-center font-serif my-2">
         {props.PackageName}
       </h1>
-      <h1 className="text-xl mb-5 font-bold text-center font-serif border-b-2 my-2">
+      <h1 className="text-lg mb-5 font-bold text-center font-serif border-b-2 my-2">
         {input.PackageDays} {input.PackageDays > 1 ? "days " : "day "}
       </h1>
       <div className="flex flex-col gap-6 mt-5">
@@ -246,7 +246,7 @@ function BookingCard({ props }: { props: Props }) {
               >
                 <CalendarIcon className="h-3 w-3" />
                 {input.startDate ? (
-                  <span className="text-sm md:text-base">
+                  <span className="text-xs md:text-sm lg:text-base">
                     {new Date(input.startDate).toDateString()}
                   </span>
                 ) : (

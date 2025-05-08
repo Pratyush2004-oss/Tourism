@@ -1,9 +1,19 @@
+'use client';
+
 import { Landing } from "@/components/shared/Landing";
 import { AIRLINEIMAGES, AIRLINESERVICES } from "@/services/Options";
 import React from "react";
 import { Plane, MapPin, Calendar, Clock } from "lucide-react";
 
 function Airline() {
+  const affiliateBaseUrl = "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels/";
+
+  const handleRedirect = (destination: string) => {
+    const encodedDestination = encodeURIComponent(destination); // Encode the destination for the URL
+    const redirectUrl = `${affiliateBaseUrl}?destination=${encodedDestination}`;
+    window.open(redirectUrl, "_blank"); // Open the link in a new tab
+  };
+
   return (
     <>
       {/* Landing Section */}
@@ -24,7 +34,8 @@ function Airline() {
         {AIRLINESERVICES.map((item, idx) => (
           <div
             key={idx}
-            className="p-5 rounded-lg shadow-lg bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="p-5 rounded-lg shadow-lg bg-white hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
+            onClick={() => handleRedirect(item.name)} // Redirect on click
           >
             <div className="flex items-center justify-center mb-4">
               <Plane className="w-10 h-10 text-blue-500" />
