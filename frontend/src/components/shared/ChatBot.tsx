@@ -1,173 +1,289 @@
-'use client';
-import React, { useState, useEffect, useRef } from "react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { MessageSquare } from "lucide-react";
+'use client'
+import { useState, useRef, useEffect } from 'react';
+import { Send, X, MessageSquare } from 'lucide-react';
 
-interface Message {
-  text: string;
-  sender: "bot" | "user";
-}
-
-const chatbotData = {
-  welcomeMessage: "Welcome to Explore-India-View! How can I assist you today?",
-  categories: [
-    { name: "Trip Booking", key: "trip booking" },
-    { name: "Transportation", key: "transportation" },
-    { name: "Hotel Booking", key: "hotel booking" },
-    { name: "Payments", key: "payment" },
-    { name: "General Queries", key: "support" },
+const travelServices = {
+  "Flight Booking": [
+    "Domestic flights",
+    "International flights",
+    "Round-trip flights",
+    "One-way flights",
+    "Flight + hotel packages"
   ],
-  responses: {
-    tripBooking: {
-      bookTour: "Please provide the destination, dates, and number of travelers to book your tour package.",
-      checkDestinations: "Here are our top destinations: Rajasthan, Jaipur, Udaipur, Jaisalmer, and more.",
-      modifyBooking: "Please share your booking ID and the changes you'd like to make.",
-      cancelBooking: "Please provide your booking ID to proceed with the cancellation.",
-    },
-    transportation: {
-      busBooking: "Please provide your travel dates and destination to check bus availability.",
-      carRental: "We offer car rentals for city tours and intercity travel. Please share your requirements.",
-      flightBooking: "Please provide your departure city, destination, and travel dates to book a flight.",
-    },
-    hotelBooking: {
-      searchHotels: "Please provide the city and dates to search for hotels.",
-      checkAvailability: "Please share the hotel name and dates to check availability.",
-      modifyBooking: "Please provide your booking ID and the changes you'd like to make.",
-      cancelBooking: "Please provide your booking ID to cancel your hotel reservation.",
-    },
-    payments: {
-      checkStatus: "Please provide your booking ID to check the payment status.",
-      makePayment: "You can make payments via credit card, debit card, or UPI. Please share your booking ID to proceed.",
-      requestRefund: "Please provide your booking ID and reason for the refund request.",
-      paymentIssues: "Please describe the issue you're facing with the payment.",
-    },
-    generalQueries: {
-      contactSupport: "You can reach our customer support at +91 9588041628 or email us at exploreindiaview@gmail.com.",
-      servicesInfo: "We offer tour packages, hotel bookings, car rentals, flight bookings, and event organization services.",
-      feedback: "We value your feedback! Please share your suggestions or concerns.",
-    },
-  },
+  "Train Booking": [
+    "Rajdhani Express",
+    "Shatabdi Express",
+    "Duronto Express",
+    "Local trains",
+    "Tourist special trains"
+  ],
+  "Bike and Car Rental": [
+    "Self-drive cars",
+    "Chauffeur-driven cars",
+    "Motorcycle rentals",
+    "Scooter rentals",
+    "Long-term rentals"
+  ],
+  "Hotel Booking": [
+    "Luxury hotels",
+    "Budget hotels",
+    "Heritage properties",
+    "Resorts",
+    "Homestays"
+  ],
+  "Package Booking": [
+    "Golden Triangle (Delhi-Agra-Jaipur)",
+    "Rajasthan cultural tour",
+    "Jaipur city tour",
+    "Weekend getaways",
+    "Customized packages"
+  ]
 };
 
-const ChatBotPopover: React.FC = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    { text: chatbotData.welcomeMessage, sender: "bot" },
+const quickReplies = [
+  "How do I book a flight?",
+  "What are your hotel options in Jaipur?",
+  "Can I get a car with driver?",
+  "What's included in your tour packages?",
+  "How can I cancel a booking?"
+];
+
+const ChatBotPopover = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<
+    { id: number; text: string; sender: string; options?: string[] }[]
+  >([
+    {
+      id: 1,
+      text: "Hello! I'm your travel assistant from Explore India View. How can I help you today?",
+      sender: 'bot'
+    }
   ]);
-  const [userInput, setUserInput] = useState("");
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [inputValue, setInputValue] = useState('');
+  const [showServices, setShowServices] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const handleSend = (query?: string) => {
-    const userMessage = query || userInput.trim();
-    if (userMessage) {
-      setMessages([...messages, { text: userMessage, sender: "user" }]);
-      setUserInput("");
-
-      // Simulate bot response
-      setTimeout(() => {
-        const botResponse = getBotResponse(userMessage);
-        setMessages((prevMessages) => [...prevMessages, { text: botResponse, sender: "bot" }]);
-      }, 1000);
-    }
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const getBotResponse = (query: string): string => {
-    const lowerCaseQuery = query.toLowerCase();
-
-    if (lowerCaseQuery.includes("trip booking")) {
-      return chatbotData.responses.tripBooking.bookTour;
-    } else if (lowerCaseQuery.includes("destinations")) {
-      return chatbotData.responses.tripBooking.checkDestinations;
-    } else if (lowerCaseQuery.includes("modify booking")) {
-      return chatbotData.responses.tripBooking.modifyBooking;
-    } else if (lowerCaseQuery.includes("cancel booking")) {
-      return chatbotData.responses.tripBooking.cancelBooking;
-    } else if (lowerCaseQuery.includes("bus booking")) {
-      return chatbotData.responses.transportation.busBooking;
-    } else if (lowerCaseQuery.includes("car rental")) {
-      return chatbotData.responses.transportation.carRental;
-    } else if (lowerCaseQuery.includes("flight booking")) {
-      return chatbotData.responses.transportation.flightBooking;
-    } else if (lowerCaseQuery.includes("hotel booking")) {
-      return chatbotData.responses.hotelBooking.searchHotels;
-    } else if (lowerCaseQuery.includes("payment")) {
-      return chatbotData.responses.payments.checkStatus;
-    } else if (lowerCaseQuery.includes("support")) {
-      return chatbotData.responses.generalQueries.contactSupport;
-    } else if (lowerCaseQuery.includes("services")) {
-      return chatbotData.responses.generalQueries.servicesInfo;
-    } else if (lowerCaseQuery.includes("feedback")) {
-      return chatbotData.responses.generalQueries.feedback;
-    } else {
-      return "I'm sorry, I didn't understand that. Can you please rephrase your query?";
-    }
-  };
-
-  // Auto-scroll to the last message
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    scrollToBottom();
   }, [messages]);
 
+  const handleSendMessage = () => {
+    if (inputValue.trim() === '') return;
+
+    // Add user message
+    const userMessage = {
+      id: messages.length + 1,
+      text: inputValue,
+      sender: 'user'
+    };
+    setMessages([...messages, userMessage]);
+    setInputValue('');
+
+    // Simulate bot response after a short delay
+    setTimeout(() => {
+      const botResponse = generateBotResponse(inputValue);
+      setMessages(prev => [...prev, botResponse]);
+    }, 800);
+  };
+
+  const generateBotResponse = (userInput:string) => {
+    const lowerInput = userInput.toLowerCase();
+    let responseText = '';
+    let responseOptions: string[] = [];
+
+    // Check for service-related queries
+    if (lowerInput.includes('flight') || lowerInput.includes('fly')) {
+      responseText = "We can certainly help with flight bookings! Here are some options:";
+      responseOptions = travelServices["Flight Booking"];
+    } 
+    else if (lowerInput.includes('train') || lowerInput.includes('rail')) {
+      responseText = "We offer various train booking services. Here are some options:";
+      responseOptions = travelServices["Train Booking"];
+    }
+    else if (lowerInput.includes('car') || lowerInput.includes('bike') || lowerInput.includes('rent')) {
+      responseText = "We have excellent rental options. Here are some choices:";
+      responseOptions = travelServices["Bike and Car Rental"];
+    }
+    else if (lowerInput.includes('hotel') || lowerInput.includes('stay') || lowerInput.includes('accommodation')) {
+      responseText = "We partner with the best hotels in Jaipur and across India. Here are options:";
+      responseOptions = travelServices["Hotel Booking"];
+    }
+    else if (lowerInput.includes('package') || lowerInput.includes('tour') || lowerInput.includes('holiday')) {
+      responseText = "Our tour packages are carefully curated for amazing experiences. Here are some:";
+      responseOptions = travelServices["Package Booking"];
+    }
+    else if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')) {
+      responseText = "Hello! Welcome to Explore India View. How can I assist you with your travel plans today?";
+    }
+    else if (lowerInput.includes('thank')) {
+      responseText = "You're welcome! Is there anything else I can help you with?";
+    }
+    else if (lowerInput.includes('cancel') || lowerInput.includes('refund')) {
+      responseText = "For cancellations or refunds, please visit our 'My Bookings' section or contact our customer support at support@exploreindiaview.com";
+    }
+    else if (lowerInput.includes('contact') || lowerInput.includes('help')) {
+      responseText = "You can reach us at:\n- Phone: +91 XXXXX XXXXX\n- Email: info@exploreindiaview.com\n- Office: 123 Travel Plaza, Jaipur";
+    }
+    else {
+      responseText = "I can help you with flight bookings, train tickets, hotel reservations, car rentals, and tour packages. What would you like to know more about?";
+      setShowServices(true);
+    }
+
+    const botMessage = {
+      id: messages.length + 2,
+      text: responseText,
+      sender: 'bot',
+      options: responseOptions
+    };
+
+    return botMessage;
+  };
+
+  const handleQuickReply = (reply:string) => {
+    setInputValue(reply);
+    // Auto-send the quick reply
+    setTimeout(() => {
+      handleSendMessage();
+    }, 100);
+  };
+
+  const handleServiceSelect = (service:string) => {
+    const userMessage = {
+      id: messages.length + 1,
+      text: service,
+      sender: 'user'
+    };
+    setMessages([...messages, userMessage]);
+    setShowServices(false);
+
+    // Simulate bot response
+    setTimeout(() => {
+      const botResponse = {
+        id: messages.length + 2,
+        text: `Great choice! To book "${service}", please visit our ${service.includes('flight') ? 'Flights' : 
+              service.includes('train') ? 'Trains' : 
+              service.includes('car') || service.includes('bike') ? 'Rentals' : 
+              service.includes('hotel') ? 'Hotels' : 'Packages'} section or would you like me to guide you through the process?`,
+        sender: 'bot'
+      };
+      setMessages(prev => [...prev, botResponse]);
+    }, 800);
+  };
+
+  // Simple newline to <br> converter for basic formatting
+  const formatMessage = (text:string) => {
+    return text.split('\n').map((line, i) => (
+      <span key={i}>
+        {line}
+        <br />
+      </span>
+    ));
+  };
+
   return (
-    <div className="fixed bottom-4 z-50 right-4">
-      <Popover>
-        <PopoverTrigger asChild>
-          <button className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600">
-            <MessageSquare className="w-6 h-6" />
-          </button>
-        </PopoverTrigger>
-        <PopoverContent className="w-80 p-0 shadow-lg">
-          <div className="bg-white shadow-lg rounded-lg flex flex-col">
-            <div className="bg-blue-500 text-white p-4 rounded-t-lg">
-              <h2 className="text-lg font-semibold">Explore India View Chatbot</h2>
-            </div>
-            <div className="p-4 space-y-2">
-              <div className="flex flex-wrap gap-2">
-                {chatbotData.categories.map((category) => (
+    <div className="fixed bottom-6 right-6 z-50">
+      {isOpen ? (
+        <div className="w-80 bg-white rounded-lg shadow-xl overflow-hidden flex flex-col">
+          <div className="bg-teal-500 text-white p-3 flex justify-between items-center">
+            <h3 className="font-bold">Explore India View Assistant</h3>
+            <button 
+              onClick={() => setIsOpen(false)}
+              className="text-white hover:text-teal-200"
+            >
+              <X size={20} />
+            </button>
+          </div>
+          
+          <div className="flex-1 p-3 overflow-y-auto bg-gray-50 max-h-[500px]">
+            {messages.map((message) => (
+              <div 
+                key={message.id} 
+                className={`mb-3 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div 
+                  className={`max-w-xs p-3 rounded-lg ${message.sender === 'user' 
+                    ? 'bg-teal-500 text-white rounded-tr-none' 
+                    : 'bg-white border border-gray-200 rounded-tl-none'}`}
+                >
+                  {formatMessage(message.text)}
+                  {message.options && (
+                    <div className="mt-2">
+                      {message.options.map((option, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleServiceSelect(option)}
+                          className="block w-full text-left p-2 my-1 bg-teal-100 hover:bg-teal-200 rounded text-sm text-teal-800"
+                        >
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+          
+          {showServices && (
+            <div className="p-3 bg-gray-100 border-t">
+              <p className="text-sm font-medium mb-2 text-gray-700">Select a service:</p>
+              <div className="grid grid-cols-2 gap-2">
+                {Object.keys(travelServices).map((service) => (
                   <button
-                    key={category.key}
-                    className="bg-gray-200 text-gray-800 px-3 py-1 rounded-lg hover:bg-gray-300"
-                    onClick={() => handleSend(category.key)}
+                    key={service}
+                    onClick={() => handleServiceSelect(service)}
+                    className="p-2 bg-white border border-teal-300 hover:bg-teal-50 rounded text-xs text-center"
                   >
-                    {category.name}
+                    {service}
                   </button>
                 ))}
               </div>
             </div>
-            <div className="flex-1 p-4 overflow-y-auto space-y-2" style={{ maxHeight: "300px" }}>
-              {messages.map((msg, index) => (
-                <div
+          )}
+          
+          <div className="p-3 bg-white border-t">
+            <div className="flex gap-2 mb-2 overflow-x-auto">
+              {quickReplies.map((reply, index) => (
+                <button
                   key={index}
-                  className={`flex ${msg.sender === "bot" ? "justify-start" : "justify-end"}`}
+                  onClick={() => handleQuickReply(reply)}
+                  className="whitespace-nowrap px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-xs"
                 >
-                  <div
-                    className={`p-2 rounded-lg ${
-                      msg.sender === "bot" ? "bg-gray-200 text-gray-800" : "bg-blue-500 text-white"
-                    }`}
-                  >
-                    {msg.text}
-                  </div>
-                </div>
+                  {reply}
+                </button>
               ))}
-              <div ref={messagesEndRef} />
             </div>
-            <div className="p-4 border-t border-gray-200 flex items-center space-x-2">
+            <div className="flex gap-2">
               <input
                 type="text"
-                className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Type your message..."
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
+                className="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
               />
               <button
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-                onClick={() => handleSend()}
+                onClick={handleSendMessage}
+                className="p-2 bg-teal-500 text-white rounded hover:bg-teal-700"
               >
-                Send
+                <Send size={18} />
               </button>
             </div>
           </div>
-        </PopoverContent>
-      </Popover>
+        </div>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="w-14 h-14 bg-teal-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-teal-700 transition-all"
+        >
+          <MessageSquare size={24} />
+        </button>
+      )}
     </div>
   );
 };

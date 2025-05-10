@@ -3,7 +3,7 @@ import { getRandomAdventureImage, getRandomIndexedImage } from "./Images";
 export const PACKAGES = [
   {
     __id: "1",
-    name: "Best Tour of Rajasthan",
+    name: "Incredible Tour of Rajasthan",
     image: getRandomIndexedImage(),
     days: 10,
     nights: 9,
@@ -25,71 +25,94 @@ export const PACKAGES = [
     ],
     Itinerary: [
       {
-        name: "day 1 - Arrive Delhi",
+        name: "Day 1 - Arrive Jaipur",
         description:
           "Welcome by incredible tour to India Representative at New Delhi Indira Gandhi Airport (T-3) and transfer to hotel. Overnight stay in Delhi.",
       },
       {
-        name: `day 2 - Delhi Mandawa (250 Kms)`,
+        name: `Day 2 - Mandawa`,
         description: `Morning drive to Mandawa. Dep: Delhi/Mandawa By Car(with an English speaking Tourist Driver) Arrive Mandawa and direct transfer to hotel. Mandawa was settled in the 18th century, and was fortified by the dominant merchant families. Today it has some of the finest painted havelies in the region.
       
         Evening visit the town and some of its painted havelies. Mandawa houses a collection of armories, costumes of ancestors, canons from 1820, ancient coins, numismatic collection and many other interesting items preserved in a museum. The whole area of Shekhawati has beautiful frescoes, Haveli’s & mansions and is called the open-air gallery. Overnight in Mandawa.`,
       },
       {
-        name: "day 3 - Mandawa-Bikaner (190 Kms)",
+        name: "Day 3 - Bikaner",
         description:
           "Morning drive to Bikaner. Dep: Mandawa/BikanerBy Car (with an English speaking Tourist Driver) Bikaner – popularly called the camel country. The city is renowned for the best riding camels in the world. Afternoon visit Junagarh Fort – built in 1593 A.D. by Raja Rai Singh, a general in the army of Emperor Akbar, and Camel Breeding farm. Overnight stay in Bikaner.",
       },
       {
-        name: "day 4 - Bikaner-jaisalmer (328 Kms)",
+        name: "Day 4 -Jaisalmer ",
         description: `Morning visit Deshnok’s Karni Mata Temple (32 kms): the famous 600 years old temple on the Jodhpur road dedicated to Karni Mata, an incarnation of Goddess Durga. The temple has huge intricately carved silver gates which were donated by Maharaja Ganga Singh. The most interesting thing about the temple are the rats who scamper freely within the sanctum sanctorum of the temple.
         
         They are regarded as sacred and are fed by priests and devotees owing to the belief that they will be reincarnated in the family of the goddess. Continue drive to Jaisalmer. Dep: Bikaner/Jaisalmer By Car (with an English speaking Tourist Driver) Direct transfer to hotel. Rest of the day at leisure and overnight in Jaisalmer.`,
       },
       {
-        name: "day 5 - jaisalmer - khuri (50 Km)",
+        name: "Day 5 - Khuri",
         description: `Morning Visit The Fort, Jain Temple and the old mansions known as “Haveli’s”. People still live in these ancient buildings dating from 12th to 15th century. Every house has exquisite carvings and filigreed work.
         
         Later drive to Khuri and check-in Desert Resort. Evening enjoy Camel Safari and witness Golden Sunset. Return to Desert Resort, enjoy Gypsy dances (live show) with cock-tail and followed by dinner. Overnight stay in Desert Resort, Khuri.`,
       },
       {
-        name: "day 6 - khuri - jhodhpur (295 Kms)",
+        name: "Day 6 - Jhodhpur",
         description:
-          "Morning drive to Jodhpur. Dep:Jaisalmer/Jodhpur By Car (with an English speaking Tourist Driver). En- route visit Osian – an oasis in the desert. (if time permits). Direct transfer to hotel. Afternoon visit Mandore Gardens and local market in Old Jodhpur. Evening free. overnight in Jodhpur.",
+          "Morning drive to Jodhpur. Dep: Jaisalmer/Jodhpur By Car (with an English speaking Tourist Driver). En- route visit Osian – an oasis in the desert. (if time permits). Direct transfer to hotel. Afternoon visit Mandore Gardens and local market in Old Jodhpur. Evening free. overnight in Jodhpur.",
       },
       {
-        name: " day 7 - jodhpur - ranakpur (160 Kms)",
+        name: " Day 7 - Ranakpur",
         description: `Morning visit Meharangarh Fort – the 5 km long majestic fort on 125 m high hill is one of the most impressive and formidable structures, Jaswant Thada – a cluster of royal cenotaphs in white marble built in 1899 A.D. in memory of Maharaja Jaswant Singh II and Umaid Bhawan Palace. Afternoon drive to Ranakpur.
          
         Dep: Jodhpur/Ranakpur By Car (with an English speaking Tourist Driver) Ranakpur – renowned for some marvelously carved Jain Temples in amber stone. Direct transfer to hotel. Evening visit Temples and overnight stay in Ranakpur.`,
       },
       {
-        name: "day 8 - ranakpur - udaipur (96 Kms)",
+        name: "Day 8 - Udaipur and Chittogarh",
         description:
           "Morning drive to Udaipur. En-route visit Kumbhalgarh Fort. Continue drive to Udaipur. Dep: Ranakpur/Udaipur By Car with an English speaking Tourist Driver) Direct transfer to hotel. Later city tour of Udaipur. Visit: City Palace, Jagdish Temple, Sahelion-ki-bari. Overnight in Udaipur.",
       },
       {
-        name: "day 9 - udaipur - delhi or mumbai",
+        name: "Day 9 - Kumbalgarh",
         description:
           "Morning excursion trip to Eklingi & Nagda. Later transfer to airport to connect flight for Delhi. Dep: Udaipur/Delhi Assistance at Delhi airport and transfer to hotel. Evening free and overnight in Delhi OR Mumbai.",
       },
       {
-        name: "day 10 - depart delhi",
+        name: "Day 10 - Ajmer",
+        description:
+          "Morning excursion trip to Eklingi & Nagda. Later transfer to airport to connect flight for Delhi. Dep: Udaipur/Delhi Assistance at Delhi airport and transfer to hotel. Evening free and overnight in Delhi OR Mumbai.",
+      },
+      {
+        name: "Day 11 - Depart From Jaipur To Delhi",
         description: `Morning full day sightseeing tour of Delhi. Visit: Raj Ghat – the cremation sites of Mahatma Gandhi, Jama Masjid and Red Fort. Free time for Lunch. Afternoon visit Qutub Minar (built by Qutub-ud-Din Aibek in 1199), Lotus Temple, Indira Gandhi Museum. <br/>
         
         India Gate (a memorial to the Indian soldiers killed in World War I), Also drive past President’s House, Parliament House, Government Secretariat Buildings and Connaught Place shopping center. Late evening transfer to airport to connect flight for onward destination.`,
       },
     ],
-    Inclusion: [],
-    Exclusion: [],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
     FAQs: [],
   },
   {
     __id: "2",
-    name: "Colorful Rajasthan Tour",
+    name: "Colorful Tour of Rajasthan",
     image: getRandomIndexedImage(),
-    days: 18,
-    nights: 17,
+    days: 16,
+    nights: 15,
     Overview: [
       `Experience the most colorful and vibrant part of a visit to Rajasthan with this tour. Sights such as the Pushkar Lake and Amber Fort will take you on a journey of sights you have never seen before. You will also get to experience some fascinating festivals like Holi and Diwali in Pushkar.`,
       `This is a tour that will take you through the sights and sounds of Pushkar, Udaipur and Jaipur. You will get to experience the adventures of a camel safari, visit an elephant camp and enjoy the vibrant colors of Holi.`,
@@ -99,17 +122,22 @@ export const PACKAGES = [
     Highlight: [
       "Colourful Rajasthan tour package",
       "Visit the Amazing and Incredible destination",
-      "explore the Luxurias and rural life of Rajasthan",
+      "Explore the Luxurias and rural life of Rajasthan",
     ],
     Itinerary: [
       {
-        name: "Day 01: New Delhi (Arrival)",
-        description: `You will be arrived at Delhi airport and be transferred to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
+        name: " Day 01 - Delhi to Jaipur (Arrival)",
+        description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
         
-        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.`,
+        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
+        `,
       },
       {
-        name: "Day 02: Delhi – Mandawa (by road 280 kms / 06 hrs)",
+        name: "Day 02: Jaipur",
+        description: `We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market`,
+      },
+      {
+        name: "Day 03: Mandawa",
         description: `After breakfast drive to Mandawa. Upon arrival at Mandawa check-in at your pre-booked hotel. Mandawa is known as the heart of Shekhawati. The Fort of Mandawa was built in the year 1755 by Thakur Nawal Singh, the founder of the town. <br/>
         
         After freshening up proceed to local sightseeing which includes the Arched Gateway of Fort Mandawa located in the very heart of Mandawa & a classic example of the famed Rajput style of architecture. It houses many beautiful paintings & frescoes that dazzle the eyes & now been converted into a heritage hotel. <br/>
@@ -118,7 +146,7 @@ export const PACKAGES = [
         `,
       },
       {
-        name: "Day 03: Mandawa – Bikaner (by road 164 kms / 04 hrs)",
+        name: "Day 04: Bikaner",
         description: `After breakfast proceeds for Bikaner, Bikaner is named after its founder Rao Bikaji in 1488. But long before this, the city was a trade center on the caravan routes from Africa and West Asia. <br/>
         
         Bikaner’s dominant features are rippling sands and abundant sunshine. The city stands on an elevation, enclosed by a 7 Kms wall, which can be entered from 5 gates. Bikaner City is bolstered by imposing walls and has a 16th-century fort housing old palaces, temples and mosques. <br/>
@@ -126,43 +154,51 @@ export const PACKAGES = [
         Founded by Raja Rai Singh the fort is distinguished by its long range of 37 pavilions, a line of balconies and aerial windows of varying designs. on arrival, Bikaner checks into the hotel than a city tour of Bikaner visit - Junagarh fort, and Lalgarh palace. Overnight stay at hotel.`,
       },
       {
-        name: "Day 04: Bikaner – Jaisalmer (By road 333 kms / 06 hrs)",
-        description: `After breakfast check out and drive to Jaisalmer on arrival transfer to the hotel. In the evening, visit the Rishabdevji Temple and the Sambhavnathji Temple. Overnight stay at the hotel.`,
-      },
-      {
         name: "Day 05: Jaisalmer",
-        description: `After breakfast proceeds to a full-day city tour of Jaisalmer. Throbbing in the heart of the Thar, the burnished sandstone, is an intricately molded wonderland in place of barren land, today stands a city of gilded magic. <br/>
+        description: `After breakfast check out and drive to Jaisalmer on arrival transfer to the hotel. In the evening, visit the Rishabdevji Temple and the Sambhavnathji Temple. Overnight stay at the hotel. <br/>
         
-        The origins of Jaisalmer go back to the 12th century when Rawal Jaisal abandoned his old fort at Ludarwa and laid the foundation of a new city. Visit the magnificent fort, the Patwon Ki Haveli ( Mansion) and Salim Singh Ki Haveli, with their carved balconies and brackets which are supreme examples of the art., Garisar lake, Manek chowk and Bada Baugh afterward drive to sam sand dunes enjoy the camel ride, return to the hotel. Overnight stay at the hotel.`,
+        After breakfast proceeds to a full-day city tour of Jaisalmer. Throbbing in the heart of the Thar, the burnished sandstone, is an intricately molded wonderland in place of barren land, today stands a city of gilded magic. <br/>
+        
+        The origins of Jaisalmer go back to the 12th century when Rawal Jaisal abandoned his old fort at Ludarwa and laid the foundation of a new city. Visit the magnificent fort, the Patwon Ki Haveli ( Mansion) and Salim Singh Ki Haveli, with their carved balconies and brackets which are supreme examples of the art., Garisar lake, Manek chowk and Bada Baugh afterward drive to sam sand dunes enjoy the camel ride, return to the hotel. Overnight stay at the hotel.
+        `,
       },
       {
-        name: "Day 06: Jaisalmer – Jodhpur ( By road 385 kms / 06 hrs)",
+        name: "Day 06 - Khuri",
+        description: `Morning Visit The Fort, Jain Temple and the old mansions known as “Haveli’s”. People still live in these ancient buildings dating from 12th to 15th century. Every house has exquisite carvings and filigreed work.
+        
+        Later drive to Khuri and check-in Desert Resort. Evening enjoy Camel Safari and witness Golden Sunset. Return to Desert Resort, enjoy Gypsy dances (live show) with cock-tail and followed by dinner. Overnight stay in Desert Resort, Khuri.`,
+      },
+      {
+        name: "Day 07: Jodhpur",
         description: `After breakfast, check-out and drive to Jodhpur. On arrival at Jodhpur check-in at your pre-booked hotel after a short break proceeds for a city sightseeing tour of Jodhpur. <br/>
         
         Jodhpur – the stronghold of the fierce Rathore clan, was founded in 1459 by Prince Jodha. Visit the Mehrangarh Fort, situated on a low sandstone hill. Within the fort, visit Moti Mahal and Phool Mahal. Also visit Jaswant Thada, an imposing marble cenotaph, built in memory of Maharaja Jaswant Singh II around 1899 and Umaid Public gardens. Night stay at a hotel in Jodhpur .`,
       },
       {
-        name: "Day 07: Jodhpur – Ranakpur ( By road 180 kms / 4 hrs)",
+        name: "Day 08: Ranakpur",
         description: `After breakfast you proceed to your next destination Ranakpur. Ranakpur is famous for Jain Temples wich was built during the reign of the liberal and gifted Rajput monarch Rana Kumbha in the 15th century. <br/>
         
         The main temple is the Chaumukha Temple, or Four-Faced Temple, dedicated to Adinath, the first tirthankar (‘Jain Teacher’). Built in 1439, this huge, superbly crafted and well-kept marble temple has 29 halls supported by 14 pillars – no two are alike. Within the complex are two other Jain temples (dedicated to Neminath and Parasnath) and, a short distance away, a Sun Temple. Amba Mata Temple is 1 km from the main comple Upon arrival at Ranakpur, check-in at your pre booked hotel. Freshen up and embark on a sight seeing trip of temples and Havelis of Ranakpur. After a captivating sight seeing experience of Ranakpur, and overnight stay at hotel in Ranakpur `,
       },
       {
-        name: "day 08 - ranakpur - udaipur (96 Kms)",
-        description: `Morning drive to Udaipur. En-route visit Kumbhalgarh Fort. Continue drive to Udaipur. Dep: Ranakpur/Udaipur By Car with an English speaking Tourist Driver Direct transfer to hotel. Later city tour of Udaipur. Visit: City Palace, Jagdish Temple, Sahelion-ki-bari. Overnight in Udaipur.`,
-      },
-      {
         name: "day 09 - udaipur",
-        description: `Morning city sightseeing tour of Udaipur. Visit, Sahelion Ki Bari (Queen’s resort for their friends) Bhartiya Lok Kala Mandir (Folk art museum) and the Pratap Memorial. Rest of the day at leisure. Overnight stay at a hotel in Udaipur.`,
+        description: `Morning drive to Udaipur. En-route visit Kumbhalgarh Fort. Continue drive to Udaipur. Dep: Ranakpur/Udaipur By Car with an English speaking Tourist Driver Direct transfer to hotel. Later city tour of Udaipur. Visit: City Palace, Jagdish Temple, Sahelion-ki-bari. Overnight in Udaipur. <br/>
+        Morning city sightseeing tour of Udaipur. Visit, Sahelion Ki Bari (Queen’s resort for their friends) Bhartiya Lok Kala Mandir (Folk art museum) and the Pratap Memorial. Rest of the day at leisure. Overnight stay at a hotel in Udaipur.
+        `,
       },
       {
-        name: "Day 10: Udaipur – Chittorgarh ( By road 122 kms / 03 hrs)",
+        name: "day 10 - Chittorgarh",
         description: `After breakfast morning drive to chittogarh. This is Capital city of Rajasthan. Famous for Forts and Mahal The indomitable pride of Chittaur, the fort is a massive structure with many gateways built by the later Maurya rulers in 7th century A.D. Perched on a height of 180 m. high hill, it sprawls over 700 acres. <br/>
         
         After freshen up take sightseeing which is include – Vijay Stambh (Victory Tower), Kirti Stambh (Tower of Fame), Rana Kumbha’s Palace, Meerabai Temple, Padmini’s Palace, Government Museum, Kumbha Shyam Temple, Kalika Mata Temple, Jaimal and Patta Palaces. Overnight stay at the hotel`,
       },
       {
-        name: "Day 11: Chittorgarh – Bundi ( By road 170 kms / 04 hrs)",
+        name: "Day 11: Kumbalgarh",
+        description:
+          "Morning excursion trip to Eklingi & Nagda. Later transfer to airport to connect flight for Delhi. Dep: Udaipur/Delhi Assistance at Delhi airport and transfer to hotel. Evening free and overnight in Delhi OR Mumbai.",
+      },
+      {
+        name: "Day 12: Bundi",
         description: `After breakfast check-out and proceed to Bundi On arrival at Bundi transfer to your pre booked hotel. The small, rustic town Bundi known for its palaces, forts, baolis (step wells) and water tanks. <br/>
         
         The monuments and their architecture reflect the splendor of the local Rajput chiefs.Bundi came under the Chauhan rulers in the 12th century. The descendent’s of the Chauhans set up their center at Bundi and ruled from here. <br/>
@@ -170,25 +206,11 @@ export const PACKAGES = [
         Bundi got its name from Bunda, one of its former rulers. Bundi sightseeing include – Taragarh fort , Sukh Mahal, Phool sagar palace, Chitrasala , Hathi Shala,Rani ji ki baoli, 32 pillars cenotaph,Shikar Burj, Jaisagar Lake, and Nawal sagar. Overnight stay at the hotel.`,
       },
       {
-        name: "Day 12: Bundi – Pushkar ( By road 161 kms / 02 hrs)",
-        description: `After an early morning breakfast drive to enchanting city of Pushkar. This is a wonderful tourist destination to explore and enjoy the rustic charm of Rajasthan. <br/>
-        
-        This place is also known for its Brahma Temple that is believed to be one of the few temples dedicated to Lord Brahma in the country. Brahma Temple, said to be one of the few temples in the world dedicated to this deity. It’s marked by red spire, and over the entrance gateway is the hans, or goose symbol, of Brahma, who is said to have personally chosen Pushkar as its site.few are as ancient as you might expect at such an important pilgrimage site, since many were deserted by Aurangzeb and subsequently rebuilt. <br/>
-        
-        You can concentrate upon the ghats of Pushkar and also visit all the three sacred lakes of Pushkar. This lake is a beautiful spot to be in harmony with your mind and soul.`,
+        name: "Day 13: Ajmer",
+        description: `After breakfast drive to Jaipur on the way visit khwaja dargha at Ajmer. On arrival Jaipur transfer to your pre booked hotel at Jaipur, after freshen-up take visit Jaipur local sightseeing Nahargarh , Jaigarh , Birla Tample. In the evening enjoy local market and dinner at Chokhi dhani (an ethnic village resort) where you will have an idea of the village life of Rajasthan here you will also enjoy various traditional Rajasthani dances, puppet show and various other interesting activities (Optional). Over night in your hotel.`,
       },
       {
-        name: "Day 13: Pushkar – Jaipur (By road 132 kms / 03 hrs)",
-        description: `After breakfast drive to Jaipur on the way visit khwaja dargha at Ajmer. On arrival Jaipur transfer to your pre booked hotel at Jaaipur, after freshen-up take visit Jaipur local sightseeing Nahargarh , Jaigarh , Birla Tample. In the evening enjoy local market and dinner at Chokhi dhani (an ethnic village resort) where you will have an idea of the village life of Rajasthan here you will also enjoy various traditional Rajasthani dances, puppet show and various other interesting activities (Optional). Over night in your hotel.`,
-      },
-      {
-        name: "Day 14: Jaipur",
-        description: `After break fast take a visit full day sightseeing include Amber Fort. Here at Amber, you’ll ascend till the gates of majestic Amber fort on elephant back (This is optional on direct payment basis). The fort displays a beautiful mix of Mughal and Rajput styles of architecture. Hawa Mahal (Palace of Winds).
-        
-        The beauty of Jaipur is that its unique architecture and town planning is visible at even the most common places such as its squares and lanes. City Palace, Jantar Mantar observatory,Overnight stay at the hotel.`,
-      },
-      {
-        name: "Day 15: Jaipur – Ranthambore (By road 180 kms / 04 hrs)",
+        name: "Day 14: Ranthambore",
         description: `After break fast check-out and proceed to Ranthambore.Check-in into your pre booked hotel. After lunch you take an afternoon drive into Ranthambore National Park by Canter. <br/>
         
         Ranthambore National Park is in Sawai Madhopur District of Rajasthan state. Located at the junction of the Aravalli & Vindhya hill range, Ranthambore-famous for the wildlife sanctuary which is said to have the India’s friendliest Tigers and also considered to be the best place in the world to photograph the tiger in its natural habitat. <br/>
@@ -196,20 +218,14 @@ export const PACKAGES = [
         The park covers an area of Approximately 400 sq. Sanctuary establish in the year 1955 by the Indian Government & was declared as Project Tiger reserves in the year 1973. It became National Park in the year 1980 & later in the year 1991 the tiger reserve was enlarged to include Sawai Man Singh & Keladevi sanctuaries, total area 1334 km.Major wild animals found in the national park include the tiger, leopard, Nilgai, dholes, wild pig, Sambar, chital & the gaur. It is also home to wide variety of trees, plants, birds & reptiles.Overnight stay at the hotel.`,
       },
       {
-        name: "Day 16: Ranthambore",
-        description: `Early morning visit to Ranthambore National Park by Canter. Return for breakfast and spend the rest of the morning at leisure. There is time to relax and enjoy the facilities of your hotel, maybe take a dip in the pool for a break from the heat of the day. After lunch Afternoon drive to Ranthambore National Park by Canter. Overnight stay at the hotel.`,
+        name: "Day 15: Bharatpur",
+        description: `After break fast take a visit full day sightseeing include Amber Fort. Here at Amber, you’ll ascend till the gates of majestic Amber fort on elephant back (This is optional on direct payment basis). The fort displays a beautiful mix of Mughal and Rajput styles of architecture. Hawa Mahal (Palace of Winds).
+        
+        The beauty of Jaipur is that its unique architecture and town planning is visible at even the most common places such as its squares and lanes. City Palace, Jantar Mantar observatory,Overnight stay at the hotel.`,
       },
       {
-        name: "Day 17: Ranthambore – Agra via Fatehpur Sikri (By road 280 kms / 06 hrs)",
-        description: `After break fast drive to Agra. The city of Mughals offers you an opportunity to explore the massive monuments, majestic buildings, and the popular arts and crafts. The architectural splendor of the mausoleums, the fort and the palaces is a vivid remainder of the mausoleums. Yu will be check in your pre booked hotel and visit to visit the Sikandra – Mughal Emperor Akbar’s Mausoleum,
-        
-        Also visit the Agra fort – the rusty and majestic red-sandstone fort of Agra stands on the banks of the river Yamuna and the construction was started by Emperor Akbar in 1566. The crescent-shaped fort with its 20-meter high, 2.4-km outer walls contains a maze of buildings that form a small city within a city and Tomb of Itmad-ud-Daulah.Over night stay in Hotel.`,
-      },
-      {
-        name: "Day 18: Agra – Delhi (By road 180 kms / 04 hrs) [ Departure]",
-        description: `After breakfast visit the magnificent Taj Mahal (Taj Mahal remains closed on Friday) a poem in white marble – one of the seven wonders of the world which built by Shah Jahan in memory of his beloved wife Mumtaj Mahal, The Taj Mahal was constructed by 20,000 men labored for over 17 years, Taj Mahal symbolizes the richness of art and architecture of the Mughal period.
-        
-        Check out and drive to Delhi airport to board the flight back to your home with sweet memories, a bundle of souvenirs and an address book full of friends. (The Tour Ends).`,
+        name: "Day 16: Departure to Delhi",
+        description: `Check out and drive to Delhi airport to board the flight back to your home with sweet memories, a bundle of souvenirs and an address book full of friends. (The Tour Ends).`,
       },
     ],
     Inclusion: [
@@ -1092,8 +1108,8 @@ export const PACKAGES = [
     __id: "8",
     name: "Rajasthan with South India Tour",
     image: getRandomIndexedImage(),
-    days: 23,
-    nights: 22,
+    days: 22,
+    nights: 21,
     Overview: [
       `The Rajasthan with South India Tour is designed to give you a memorable vacation. You will be exploring the most beautiful regions of India and will travel through scenic areas that have been inhabited for centuries, but still remain unspoiled and untouched by the modern world.`,
       `During your tour you will stay in 5 star quality hotels and experience true Indian hospitality. You will visit Delhi and see the "Red Fort" or take a train ride through Hampi; spend some time at Jaipur, Bikaner or Jodhpur; discover a colourful city like Udaipur in the desert;" The Taj Mahal at Agra.; enjoy 4 course food in India's most famous cities like Jaisalmer, Jodhpur, Udaipur, Cochin & Trichy; go back in time via Munnar Rainforest or Kumbakonam to Pondicherry."`,
@@ -1235,190 +1251,579 @@ export const PACKAGES = [
     ],
     FAQs: [],
   },
-  // {
-  //   __id: "9",
-  //   name: "Rajasthan Culture Tour",
-  //   image: getRandomIndexedImage(),
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "10",
-  //   name: "Rajasthan Culture Tour",
-  //   image: getRandomIndexedImage(),
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "11",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "getRandomIndexedImage()",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "12",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "13",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "14",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "15",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
-  // {
-  //   __id: "16",
-  //   name: "Rajasthan Culture Tour",
-  //   image: "/images/slide-3.jpg",
-  //   days: 15,
-  //   nights: 14,
-  //   Overview: ``,
-  //   Highlights: [],
-  //   Itinerary: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  //   Inclusion: [],
-  //   Exclusion: [],
-  //   FAQs: [
-  //     {
-  //       name:"",
-  //       description:``
-  //     }
-  //   ],
-  // },
+  {
+    __id: "9",
+    name: "Royal Heritage Tour of Rajasthan",
+    image: getRandomIndexedImage(),
+    days: 15,
+    nights: 14,
+    Overview: [
+      `
+    The Royal Heritage Tour of Rajasthan offers a majestic journey through the grand palaces, mighty forts, and regal traditions of India's most colorful state. Starting in Jaipur, the Pink City, travelers experience royal splendor at the City Palace, Amber Fort, and Hawa Mahal. Moving to Mandawa and Kuchaman, the tour showcases intricately painted havelis and ancient forts that reflect the merchant and feudal legacy of Shekhawati. In Bikaner, the majestic Junagarh Fort and the unique Karni Mata Temple impress with their architecture and mystique. The golden sands of Jaisalmer highlight desert charm with its towering fort, ornate havelis, and dune camps in Khuri. Jodhpur, the Blue City, offers the awe-inspiring Mehrangarh Fort and royal palaces. Udaipur, with its serene lakes and opulent City Palace, epitomizes romance and royal grace. The historic battlefields of Chittorgarh and the formidable walls of Kumbhalgarh Fort echo tales of valor and resistance. Ranakpur stuns with its intricately carved Jain temples, while Mount Abu offers a refreshing hill retreat. The spiritual charm of Ajmer and the wilderness of Ranthambore blend history and nature. Bundi, Alwar, Rohitgarh, and boutique retreats like Lakshman Sagar provide intimate glimpses into Rajasthan’s noble legacy. Ending in Delhi, the capital connects the journey with Mughal grandeur and modern vibrance. This tour immerses travelers in the legacy of Rajput kings, warrior tales, timeless art, and unmatched hospitality.
+    `,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Delhi to Jaipur (Arrival)",
+        description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
+        
+        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
+        `,
+      },
+      {
+        name: " Day 02 - Jaipur",
+        description: `
+        We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+        `,
+      },
+      {
+        name: "Day 03 - Kuchaman fort ",
+        description: `Kuchaman Fort is located in the town of Kuchaman and is a majestic fort offering panoramic views and showcasing Rajput architecture, now partly a heritage hotel.`,
+      },
+      {
+        name: "Day 04 - Mandawa",
+        description: `Mandawa is a town in the Shekhawati region known for its beautifully painted havelis and frescoes, attracting art and architecture lovers.`,
+      },
+      {
+        name: "day 05 - Hanumangarh",
+        description: `Hanumangarh is an ancient town with historical significance, featuring remnants from the Indus Valley Civilization and the Bhatner Fort.`,
+      },
+      {
+        name: "day 06 - Bikaner",
+        description: `Bikaner is known for Junagarh Fort, Lalgarh Palace, and the unique Karni Mata Temple (Rat Temple), as well as delicious snacks like bhujia.`,
+      },
+      {
+        name: "day 07 - Jaiselmer",
+        description: `Jaisalmer is called the Golden City, famed for Jaisalmer Fort, Patwon Ki Haveli, and the surrounding Thar Desert sand dunes.`,
+      },
+      {
+        name: "day 08 - Jodhpur",
+        description: `Jodhpur is the Blue City, home to the massive Mehrangarh Fort, Umaid Bhawan Palace, and the vibrant old city area.`,
+      },
+      {
+        name: "day 09 - Udaipur",
+        description: `Udaipur is the City of Lakes, known for Lake Pichola, City Palace, Jag Mandir, and romantic boat rides and hilltop views.`,
+      },
+      {
+        name: "day 10 - Chittorgarh",
+        description: `Chittorgarh is symbolic of Rajput pride and sacrifice, with the enormous Chittorgarh Fort, Rana Kumbha Palace, and Vijay Stambh.`,
+      },
+      {
+        name: "day 11 - Kumbargarh",
+        description: `Kumbhalgarh is known for Kumbhalgarh Fort, with the second-longest wall in the world, and it is surrounded by scenic wildlife and hills.`,
+      },
+      {
+        name: "day 12 - Bundi",
+        description: `Bundi is a picturesque town featuring Taragarh Fort, Bundi Palace, and intricately carved stepwells like Raniji Ki Baori.`,
+      },
+      {
+        name: "day 13 - Ajmer",
+        description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
+      },
+      {
+        name: "day 14 - Nahargarh Fort",
+        description: `Nahargarh Fort is situated on the Aravalli hills near Jaipur and is known for panoramic views of the city and historical structures.`,
+      },
+      {
+        name: "day 15 - Ranthambore",
+        description: `Ranthambore is a renowned national park famous for tiger safaris, Ranthambore Fort, and picturesque lakes and ruins.`,
+      },
+      {
+        name: "day 16 - Bharatpur",
+        description: `Bharatpur is known for the Keoladeo National Park, a UNESCO World Heritage site and a haven for migratory birds and birdwatchers.`,
+      },
+      {
+        name: "Jaipur to Delhi departure",
+        description: `
+        Departure from Jaipur to Delhi.
+        `,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [],
+  },
+  {
+    __id: "10",
+    name: "Cultural and Colorful Tour of Rajasthan",
+    image: getRandomIndexedImage(),
+    days: 30,
+    nights: 29,
+    Overview: [
+      `Rajasthan, the Land of Kings, offers a vibrant and deeply cultural experience shaped by centuries of royal heritage, desert landscapes, and diverse traditions. Its cities burst with color — from the pink hues of Jaipur and the blue lanes of Jodhpur to the golden sandstone of Jaisalmer. The state celebrates life with exuberant festivals like Pushkar Fair, Teej, and Gangaur, where locals don traditional attire, perform folk dances like Ghoomar and Kalbelia, and play lively music with instruments like the sarangi and dholak. Every corner showcases rich craftsmanship through intricate textiles, hand-painted pottery, and mirror-work embroidery. 
+      Historic forts, majestic palaces, and havelis reflect the grandeur of Rajput architecture, while bustling bazaars overflow with spices, bangles, and Rajasthani cuisine like dal baati churma and ghevar. Rajasthan’s villages and desert camps offer authentic glimpses into rural life, where camel rides, puppet shows, and warm hospitality complete the colorful and cultural tapestry of the state.`,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Delhi to Jaipur (Arrival)",
+        description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
+        
+        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
+        `,
+      },
+      {
+        name: " Day 02 - Jaipur",
+        description: `
+        We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+        `,
+      },
+      {
+        name: "Day 03 - Kuchaman fort ",
+        description: `Kuchaman Fort is located in the town of Kuchaman and is a majestic fort offering panoramic views and showcasing Rajput architecture, now partly a heritage hotel.`,
+      },
+      {
+        name: "Day 04 - Mandawa",
+        description: `Mandawa is a town in the Shekhawati region known for its beautifully painted havelis and frescoes, attracting art and architecture lovers.`,
+      },
+      {
+        name: "day 05 - Bikaner",
+        description: `Bikaner is known for Junagarh Fort, Lalgarh Palace, and the unique Karni Mata Temple (Rat Temple), as well as delicious snacks like bhujia.`,
+      },
+      {
+        name: "day 06 - Jaiselmer",
+        description: `Jaisalmer is called the Golden City, famed for Jaisalmer Fort, Patwon Ki Haveli, and the surrounding Thar Desert sand dunes.`,
+      },
+      {
+        name: "day 07 - Khuri",
+        description: `Khuri is a tranquil desert village near Jaisalmer, known for sand dunes, camel safaris, and peaceful desert camp stays.`,
+      },
+      {
+        name: "day 08 - Jodhpur",
+        description: `Jodhpur is the Blue City, home to the massive Mehrangarh Fort, Umaid Bhawan Palace, and the vibrant old city area.`,
+      },
+      {
+        name: "day 09 - Ranakpur and Mount-Abu",
+        description: `
+        Ranakpur is famous for the stunning white marble Jain Temple dedicated to Tirthankara Adinatha, set amidst green hills.
+        <br/>
+        Mount Abu is Rajasthan’s only hill station, popular for the Dilwara Jain Temples, Nakki Lake, and the cool, green hill environment.
+        `,
+      },
+      {
+        name: "day 10 - Udaipur",
+        description: `Udaipur is the City of Lakes, known for Lake Pichola, City Palace, Jag Mandir, and romantic boat rides and hilltop views.`,
+      },
+      {
+        name: "day 11 - Chittorgarh",
+        description: `Chittorgarh is symbolic of Rajput pride and sacrifice, with the enormous Chittorgarh Fort, Rana Kumbha Palace, and Vijay Stambh.`,
+      },
+      {
+        name: "day 12 - Kumbargarh",
+        description: `Kumbhalgarh is known for Kumbhalgarh Fort, with the second-longest wall in the world, and it is surrounded by scenic wildlife and hills.`,
+      },
+      {
+        name: "day 13 - Bundi",
+        description: `Bundi is a picturesque town featuring Taragarh Fort, Bundi Palace, and intricately carved stepwells like Raniji Ki Baori.`,
+      },
+      {
+        name: "day 14 - Ajmer",
+        description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
+      },
+      {
+        name: "day 15 - Ranthambore",
+        description: `Ranthambore is a renowned national park famous for tiger safaris, Ranthambore Fort, and picturesque lakes and ruins.`,
+      },
+      {
+        name: "day 16 - Lakshman Sagar",
+        description: `Lakshman Sagar is a luxury boutique resort near Raipur, offering a blend of rustic charm and comfort in a natural setting.`,
+      },
+      {
+        name: "day 17 - Rohitgarh",
+        description: `Rohitgarh is a lesser-known heritage village area with rural Rajasthani charm, featuring a heritage fort now serving as a homestay.`,
+      },
+      {
+        name: "day 18 - Alwar",
+        description: `Alwar features scenic spots like Siliserh Lake, Bala Quila Fort, and is close to the haunted Bhangarh Fort and Sariska Tiger Reserve.`,
+      },
+      {
+        name: "day 19 - Bharatpur",
+        description: `Bharatpur is known for the Keoladeo National Park, a UNESCO World Heritage site and a haven for migratory birds and birdwatchers.`,
+      },
+      {
+        name: "day 19 - Agra",
+        description: `Agra - the city of Taj Mahal was a special place to explore. There is something special in the air of Agra that speaks about its glorious past. I was overwhelmed with the first sight of Taj Mahal and tours to Itmad-Ud-Daula's tomb and Agra fort made my stay absolutely unforgettable. Today I am leaving this great city only with a firm desire to return back here very soon.`,
+      },
+      {
+        name: "Agra to Delhi departure",
+        description: `
+        Departure from Agra to Delhi.
+        `,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [],
+  },
+  {
+    __id: "11",
+    name: "Marwar Tour",
+    image: getRandomIndexedImage(),
+    days: 6,
+    nights: 7,
+    Overview: [
+      `The Marwar Tour of Rajasthan takes you through the heart of the desert kingdom, revealing the rugged beauty, valorous history, and vibrant culture of the Marwar region. Centered around Jodhpur, the Blue City, the tour begins with the awe-inspiring Mehrangarh Fort, Umaid Bhawan Palace, and the bustling Sardar Market. From there, travelers can explore Mandore, the ancient capital of Marwar, known for its cenotaphs and gardens. A visit to Osian, an ancient temple town in the Thar Desert, offers both spiritual significance and camel safari experiences. The tour often includes nearby desert villages like Khimsar and Rohetgarh, where heritage hotels and rustic charm showcase Marwar’s noble hospitality. Bikaner, another jewel of Marwar, enchants with Junagarh Fort, the royal palaces, and the unique Karni Mata Temple. In smaller towns like Nagaur and Phalodi, travelers witness authentic desert life, historic forts, and salt-lake landscapes. This tour paints a vivid picture of Marwar’s royal legacy, Rajput bravery, and desert traditions through its architecture, cuisine, music, and warm desert hospitality.`,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Delhi to Mandawa (Arrival)",
+        description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
+        
+        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
+        `,
+      },
+      {
+        name: `Day 02 - Mandawa`,
+        description: `Morning drive to Mandawa. Dep: Delhi/Mandawa By Car(with an English speaking Tourist Driver) Arrive Mandawa and direct transfer to hotel. Mandawa was settled in the 18th century, and was fortified by the dominant merchant families. Today it has some of the finest painted havelies in the region.
+      
+        Evening visit the town and some of its painted havelies. Mandawa houses a collection of armories, costumes of ancestors, canons from 1820, ancient coins, numismatic collection and many other interesting items preserved in a museum. The whole area of Shekhawati has beautiful frescoes, Haveli’s & mansions and is called the open-air gallery. Overnight in Mandawa.`,
+      },
+      {
+        name: "Day 03 - Bikaner",
+        description:
+          "Morning drive to Bikaner. Dep: Mandawa/BikanerBy Car (with an English speaking Tourist Driver) Bikaner – popularly called the camel country. The city is renowned for the best riding camels in the world. Afternoon visit Junagarh Fort – built in 1593 A.D. by Raja Rai Singh, a general in the army of Emperor Akbar, and Camel Breeding farm. Overnight stay in Bikaner.",
+      },
+      {
+        name: "Day 04 -Jaisalmer ",
+        description: `Morning visit Deshnok’s Karni Mata Temple (32 kms): the famous 600 years old temple on the Jodhpur road dedicated to Karni Mata, an incarnation of Goddess Durga. The temple has huge intricately carved silver gates which were donated by Maharaja Ganga Singh. The most interesting thing about the temple are the rats who scamper freely within the sanctum sanctorum of the temple.
+        
+        They are regarded as sacred and are fed by priests and devotees owing to the belief that they will be reincarnated in the family of the goddess. Continue drive to Jaisalmer. Dep: Bikaner/Jaisalmer By Car (with an English speaking Tourist Driver) Direct transfer to hotel. Rest of the day at leisure and overnight in Jaisalmer.`,
+      },
+      {
+        name: "Day 05 - Jhodhpur",
+        description:
+          "Morning drive to Jodhpur. Dep: Jaisalmer/Jodhpur By Car (with an English speaking Tourist Driver). En- route visit Osian – an oasis in the desert. (if time permits). Direct transfer to hotel. Afternoon visit Mandore Gardens and local market in Old Jodhpur. Evening free. overnight in Jodhpur.",
+      },
+
+      {
+        name: "Day 06 - Nagaur",
+        description: `
+        Nagaur, located between Jodhpur and Bikaner, is a lesser-explored gem of Rajasthan known for its historical significance and rustic charm. The centerpiece is the massive Nagaur Fort, which houses beautiful palaces, temples, gardens, and ancient frescoes. The fort comes alive during the Nagaur Cattle Fair, one of the largest in India, drawing visitors with its vibrant mix of trading, folk music, camel races, and local crafts. Other notable sites include the Tarkeen Dargah, a revered Sufi shrine, and the serene Jain Glass Temple. With its authentic Rajasthani atmosphere, fewer crowds, and well-preserved heritage, Nagaur offers a peaceful yet culturally rich experience for travelers seeking offbeat destinations in Rajasthan.`,
+      },
+      {
+        name: "Mandawa to Delhi Departure",
+        description: ` Check out and drive to Delhi airport to board the flight back to your home with sweet memories, a bundle of souvenirs and an address book full of friends. (The Tour Ends).`,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [],
+  },
+  {
+    __id: "12",
+    name: "East Rajasthan Tour",
+    image: getRandomIndexedImage(),
+    days: 8,
+    nights: 7,
+    Overview: [
+      `
+    The East Rajasthan Tour offers a captivating journey through the culturally rich and ecologically diverse eastern region of the state, blending royal heritage with wildlife and spirituality. The tour often starts from Jaipur, the Pink City, with its majestic forts like Amber and Nahargarh, royal palaces, and colorful bazaars. Moving to Ranthambore, visitors enjoy thrilling wildlife safaris in one of India’s top tiger reserves, home to Bengal tigers and ancient fort ruins nestled in the jungle. Bharatpur enchants bird lovers with the Keoladeo National Park, a UNESCO World Heritage site known for its migratory birds. Alwar, with attractions like Bala Quila, Siliserh Lake, and proximity to the haunted Bhangarh Fort, adds historical depth and mystery. The spiritual town of Ajmer, home to the Ajmer Sharif Dargah, and nearby Pushkar, with its sacred lake and Brahma Temple, offer a spiritual pause along the route. This tour gives a perfect blend of history, nature, culture, and faith, all within a compact and scenic circuit of Rajasthan.
+    `,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: "",
+        description: ``,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [
+      {
+        name: " Day 01 - Jaipur",
+        description: `
+        We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+        `,
+      },
+      {
+        name: "day 02 - Ajmer",
+        description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
+      },
+      {
+        name: "day 03 - Kumbargarh",
+        description: `Kumbhalgarh is known for Kumbhalgarh Fort, with the second-longest wall in the world, and it is surrounded by scenic wildlife and hills.`,
+      },
+      {
+        name: "day 04 - Mount-Abu",
+        description: `
+        Mount Abu is Rajasthan’s only hill station, popular for the Dilwara Jain Temples, Nakki Lake, and the cool, green hill environment.
+        `,
+      },
+      {
+        name: "day 05 - Udaipur",
+        description: `Udaipur is the City of Lakes, known for Lake Pichola, City Palace, Jag Mandir, and romantic boat rides and hilltop views.`,
+      },
+      {
+        name: "day 06 - Chittorgarh",
+        description: `Chittorgarh is symbolic of Rajput pride and sacrifice, with the enormous Chittorgarh Fort, Rana Kumbha Palace, and Vijay Stambh.`,
+      },
+      {
+        name: "day 07 - Bundi",
+        description: `Bundi is a picturesque town featuring Taragarh Fort, Bundi Palace, and intricately carved stepwells like Raniji Ki Baori.`,
+      },
+      {
+        name: "day 08 - Bharatpur",
+        description: `Bharatpur is known for the Keoladeo National Park, a UNESCO World Heritage site and a haven for migratory birds and birdwatchers.`,
+      },
+    ],
+  },
+  {
+    __id: "13",
+    name: "Mini Rajasthan Tour",
+    image: getRandomIndexedImage(),
+    days: 15,
+    nights: 14,
+    Overview: [
+      `
+    The Mini Rajasthan Tour is a compact yet enriching journey that captures the essence of Rajasthan’s royal heritage, desert charm, vibrant culture, and scenic beauty within a short span. Ideal for travelers with limited time, the tour typically includes key destinations like Jaipur, Jodhpur, and Udaipur. Starting in Jaipur, visitors explore architectural marvels like Amber Fort, City Palace, and Hawa Mahal while enjoying traditional markets and Rajasthani cuisine. The tour then moves to Jodhpur, the Blue City, where the massive Mehrangarh Fort, Umaid Bhawan Palace, and vibrant bazaars reveal the grandeur of Marwar. Finally, Udaipur, the City of Lakes, offers serene boat rides on Lake Pichola, visits to the majestic City Palace, and strolls through romantic gardens. This compact route gives travelers a taste of Rajasthan’s royal history, desert landscapes, local crafts, and warm hospitality—making it perfect for a first-time or quick visit.
+    `,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Delhi to Jaipur (Arrival)",
+        description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
+        
+        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
+        `,
+      },
+      {
+        name: " Day 02 - Jaipur",
+        description: `
+        We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+        `,
+      },
+      {
+        name: "day 06 - Jaiselmer",
+        description: `Jaisalmer is called the Golden City, famed for Jaisalmer Fort, Patwon Ki Haveli, and the surrounding Thar Desert sand dunes.`,
+      },
+      {
+        name: "day 08 - Jodhpur",
+        description: `Jodhpur is the Blue City, home to the massive Mehrangarh Fort, Umaid Bhawan Palace, and the vibrant old city area.`,
+      },
+      {
+        name: "day 11 - Chittorgarh",
+        description: `Chittorgarh is symbolic of Rajput pride and sacrifice, with the enormous Chittorgarh Fort, Rana Kumbha Palace, and Vijay Stambh.`,
+      },
+      {
+        name: "day 12 - Kumbargarh",
+        description: `Kumbhalgarh is known for Kumbhalgarh Fort, with the second-longest wall in the world, and it is surrounded by scenic wildlife and hills.`,
+      },
+      {
+        name: "day 14 - Ajmer",
+        description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
+      },
+      {
+        name: "Jaipur to Delhi departure",
+        description: `
+        Departure from Agra to Delhi.
+        `,
+      },
+    ],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
+    FAQs: [],
+  },
+  {
+    __id: "14",
+    name: "Rajasthan Central City Tour",
+    image: getRandomIndexedImage(),
+    days: 100,
+    nights: 500,
+    Overview: [
+      `
+      The Rajasthan Central Tour offers a deep dive into the heart of the state, blending royal heritage, desert culture, and spiritual richness. Centered around Jodhpur, Ajmer, Pushkar, and Nagaur, the tour highlights majestic forts like Mehrangarh, sacred sites like the Ajmer Sharif Dargah, and the holy Pushkar Lake with its unique Brahma Temple. Nagaur Fort and its annual cattle fair provide a glimpse into traditional desert life. This central circuit showcases authentic Rajasthani architecture, vibrant markets, and folk traditions, offering a rich cultural experience in a compact, centrally located route.
+      `,
+    ],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Jaipur",
+        description: `
+          We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+          `,
+      },
+      {
+        name: "day 02 - Ajmer",
+        description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
+      },
+    ],
+    Inclusion: [],
+    Exclusion: [],
+    FAQs: [],
+  },
+  {
+    __id: "15",
+    name: "Lake City Tour",
+    image: getRandomIndexedImage(),
+    days: 15,
+    nights: 14,
+    Overview: [`
+      The Lake City Tour of Rajasthan revolves around the enchanting beauty of Udaipur, famously known as the City of Lakes. Nestled in the Aravalli hills, Udaipur offers a romantic blend of serene waters, royal palaces, and scenic landscapes. Highlights include the grand City Palace, tranquil Lake Pichola, the iconic Lake Palace, and the serene Fateh Sagar Lake. Nearby attractions like Saheliyon ki Bari, Bagore Ki Haveli, and Monsoon Palace add charm to the experience. The tour may also include nearby lake towns like Rajsamand and Jaisamand, making it ideal for those seeking beauty, heritage, and peace in one journey.
+      `],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Jaipur",
+        description: `
+        We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+        `,
+      },
+      {
+        name: "day 02 - Ajmer",
+        description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
+      },
+      {
+        name: "day 03 - Rajsamand",
+        description: `
+        Rajsamand, located near Udaipur in Rajasthan, is known for the historic Rajsamand Lake, built by Maharana Raj Singh. Nearby attractions include the majestic Kumbhalgarh Fort, a UNESCO World Heritage Site, and the Kumbhalgarh Wildlife Sanctuary. Haldighati, famous for the battle of Maharana Pratap, and the cave temple of Parshuram Mahadev are also close by. The town is rich in history and offers scenic landscapes, making it a peaceful yet culturally significant destination.
+        `,
+      },
+      {
+        name: "day 04 - Udaipur",
+        description: `Udaipur is the City of Lakes, known for Lake Pichola, City Palace, Jag Mandir, and romantic boat rides and hilltop views.`,
+      },
+      {
+        name: "day 05 - Back to Jaipur",
+        description: ` BAck to Jaipur`,
+      },
+    ],
+    Inclusion: [],
+    Exclusion: [],
+    FAQs: [],
+  },
+  {
+    __id: "16",
+    name: "Desert Tour",
+    image: "/images/camel1.jpg",
+    days: 15,
+    nights: 14,
+    Overview: [``],
+    Highlights: [],
+    Itinerary: [
+      {
+        name: " Day 01 - Delhi to Jaipur (Arrival)",
+        description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
+        
+        the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
+        `,
+      },
+      {
+        name: "day 02 - Bikaner",
+        description: `Bikaner is known for Junagarh Fort, Lalgarh Palace, and the unique Karni Mata Temple (Rat Temple), as well as delicious snacks like bhujia.`,
+      },
+      {
+        name: "day 03 - Jaiselmer",
+        description: `Jaisalmer is called the Golden City, famed for Jaisalmer Fort, Patwon Ki Haveli, and the surrounding Thar Desert sand dunes.`,
+      },
+      {
+        name: "day 04 - Jodhpur",
+        description: `Jodhpur is the Blue City, home to the massive Mehrangarh Fort, Umaid Bhawan Palace, and the vibrant old city area.`,
+      },
+      {
+        name:"Jaipur to Delhi Departure",
+        description: `
+        Depature from Jaipur to Delhi
+        `
+      }
+    ],
+    Inclusion: [],
+    Exclusion: [],
+    FAQs: [],
+  },
 ];
 
 // Our services
@@ -1678,15 +2083,15 @@ export const TOPSERVICES = [
     path: "/camping_hiking",
   },
   {
-    name:"Flight Service",
+    name: "Flight Service",
     image: "/images/airline1.jpg",
-    path:"/airline"
+    path: "/airline",
   },
   {
-    name:"Railway Service",
+    name: "Railway Service",
     image: "/images/train1.jpg",
-    path:"/train"
-  }
+    path: "/train",
+  },
 ];
 
 export const RAILWAYIMAGES = [
@@ -1702,34 +2107,34 @@ export const RAILWAYIMAGES = [
     image: "/images/train3.jpg",
     content: "Train Service",
   },
-]
+];
 
 export const AIRLINESERVICES = [
   {
-    name:"Delhi - Jaipur",
+    name: "Delhi - Jaipur",
   },
   {
-    name:"Jaipur - Delhi",
+    name: "Jaipur - Delhi",
   },
   {
-    name:"Delhi - Agra",
+    name: "Delhi - Agra",
   },
   {
-    name:"Agra - Delhi",
+    name: "Agra - Delhi",
   },
   {
-    name:"Mumbai - Jaipur",
+    name: "Mumbai - Jaipur",
   },
   {
-    name:"Jaipur - Mumbai",
+    name: "Jaipur - Mumbai",
   },
   {
-    name:"Mumbai - Agra",
+    name: "Mumbai - Agra",
   },
   {
-    name:"Agra - Mumbai",
+    name: "Agra - Mumbai",
   },
-]
+];
 
 export const TRAINSERVICES = [
   { name: "Delhi - Jaipur Express" },
@@ -1741,19 +2146,19 @@ export const TRAINSERVICES = [
 ];
 
 export const AIRLINEIMAGES = [
-      {
-        image: "/images/airline1.jpg",
-        content: "Airline Service",
-      },
-      {
-        image: "/images/airline2.jpg",
-        content: "Airline Service",
-      },
-      {
-        image: "/images/airline3.jpg",
-        content: "Airline Service",
-      },
-    ]
+  {
+    image: "/images/airline1.jpg",
+    content: "Airline Service",
+  },
+  {
+    image: "/images/airline2.jpg",
+    content: "Airline Service",
+  },
+  {
+    image: "/images/airline3.jpg",
+    content: "Airline Service",
+  },
+];
 
 // One Day Tour
 export const ONEDAYTOUR = {
@@ -2193,3 +2598,52 @@ export const CAMPING = {
     },
   ],
 };
+
+export const RAJASTHANDISTRICTS = [
+  "Ajmer",
+  "Alwar",
+  "Anupgarh",
+  "Balotra",
+  "Baran",
+  "Barmer",
+  "Beawar",
+  "Bharatpur",
+  "Bhilwara",
+  "Bhiwadi",
+  "Bikaner",
+  "Bundi",
+  "Chittorgarh",
+  "Churu",
+  "Dausa",
+  "Dholpur",
+  "Didwana-Kuchaman",
+  "Dungarpur",
+  "Ganganagar",
+  "Gangapur City",
+  "Hanumangarh",
+  "Jaipur",
+  "Jaisalmer",
+  "Jalore",
+  "Jhalawar",
+  "Jhunjhunu",
+  "Jodhpur",
+  "Karauli",
+  "Kekri",
+  "Kota",
+  "Kotputli-Behror",
+  "Nagaur",
+  "Neem Ka Thana",
+  "Pali",
+  "Phalodi",
+  "Pratapgarh",
+  "Rajsamand",
+  "Salumbar",
+  "Sanchore",
+  "Sawai Madhopur",
+  "Sikar",
+  "Sirohi",
+  "Sri Ganganagar",
+  "Sri Karanpur",
+  "Tonk",
+  "Udaipur",
+];

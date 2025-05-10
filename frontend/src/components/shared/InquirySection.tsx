@@ -55,8 +55,7 @@ function InquirySection() {
     <Dialog open={openDialog} onOpenChange={setopenDialog}>
       <DialogTrigger className=" cursor-pointer w-full" asChild>
         <Button
-          size="lg"
-          className="font-bold  bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent mx-auto"
+          className="font-bold bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent mx-auto"
           variant="secondary"
         >
           Raise your Query

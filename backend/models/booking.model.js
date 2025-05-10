@@ -20,6 +20,13 @@ const BookingSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    hotel: {
+        type: String,
+        enum: ["3 Star", "5 Star"]
+    },
+    PlaceList: [{
+        type: String
+    }],
     paymentStatus: {
         order_id: {
             type: String,

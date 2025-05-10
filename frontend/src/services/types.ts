@@ -91,6 +91,8 @@ export type BOOKINGTYPE = {
   startDate: Date;
   user: User;
   paymentStatus: PAYMENTSTATUSTYPE;
+  PlaceList?: string[];
+  hotel?: string;
 };
 
 export type QUERIESTYPE = {

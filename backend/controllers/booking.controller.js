@@ -39,7 +39,7 @@ export const createTour = async (req, res, next) => {
 export const verifyPayment = async (req, res, next) => {
     try {
         const user = req.user;
-        const { order_id, payment_id, signature, PackageName, PackageDays, PackagePrice, people, startDate } = req.body;
+        const { order_id, payment_id, signature, PackageName, PackageDays, PackagePrice, people, startDate, hotel, PlaceList } = req.body;
 
         const razorpaySecret = process.env.RAZORPAY_KEY_SECRET;
 
@@ -58,6 +58,8 @@ export const verifyPayment = async (req, res, next) => {
                 PackagePrice,
                 people,
                 startDate,
+                hotel,
+                PlaceList,
                 paymentStatus: {
                     order_id,
                     payment_id,
@@ -78,7 +80,7 @@ export const verifyPayment = async (req, res, next) => {
 export const bookTourWithoutPayment = async (req, res, next) => {
     try {
         const user = req.user;
-        const { PackageName, PackageDays, PackagePrice, people, startDate } = req.body;
+        const { PackageName, PackageDays, PackagePrice, people, startDate, PlaceList, hotel } = req.body;
         const newBooking = new Booking({
             user: user._id,
             PackageName,
@@ -86,6 +88,8 @@ export const bookTourWithoutPayment = async (req, res, next) => {
             PackagePrice,
             people,
             startDate,
+            PlaceList,
+            hotel
         });
         await newBooking.save();
         return res.status(200).json({ message: "Tour Booked Successfully" });
@@ -117,12 +121,12 @@ export const getBookingsForAdmin = async (req, res, next) => {
         const limit = req.query.limit || 15;
         const skip = (page - 1) * limit;
         const bookings = await Booking.find().sort({ createdAt: -1 })
-        .skip(skip)
-        .limit(limit)
-        .populate(
-            "user",
-            "fullname mobile isVerified _id",
-        );
+            .skip(skip)
+            .limit(limit)
+            .populate(
+                "user",
+                "fullname mobile isVerified _id",
+            );
         return res.status(200).json({ message: "Bookings fetched successfully", bookings });
     } catch (error) {
         console.log("Error in getBookingsForAdmin controller:", error);

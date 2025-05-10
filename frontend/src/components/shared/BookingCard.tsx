@@ -17,10 +17,18 @@ import axios from "axios";
 import { API_URL } from "@/services/API";
 import { Checkbox } from "../ui/checkbox";
 import InquirySection from "./InquirySection";
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface Props {
   PackageName: string;
   PackageDays: number;
+  PlaceList?: string[];
 }
 
 type BookingInput = {
@@ -29,6 +37,8 @@ type BookingInput = {
   PackagePrice: number;
   people: number;
   startDate: Date;
+  PlaceList?: string[];
+  hotel?: string;
 };
 
 function BookingCard({ props }: { props: Props }) {
@@ -39,6 +49,7 @@ function BookingCard({ props }: { props: Props }) {
     PackagePrice: props.PackageDays * 1000,
     people: 1,
     startDate: new Date(),
+    PlaceList: props.PlaceList,
   });
   const [payOnline, setpayOnline] = useState(true);
   const [loading, setloading] = useState(false);
@@ -66,11 +77,27 @@ function BookingCard({ props }: { props: Props }) {
 
   // change package price
   useEffect(() => {
-    setInput({
-      ...input,
-      PackagePrice: input.people * input.PackageDays * 1000,
-    });
-  }, [input.PackageDays, input.people]);
+    if (input.hotel === "3 Star") {
+      setInput({
+        ...input,
+        PackagePrice:
+          input.people * input.PackageDays * 1000 +
+          input.people * input.PackageDays * 800 * 0.8,
+      });
+    } else if (input.hotel === "5 Star") {
+      setInput({
+        ...input,
+        PackagePrice:
+          input.people * input.PackageDays * 1000 +
+          input.people * input.PackageDays * 1000 * 0.8,
+      });
+    } else {
+      setInput({
+        ...input,
+        PackagePrice: input.people * input.PackageDays * 1000,
+      });
+    }
+  }, [input.PackageDays, input.people, input.hotel]);
 
   const handleBooking = async () => {
     try {
@@ -104,6 +131,8 @@ function BookingCard({ props }: { props: Props }) {
               PackagePrice: input.PackagePrice,
               people: input.people,
               startDate: input.startDate.toISOString(),
+              PlaceList: input.PlaceList,
+              hotel: input.hotel,
             };
             await axios
               .post(`${API_URL}/api/v1/booking/verify-payment`, options2, {
@@ -149,6 +178,7 @@ function BookingCard({ props }: { props: Props }) {
       setloading(false);
     }
   };
+
   return (
     <div className="w-full mt-5 border rounded-lg shadow-md p-4 md:sticky md:top-10">
       <h1 className="text-lg font-bold text-center font-serif my-2">
@@ -172,9 +202,9 @@ function BookingCard({ props }: { props: Props }) {
                 setInput({ ...input, people: input.people - 1 });
               }}
             >
-              <MinusCircle className="size-7" strokeWidth={1} />
+              <MinusCircle className="size-5" strokeWidth={2} />
             </Button>
-            <span className="text-xl lg:text-2xl font-bold border px-5 py-2 rounded-lg">
+            <span className="text-lg lg:text-xl font-bold border px-3.5 py-1 rounded-lg">
               {input.people}
             </span>
             <Button
@@ -187,7 +217,7 @@ function BookingCard({ props }: { props: Props }) {
                 setInput({ ...input, people: input.people + 1 });
               }}
             >
-              <PlusCircle className="size-7" strokeWidth={1} />
+              <PlusCircle className="size-5" strokeWidth={2} />
             </Button>
           </div>
         </div>
@@ -209,9 +239,9 @@ function BookingCard({ props }: { props: Props }) {
                 });
               }}
             >
-              <MinusCircle className="size-7" strokeWidth={1} />
+              <MinusCircle className="size-5" strokeWidth={2} />
             </Button>
-            <span className="text-xl lg:text-2xl font-bold border px-5 py-2 rounded-lg">
+            <span className="text-lg lg:text-xl font-bold border px-3.5 py-1 rounded-lg">
               {input.PackageDays}
             </span>
             <Button
@@ -225,7 +255,7 @@ function BookingCard({ props }: { props: Props }) {
                 });
               }}
             >
-              <PlusCircle className="size-7" strokeWidth={1} />
+              <PlusCircle className="size-5" strokeWidth={2} />
             </Button>
           </div>
         </div>
@@ -272,9 +302,63 @@ function BookingCard({ props }: { props: Props }) {
         {/* Price */}
         <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
           <Label className="text-xl font-bold sm:justify-center">Price</Label>
-          <span className="text-xl lg:text-2xl font-bold border px-5 py-2 rounded-lg">
+          <span className="text-lg lg:text-xl font-bold border px-3.5 py-1 rounded-lg">
             ₹ {input.PackagePrice}
           </span>
+        </div>
+
+        {/* Hotel Selection */}
+        <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
+          <Label className="text-xl font-bold sm:justify-center">Hotel</Label>
+          <div className="flex items-center gap-5 justify-center">
+            <RadioGroup
+              defaultValue={input.hotel}
+              className="flex flex-col md:flex-row flex-wrap"
+              value={input.hotel}
+              onValueChange={(value) => setInput({ ...input, hotel: value })}
+            >
+              <div className="flex items-center space-x-2 group">
+                <RadioGroupItem value="3 Star" id="r2" className="size-5" />
+                <Label htmlFor="r2">
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button variant={"ghost"} size={"sm"}>
+                          3 Star Hotel
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>
+                          ₹{input.people * input.PackageDays * 800 * 0.8} for{" "}
+                          {input.people} people for {input.PackageDays} days
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="5 Star" id="r3" className="size-5" />
+                <Label htmlFor="r3">
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button variant="ghost" size={"sm"}>
+                          5 star Hotel
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>
+                          ₹{input.people * input.PackageDays * 1000 * 0.8} for{" "}
+                          {input.people} people for {input.PackageDays} days
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Label>
+              </div>
+            </RadioGroup>
+          </div>
         </div>
 
         {/* Checkbox whthter payment is online or offline */}
@@ -299,7 +383,6 @@ function BookingCard({ props }: { props: Props }) {
             onClick={handleBooking}
             variant={"outline"}
             className="w-full text-white max-w-96 mx-auto bg-gradient-to-r from-green-500 via-emerald-500 to-emerald-600 cursor-pointer"
-            size={"lg"}
           >
             {loading ? (
               <Loader2 className="size-4 animate-spin" />
@@ -315,7 +398,6 @@ function BookingCard({ props }: { props: Props }) {
           <>
             <Button
               variant={"outline"}
-              size={"lg"}
               className="w-full max-w-96 mx-auto bg-gradient-to-r from-green-500 via-emerald-500 to-emerald-600 cursor-pointer"
               onClick={() => router.push("/login")}
             >

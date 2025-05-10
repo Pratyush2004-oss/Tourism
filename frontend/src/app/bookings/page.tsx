@@ -17,7 +17,7 @@ function page() {
     try {
       setloading(true);
       const response = await axios.get(
-        `${API_URL}/api/v1/booking/get-bookings-admin`,
+        `${API_URL}/api/v1/booking/get-bookings`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -74,6 +74,16 @@ function page() {
                     <p className="text-lg font-bold col-span-2 text-center">
                       Number of People: {booking.people}
                     </p>
+                    {(booking.PlaceList ?? []).length > 0 && (
+                      <p className="text-lg font-bold col-span-2 text-center">
+                        Places: {(booking.PlaceList ?? []).join(", ")}
+                      </p>
+                    )}
+                    {booking.hotel && (
+                      <p className="text-lg font-bold col-span-2 text-center">
+                        Hotel: {booking.hotel}
+                      </p>
+                    )}
                     {booking.paymentStatus &&
                     booking.paymentStatus.order_id &&
                     booking.paymentStatus.payment_id ? (

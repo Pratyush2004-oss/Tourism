@@ -22,7 +22,7 @@ function Services() {
                   alt={service.name}
                   width={500}
                   height={500}
-                  className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-t-lg"
+                  className="w-full object-cover rounded-t-lg h-56"
                 />
                 <h2 className="text-xl md:text-2xl font-bold my-4 text-center">
                   {service.name}
@@ -44,7 +44,7 @@ function Services() {
                   alt={service.name}
                   width={500}
                   height={500}
-                  className="w-full h-56 sm:h-64 lg:h-72 object-cover rounded-t-lg"
+                  className="w-full h-56 object-cover rounded-t-lg"
                 />
                 <h2 className="text-xl md:text-2xl font-bold my-4 text-center">
                   {service.name}
