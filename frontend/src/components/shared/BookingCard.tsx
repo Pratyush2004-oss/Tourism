@@ -50,7 +50,7 @@ function BookingCard({ props }: { props: Props }) {
     PackageName: props.PackageName,
     PackageDays: props.PackageDays,
     PackagePrice: props.PackageDays * 1000,
-    people: 1,
+    people: 2,
     hotel: "",
     startDate: new Date(),
     PlaceList: props.PlaceList,
@@ -225,7 +225,7 @@ function BookingCard({ props }: { props: Props }) {
                   variant={"ghost"}
                   className="cursor-pointer"
                   onClick={() => {
-                    if (input.people <= 1) return;
+                    if (input.people <= 2) return;
                     setInput({ ...input, people: input.people - 1 });
                   }}
                 >
@@ -331,7 +331,7 @@ function BookingCard({ props }: { props: Props }) {
             {/* Price */}
             <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
               <Label className="text-xl font-bold sm:justify-center">
-                Price
+                Price Starts from
               </Label>
               <span className="text-lg lg:text-xl font-bold border px-3.5 py-1 rounded-lg">
                 ₹ {input.PackagePrice}

@@ -1,46 +1,45 @@
 import React from 'react';
 
-const PrivacyPolicy: React.FC = () => {
+const TermsAndConditions: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-sans text-gray-800">
-      <h1 className="text-3xl font-bold mb-6 text-indigo-700">Privacy Policy</h1>
+      <h1 className="text-3xl font-bold mb-6 text-indigo-700">Terms and Conditions</h1>
+      <p className="mb-4 leading-relaxed">Welcome to Explore India View!</p>
       <p className="mb-6 leading-relaxed">
-        At Explore India View, accessible from exploreindiaview.com, one of our main priorities is the privacy of our visitors. 
-        This Privacy Policy document contains types of information that is collected and recorded by Explore India View and how we use it.
+        These terms and conditions outline the rules and regulations for the use of Explore India View's Website, 
+        located at exploreindiaview.com.
       </p>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Information We Collect</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Personal identification information (Name, email address, phone number, etc.)</li>
-          <li>Log data and usage information</li>
-          <li>Cookies and tracking technologies</li>
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">How We Use Your Information</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>To provide and maintain our website and services</li>
-          <li>To personalize your experience</li>
-          <li>To improve our website</li>
-          <li>To communicate with you</li>
-          <li>To run affiliate marketing programs and track commissions</li>
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Third-Party Privacy Policies</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">License</h2>
         <p className="leading-relaxed">
-          Explore India View's Privacy Policy does not apply to other advertisers or websites. 
-          We advise you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.
+          Unless otherwise stated, Explore India View and/or its licensors own the intellectual property rights for all material on the website. 
+          All intellectual property rights are reserved.
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Consent</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">User Restrictions</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>You must not republish material from this website</li>
+          <li>You must not sell, rent, or sub-license material</li>
+          <li>You must not reproduce, duplicate or copy material for commercial purposes</li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Affiliate Disclaimer</h2>
         <p className="leading-relaxed">
-          By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+          Some of the links on this site are affiliate links. This means that Explore India View may earn a commission 
+          if you click on the link and make a purchase.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 text-indigo-600">Modifications</h2>
+        <p className="leading-relaxed">
+          We reserve the right to revise these terms at any time. By using this website, you are agreeing to be bound by 
+          the then current version of these Terms and Conditions.
         </p>
       </section>
 
@@ -95,7 +94,8 @@ const PrivacyPolicy: React.FC = () => {
           <li>Less than 72 hours or No Show: No Refund</li>
         </ul>
         <p className="mb-4 leading-relaxed">
-          In the case of special train journeys and peak season hotel bookings a separate cancellation policy is applicable (which can be advised as required).
+          In the case of special train journeys and peak season hotel bookings a separate cancellation policy is applicable 
+          (which can be advised as required).
         </p>
         <p className="leading-relaxed">
           Some cancellation and refund policies are out of our control:
@@ -113,4 +113,4 @@ const PrivacyPolicy: React.FC = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default TermsAndConditions;

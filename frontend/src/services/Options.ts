@@ -39,7 +39,7 @@ export const PACKAGES = [
       {
         name: "Jaisalmer",
         description: `Head to Jaisalmer, the Golden City. Explore the Jaisalmer Fort, Patwon Ki Haveli, and the vibrant local markets. Enjoy a camel safari and cultural performances in the Thar Desert. Overnight stay in a desert camp.`,
-      },
+      },      
       {
         name: "Jodhpur",
         description: `Drive to Jodhpur, the Blue City. Visit the majestic Mehrangarh Fort, Jaswant Thada, and Umaid Bhawan Palace. Explore the bustling Sardar Market. Overnight stay in Jodhpur.`,
@@ -148,9 +148,19 @@ export const PACKAGES = [
           "Explore the Jaisalmer Fort, Patwon Ki Haveli, and enjoy a camel safari in the Thar Desert. Overnight stay in a desert camp.",
       },
       {
+        name: " Khuri",
+        description: `Khuri is a tranquil desert village near Jaisalmer, known for sand dunes, camel safaris, and peaceful desert camp stays.`,
+      },
+      {
         name: "Jodhpur",
         description:
           "Visit the Mehrangarh Fort, Jaswant Thada, and Umaid Bhawan Palace. Overnight stay in Jodhpur.",
+      },
+      {
+        name: "Ranakpur",
+        description: `
+        Ranakpur is famous for the stunning white marble Jain Temple dedicated to Tirthankara Adinatha, set amidst green hills.
+        `,
       },
       {
         name: "Udaipur",
@@ -158,9 +168,27 @@ export const PACKAGES = [
           "Explore the City Palace, Jagdish Temple, and enjoy a boat ride on Lake Pichola. Overnight stay in Udaipur.",
       },
       {
-        name: "Pushkar",
+        name: "Kumbargarh",
+        description: `Kumbhalgarh is known for Kumbhalgarh Fort, with the second-longest wall in the world, and it is surrounded by scenic wildlife and hills.`,
+      },
+      {
+        name: " Bundi",
+        description: `Bundi is a picturesque town featuring Taragarh Fort, Bundi Palace, and intricately carved stepwells like Raniji Ki Baori.`,
+      },
+      {
+        name: "Pushkar and Ajmer",
         description:
-          "Visit the Brahma Temple and Pushkar Lake. Overnight stay in Pushkar.",
+          `Visit the Brahma Temple and Pushkar Lake. Overnight stay in Pushkar. <br/>
+          Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.
+          `,
+      },
+      {
+        name: " Ranthambore",
+        description: `Ranthambore is a renowned national park famous for tiger safaris, Ranthambore Fort, and picturesque lakes and ruins.`,
+      },
+      {
+        name: " Bharatpur",
+        description: `Bharatpur is known for the Keoladeo National Park, a UNESCO World Heritage site and a haven for migratory birds and birdwatchers.`,
       },
       {
         name: "Departure",
@@ -436,7 +464,7 @@ export const PACKAGES = [
         `,
       },
       {
-        name: "Kuchaman fort ",
+        name: "Kuchaman and Nagaur fort",
         description: `Kuchaman Fort is located in the town of Kuchaman and is a majestic fort offering panoramic views and showcasing Rajput architecture, now partly a heritage hotel.`,
       },
       {
@@ -480,10 +508,6 @@ export const PACKAGES = [
         description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
       },
       {
-        name: " Nahargarh Fort",
-        description: `Nahargarh Fort is situated on the Aravalli hills near Jaipur and is known for panoramic views of the city and historical structures.`,
-      },
-      {
         name: " Ranthambore",
         description: `Ranthambore is a renowned national park famous for tiger safaris, Ranthambore Fort, and picturesque lakes and ruins.`,
       },
@@ -522,7 +546,7 @@ export const PACKAGES = [
   },
   {
     __id: "10",
-    name: "Cultural and Colorful Tour of Rajasthan",
+    name: "Cultural and Colorful Tour of Rajasthan, Delhi and Agra",
     image: getRandomIndexedImage(),
     days: 30,
     nights: 29,
@@ -533,14 +557,14 @@ export const PACKAGES = [
     Highlights: [],
     Itinerary: [
       {
-        name: "Delhi to Jaipur (Arrival)",
+        name: "Delhi (Arrival)",
         description: `You will be arrived at Delhi airport and be shifted to the hotel. On the first day you will be exploring the historical walled city of Delhi. <br/>
         
         the sightseeing tour of Delhi will include the Qutub Minar, Humayun’s Tomb, India Gate, President House, Mahatma Gandhi memorial, Red Fort, Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel. Jama Masjid and Laxmi Narayan Temple. Overnight in your hotel.
         `,
       },
       {
-        name: " Jaipur",
+        name: "Jaipur",
         description: `
         We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
         `,
@@ -790,6 +814,10 @@ export const PACKAGES = [
       },
       {
         name: " Bharatpur",
+        description: `Bharatpur is known for the Keoladeo National Park, a UNESCO World Heritage site and a haven for migratory birds and birdwatchers.`,
+      },
+      {
+        name: " Bharatpur to Jaipur departure",
         description: `Bharatpur is known for the Keoladeo National Park, a UNESCO World Heritage site and a haven for migratory birds and birdwatchers.`,
       },
     ],
