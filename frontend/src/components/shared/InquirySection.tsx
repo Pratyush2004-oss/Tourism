@@ -19,7 +19,7 @@ import { API_URL } from "@/services/API";
 import { useState } from "react";
 import { Loader } from "lucide-react";
 
-function InquirySection() {
+function InquirySection({ expand }: { expand: boolean }) {
   const { user, token } = useAuthStore();
   const [openDialog, setopenDialog] = useState(false);
   const [loading, setloading] = useState(false);
@@ -51,7 +51,7 @@ function InquirySection() {
       setloading(false);
     }
   };
-  return (
+  return !expand ? (
     <Dialog open={openDialog} onOpenChange={setopenDialog}>
       <DialogTrigger className=" cursor-pointer w-full" asChild>
         <Button
@@ -92,6 +92,22 @@ function InquirySection() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
+  ) : user ? (
+    <div className="flex flex-col gap-5 max-w-200 w-full mx-auto">
+      <h1 className="text-xl font-bold text-center mt-5">Raise your Query</h1>
+      <Label className="">Elaborate your query</Label>
+      <Textarea
+        rows={5}
+        value={message}
+        onChange={(e) => setmessage(e.target.value)}
+        placeholder="Enter your query"
+      />
+      <Button disabled={loading} onClick={handleSubmit}>
+        {loading ? <Loader className="animate-spin" /> : "Send"}
+      </Button>
+    </div>
+  ) : (
+    <Button onClick={() => router.push("/login")}>Sign In</Button>
   );
 }
 

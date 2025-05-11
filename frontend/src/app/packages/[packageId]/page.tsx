@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import PlaceCard from "@/components/shared/PlaceCard";
 import Autoplay from "embla-carousel-autoplay";
+import RajasthanMap from "@/components/shared/Maps";
 
 function PackageDetail() {
   const { packageId } = useParams();
@@ -28,7 +29,7 @@ function PackageDetail() {
     Package && (
       <div className="p-6 md:p-10">
         <div className="flex flex-col gap-6 ">
-          <div className="w-full relative">
+          <div className="w-full relative max-h-[650px] overflow-hidden">
             <Image
               src={Package.image}
               alt={Package.name}
@@ -176,6 +177,8 @@ function PackageDetail() {
                 </>
               )}
 
+              <RajasthanMap />
+
               {/* Booking Section */}
             </div>
             <div className="md:w-2/5 md:mt-10 px-3">
@@ -195,20 +198,18 @@ function PackageDetail() {
             className="w-full"
           >
             <CarouselContent className="p-7">
-              {PACKAGES.map(
-                (_, index) => (
-                  <CarouselItem
+              {PACKAGES.map((_, index) => (
+                <CarouselItem
+                  key={index}
+                  className="pl-1 md:basis-1/2 lg:basis-1/3"
+                >
+                  <PlaceCard
+                    pack={PACKAGES[index]}
                     key={index}
-                    className="pl-1 md:basis-1/2 lg:basis-1/3"
-                  >
-                    <PlaceCard
-                      pack={PACKAGES[index]}
-                      key={index}
-                      lineclamp={true}
-                    />
-                  </CarouselItem>
-                )
-              )}
+                    lineclamp={true}
+                  />
+                </CarouselItem>
+              ))}
             </CarouselContent>
           </Carousel>
         </div>

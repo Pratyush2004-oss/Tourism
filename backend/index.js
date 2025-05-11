@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 app.use('/api/v1/auth', authRouter); // Use the auth router for authentication routes
 app.use('/api/v1/booking', bookingRouter); // Use the booking router for booking routes)
 app.use('/api/v1/query', queryRouter); // Use the booking router for booking routes)
-app.use("/api/v1/alternateBooking", alternateBookingRouter);
+app.use("/api/v1/alternate-booking", alternateBookingRouter);
 
 // error handling route
 app.use((err, req, res, next) => {

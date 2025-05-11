@@ -18,10 +18,11 @@ import {
 } from "@/components/ui/select";
 import { Button } from "../ui/button";
 import BookingCard from "./BookingCard";
-import { RAJASTHANDISTRICTS } from "@/services/Options";
+import { ADVENTURE, RAJASTHANDISTRICTS } from "@/services/Options";
 
 function CreateOwnPackageModal() {
   const [PlaceList, setPlaceList] = useState<string[]>([]);
+  const [AdventureList, setAdventureList] = useState<string[]>([]);
   const [onDone, setonDone] = useState(false);
 
   const OnCitySelect = (city: string) => {
@@ -33,6 +34,19 @@ function CreateOwnPackageModal() {
     }
   };
 
+  const OnAdventureSelect = (adventure: string) => {
+    if (AdventureList.includes(adventure)) {
+      return;
+    }
+    if (!AdventureList.includes(adventure)) {
+      setAdventureList([...AdventureList, adventure]);
+    }
+  }
+
+  const onDeleteAdventure = (adventure: string) => {
+    setAdventureList(AdventureList.filter((adv) => adv !== adventure));
+  }
+
   const onDeleteCity = (city: string) => {
     setPlaceList(PlaceList.filter((place) => place !== city));
   };
@@ -40,6 +54,8 @@ function CreateOwnPackageModal() {
     <Dialog
       onOpenChange={() => {
         setPlaceList([]);
+        setonDone(false);
+        setAdventureList([]);
       }}
     >
       <DialogTrigger asChild className="my-4 flex items-center w-full">
@@ -88,6 +104,39 @@ function CreateOwnPackageModal() {
                 </div>
               ))}
             </div>
+
+            {/* Select Adventure */}
+            <Select onValueChange={(e) => OnAdventureSelect(e)}>
+              <SelectTrigger className="w-full max-w-[450px] line-clamp-1">
+                <SelectValue placeholder="Select Adventures" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Adventures</SelectLabel>
+                  {ADVENTURE.data.map((pack, idx) => (
+                    <SelectItem key={idx} value={pack.name}>
+                      {pack.name}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <div className="flex flex-wrap gap-3">
+              {AdventureList.map((adv, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gradient-to-r from-emerald-500 to-teal-400 cursor-pointer relative p-1.5 rounded-md text-white text-sm font-semibold"
+                  onClick={() => onDeleteAdventure(adv)}
+                >
+                  <span className="absolute -top-2 -right-2 bg-white text-red-600 rounded-full w-5 h-5 flex items-center justify-center ">
+                    x
+                  </span>
+                  {adv}
+                </div>
+              ))}
+            </div>
+
+
             <Button
               onClick={() => setonDone(true)}
               disabled={PlaceList.length < 1}
@@ -99,6 +148,7 @@ function CreateOwnPackageModal() {
           </>
         ) : (
           <>
+            <h1>Cities</h1>
             <div className="flex flex-wrap gap-3">
               {PlaceList.map((city, idx) => (
                 <div
@@ -109,11 +159,23 @@ function CreateOwnPackageModal() {
                 </div>
               ))}
             </div>
+            <h1>Adventures</h1>
+            <div className="flex flex-wrap gap-3">
+              {AdventureList.map((adv, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gradient-to-r from-emerald-500 to-teal-400 p-1.5 rounded-md text-white text-sm font-semibold"
+                >
+                  {adv}
+                </div>
+              ))}
+            </div>
             <BookingCard
               props={{
                 PackageName: "Custom Package",
                 PackageDays: PlaceList.length,
                 PlaceList: PlaceList,
+                AdventureList: AdventureList
               }}
             />
           </>

@@ -1,4 +1,5 @@
 import { createRazorpayInstance } from "../config/razorpay.config.js";
+import User from '../models/auth.model.js';
 import Booking from "../models/booking.model.js";
 import crypto from "crypto";
 import dotendv from "dotenv";
@@ -39,7 +40,7 @@ export const createTour = async (req, res, next) => {
 export const verifyPayment = async (req, res, next) => {
     try {
         const user = req.user;
-        const { order_id, payment_id, signature, PackageName, PackageDays, PackagePrice, people, startDate, hotel, PlaceList } = req.body;
+        const { order_id, payment_id, signature, PackageName, PackageDays, PackagePrice, people, startDate, hotel, PlaceList, AdventureList } = req.body;
 
         const razorpaySecret = process.env.RAZORPAY_KEY_SECRET;
 
@@ -60,13 +61,20 @@ export const verifyPayment = async (req, res, next) => {
                 startDate,
                 hotel,
                 PlaceList,
+                AdventureList,
                 paymentStatus: {
                     order_id,
                     payment_id,
                 }
             });
+            // Add cashback to the user acount upto 10% of the package price
+            const userToUpdate = await User.findById(user._id);
+            const cashbackPercentage = (Math.random() * (0.1 - 0.01) + 0.01); // Generate a random number between 0.01 and 0.1
+            const cashbackAmount = (PackagePrice * cashbackPercentage).toFixed(2); // Calculate cashback and limit to 2 decimal places
+            userToUpdate.CashbackAmount += parseFloat(cashbackAmount); // Ensure it's added as a number
+            await userToUpdate.save();
             await newBooking.save();
-            return res.status(200).json({ message: "Payment Verified" });
+            return res.status(200).json({ message: "Payment Verified", CashbackAmount: parseFloat(cashbackAmount) });
         } else {
             return res.status(400).json({ message: "Payment not verified" });
         }
@@ -80,7 +88,7 @@ export const verifyPayment = async (req, res, next) => {
 export const bookTourWithoutPayment = async (req, res, next) => {
     try {
         const user = req.user;
-        const { PackageName, PackageDays, PackagePrice, people, startDate, PlaceList, hotel } = req.body;
+        const { PackageName, PackageDays, PackagePrice, people, startDate, PlaceList, hotel, AdventureList } = req.body;
         const newBooking = new Booking({
             user: user._id,
             PackageName,
@@ -89,7 +97,8 @@ export const bookTourWithoutPayment = async (req, res, next) => {
             people,
             startDate,
             PlaceList,
-            hotel
+            hotel,
+            AdventureList
         });
         await newBooking.save();
         return res.status(200).json({ message: "Tour Booked Successfully" });
@@ -125,7 +134,7 @@ export const getBookingsForAdmin = async (req, res, next) => {
             .limit(limit)
             .populate(
                 "user",
-                "fullname mobile isVerified _id",
+                "fullname mobile isVerified _id CashbackAmount",
             );
         return res.status(200).json({ message: "Bookings fetched successfully", bookings });
     } catch (error) {

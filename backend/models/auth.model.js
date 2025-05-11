@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    CashbackAmount: {
+        type: Number,
+        default: 0,
+    },
 }, { timestamps: true });
 
 userSchema.pre('save', async function (next) {

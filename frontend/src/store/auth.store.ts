@@ -19,6 +19,7 @@ interface AuthStore {
   login: (user: LoginInput) => Promise<void>;
   logout: () => void;
   reset: () => void;
+  addCashback: (amount: number) => Promise<void>;
 }
 
 export const useAuthStore = create<AuthStore>((set, get) => ({
@@ -167,7 +168,7 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
       });
       if (response.status === 400) throw new Error(response.data.message);
       set({ isAdmin: true });
-    } catch (error:any) {
+    } catch (error: any) {
       set({ error: "Error Checking-Admin" });
     }
   },
@@ -195,4 +196,11 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
       user: null,
       token: null,
     }),
+  addCashback: async (amount: number) => {
+    const currentUser = get().user;
+    if (!currentUser || !currentUser._id) {
+      throw new Error("User or User ID is not defined");
+    }
+    set({ user: { ...currentUser, CashbackAmount: amount } });
+  },
 }));

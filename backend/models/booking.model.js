@@ -27,6 +27,9 @@ const BookingSchema = new mongoose.Schema({
     PlaceList: [{
         type: String
     }],
+    AdventureList: [{
+        type: String
+    }],
     paymentStatus: {
         order_id: {
             type: String,

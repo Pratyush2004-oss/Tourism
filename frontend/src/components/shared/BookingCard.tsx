@@ -29,6 +29,7 @@ interface Props {
   PackageName: string;
   PackageDays: number;
   PlaceList?: string[];
+  AdventureList?: string[]
 }
 
 type BookingInput = {
@@ -39,6 +40,7 @@ type BookingInput = {
   startDate: Date;
   PlaceList?: string[];
   hotel?: string;
+  AdventureList?: string[]
 };
 
 function BookingCard({ props }: { props: Props }) {
@@ -48,8 +50,10 @@ function BookingCard({ props }: { props: Props }) {
     PackageDays: props.PackageDays,
     PackagePrice: props.PackageDays * 1000,
     people: 1,
+    hotel: "",
     startDate: new Date(),
     PlaceList: props.PlaceList,
+    AdventureList: props.AdventureList
   });
   const [payOnline, setpayOnline] = useState(true);
   const [loading, setloading] = useState(false);
@@ -132,6 +136,7 @@ function BookingCard({ props }: { props: Props }) {
               people: input.people,
               startDate: input.startDate.toISOString(),
               PlaceList: input.PlaceList,
+              AdventureList: input.AdventureList,
               hotel: input.hotel,
             };
             await axios
@@ -143,6 +148,8 @@ function BookingCard({ props }: { props: Props }) {
               .then((resp) => {
                 if (resp.status === 400) throw new Error(resp.data.message);
                 toast.success(resp.data.message || "Payment verified");
+                console.log(resp.data)
+                toast.message("Yoohoo! You earned a cashback of amount ₹" + resp.data.CashbackAmount + " on your booking.");
                 router.push("/bookings");
               })
               .catch((error: any) => {
@@ -408,7 +415,7 @@ function BookingCard({ props }: { props: Props }) {
             </p>
           </>
         )}
-        <InquirySection />
+        <InquirySection expand={false} />
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ export type User = {
   fullname: string;
   mobile: string;
   isVerified: boolean;
+  CashbackAmount: number;
 };
 
 export type UserInput = {
@@ -93,6 +94,7 @@ export type BOOKINGTYPE = {
   paymentStatus: PAYMENTSTATUSTYPE;
   PlaceList?: string[];
   hotel?: string;
+  AdventureList?: string[];
 };
 
 export type QUERIESTYPE = {

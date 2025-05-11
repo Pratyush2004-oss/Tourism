@@ -31,10 +31,13 @@ export function UserAvatar({User}: {User:User} ) {
             <p className="text-sm font-medium">
               {User.mobile}
             </p>
-            <div className="flex items-center pt-2">
+            <div className="flex flex-col items-center pt-2">
               <Verified className="mr-2 h-4 w-4 opacity-70 text-emerald-500" />{" "}
               <span className="text-sm text-muted-foreground font-medium">
                 Verified: <Badge variant={User.isVerified ? "default" : "destructive"} className="bg-emerald-500">{User.isVerified ? "Yes" : "No"}</Badge>
+              </span>
+              <span className="text-sm text-muted-foreground font-medium">
+                Wallet Amount: {User.CashbackAmount}
               </span>
             </div>
           </div>

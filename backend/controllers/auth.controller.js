@@ -59,6 +59,7 @@ export const signUp = async (req, res, next) => {
                     fullname: existingUser.fullname,
                     mobile: existingUser.mobile,
                     isVerified: existingUser.isVerified,
+                    CashbackAmount: existingUser.CashbackAmount
                 },
             });
         }
@@ -141,6 +142,7 @@ export const verifyOTP = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
+                CashbackAmount: user.CashbackAmount
             },
             token, // Send the token back to the client
         });
@@ -241,6 +243,7 @@ export const signIn = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
+                CashbackAmount: user.CashbackAmount
             },
             token, // Send the token back to the client
         });
@@ -264,6 +267,7 @@ export const checkAuth = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
+                CashbackAmount: user.CashbackAmount
             },
         });
     } catch (error) {
@@ -284,6 +288,7 @@ export const checkAdmin = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
+                CashbackAmount: user.CashbackAmount
             },
         });
     }

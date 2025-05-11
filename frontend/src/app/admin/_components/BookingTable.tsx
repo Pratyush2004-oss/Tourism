@@ -20,7 +20,12 @@ interface BookingTableProps {
   setpageNumber: React.Dispatch<React.SetStateAction<number>>;
   loading: boolean;
 }
-function BookingTable({bookings, pageNumber, setpageNumber, loading}: BookingTableProps) {
+function BookingTable({
+  bookings,
+  pageNumber,
+  setpageNumber,
+  loading,
+}: BookingTableProps) {
   if (loading)
     <div className="h-[calc(100vh-11rem)] w-full bg-gray-300/50">
       <LoaderCircle className="mx-auto animate-spin size-16 text-emerald-500" />
@@ -45,11 +50,27 @@ function BookingTable({bookings, pageNumber, setpageNumber, loading}: BookingTab
           </TableRow>
         </TableHeader>
         <TableBody className="border-2 border-black">
-          {bookings.length > 0 ?
+          {bookings.length > 0 ? (
             bookings.map((bookings, idx) => (
               <TableRow key={idx}>
                 <TableCell className="font-medium border border-black">
-                  {bookings.PackageName}
+                  <span>{bookings.PackageName}</span>
+                  {
+                    (bookings.PlaceList?.length ?? 0) > 0 && (
+                      <span className="block text-xs">
+                        Places: {" "}
+                        {bookings.PlaceList?.join(", ") ?? ""}
+                      </span>
+                    )
+                  }
+                  {
+                  (bookings.AdventureList?.length ?? 0) > 0 && (
+                    <span className="block text-xs">
+                      Adventures: {" "}
+                      {bookings.AdventureList?.join(", ") ?? ""}
+                    </span>
+                  )
+                  }
                 </TableCell>
                 <TableCell className=" border border-black">
                   {bookings.PackageDays}
@@ -82,13 +103,14 @@ function BookingTable({bookings, pageNumber, setpageNumber, loading}: BookingTab
                   )}
                 </TableCell>
               </TableRow>
-            )) : (
-              <TableRow>
-                <TableCell colSpan={8} className="text-center">
-                  No Bookings Found.
-                </TableCell>
-              </TableRow>
-            )}
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={8} className="text-center">
+                No Bookings Found.
+              </TableCell>
+            </TableRow>
+          )}
         </TableBody>
         <TableCaption className="text-center mb-0">
           <div className="mt-5 flex items-center justify-between w-2/3 mx-auto">

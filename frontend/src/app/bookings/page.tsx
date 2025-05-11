@@ -39,7 +39,7 @@ function page() {
     <>
       <Landing IMAGES={CAROUSELIMAGE} />
       <div className="container mx-auto px-4 py-8 min-h-[calc(100vh-120px)]">
-        <h1 className="text-2xl md:text-4xl mb-5 font-bold text-center font-serif">
+        <h1 className="text-2xl md:text-4xl mb-5 font-semibold text-center font-serif">
           Bookings
         </h1>
         <div className="flex justify-center">
@@ -62,37 +62,42 @@ function page() {
                   <h2 className="text-xl md:text-2xl font-bold my-4 text-center border-b-2">
                     {booking.PackageName}
                   </h2>
-                  <div className="grid grid-cols-2 gap-5 p-2 text-sm font-medium sm:text-base sm:font-bold">
+                  <div className="grid grid-cols-2 gap-5 p-2 text-sm font-medium sm:text-base sm:font-semibold">
                     <p className="text-center">
                       Start Date:{" "}
                       {(booking.startDate as unknown as string).split("T")[0]}
                     </p>
                     <p className="text-center">Days: {booking.PackageDays}</p>
-                    <p className="text-lg font-bold col-span-2 text-center">
+                    <p className=" font-semibold text-center">
                       Price: ₹ {booking.PackagePrice}
                     </p>
-                    <p className="text-lg font-bold col-span-2 text-center">
+                    <p className=" font-semibold text-center">
                       Number of People: {booking.people}
                     </p>
                     {(booking.PlaceList ?? []).length > 0 && (
-                      <p className="text-lg font-bold col-span-2 text-center">
+                      <p className=" font-semibold col-span-2 text-center">
                         Places: {(booking.PlaceList ?? []).join(", ")}
                       </p>
                     )}
+                    {(booking.AdventureList ?? []).length > 0 && (
+                      <p className=" font-semibold col-span-2 text-center">
+                        Adventures: {(booking.AdventureList ?? []).join(", ")}
+                      </p>
+                    )}
                     {booking.hotel && (
-                      <p className="text-lg font-bold col-span-2 text-center">
+                      <p className=" font-semibold col-span-2 text-center">
                         Hotel: {booking.hotel}
                       </p>
                     )}
                     {booking.paymentStatus &&
                     booking.paymentStatus.order_id &&
                     booking.paymentStatus.payment_id ? (
-                      <p className="text-lg font-bold col-span-2 text-center">
+                      <p className=" font-semibold col-span-2 text-center">
                         <span>Payment Status:</span>{" "}
                         <span className="text-green-500">Paid</span>
                       </p>
                     ) : (
-                      <p className="text-lg font-bold col-span-2 text-center">
+                      <p className=" font-semibold col-span-2 text-center">
                         <span>Payment Status:</span>{" "}
                         <span className="text-red-500">Payment Pending</span>
                       </p>
@@ -103,7 +108,7 @@ function page() {
             </div>
           ) : (
             !loading && (
-              <h1 className="text-2xl text-red-500 mb-5 font-bold text-center font-mono">
+              <h1 className="text-2xl text-red-500 mb-5 font-semibold text-center font-mono">
                 No Bookings Found
               </h1>
             )

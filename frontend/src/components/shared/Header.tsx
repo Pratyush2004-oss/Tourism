@@ -71,8 +71,8 @@ function Header() {
                 </Avatar>
                 <span className="text-lg font-semibold">{user.fullname}</span>
               </div>
-              <DropdownMenuLabel className="font-bold text-lg">
-                My Account
+              <DropdownMenuLabel className="font-bold text-lg flex items-center justify-between">
+                <span>My Wallet</span> <span>₹{user.CashbackAmount}</span>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="font-bold text-lg">
@@ -146,8 +146,9 @@ function Header() {
                       </div>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56" align="end">
-                      <DropdownMenuLabel className="font-bold text-lg">
-                        My Account
+                      <DropdownMenuLabel className="font-bold text-lg flex items-center justify-between">
+                        <span>My Wallet</span>{" "}
+                        <span>₹{user.CashbackAmount}</span>
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem className="font-bold text-lg">
