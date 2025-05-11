@@ -22,7 +22,7 @@ const BookingSchema = new mongoose.Schema({
     },
     hotel: {
         type: String,
-        enum: ["3 Star", "5 Star"]
+        enum: ["3 Star", "5 Star", ""]
     },
     PlaceList: [{
         type: String

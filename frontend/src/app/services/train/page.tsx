@@ -1,9 +1,9 @@
-'use client';
+"use client";
 import React from "react";
 import { Landing } from "@/components/shared/Landing";
 import { MapPin, Calendar, Clock, TrainIcon } from "lucide-react";
 import { RAILWAYIMAGES, TRAINSERVICES } from "@/services/Options";
-
+import CitySearchBar from "@/components/shared/Searchbar";
 
 function Train() {
   const affiliateBaseUrl =
@@ -26,10 +26,14 @@ function Train() {
           Train Services
         </h1>
         <p className="text-center text-gray-600 text-lg md:text-xl">
-          Explore our top train services for a seamless travel experience. Book tickets to your favorite destinations with ease!
+          Explore our top train services for a seamless travel experience. Book
+          tickets to your favorite destinations with ease!
         </p>
       </div>
 
+      {/* Search bar section */}
+      <CitySearchBar doubleSearch={true} />
+      
       {/* Train Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 px-5 md:px-10">
         {TRAINSERVICES.map((item, idx) => (
@@ -45,7 +49,8 @@ function Train() {
               {item.name}
             </h1>
             <p className="text-center text-gray-600">
-              Book your train journey for {item.name.split(" - ")[0]} to {item.name.split(" - ")[1]} with ease and comfort.
+              Book your train journey for {item.name.split(" - ")[0]} to{" "}
+              {item.name.split(" - ")[1]} with ease and comfort.
             </p>
           </div>
         ))}
@@ -59,28 +64,38 @@ function Train() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="flex flex-col items-center text-center">
             <MapPin className="w-12 h-12 text-green-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Wide Destinations</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Wide Destinations
+            </h3>
             <p className="text-gray-600">
-              Travel to a wide range of destinations across India with our trusted railway services.
+              Travel to a wide range of destinations across India with our
+              trusted railway services.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
             <Calendar className="w-12 h-12 text-green-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Flexible Scheduling</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Flexible Scheduling
+            </h3>
             <p className="text-gray-600">
               Choose from multiple train schedules to suit your travel plans.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
             <Clock className="w-12 h-12 text-green-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">On-Time Trains</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              On-Time Trains
+            </h3>
             <p className="text-gray-600">
-              Experience punctual and reliable train services for a hassle-free journey.
+              Experience punctual and reliable train services for a hassle-free
+              journey.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
             <TrainIcon className="w-12 h-12 text-green-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Comfortable Travel</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Comfortable Travel
+            </h3>
             <p className="text-gray-600">
               Enjoy comfortable seating and excellent onboard services.
             </p>

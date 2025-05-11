@@ -4,6 +4,7 @@ import React from "react";
 import { Landing } from "@/components/shared/Landing";
 import { MapPin, Bed, Calendar, Star } from "lucide-react";
 import { HOTELSDATA } from "@/services/Options";
+import CitySearchBar from "@/components/shared/Searchbar";
 
 const HOTELSERVICES = [
   { name: "Luxury Hotels in Jaipur" },
@@ -35,9 +36,13 @@ function Hotels() {
           Hotel Services
         </h1>
         <p className="text-center text-gray-600 text-lg md:text-xl">
-          Explore our top hotel services for a luxurious and comfortable stay. Book your favorite hotels with ease!
+          Explore our top hotel services for a luxurious and comfortable stay.
+          Book your favorite hotels with ease!
         </p>
       </div>
+
+      {/* Search bar section */}
+      <CitySearchBar doubleSearch={false} />
 
       {/* Hotel Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 px-5 md:px-10">
@@ -54,7 +59,8 @@ function Hotels() {
               {item.name}
             </h1>
             <p className="text-center text-gray-600">
-              Book your stay at {item.name.split(" in ")[1]} with the best deals and comfort.
+              Book your stay at {item.name.split(" in ")[1]} with the best deals
+              and comfort.
             </p>
           </div>
         ))}
@@ -68,28 +74,38 @@ function Hotels() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="flex flex-col items-center text-center">
             <MapPin className="w-12 h-12 text-purple-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Prime Locations</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Prime Locations
+            </h3>
             <p className="text-gray-600">
-              Stay at hotels located in the heart of the city or near popular attractions.
+              Stay at hotels located in the heart of the city or near popular
+              attractions.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
             <Calendar className="w-12 h-12 text-purple-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Flexible Bookings</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Flexible Bookings
+            </h3>
             <p className="text-gray-600">
               Enjoy flexible booking options to suit your travel plans.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
             <Star className="w-12 h-12 text-purple-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Top-Rated Hotels</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Top-Rated Hotels
+            </h3>
             <p className="text-gray-600">
-              Choose from a selection of highly-rated hotels for a premium experience.
+              Choose from a selection of highly-rated hotels for a premium
+              experience.
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
             <Bed className="w-12 h-12 text-purple-500 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-800">Comfortable Stays</h3>
+            <h3 className="text-lg font-semibold text-gray-800">
+              Comfortable Stays
+            </h3>
             <p className="text-gray-600">
               Enjoy luxurious amenities and comfortable accommodations.
             </p>

@@ -4,6 +4,7 @@ import { Landing } from "@/components/shared/Landing";
 import { AIRLINEIMAGES, AIRLINESERVICES } from "@/services/Options";
 import React from "react";
 import { Plane, MapPin, Calendar, Clock } from "lucide-react";
+import CitySearchBar from "@/components/shared/Searchbar";
 
 function Airline() {
   const affiliateBaseUrl = "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels/";
@@ -28,6 +29,9 @@ function Airline() {
           Explore our top airline services for a seamless travel experience. Book flights to your favorite destinations with ease!
         </p>
       </div>
+
+      {/* Searchbar section */}
+      <CitySearchBar doubleSearch={true}/>
 
       {/* Airline Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 px-5 md:px-10">

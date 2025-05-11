@@ -15,8 +15,10 @@ export const createTour = async (req, res, next) => {
         return res.status(400).json({ message: "All fields are required" });
     }
 
+    const UserDetail = await User.findById(user._id);
+
     const options = {
-        amount: PackagePrice * 100,  // amount in the smallest currency unit
+        amount: (PackagePrice - UserDetail.CashbackAmount) * 100,  // amount in the smallest currency unit
         currency: "INR",
         receipt: "receipt_order_1",
     };
@@ -51,6 +53,10 @@ export const verifyPayment = async (req, res, next) => {
         const generatedSignature = hmac.digest('hex');
 
         if (generatedSignature === signature) {
+            const userToUpdate = await User.findById(user._id);
+
+            userToUpdate.CashbackAmount = userToUpdate.CashbackAmount < PackagePrice ? 0 : userToUpdate.CashbackAmount - PackagePrice;
+            await userToUpdate.save();
             // saving data to the database
             const newBooking = new Booking({
                 user: user._id,
@@ -68,13 +74,12 @@ export const verifyPayment = async (req, res, next) => {
                 }
             });
             // Add cashback to the user acount upto 10% of the package price
-            const userToUpdate = await User.findById(user._id);
             const cashbackPercentage = (Math.random() * (0.1 - 0.01) + 0.01); // Generate a random number between 0.01 and 0.1
-            const cashbackAmount = (PackagePrice * cashbackPercentage).toFixed(2); // Calculate cashback and limit to 2 decimal places
-            userToUpdate.CashbackAmount += parseFloat(cashbackAmount); // Ensure it's added as a number
+            const cashbackAmount = Math.floor(PackagePrice * cashbackPercentage); // Calculate cashback and limit to 2 decimal places
+            userToUpdate.CashbackAmount += parseInt(cashbackAmount); // Ensure it's added as a number
             await userToUpdate.save();
             await newBooking.save();
-            return res.status(200).json({ message: "Payment Verified", CashbackAmount: parseFloat(cashbackAmount) });
+            return res.status(200).json({ message: "Payment Verified", CashbackAmount: parseInt(cashbackAmount) });
         } else {
             return res.status(400).json({ message: "Payment not verified" });
         }

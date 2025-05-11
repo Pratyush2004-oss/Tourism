@@ -198,9 +198,11 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
     }),
   addCashback: async (amount: number) => {
     const currentUser = get().user;
-    if (!currentUser || !currentUser._id) {
-      throw new Error("User or User ID is not defined");
-    }
-    set({ user: { ...currentUser, CashbackAmount: amount } });
+    try {
+      if (!currentUser || !currentUser._id) {
+        throw new Error("User or User ID is not defined");
+      }
+      set({ user: { ...currentUser, CashbackAmount: amount } });
+    } catch (error) {}
   },
 }));

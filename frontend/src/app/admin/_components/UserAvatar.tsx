@@ -1,10 +1,11 @@
-import { CalendarDays, Verified } from "lucide-react"
+import { Verified } from "lucide-react"
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   HoverCard,
@@ -12,7 +13,6 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { User } from "@/services/types"
-import { Badge } from "@/components/ui/badge"
 
 export function UserAvatar({User}: {User:User} ) {
   return (
@@ -32,12 +32,12 @@ export function UserAvatar({User}: {User:User} ) {
               {User.mobile}
             </p>
             <div className="flex flex-col items-center pt-2">
-              <Verified className="mr-2 h-4 w-4 opacity-70 text-emerald-500" />{" "}
-              <span className="text-sm text-muted-foreground font-medium">
-                Verified: <Badge variant={User.isVerified ? "default" : "destructive"} className="bg-emerald-500">{User.isVerified ? "Yes" : "No"}</Badge>
+              <span className="text-sm text-muted-foreground font-medium flex items-center">
+              <Verified className="mr-2 h-4 w-4 opacity-70 text-emerald-500" />{"  "}
+                Verified: <Badge variant={User.isVerified ? "default" : "destructive"} className="bg-emerald-500 ml-1">{User.isVerified ? "Yes" : "No"}</Badge>
               </span>
               <span className="text-sm text-muted-foreground font-medium">
-                Wallet Amount: {User.CashbackAmount}
+                Wallet Amount: ₹{User.CashbackAmount}
               </span>
             </div>
           </div>
