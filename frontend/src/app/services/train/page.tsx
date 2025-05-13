@@ -7,7 +7,7 @@ import CitySearchBar from "@/components/shared/Searchbar";
 
 function Train() {
   const affiliateBaseUrl =
-    "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels";
+    "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.railyatri.in%2F";
 
   const handleRedirect = (destination: string) => {
     const encodedDestination = encodeURIComponent(destination);

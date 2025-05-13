@@ -10,6 +10,7 @@ import authRouter from './routers/auth.router.js';
 import bookingRouter from './routers/booking.router.js';
 import queryRouter from './routers/query.router.js';
 import alternateBookingRouter from './routers/alternateBooking.router.js';
+import { aj } from './config/arcjet.js';
 
 dotenv.config();
 
@@ -21,6 +22,37 @@ app.use(cors());
 app.use(express.json()); // parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // parse URL-encoded request bodies
 // job.start(); // Start the cron job
+
+// apply arcjet rate limit to all the routes
+// app.use(async (req, res, next) => {
+//     try {
+//         const decision = await aj.protect(req, {
+//             requested: 1 // specifies that each request consumes 1 token
+//         });
+//         if (decision.isDenied()) {
+//             if (decision.reason.isRateLimit()) {
+//                 res.status(429).json({ error: "Too Many Requests" })
+//             }
+//             else if (decision.reason.isBot()) {
+//                 res.status(403).json({ error: "Bot Access Denied" })
+//             }
+//             else {
+//                 res.status(403).json({ error: "Forbidden" })
+//             }
+//             return;
+//         }
+
+//         // check for spoofed bots
+//         if (decision.results.some((result) => result.reason.isBot() && result.reason.isSpoofed())) {
+//             res.status(403).json({ error: "Spoofed bot detected" })
+//         }
+//         next();
+//     } catch (error) {
+//         console.log("Arcjet Error : ", error);
+//         next(error);
+//     }
+// })
+
 app.get('/', (req, res) => {
     res.status(200).send('Welcome to the Explore India!'); // Send a welcome message for the root route
 });

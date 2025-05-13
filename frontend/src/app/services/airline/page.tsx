@@ -7,7 +7,7 @@ import { Plane, MapPin, Calendar, Clock } from "lucide-react";
 import CitySearchBar from "@/components/shared/Searchbar";
 
 function Airline() {
-  const affiliateBaseUrl = "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels/";
+  const affiliateBaseUrl = "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.airindia.com%2Fen-in%2Fbook-flights/";
 
   const handleRedirect = (destination: string) => {
     const encodedDestination = encodeURIComponent(destination); // Encode the destination for the URL
