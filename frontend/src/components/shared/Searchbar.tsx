@@ -43,7 +43,7 @@ const CitySearchBar = ({ doubleSearch }: { doubleSearch: boolean }) => {
 
   const handleRedirect = (destination: string) => {
     const encodedDestination = encodeURIComponent(destination);
-    const redirectUrl = `${affiliateBaseUrl}?destination=${encodedDestination}`;
+    const redirectUrl = `${affiliateBaseUrl}`;
     window.open(redirectUrl, "_blank");
   };
 
@@ -72,9 +72,10 @@ const CitySearchBar = ({ doubleSearch }: { doubleSearch: boolean }) => {
       <Button
         size={"icon"}
         variant={"ghost"}
+        className="bg-gradient-to-r from-emerald-500 to-teal-500"
         onClick={() => handleRedirect(selectedCity?.value || "")}
       >
-        <Search className="size-7" />
+        <Search className="size-6 text-white" />
       </Button>
     </div>
   );

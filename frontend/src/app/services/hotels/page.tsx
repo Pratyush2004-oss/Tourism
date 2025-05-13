@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React from "react";
 import { Landing } from "@/components/shared/Landing";
 import { MapPin, Bed, Calendar, Star } from "lucide-react";
@@ -15,13 +14,23 @@ const HOTELSERVICES = [
   { name: "Boutique Hotels in Mount Abu" },
 ];
 
+const POPULARCITIES = [
+  { name: "Delhi", image: "https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVsaGl8ZW58MHx8MHx8fDA%3D" },
+  { name: "Mumbai", image: "https://images.unsplash.com/photo-1660145416818-b9a2b1a1f193?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVtYmFpfGVufDB8fDB8fHww" },
+  { name: "Kolkata", image: "https://plus.unsplash.com/premium_photo-1697730414399-3d4d9ada98bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Chennai", image: "https://images.unsplash.com/photo-1643625801401-f6a17d1debe3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2hlbm5haXxlbnwwfHwwfHx8MA%3D%3D" },
+  { name: "Bangalore", image: "https://plus.unsplash.com/premium_photo-1697729603596-90888a05a6bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Goa", image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Hyderabad", image: "https://images.unsplash.com/photo-1661170967767-d4cd31d0f3ba?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+];
+
 function Hotels() {
   const affiliateBaseUrl =
     "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels";
 
   const handleRedirect = (destination: string) => {
     const encodedDestination = encodeURIComponent(destination);
-    const redirectUrl = `${affiliateBaseUrl}?destination=${encodedDestination}`;
+    const redirectUrl = `${affiliateBaseUrl}`;
     window.open(redirectUrl, "_blank");
   };
 
@@ -44,6 +53,31 @@ function Hotels() {
       {/* Search bar section */}
       <CitySearchBar doubleSearch={false} />
 
+      {/* Popular Cities Section */}
+      <div className="mt-10 px-5 md:px-20 py-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-600 mb-6">
+          Popular Cities
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {POPULARCITIES.map((city, idx) => (
+            <div
+              key={idx}
+              className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              onClick={() => handleRedirect(city.name)}
+            >
+              <img
+                src={city.image}
+                alt={city.name}
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
+                <h3 className="text-lg font-semibold">{city.name}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Hotel Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 px-5 md:px-10">
         {HOTELSERVICES.map((item, idx) => (
@@ -65,6 +99,7 @@ function Hotels() {
           </div>
         ))}
       </div>
+
 
       {/* Additional Information Section */}
       <div className="mt-10 px-5 md:px-20 py-10 bg-purple-50 rounded-lg shadow-lg">
