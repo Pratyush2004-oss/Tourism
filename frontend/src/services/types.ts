@@ -10,6 +10,7 @@ export interface PACKAGETYPE {
   Exclusion: string[] | undefined;
   Itinerary: Itinerary[] | undefined;
   FAQs: Itinerary[] | undefined;
+  Price: number;
 }
 
 export type Itinerary = {
