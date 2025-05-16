@@ -1,5 +1,6 @@
 import { getRandomAdventureImage, getRandomIndexedImage } from "./Images";
 
+
 export const PACKAGES = [
   {
     __id: "1",
