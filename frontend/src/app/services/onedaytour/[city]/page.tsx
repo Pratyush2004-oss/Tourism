@@ -56,7 +56,7 @@ function page() {
             </div>
             <div className="md:w-2/5 md:mt-10 px-3">
               <BookingCard
-                props={{ PackageName: cityData.name, PackageDays: 1 }}
+                props={{ PackageName: cityData.name, PackageDays: 1, PackagePrice: 1800 }}
               />
             </div>
           </div>

@@ -45,6 +45,9 @@ function Header() {
         <Link href={"/about"} className="text-xl font-bold ">
           About
         </Link>
+        <Link href={"/#blogs"} className="text-xl font-bold ">
+          Blogs
+        </Link>
         <Link href={"/package"} className="text-xl font-bold ">
           Package
         </Link>
@@ -189,6 +192,9 @@ function Header() {
                 </Link>
                 <Link href={"/about"} className="text-xl font-semibold">
                   About
+                </Link>
+                <Link href={"/#blogs"} className="text-xl font-semibold ">
+                  Blogs
                 </Link>
                 <Link href={"/package"} className="text-xl font-semibold ">
                   Package

@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 import RedirectIfAuthenticated from "@/components/shared/RedirectIfAuthenticated";
 import Footer from "@/components/shared/Footer";
 import ChatBotPopover from "@/components/shared/ChatBot";
+import FloatingWhatsAppButton from "@/components/shared/FloatingWhatsappbtn";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,10 +35,11 @@ export default function RootLayout({
       >
         <RedirectIfAuthenticated>
           <Header />
-          <ChatBotPopover />
+          <ChatBotPopover open={false} />
           {children}
           <Toaster />
           <Footer />
+          <FloatingWhatsAppButton/>
         </RedirectIfAuthenticated>
       </body>
     </html>

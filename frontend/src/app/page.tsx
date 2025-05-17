@@ -9,6 +9,7 @@ import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import InquirySection from "@/components/shared/InquirySection";
+import Blogs from "@/components/shared/Blogs";
 
 
 function page() {
@@ -25,6 +26,7 @@ function page() {
       <Disclaimer/>
       <Packages />
       <Services />
+      <Blogs/>
       <AboutUs />
       <InquirySection expand={true}/>
     </div>

@@ -1887,3 +1887,96 @@ export const RAJASTHANDISTRICTS = [
   "Tonk",
   "Udaipur",
 ];
+
+export const BLOGS = [
+  {
+    BlogTitle: "10 Must-Visit Places in India for First-Time Travelers",
+    MetaTitle: "Top 10 Must-Visit Destinations in India",
+    MetaDescription: "Planning your first trip to India? Discover the top 10 destinations you shouldn't miss, from the Taj Mahal to Kerala's backwaters.",
+    ContentSummary: "This blog will guide travelers through the most iconic spots across India with brief travel tips and booking suggestions.",
+  },
+  {
+    BlogTitle: "Best Time to Travel India by Region",
+    MetaTitle: "When to Visit India: Seasonal Travel Guide",
+    MetaDescription: "Discover the best time to visit each region of India—North, South, East, and West—for the perfect vacation.",
+    ContentSummary: "Breakdown of travel seasons with recommendations on when to visit various regions based on weather and festivals.",
+  },
+  {
+    BlogTitle: "How to Book Train Tickets Online Easily in India",
+    MetaTitle: "Guide to Booking Train Tickets Online in India",
+    MetaDescription: "Step-by-step guide to booking train tickets online through IRCTC or affiliate portals for a hassle-free experience.",
+    ContentSummary: "Includes screenshots and simple steps to make the booking process easier for users.",
+  },
+  {
+    BlogTitle: "Cheapest Flights from Major Indian Cities",
+    MetaTitle: "Affordable Domestic Flights in India",
+    MetaDescription: "Find the cheapest flight options from Delhi, Mumbai, Bengaluru, and other major Indian cities.",
+    ContentSummary: "Updated flight booking tips, suggested platforms (your affiliate), and tips for getting deals.",
+  },
+  {
+    BlogTitle: "How to Plan a Budget Trip Across India",
+    MetaTitle: "Budget Travel Tips for India",
+    MetaDescription: "Learn how to explore India on a budget—cheap transport, stays, and food options included.",
+    ContentSummary: "Tips for backpackers and students with estimated costs and travel hacks.",
+  },
+  {
+    BlogTitle: "Explore Indian Culture: What Every Tourist Should Know",
+    MetaTitle: "Guide to Indian Culture for Travelers",
+    MetaDescription: "Explore the diverse cultures of India and the dos and don’ts to follow while traveling.",
+    ContentSummary: "Cultural etiquette, food habits, dress codes, and how to interact respectfully with locals.",
+  },
+  {
+    BlogTitle: "7 Scenic Train Routes in India You Must Experience",
+    MetaTitle: "India’s Most Scenic Train Journeys",
+    MetaDescription: "From the Darjeeling Himalayan Railway to the Konkan Coast, discover India’s most beautiful train routes.",
+    ContentSummary: "Promotes your train booking section through experiential content.",
+  },
+  {
+    BlogTitle: "Hotel Booking Tips: What to Check Before You Book",
+    MetaTitle: "Tips for Booking Hotels in India",
+    MetaDescription: "Learn how to book the right hotel in India with safety, amenities, and price in mind.",
+    ContentSummary: "Affiliate-linked blog offering useful suggestions and highlighting your site’s booking section.",
+  },
+  {
+    BlogTitle: "Travel Insurance in India: Is It Worth It?",
+    MetaTitle: "Should You Buy Travel Insurance for India?",
+    MetaDescription: "Explore the benefits of buying travel insurance for trips across India.",
+    ContentSummary: "A breakdown of when and why travel insurance is recommended, possibly linking to insurance services you offer.",
+  },
+  {
+    BlogTitle: "Ride-Hailing in India: Compare Ola, Uber & Rapido",
+    MetaTitle: "Best Ride Apps in India: Ola vs Uber vs Rapido",
+    MetaDescription: "Compare ride prices, service quality, and safety to choose the best ride app in India.",
+    ContentSummary: "Connects well with your upcoming ride comparison feature in the app.",
+  },
+  {
+    BlogTitle: "Explore India in 7 Days: A Quick Travel Itinerary",
+    MetaTitle: "One-Week India Travel Plan for Beginners",
+    MetaDescription: "Only have 7 days in India? Here’s a complete itinerary to help you cover top spots efficiently.",
+    ContentSummary: "Combines flights, trains, and hotel info into one friendly guide.",
+  },
+  {
+    BlogTitle: "How to Choose a Tour Package Online",
+    MetaTitle: "Guide to Booking Tour Packages in India",
+    MetaDescription: "Looking for a complete vacation plan? Learn how to choose a tour package that fits your needs and budget.",
+    ContentSummary: "Introduces ExploreIndiaView’s future offerings for package tours.",
+  },
+  {
+    BlogTitle: "Indian Street Food You Must Try",
+    MetaTitle: "12 Must-Try Indian Street Foods",
+    MetaDescription: "From Delhi’s chaat to Kolkata’s rolls—here are the best street foods you can’t miss.",
+    ContentSummary: "Engaging foodie content for readers, possibly linking to travel suggestions.",
+  },
+  {
+    BlogTitle: "Top Indian Festivals to Plan Your Trip Around",
+    MetaTitle: "Best Time to Visit India Based on Festivals",
+    MetaDescription: "Celebrate India’s vibrant festivals—from Diwali to Holi—with this cultural guide.",
+    ContentSummary: "Encourages users to time their bookings using your platform.",
+  },
+  {
+    BlogTitle: "How to Stay Safe While Traveling in India",
+    MetaTitle: "Travel Safety Tips for Visiting India",
+    MetaDescription: "Stay informed and safe with these must-know tips for solo and group travelers in India.",
+    ContentSummary: "Builds trust with your audience and encourages bookings from first-time travelers.",
+  },
+];

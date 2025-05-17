@@ -2,6 +2,7 @@ import {
   ChevronRight,
   Facebook,
   Instagram,
+  Linkedin,
   Mail,
   MapPlus,
   MessageCircle,
@@ -146,29 +147,33 @@ function Footer() {
           <h1 className="text-xl font-bold font-serif">Contact Information</h1>
           <div className="text-sm font-mono mt-2">
             <Link
-              href={"/"}
+              href={"https://www.facebook.com/profile.php?id=61575066421510"}
+              target="_blank"
               className="flex items-center gap-2 hover:gap-5 transition-all duration-300"
             >
               <Facebook size={15} className="fill-purple-700 text-purple-600" />
               Facebook
             </Link>
             <Link
-              href={"/"}
+              href={"https://www.linkedin.com/in/n-cube-4808662bb/"}
+              target="_blank"
               className="flex items-center gap-2 hover:gap-5 transition-all duration-300"
             >
-              <Twitter size={15} className="fill-purple-700 text-purple-600" />
-              Twitter
+              <Linkedin size={15} className="fill-purple-700 text-purple-600" />
+              Linkedin
             </Link>
             <Link
-              href={"/"}
+              href={"https://www.youtube.com/@Ncube-r8p"}
+              target="_blank"
               className="flex items-center gap-2 hover:gap-5 transition-all duration-300"
             >
               <Youtube size={15} className="fill-purple-700 text-purple-600" />
               Youtube
             </Link>
             <Link
-              href={"/"}
+              href={"/https://www.instagram.com/explore_india_view/?next=%2F&hl=en"}
               className="flex items-center gap-2 hover:gap-5 transition-all duration-300"
+              target="_blank"
             >
               <Instagram size={15} className="fill-purple-700 " />
               Instagram

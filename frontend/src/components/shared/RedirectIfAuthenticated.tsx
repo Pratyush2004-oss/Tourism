@@ -20,11 +20,7 @@ function RedirectIfAuthenticated({ children }: { children: ReactNode }) {
     }
   }, [user, isLoginOrSignupPath, router]);
   if (checkingAuth) {
-    return (
-      <div className="flex justify-center items-center h-[calc(100vh-64px)]">
-        <Loader className="size-28 animate-spin text-green-500" />
-      </div>
-    );
+    return null;
   }
   return <>{children}</>;
 }
