@@ -188,11 +188,11 @@ const ChatBotPopover = () => {
     <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
         <div className="w-80 bg-white rounded-lg shadow-xl overflow-hidden flex flex-col">
-          <div className="bg-teal-500 text-white p-3 flex justify-between items-center">
+          <div className="bg-orange-500 text-white p-3 flex justify-between items-center">
             <h3 className="font-bold">Explore India View Assistant</h3>
             <button 
               onClick={() => setIsOpen(false)}
-              className="text-white hover:text-teal-200"
+              className="text-white hover:text-orange-200"
             >
               <X size={20} />
             </button>
@@ -206,7 +206,7 @@ const ChatBotPopover = () => {
               >
                 <div 
                   className={`max-w-xs p-3 rounded-lg ${message.sender === 'user' 
-                    ? 'bg-teal-500 text-white rounded-tr-none' 
+                    ? 'bg-orange-500 text-white rounded-tr-none' 
                     : 'bg-white border border-gray-200 rounded-tl-none'}`}
                 >
                   {formatMessage(message.text)}
@@ -216,7 +216,7 @@ const ChatBotPopover = () => {
                         <button
                           key={index}
                           onClick={() => handleServiceSelect(option)}
-                          className="block w-full text-left p-2 my-1 bg-teal-100 hover:bg-teal-200 rounded text-sm text-teal-800"
+                          className="block w-full text-left p-2 my-1 bg-orange-100 hover:bg-orange-200 rounded text-sm text-orange-800"
                         >
                           {option}
                         </button>
@@ -237,7 +237,7 @@ const ChatBotPopover = () => {
                   <button
                     key={service}
                     onClick={() => handleServiceSelect(service)}
-                    className="p-2 bg-white border border-teal-300 hover:bg-teal-50 rounded text-xs text-center"
+                    className="p-2 bg-white border border-orange-300 hover:bg-orange-50 rounded text-xs text-center"
                   >
                     {service}
                   </button>
@@ -265,11 +265,11 @@ const ChatBotPopover = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Type your message..."
-                className="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
+                className="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-orange-500"
               />
               <button
                 onClick={handleSendMessage}
-                className="p-2 bg-teal-500 text-white rounded hover:bg-teal-700"
+                className="p-2 bg-orange-500 text-white rounded hover:bg-orange-700"
               >
                 <Send size={18} />
               </button>
@@ -279,9 +279,9 @@ const ChatBotPopover = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="w-14 h-14 bg-teal-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-teal-700 transition-all"
+          className="size-18 27xl:size-25 bg-orange-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-orange-700 transition-all"
         >
-          <MessageSquare size={24} />
+          <MessageSquare size={28} />
         </button>
       )}
     </div>

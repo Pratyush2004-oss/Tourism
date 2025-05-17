@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1700px] mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[2000px] mx-auto`}
       >
         <RedirectIfAuthenticated>
           <Header />

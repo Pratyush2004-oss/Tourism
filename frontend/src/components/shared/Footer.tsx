@@ -76,6 +76,17 @@ function Footer() {
               />
               Privacy Policy
             </Link>
+            <Link
+              href={"/terms-and-conditions"}
+              className="flex items-center gap-1 hover:gap-3 transition-all duration-300"
+            >
+              <ChevronRight
+                size={15}
+                className="text-purple-800"
+                strokeWidth={5}
+              />
+              Terms & Conditions
+            </Link>
           </div>
         </div>
 

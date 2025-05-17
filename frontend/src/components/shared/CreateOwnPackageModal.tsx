@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import {
   Dialog,
@@ -20,7 +21,7 @@ import { Button } from "../ui/button";
 import BookingCard from "./BookingCard";
 import { ADVENTURE, RAJASTHANDISTRICTS } from "@/services/Options";
 
-function CreateOwnPackageModal() {
+function CreateOwnPackageModal({title}:{title:string}) {
   const [PlaceList, setPlaceList] = useState<string[]>([]);
   const [AdventureList, setAdventureList] = useState<string[]>([]);
   const [onDone, setonDone] = useState(false);
@@ -63,12 +64,12 @@ function CreateOwnPackageModal() {
           variant={"secondary"}
           className="w-1/2 mx-auto bg-gradient-to-r from-emerald-500 to-teal-400 cursor-pointer"
         >
-          Create your Own Package
+          {title}
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] max-h-[calc(100vh-8rem)] overflow-auto w-full overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Create your Own Package</DialogTitle>
+          <DialogTitle>{title}</DialogTitle>
           <DialogDescription>
             Fill basic details and create your own package
           </DialogDescription>

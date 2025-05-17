@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import CreateOwnPackageModal from "@/components/shared/CreateOwnPackageModal";
 function Adventure() {
   return (
     <>
@@ -33,12 +34,12 @@ function Adventure() {
                 <CardTitle className="text-xl md:text-2xl font-bold text-center">
                   {item.name}
                 </CardTitle>
-                <CardDescription className="text-justify font-medium ">
+                <CardDescription className="text-justify font-medium  line-clamp-5">
                   {item.desc}
                 </CardDescription>
               </CardHeader>
               <CardFooter className="flex items-center justify-center mt-auto">
-                <Button className="w-1/2">View</Button>
+                <CreateOwnPackageModal title={"Book Adventure"}/>
               </CardFooter>
             </Card>
           ))}

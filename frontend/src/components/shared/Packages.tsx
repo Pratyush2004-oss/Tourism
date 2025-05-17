@@ -14,7 +14,7 @@ function Packages() {
           <h1 className="text-2xl md:text-4xl mb-5 font-bold text-center font-serif border-b-4">
             Packages
           </h1>
-            <CreateOwnPackageModal />
+            <CreateOwnPackageModal title="Create Your Own Package" />
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {PACKAGES.map(
               (pack, idx) => idx < 6 && <PlaceCard key={idx} pack={pack} />
@@ -25,9 +25,8 @@ function Packages() {
               onClick={() => {
                 router.push("/package");
               }}
-              variant={"link"}
               size={"lg"}
-              className="mt-5 te cursor-pointer"
+              className="mt-5 bg-gray-600 text-white cursor-pointer"
             >
               Show More
             </Button>
