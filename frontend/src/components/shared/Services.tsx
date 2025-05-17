@@ -1,5 +1,5 @@
 "use client";
-import { SERVICES, TOPSERVICES } from "@/services/Options";
+import { OTHERSERVICES, SERVICES, TOPSERVICES } from "@/services/Options";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -37,6 +37,32 @@ function Services() {
                 </div>
               </div>
             ))}
+            {OTHERSERVICES.map((service, idx) => (
+              <div key={idx} className="p-4 border rounded-lg shadow-md">
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  width={500}
+                  height={500}
+                  className="w-full object-cover rounded-t-lg h-56"
+                />
+                <h2 className="text-xl md:text-2xl font-bold my-4 text-center">
+                  {service.name}
+                </h2>
+                <div className="w-full flex items-center justify-center my-4">
+                  <Button
+                    onClick={() => {
+                      window.open(service.path, "_blank");
+                    }}
+                    className="bg-gray-600 text-white cursor-pointer"
+                  >
+                    Explore More
+                  </Button>
+                </div>
+                  <h1 className="text-center font-bold text-sm">Powered by: {service.PoweredBy}</h1>
+              </div>
+            ))}
+
             {SERVICES.map((service, idx) => (
               <div key={idx} className="p-4 border rounded-lg shadow-md">
                 <Image

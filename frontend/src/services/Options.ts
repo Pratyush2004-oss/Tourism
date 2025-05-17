@@ -676,7 +676,7 @@ export const PACKAGES = [
       "Driver tip",
       "International airfare",
     ],
-    Price:457685,
+    Price:5000,
     FAQs: [],
   },
   {
@@ -750,7 +750,7 @@ export const PACKAGES = [
       "Driver tip",
       "International airfare",
     ],
-    Price: 20000,
+    Price: 3500,
     FAQs: [],
   },
   {
@@ -785,7 +785,7 @@ export const PACKAGES = [
       "Driver tip",
       "International airfare",
     ],
-    Price: 20000,
+    Price: 3500,
     Itinerary: [
       {
         name: "Jaipur",
@@ -836,7 +836,7 @@ export const PACKAGES = [
     image: getRandomIndexedImage(),
     days: 15,
     nights: 14,
-    Price:50000,
+    Price:3600,
     Overview: [
       `
     The Mini Rajasthan Tour is a compact yet enriching journey that captures the essence of Rajasthan’s royal heritage, desert charm, vibrant culture, and scenic beauty within a short span. Ideal for travelers with limited time, the tour typically includes key destinations like Jaipur, Jodhpur, and Udaipur. Starting in Jaipur, visitors explore architectural marvels like Amber Fort, City Palace, and Hawa Mahal while enjoying traditional markets and Rajasthani cuisine. The tour then moves to Jodhpur, the Blue City, where the massive Mehrangarh Fort, Umaid Bhawan Palace, and vibrant bazaars reveal the grandeur of Marwar. Finally, Udaipur, the City of Lakes, offers serene boat rides on Lake Pichola, visits to the majestic City Palace, and strolls through romantic gardens. This compact route gives travelers a taste of Rajasthan’s royal history, desert landscapes, local crafts, and warm hospitality—making it perfect for a first-time or quick visit.
@@ -908,20 +908,20 @@ export const PACKAGES = [
     __id: "14",
     name: "Rajasthan Central City Tour",
     image: getRandomIndexedImage(),
-    days: 100,
-    nights: 500,
+    days: 5,
+    nights: 4,
+    Price:4500,
     Overview: [
       `
       The Rajasthan Central Tour offers a deep dive into the heart of the state, blending royal heritage, desert culture, and spiritual richness. Centered around Jodhpur, Ajmer, Pushkar, and Nagaur, the tour highlights majestic forts like Mehrangarh, sacred sites like the Ajmer Sharif Dargah, and the holy Pushkar Lake with its unique Brahma Temple. Nagaur Fort and its annual cattle fair provide a glimpse into traditional desert life. This central circuit showcases authentic Rajasthani architecture, vibrant markets, and folk traditions, offering a rich cultural experience in a compact, centrally located route.
       `,
     ],
-    Price: 50000,
     Highlights: [],
     Itinerary: [
       {
         name: "Jaipur",
         description: `
-          We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
+        We offer a private day tour in Jaipur City with a car, driver and guide. We suggest you try this tour of all the must-see places. This tour covers – Amber Fort with Elephant ride, Nahargarh Fort, City Palace, Hawa Mahal, Jantar Mantar, Albert Hall, Birla Temple, Local Market
           `,
       },
       {
@@ -929,8 +929,26 @@ export const PACKAGES = [
         description: `Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.`,
       },
     ],
-    Inclusion: [],
-    Exclusion: [],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],
     FAQs: [],
   },
   {
@@ -971,8 +989,27 @@ export const PACKAGES = [
         description: ` BAck to Jaipur`,
       },
     ],
-    Inclusion: [],
-    Exclusion: [],
+    Inclusion: [
+      "All arrival, departure, sightseeing’s as per above Itinerary by air conditioned Luxury car with English speaking driver",
+      "Daily buffet breakfast",
+      "Indian sim card with cell phone",
+      "One double/ twin bedroom",
+      "Elephant ride at amber fort",
+      " Boat ride at Udaipur",
+      "rain ticket New Delhi to Jaisalmer",
+      "Guide service at all destinations and monuments",
+      "All applicable hotel & transport taxes",
+      "Government services tax of 4.89%",
+    ],
+    Exclusion: [
+      "Any meals other than those specified",
+      "Expenses of personal nature such as tips, telephone calls, laundry, liquor etc",
+      "Entrance fees during sightseeing",
+      "Any other item not specified",
+      "Driver tip",
+      "International airfare",
+    ],  
+    Price: 3500,  
     FAQs: [],
   },
   {
@@ -981,8 +1018,10 @@ export const PACKAGES = [
     image: "/images/camel1.jpg",
     days: 15,
     nights: 14,
-    Price:457854,
-    Overview: [``],
+    Overview: [`
+      A Desert Tour in Rajasthan immerses travelers in the golden landscapes of the Thar Desert, offering a blend of adventure, history, and cultural richness. Starting from Jaisalmer, the "Golden City," visitors can explore the towering Jaisalmer Fort, wander through the intricate Patwon Ki Haveli, and enjoy the serenity of Gadisar Lake before heading to the mesmerizing Sam Sand Dunes for a camel safari and traditional Rajasthani folk performances under the starlit sky. Moving to Bikaner, the city known as the "Camel Country," tourists can visit Junagarh Fort, marvel at the unique Karni Mata Temple, and learn about India's finest camels at the Camel Breeding Farm. The lesser-known Osian, often referred to as the "Oasis in the Desert," presents a treasure trove of ancient Jain and Hindu temples and thrilling jeep safaris through the rugged terrain. Khimsar, a hidden gem in the desert, offers tranquil luxury amidst the dunes, where heritage camps provide an authentic desert experience with breathtaking sunset views. Throughout the journey, travelers can enjoy immersive experiences such as camel rides, jeep safaris, fire dance performances, and Rajasthani folk music, all while savoring the region’s signature delicacies like Dal Baati Churma. The Desert Tour of Rajasthan is a captivating blend of royal history, desert adventures, and local traditions, leaving visitors enchanted by the rustic charm and warm hospitality of the desert communities.
+      `],
+
     Highlights: [],
     Itinerary: [
       {
@@ -1009,6 +1048,7 @@ export const PACKAGES = [
         `,
       },
     ],
+    Price: 4000,
     Inclusion: [],
     Exclusion: [],
     FAQs: [],
@@ -1271,22 +1311,28 @@ export const TOPSERVICES = [
     image: "/images/camping1.jpg",
     path: "/camping_hiking",
   },
+];
+
+export const OTHERSERVICES = [
   {
     name: "Flight Service",
     image: "/images/airline1.jpg",
-    path: "/airline",
+    path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.airindia.com%2Fen-in%2Fbook-flights",
+    PoweredBy:"Air India",
   },
   {
     name: "Railway Service",
     image: "/images/train1.jpg",
-    path: "/train",
+    path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.railyatri.in%2F",
+    PoweredBy:"Rail Yatri",
   },
   {
     name: "Hotel Service",
     image: "/images/hotel-1.jpg",
-    path: "/hotels",
+    path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels",
+    PoweredBy:"Make My Trip",
   },
-];
+]
 
 export const RAILWAYIMAGES = [
   {

@@ -29,6 +29,7 @@ import ScratchCard from "./ScratchCard";
 interface Props {
   PackageName: string;
   PackageDays: number;
+  PackagePrice: number;
   PlaceList?: string[];
   AdventureList?: string[];
 }
@@ -49,7 +50,7 @@ function BookingCard({ props }: { props: Props }) {
   const [input, setInput] = useState<BookingInput>({
     PackageName: props.PackageName,
     PackageDays: props.PackageDays,
-    PackagePrice: props.PackageDays * 1000,
+    PackagePrice: props.PackageDays * props.PackagePrice,
     people: 2,
     hotel: "",
     startDate: new Date(),
@@ -88,20 +89,20 @@ function BookingCard({ props }: { props: Props }) {
       setInput({
         ...input,
         PackagePrice:
-          input.people * input.PackageDays * 1000 +
+          input.people * input.PackageDays * props.PackagePrice +
           input.people * input.PackageDays * 800 * 0.8,
       });
     } else if (input.hotel === "5 Star") {
       setInput({
         ...input,
         PackagePrice:
-          input.people * input.PackageDays * 1000 +
+          input.people * input.PackageDays * props.PackagePrice +
           input.people * input.PackageDays * 1000 * 0.8,
       });
     } else {
       setInput({
         ...input,
-        PackagePrice: input.people * input.PackageDays * 1000,
+        PackagePrice: input.people * input.PackageDays * props.PackagePrice,
       });
     }
   }, [input.PackageDays, input.people, input.hotel]);

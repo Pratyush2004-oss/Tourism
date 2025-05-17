@@ -2,6 +2,28 @@
 import { useState, useRef, useEffect } from 'react';
 import { Send, X, MessageSquare } from 'lucide-react';
 
+const packageRedirectKeywords = ["package", "tour", "holiday"];
+const hotelRedirectKeywords = ["hotel", "stay", "accommodation"];
+
+const packageResponses = [
+  "Our packages are designed for every kind of traveler. Would you like to see our latest offers?",
+  "We have a variety of tour packages! Redirecting you to our Packages section...",
+  "Looking for a memorable trip? Check out our curated packages.",
+];
+
+const hotelResponses = [
+  "We offer hotels from budget to luxury. Redirecting you to our Hotels section...",
+  "Find the best stays with us! Taking you to the Hotels section.",
+  "Need a place to stay? Let me show you our hotel options.",
+];
+
+const generalResponses = [
+  "I can help you with bookings, travel tips, and more. What would you like to do?",
+  "Feel free to ask about flights, trains, hotels, or packages!",
+  "I'm here to assist you with your travel plans. How can I help?",
+  "You can ask me about car rentals, sightseeing, or anything else related to your trip.",
+];
+
 const travelServices = {
   "Flight Booking": [
     "Domestic flights",
@@ -41,17 +63,21 @@ const travelServices = {
 };
 
 const quickReplies = [
+  "Show me tour packages",
+  "Find hotels in Jaipur",
   "How do I book a flight?",
   "What are your hotel options in Jaipur?",
   "Can I get a car with driver?",
   "What's included in your tour packages?",
-  "How can I cancel a booking?"
+  "How can I cancel a booking?",
+  "Contact support",
 ];
+
 
 const ChatBotPopover = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<
-    { id: number; text: string; sender: string; options?: string[] }[]
+    { id: number; text: string; sender: string; options?: string[], redirect?: string }[]
   >([
     {
       id: 1,
@@ -90,58 +116,85 @@ const ChatBotPopover = () => {
     }, 800);
   };
 
-  const generateBotResponse = (userInput:string) => {
-    const lowerInput = userInput.toLowerCase();
-    let responseText = '';
-    let responseOptions: string[] = [];
+  const generateBotResponse = (userInput: string) => {
+  const lowerInput = userInput.toLowerCase();
+  let responseText = '';
+  let responseOptions: string[] = [];
+  let redirect: string | undefined = undefined;
 
-    // Check for service-related queries
-    if (lowerInput.includes('flight') || lowerInput.includes('fly')) {
-      responseText = "We can certainly help with flight bookings! Here are some options:";
-      responseOptions = travelServices["Flight Booking"];
-    } 
-    else if (lowerInput.includes('train') || lowerInput.includes('rail')) {
-      responseText = "We offer various train booking services. Here are some options:";
-      responseOptions = travelServices["Train Booking"];
-    }
-    else if (lowerInput.includes('car') || lowerInput.includes('bike') || lowerInput.includes('rent')) {
-      responseText = "We have excellent rental options. Here are some choices:";
-      responseOptions = travelServices["Bike and Car Rental"];
-    }
-    else if (lowerInput.includes('hotel') || lowerInput.includes('stay') || lowerInput.includes('accommodation')) {
-      responseText = "We partner with the best hotels in Jaipur and across India. Here are options:";
-      responseOptions = travelServices["Hotel Booking"];
-    }
-    else if (lowerInput.includes('package') || lowerInput.includes('tour') || lowerInput.includes('holiday')) {
-      responseText = "Our tour packages are carefully curated for amazing experiences. Here are some:";
-      responseOptions = travelServices["Package Booking"];
-    }
-    else if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')) {
-      responseText = "Hello! Welcome to Explore India View. How can I assist you with your travel plans today?";
-    }
-    else if (lowerInput.includes('thank')) {
-      responseText = "You're welcome! Is there anything else I can help you with?";
-    }
-    else if (lowerInput.includes('cancel') || lowerInput.includes('refund')) {
-      responseText = "For cancellations or refunds, please visit our 'My Bookings' section or contact our customer support at support@exploreindiaview.com";
-    }
-    else if (lowerInput.includes('contact') || lowerInput.includes('help')) {
-      responseText = "You can reach us at:\n- Phone: +91 XXXXX XXXXX\n- Email: info@exploreindiaview.com\n- Office: 123 Travel Plaza, Jaipur";
-    }
-    else {
-      responseText = "I can help you with flight bookings, train tickets, hotel reservations, car rentals, and tour packages. What would you like to know more about?";
-      setShowServices(true);
-    }
+  // Package section redirection
+  if (packageRedirectKeywords.some(k => lowerInput.includes(k))) {
+    responseText = packageResponses[Math.floor(Math.random() * packageResponses.length)];
+    redirect = "packages";
+  }
+  // Hotel section redirection
+  else if (hotelRedirectKeywords.some(k => lowerInput.includes(k))) {
+    responseText = hotelResponses[Math.floor(Math.random() * hotelResponses.length)];
+    redirect = "hotels";
+  }
+  // ...existing logic for flights, trains, etc...
+  else if (lowerInput.includes('flight') || lowerInput.includes('fly')) {
+    responseText = "We can certainly help with flight bookings! Here are some options:";
+    responseOptions = travelServices["Flight Booking"];
+    redirect='flights'
+  }
+  else if (lowerInput.includes('train') || lowerInput.includes('rail')) {
+    responseText = "We offer various train booking services. Here are some options:";
+    responseOptions = travelServices["Train Booking"];
+    redirect='train'
+  }
+  else if (lowerInput.includes('car') || lowerInput.includes('bike') || lowerInput.includes('rent')) {
+    responseText = "We have excellent rental options. Here are some choices:";
+    responseOptions = travelServices["Bike and Car Rental"];
+  }
+  else if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')) {
+    responseText = "Hello! Welcome to Explore India View. How can I assist you with your travel plans today?";
+  }
+  else if (lowerInput.includes('thank')) {
+    responseText = "You're welcome! Is there anything else I can help you with?";
+  }
+  else if (lowerInput.includes('cancel') || lowerInput.includes('refund')) {
+    responseText = "For cancellations or refunds, please visit our 'My Bookings' section or contact our customer support at support@exploreindiaview.com";
+  }
+  else if (lowerInput.includes('contact') || lowerInput.includes('help')) {
+    responseText = "You can reach us at:\n- Phone: +91 XXXXX XXXXX\n- Email: info@exploreindiaview.com\n- Office: 123 Travel Plaza, Jaipur";
+  }
+  else {
+    responseText = generalResponses[Math.floor(Math.random() * generalResponses.length)];
+    setShowServices(true);
+  }
 
-    const botMessage = {
-      id: messages.length + 2,
-      text: responseText,
-      sender: 'bot',
-      options: responseOptions
-    };
-
-    return botMessage;
+  const botMessage = {
+    id: messages.length + 2,
+    text: responseText,
+    sender: 'bot',
+    options: responseOptions.length > 0 ? responseOptions : undefined,
+    redirect: redirect,
   };
+
+  return botMessage;
+};
+
+useEffect(() => {
+  // Check the last message for redirection
+  const lastMsg = messages[messages.length - 1];
+  if (lastMsg && lastMsg.redirect) {
+    setTimeout(() => {
+      if (lastMsg.redirect === "packages") {
+        window.location.href = "/package";
+      } 
+      else if (lastMsg.redirect === "hotels") {
+        window.location.href = "/hotels";
+      }
+      else if (lastMsg.redirect === "flights") {
+        window.location.href = "/services/airline";
+      }
+      else if (lastMsg.redirect === "train") {
+        window.location.href = "/services/train";
+      }
+    }, 1500); // Give user time to read the message
+  }
+}, [messages]);
 
   const handleQuickReply = (reply:string) => {
     setInputValue(reply);

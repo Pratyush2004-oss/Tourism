@@ -183,7 +183,11 @@ function PackageDetail() {
             </div>
             <div className="md:w-2/5 md:mt-10 px-3">
               <BookingCard
-                props={{ PackageName: Package.name, PackageDays: Package.days }}
+                props={{
+                  PackageName: Package.name,
+                  PackageDays: Package.days ?? 0,
+                  PackagePrice: Package.Price ?? 0,
+                }}
               />
             </div>
           </div>

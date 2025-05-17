@@ -176,6 +176,7 @@ function CreateOwnPackageModal({title}:{title:string}) {
                 PackageName: "Custom Package",
                 PackageDays: PlaceList.length,
                 PlaceList: PlaceList,
+                PackagePrice: 2500,
                 AdventureList: AdventureList
               }}
             />
