@@ -13,7 +13,7 @@ node_modules
 # testing
 /coverage
 
-
+mobile
 # next.js
 /.next/
 /out/
