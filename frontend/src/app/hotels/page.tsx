@@ -3,7 +3,6 @@ import { Landing } from "@/components/shared/Landing";
 import { HOTELSDATA } from "@/services/Options";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
 
 function page() {
   const router = useRouter();
