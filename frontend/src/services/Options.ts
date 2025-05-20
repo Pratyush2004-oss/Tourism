@@ -39,7 +39,7 @@ export const PACKAGES = [
       {
         name: "Jaisalmer",
         description: `Head to Jaisalmer, the Golden City. Explore the Jaisalmer Fort, Patwon Ki Haveli, and the vibrant local markets. Enjoy a camel safari and cultural performances in the Thar Desert. Overnight stay in a desert camp.`,
-      },      
+      },
       {
         name: "Jodhpur",
         description: `Drive to Jodhpur, the Blue City. Visit the majestic Mehrangarh Fort, Jaswant Thada, and Umaid Bhawan Palace. Explore the bustling Sardar Market. Overnight stay in Jodhpur.`,
@@ -85,7 +85,7 @@ export const PACKAGES = [
       "International and domestic airfare",
       "Travel insurance",
     ],
-    Price:1600,
+    Price: 1600,
     FAQs: [
       {
         name: "What is the best time to visit Rajasthan?",
@@ -178,8 +178,7 @@ export const PACKAGES = [
       },
       {
         name: "Pushkar and Ajmer",
-        description:
-          `Visit the Brahma Temple and Pushkar Lake. Overnight stay in Pushkar. <br/>
+        description: `Visit the Brahma Temple and Pushkar Lake. Overnight stay in Pushkar. <br/>
           Ajmer is a spiritual center housing the Ajmer Sharif Dargah of Khwaja Moinuddin Chishti and the nearby Ana Sagar Lake.
           `,
       },
@@ -213,7 +212,7 @@ export const PACKAGES = [
       "International and domestic airfare",
       "Travel insurance",
     ],
-    Price:2500,
+    Price: 2500,
     FAQs: [
       {
         name: "What is included in the package?",
@@ -254,14 +253,14 @@ export const PACKAGES = [
   //       description: `
   //       <h1><strong>City Place</strong><h1>
   //       The City Palace of Jaipur is located in the heart of the old city of Jaipur in Rajasthan, India. It is spread over a large area, split into a series of courtyards, gardens, and buildings. <br/>
-        
+
   //       The outer wall was built by Maharaja Jai Singh II, but other additions are much more recent, some dating back to the beginning of the 20th century. The palace is a wonderful blend of Rajasthani and Mughal architectural style. The City Place of Jaipur is a major tourist attraction in Rajasthan. <br/><br/>
 
   //       <h1><strong>Astronomical Observatory (Jantar Mantar):</strong><h1>
   //       Between 1727 and 1734 Maharajah Jai Singh II of Jaipur constructed five astronomical observatories in west-central India. The observatories, or “Jantar Mantar” as they are commonly known, incorporate multiple buildings of unique form, each with a specialized function for astronomical measurement. <br/>
-        
+
   //       These structures with their striking combinations of geometric forms at large scale, have captivated the attention of architects, artists, and art historians worldwide, yet remain largely unknown to the general public.
-        
+
   //       Jantar Mantar presents the observatories through a variety of media and information sources, making it possible to explore and learn about these historic sites through interactive panoramic “VR” photographs, time-lapse sequences, and 3D models as well as articles, drawings, and historic texts. It is a comprehensive resource for exploring the observatories in depth.
   //       `,
   //     },
@@ -269,138 +268,136 @@ export const PACKAGES = [
   //       name: "Shekawati",
   //       description: `
   //       <h1><strong>Amer Fort</strong><h1>
-        
+
   //       The Amer Fort is situated in Amer, which is 11 kilometres from Jaipur. Amer, originally, was the capital of the state before Jaipur. It is an old fort, built-in 1592 by Raja Man Singh. This fort is also very popularly known as the Amer Palace.<br/><br/>
-        
+
   //       The Amer Fort was built in red sandstone and marble and the Maotha Lake adds a certain charm to the entire Fort. Though the fort is quite old and may even look so from the outside, it is beautiful on the inside and boasts of various buildings of prominence like the ‘Diwan-i-Aam’, the ‘Sheesh Mahal’ and even the ‘Sukh Mahal’. The Amer Fort has influences of both Hindu and Muslim architecture.<br/><br/>
-        
+
   //       This fort also has the ‘Shila Devi’ Temple and the ‘Ganesh Pol’ which is a gate that leads to the private palaces of the kings. The Amer Fort has many pavilions and halls of great interest and other popular attractions.<br/><br/>
-        
-        
+
   //       <h1><strong>Jaigarh Fort</strong><h1>
-        
+
   //       The Jaigarh fort is the most spectacular of the three-hilltop forts that overlook Jaipur. In Mughal times, the Jaipur region was a major weapon-producing centre for the Mughal and Rajput rulers, several of the weapons being on display in the fort’s museum.<br/><br/>
-        
+
   //       It is one of the few military structures of medieval India preserved almost intact, containing palaces, a granary, a well-planned cannon foundry, several temples, a tall tower and giant mounted cannon-the Jai Ban (Jaivan) which is the largest cannon on wheels in the world. Jaigarh Fort is also known as the fort of victory. The display includes a collection of canons, many of which are exquisitely decorated and were used in the Mughal campaigns led by the Rajput King, Raja Man Singh.<br/><br/>
-        
+
   //       Of Jaipur’s three forts, Jaigarh is perhaps the most imposing. It does not have those delicate structures or palaces like that of Amber but if you want a quick look at a hard-core fortress, this is it. Jaigarh means ‘Victory Fort’ and was built between the 15th and the 18th century AD, and stands 15 km from Jaipur, amidst rock-strewn, thorn-scrub covered hills, its forbidding stone ramparts being visible from the Jaipur town. A steep road goes up to the main gate, the Dungar Darwaza, from where the view is are inspiring. <br/><br/>
-        
-        
+
   //       <h1><strong>Nahargarh Fort</strong><h1>
-        
+
   //       Nahargarh Fort is located on the rugged ridge of Aravali Hills and it forms an impressive northern backdrop of Jaipur. It looks most classy when floodlit at night. The fort overlooks the city and presents a glittering view of the city lights. It was built in 1734 and extended in 1868. Nahargarh meaning abode of the tigers was built by Jai Singh to bolster the defence of Amber.<br/><br/>
-        
+
   //       The legend has it that it was named Nahargarh after Nahar Singh, a prince whose spirit would destroy the construction and stall its progress. So after a Tantrik invoked the spirit, it agreed to withdraw on condition that the fort would be named after him. The Madhavendra Bhawan, built by Sawai Madho Singh has a unique cluster of 12 identical suites for queens and at the head is a suite for the king himself.<br/><br/>
-        
+
   //       The rooms are linked by corridors and retain some delicate frescoes as well as toilets and kitchen hearths. It was used by members of the royal family for an excursion in summers and is even now a favoured picnic spot. Durg Cafeteria just above the entrance sells meals and refreshments, while Padao Restaurant on the west sells drinks around sunset.`,
   //     },
   //     {
   //       name: "Kuchaman Fort",
   //       description: `Mandawa is located in the Shekhawati region of Rajasthan. The presence of a number of forts, mansions and Haveli’s also make it a great tourist destination.<br/><br/>
-        
+
   //       Mandawa used to a busy market town for Rajput merchants. It was during that period, the Rajputs built a number of palatial mansions. It was their initiative to build the archways, murals etc. as well. This actually helped in imparting a royal ambiance and vintage charm to the place. The traders used to work in different parts of the country.<br/><br/>
-        
+
   //       However, whenever there was a question of building a palatial mansion, they built it in Mandawa. These mansions marked their wealth and prosperity.`,
   //     },
   //     {
   //       name: "Bikaner Via Nagaur Fort",
   //       description: `The Kuchaman Fort, a Heritage Hotel near Jaipur, Rajasthan. Ideally situated with proximity to key tourist destinations in India Pushkar, Ajmer, Jaipur and Samode. The scenic beauty and picturesque setting of this fort make you travel back in time. <br/><br/>
-        
+
   //       This Heritage Hotel and Resort offers more than just accommodation activities include Horse Safaris, Camel Safaris, Village Safaris, Bird watching and Temple excursions. Our special Kuchaman City excursion takes you through old heritage Haveli’s and other memorable lanes. <br/><br/>
-        
+
   //       The resort itself offers Five-star comfort. An indoor Pool, Yoga Centre, Kerala Massages and a multi-cuisine restaurant. This Heritage Hotel and Fort with its high and massive ramparts, 32 bastions, 10 gates and various defences is a formidable fort unique in its architecture. One of the finest Heritage Hotels in Rajasthan, The Kuchaman Fort is rapidly becoming the favourite choice for the discerning traveller. <br/><br/>
-        
+
   //       As you go winding up an undulating mountain road, towards the massive portals of this magnificent fort, you travel back to in time, only to be swallowed into the inside of this ancient world of strange mysteries, of secret chants and mantras, of classical music and ragas, and of fine arts and murals. The Kuchaman Fort. Beckoning, inviting, waiting to welcome you as it rises proudly int the clear skies at the top of a 1000 feet high rock cliff.
   //       <br/><br/>
-        
+
   //       The Kuchaman Fort, a rare jewel set in a glittering sea of golden sands, as though a million-year-old rock itself changed its shape, to record the extraordinary era of Kuchaman glory. The Kuchaman Fort, where with echoing, reverberating step, you peel away successive layers of timeless history, perfectly preserved, frozen in rock and time.`,
   //     },
   //     {
   //       name: "Jaisalmer",
   //       description: `Just over five centuries old, Bikaner was founded by a scion of the house of Marwar (Jodhpur). The fort of Bikaner, Junagadh, however, was built in 1593 by Raja Rai Singh who also served as a general in the army of Emperor Akbar. Made from red sandstone and encircled by a moat around which the modern city of Bikaner has spread in a somewhat erratic fashion, Junagadh consists of several palaces and apartments in a remarkable state of preservation. The art of mason and sculptor is most obvious in the recreation of delicate stone screens, kiosks, pavilions and series of arched entrances to buildings reached from corridors that have windows overlooking the city beyond. <br/><br/>
-        
+
   //       Some of the palaces are among the most richly decorated in Rajasthan and include Anup Mahal, Chandra Mahal and Phool Mahal. They give the impression of rich inlay of pietra dura, though in fact the apartments are merely richly painted. The paintings have been preserved as good as new because of the extremely dry heat conditions of the desert town. Another palace, Badal Mahal recreated the painting of clouds on its walls, a reminder of the monsoon that often failed the settlement. The Anup Mahal courtyard has a throne set in a pool of water. Bringing alive the sensitivity the rulers showed in their building environment.`,
   //     },
   //     {
   //       name: "Jaisalmer",
   //       description: `Morning sightseeing tour of Jaisalmer The golden rays of the setting sun, the colourfully adorned locals, the massive forts and mansions, the extremely fascinating craftsmanship, Rajput Havelis, all these make Jaisalmer a place of must visit in Rajasthan. Moreover, a visit to the Jaisalmer Fort (the second oldest fort in Rajasthan after Chittaur), Patwon ki Haweli, (the grandest haveli of Jaisalmer), Desert Culture centre and museums gives you some glimpse of this small town’s past. <br/><br/>
-        
+
   //       meet your religious taste; Salim Singh ki Haweli and Nathmal ki Haweli give you some more idea of the haweli architecture of the town. Besides these, Gadsisar Lake is also an interesting spot that you must visit in this desert city.
-        
+
   //       Afternoon visit Sam Sand Dunes, Ideal for viewing sunsets, these sites will also give you a chance to capture the picturesque sand dunes in your camera. Overnight in Hotel. / Night at Desert Camp.`,
   //     },
   //     {
   //       name: "Manvar",
   //       description: `Rajasthan is presently one of the most enchanting tourist destinations in the world. Among all the cities in Rajasthan, Jodhpur is also experiencing a huge number of tourist footfalls in the recent past Tours to Manvar is one such attraction that is located in the midst of the Thar Desert, Manvar lying exactly between the Jodhpur, Jaisalmer and Bikaner. It will surely give a great experience for the tourists by offering the beauty of the desert of at its best. It becomes a must visit during excursions from Jodhpur.<br/><br/>
-        
+
   //       Manvar is an excellent destination to have a thoroughly enjoyable holiday. Manvar is one of the perfect options for those who wish to get the true feel of deserts. It is such a fascinating place that offers the raw beauty of nature. It will let you explore the various parts of the desert to enjoy its kaleidoscopic beauty. Sightseeing Manvar provides you with an opportunity to enjoy the enthusiasm of wilderness in the desert. Manvar has the sprawling resort that built on 5 acres of land reflecting the true ambience of the traditional village.<br/><br/>
-        
+
   //       The best time to visit here is between the months of September to March. During this time, you will be able to get to see a large number of migratory demoiselle cranes. Ride-on Jeep safaris gives you an enjoyable experience for the tourists.<br/>`,
   //     },
   //     {
   //       name: "Jodhpur",
   //       description: `Rajasthan is one of the most prominent tourist destinations that offer a lot of tourist attractions. The variety of tourist attraction helps in making Rajasthan one of the most sought after tourist attraction. In fact, Rajasthan is currently one of the most popular tourist destinations in the world. The unique charm appeals similarly to the domestic tourists as well as foreign tourists. Among the various cities in Rajasthan that manages to attract a large number of tourists, Jodhpur is a prominent one.<br/><br/>
-        
+
   //       Jodhpur is a tourist place in Rajasthan that has a variety of tourist places. These tourist places experience a huge number of tourist footfall. However, in the recent past, Jodhpur is also experiencing a huge number of tourist footfalls as the tourists are coming down to the place to go for excursions from Jodhpur. Presence of a number of tourist attractions in close proximity to the Jodhpur helps in making Jodhpur excursions a thoroughly enjoyable excursion for the tourists. These excursions take you for a number of tours.<br/><br/>
-        
+
   //       Tours to Manvar is one such attraction that will surely be a great experience for the tourists. Offering the beauty of desert of at its best, it is a must-visit during excursions from Jodhpur.`,
   //     },
   //     {
   //       name: "Jodhpur (Maharangarh Fort with Jaswantarda) via Osian – Bundi",
   //       description: `Having arranged many mobile camel safaris in the usual mainstream and busy destinations we realized that a more exclusive destination was missing from this fun experience. A location was sourced and what better than on the first sand dune of the famous Thar Desert of Rajasthan.<br/><br/>
-        
+
   //       With expansive views of the vast desert on one side and the intricate temples of Osian on the other, this camp, the first of its kind in India, offers easy access to the local desert villages. Venturing out on camel one can meet the proud local tribes, the Bishnois and Bhils, potters and weavers and shepherds in their natural surroundings, not to mention the various varieties of desert wildlife such as blue bulls, gazelles, foxes, peacocks and partridges to name but a few.<br/><br/>
-        
+
   //       The nearby ancient village of Osian is legendary for its mesmerizing 6th /8th-century temples, sand-dunes and diversity of Rajasthani culture and tradition and Jodhpur, with its magnificent Meherangarh Fort, is just 60 km away.<br/><br/>
-        
+
   //       Being a permanent structure we also have the additional bonus of a refreshing swimming pool, a feat of architectural engineering in a sand dune ! and the safari bar, a wonderful place to relax in the evenings over a drink and cigar to the gentle strains of jazz music.<br/><br/>
-        
+
   //       Once at the camp -nestled in the dunes your host Reggie Singh, grandson of Maharaj Ratan Singh of Jodhpur will invite you for an evening of cocktails, folk entertainment and a semi-formal candle lit dinner.
-        
+
   //       `,
   //     },
   //     {
   //       name: "Jodhpur – Udaipur",
   //       description: `This morning after breakfast drive to Udaipur. En-route Visit Ranakpur famous for Jain Temples. The Ranakpur Jain Temples were built during the reign of the liberal and gifted monarch Rana Kumbha in the 15th century. An enormous basement covers 48,000 sq. feet area. There are four subsidiary shrines, twenty-four pillared halls and eligibly domes supported by over four hundred columns.<br/><br/>
-        
+
   //       Visit Muchhal Mahaveer Temple – The distinctive feature of this Jain temple is the statue of Lord Mahavira with a moustache. From here proceed to Udaipur. check into your hotel. Rest of the day is at your leisure you may rest in the hotel Or visit the Udaipur city in the evening. Overnight in Udaipur Overnight at the hotel.`,
   //     },
   //     {
   //       name: "Udaipur City Tour",
   //       description: `This morning after the breakfast City tour of Udaipur also known as the city of Lakes. It is the historic capital of the former kingdom of Mewar in Rajasthan Agency. Lake Pichola, Fateh Sagar Lake, Udai Sagar and Swaroop Sagar in the city are considered some of the most beautiful lakes in the state. Places you visit CITY PALACE. Udaipur is a palaces complex in Udaipur in the Indian state Rajasthan. It was built by the Maharana Udai Mirza Singh as the capital of the Sisodia Rajput clan in 1559 after he moved from Chittor. It is located on the east bank of the Lake Pichola and has several palaces built within its complex.<br/><br/>
-        
+
   //       Udaipur was the historic capital of the former kingdom of Mewar in the Rajputana Agency and its last capital. JAGDISH TEMPLE is one of the famous temples of Udaipur. Located in the city palaces compel of Udaipur, this temple is made in the Indo Aryan style of architecture. In 1651, Jagdish temple was built by Maharana Jagat Singh, who ruled Udaipur during 1628-53. The temple is dedicated to Lord Vishnu (Laxmi Narayan), the preserver of the universe. JAG MANDIR is a palace built on an island in the Lake Pichola.<br/><br/>
-        
+
   //       It is also called the “Lake Garden Palace”. Its construction is credited to three Maharana of the Sisodia Rajputs of Mewar kingdom. It is named as “Jagat Mandir” in honour of the last-named Maharana Jagat Singh. SAHELION KI BARI is one of the most beautiful gardens and a major tourist destination in Udaipur.<br/><br/>
-        
+
   //       The garden is famous for its lush green lawns marble art and fountains. English translation of Sahelian ki Bari means Garden of Maids. By evening you may take a walking tour on your own through the narrow lanes and back streets of Udaipur up to the Washing Ghats at the lake Pichola. by late evening return to your hotel. Overnight in Udaipur.`,
   //     },
   //     {
   //       name: "Bundi",
   //       description: `Built in the 14th century, the Taragarh Fort is the star attraction in Bundi. With the entry being free and souvenir shops fortunately absent, the fort provides an option of a peaceful ramble round its premises. Inside the instant, eye-catchers include the Bhim Burj, a large battlement with a cannon placed on it and a large reservoir carved out of a single piece of rock.<br/><br/>
-        
+
   //       The views from the fort are exceptional, especially during the sunset when the rays seem to lend a lovely grace to the entire area. In Chittorgarh, the Chittorgarh Fort is the imposing structure atop a hill of 300 m which has many palaces and monuments. This fort is situated 1 km from the new town and is spread over an area of around 692 acres.<br/><br/>
-        
+
   //       Inside the large fort, is a road that connects the different gates, viz. the main gate or Ram Pol, Padan Pol, Bhairon Pol, Hanuman Pol, Ganesh Pol, Laxman Pol and Jodla Pol. These gates were built for security and fortification of the area. There are around 84 water bodies and many small palaces, important ones being Rana Kumbha Palace, Rani Padmini’s Palace, etc.<br/><br/>
-        
+
   //       Besides these structures, the fort is known for the Kirti Stambha, in honour of the 1st Jain Tirthankara, the victory tower or Vijay Stambha, Meera Temple, Kalika Mata temple and the various sculptures and carvings on the monuments.`,
   //     },
   //     {
   //       name: "Jaipur",
   //       description: `After breakfast, explore the Pink City with an excursion to Amber Fort, situated just outside the city, enjoy the experience of ride on elephant back to and from the top of the hill on which the fort is situated. Afternoon sightseeing tour of City Palace in the heart of Jaipur is known for its blend of Rajasthani and Mughal architecture. Not far away is the Central Museum.<br/><br/>
-        
+
   //       Jantar Mantar is the largest of the five observatories built by Sawai Jai Singh. The Hawa Mahal or the Palace of Winds was constructed for the royal ladies to watch the royal processions without being seen, all monuments are located in the vicinity of City Palace Complex of Jaipur.<br/><br/>
-        
+
   //       Later late afternoon is kept free to visit the famous Markets of Textiles, Gems, Carpets, and handicrafts. One can also visit Nahargarh Fort to see it illuminated over the floodlights. Return to the hotel for overnight.`,
   //     },
   //     {
   //       name: "Agra",
   //       description: `After breakfast drive to Jaipur en-route visit Old deserted town of Mughal Dynasty – Fatehpur Sikri built in red sandstone in honour of Saint Salim Chisti who foretold the birth of 3 sons to Emperor Akbar, is an example of robust stability combined with originality.<br/><br/>
-        
+
   //       Each important edifice here represents a type by itself. Notable among them is the Diwan-e-Khas, Punch Mahal, the Tomb of Salim Chisti, and the Bulund Darwaza. Later continue to proceed to Jaipur. Rest of the day at leisure, in the evening hours, enjoy walking in the colourful streets and bazaars of Jaipur City.<br/><br/>
-        
+
   //       The beauty of Jaipur is that its unique architecture and town planning is visible at even the most common places such as its squares and lanes. Overnight at Hotel.
-        
+
   //       `,
   //     },
   //   ],
@@ -545,7 +542,7 @@ export const PACKAGES = [
       "Driver tip",
       "International airfare",
     ],
-    Price:5350,
+    Price: 5350,
     FAQs: [],
   },
   {
@@ -676,7 +673,7 @@ export const PACKAGES = [
       "Driver tip",
       "International airfare",
     ],
-    Price:5000,
+    Price: 5000,
     FAQs: [],
   },
   {
@@ -836,7 +833,7 @@ export const PACKAGES = [
     image: getRandomIndexedImage(),
     days: 15,
     nights: 14,
-    Price:3600,
+    Price: 3600,
     Overview: [
       `
     The Mini Rajasthan Tour is a compact yet enriching journey that captures the essence of Rajasthan’s royal heritage, desert charm, vibrant culture, and scenic beauty within a short span. Ideal for travelers with limited time, the tour typically includes key destinations like Jaipur, Jodhpur, and Udaipur. Starting in Jaipur, visitors explore architectural marvels like Amber Fort, City Palace, and Hawa Mahal while enjoying traditional markets and Rajasthani cuisine. The tour then moves to Jodhpur, the Blue City, where the massive Mehrangarh Fort, Umaid Bhawan Palace, and vibrant bazaars reveal the grandeur of Marwar. Finally, Udaipur, the City of Lakes, offers serene boat rides on Lake Pichola, visits to the majestic City Palace, and strolls through romantic gardens. This compact route gives travelers a taste of Rajasthan’s royal history, desert landscapes, local crafts, and warm hospitality—making it perfect for a first-time or quick visit.
@@ -910,7 +907,7 @@ export const PACKAGES = [
     image: getRandomIndexedImage(),
     days: 5,
     nights: 4,
-    Price:4500,
+    Price: 4500,
     Overview: [
       `
       The Rajasthan Central Tour offers a deep dive into the heart of the state, blending royal heritage, desert culture, and spiritual richness. Centered around Jodhpur, Ajmer, Pushkar, and Nagaur, the tour highlights majestic forts like Mehrangarh, sacred sites like the Ajmer Sharif Dargah, and the holy Pushkar Lake with its unique Brahma Temple. Nagaur Fort and its annual cattle fair provide a glimpse into traditional desert life. This central circuit showcases authentic Rajasthani architecture, vibrant markets, and folk traditions, offering a rich cultural experience in a compact, centrally located route.
@@ -1008,8 +1005,8 @@ export const PACKAGES = [
       "Any other item not specified",
       "Driver tip",
       "International airfare",
-    ],  
-    Price: 3500,  
+    ],
+    Price: 3500,
     FAQs: [],
   },
   {
@@ -1018,9 +1015,11 @@ export const PACKAGES = [
     image: "/images/camel1.jpg",
     days: 15,
     nights: 14,
-    Overview: [`
+    Overview: [
+      `
       A Desert Tour in Rajasthan immerses travelers in the golden landscapes of the Thar Desert, offering a blend of adventure, history, and cultural richness. Starting from Jaisalmer, the "Golden City," visitors can explore the towering Jaisalmer Fort, wander through the intricate Patwon Ki Haveli, and enjoy the serenity of Gadisar Lake before heading to the mesmerizing Sam Sand Dunes for a camel safari and traditional Rajasthani folk performances under the starlit sky. Moving to Bikaner, the city known as the "Camel Country," tourists can visit Junagarh Fort, marvel at the unique Karni Mata Temple, and learn about India's finest camels at the Camel Breeding Farm. The lesser-known Osian, often referred to as the "Oasis in the Desert," presents a treasure trove of ancient Jain and Hindu temples and thrilling jeep safaris through the rugged terrain. Khimsar, a hidden gem in the desert, offers tranquil luxury amidst the dunes, where heritage camps provide an authentic desert experience with breathtaking sunset views. Throughout the journey, travelers can enjoy immersive experiences such as camel rides, jeep safaris, fire dance performances, and Rajasthani folk music, all while savoring the region’s signature delicacies like Dal Baati Churma. The Desert Tour of Rajasthan is a captivating blend of royal history, desert adventures, and local traditions, leaving visitors enchanted by the rustic charm and warm hospitality of the desert communities.
-      `],
+      `,
+    ],
 
     Highlights: [],
     Itinerary: [
@@ -1112,7 +1111,14 @@ export const SERVICES = [
         content: "Tour Guide Service",
       },
     ],
-    Overview: ``,
+    Overview: `Experience the vibrant culture, rich heritage, and majestic history of Rajasthan with our expert tour guide services. At [Your Website Name], we understand that a knowledgeable and passionate guide can transform your journey into an unforgettable experience. Our licensed and professional tour guides are fluent in multiple languages and deeply familiar with Rajasthan's iconic cities like Jaipur, Udaipur, Jodhpur, Jaisalmer, Bikaner, and more.
+
+Whether you are exploring grand forts, royal palaces, colorful bazaars, or hidden heritage sites, our guides provide insightful commentary, fascinating legends, and local anecdotes that bring each location to life. They ensure a safe, enriching, and immersive experience tailored to your interests and preferences.
+
+Our guides also assist with local navigation, bargaining in markets, and finding authentic cuisine, making your travel smooth and hassle-free. Whether you prefer a city walk, cultural exploration, or heritage trail, we have personalized guided tours for individuals, families, and groups.
+
+Let our experienced guides help you discover the soul of Rajasthan—its people, traditions, and timeless charm. Book a tour guide with us and embark on a journey that goes beyond sightseeing.
+`,
   },
   {
     __id: "5",
@@ -1318,21 +1324,21 @@ export const OTHERSERVICES = [
     name: "Flight Service",
     image: "/images/airline1.jpg",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.airindia.com%2Fen-in%2Fbook-flights",
-    PoweredBy:"Air India",
+    PoweredBy: "Air India",
   },
   {
     name: "Railway Service",
     image: "/images/train1.jpg",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.railyatri.in%2F",
-    PoweredBy:"Rail Yatri",
+    PoweredBy: "Rail Yatri",
   },
   {
     name: "Hotel Service",
     image: "/images/hotel-1.jpg",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels",
-    PoweredBy:"Make My Trip",
+    PoweredBy: "Make My Trip",
   },
-]
+];
 
 export const RAILWAYIMAGES = [
   {
@@ -1892,91 +1898,121 @@ export const BLOGS = [
   {
     BlogTitle: "10 Must-Visit Places in India for First-Time Travelers",
     MetaTitle: "Top 10 Must-Visit Destinations in India",
-    MetaDescription: "Planning your first trip to India? Discover the top 10 destinations you shouldn't miss, from the Taj Mahal to Kerala's backwaters.",
-    ContentSummary: "This blog will guide travelers through the most iconic spots across India with brief travel tips and booking suggestions.",
+    MetaDescription:
+      "Planning your first trip to India? Discover the top 10 destinations you shouldn't miss, from the Taj Mahal to Kerala's backwaters.",
+    ContentSummary:
+      "This blog will guide travelers through the most iconic spots across India with brief travel tips and booking suggestions.",
   },
   {
     BlogTitle: "Best Time to Travel India by Region",
     MetaTitle: "When to Visit India: Seasonal Travel Guide",
-    MetaDescription: "Discover the best time to visit each region of India—North, South, East, and West—for the perfect vacation.",
-    ContentSummary: "Breakdown of travel seasons with recommendations on when to visit various regions based on weather and festivals.",
+    MetaDescription:
+      "Discover the best time to visit each region of India—North, South, East, and West—for the perfect vacation.",
+    ContentSummary:
+      "Breakdown of travel seasons with recommendations on when to visit various regions based on weather and festivals.",
   },
   {
     BlogTitle: "How to Book Train Tickets Online Easily in India",
     MetaTitle: "Guide to Booking Train Tickets Online in India",
-    MetaDescription: "Step-by-step guide to booking train tickets online through IRCTC or affiliate portals for a hassle-free experience.",
-    ContentSummary: "Includes screenshots and simple steps to make the booking process easier for users.",
+    MetaDescription:
+      "Step-by-step guide to booking train tickets online through IRCTC or affiliate portals for a hassle-free experience.",
+    ContentSummary:
+      "Includes screenshots and simple steps to make the booking process easier for users.",
   },
   {
     BlogTitle: "Cheapest Flights from Major Indian Cities",
     MetaTitle: "Affordable Domestic Flights in India",
-    MetaDescription: "Find the cheapest flight options from Delhi, Mumbai, Bengaluru, and other major Indian cities.",
-    ContentSummary: "Updated flight booking tips, suggested platforms (your affiliate), and tips for getting deals.",
+    MetaDescription:
+      "Find the cheapest flight options from Delhi, Mumbai, Bengaluru, and other major Indian cities.",
+    ContentSummary:
+      "Updated flight booking tips, suggested platforms (your affiliate), and tips for getting deals.",
   },
   {
     BlogTitle: "How to Plan a Budget Trip Across India",
     MetaTitle: "Budget Travel Tips for India",
-    MetaDescription: "Learn how to explore India on a budget—cheap transport, stays, and food options included.",
-    ContentSummary: "Tips for backpackers and students with estimated costs and travel hacks.",
+    MetaDescription:
+      "Learn how to explore India on a budget—cheap transport, stays, and food options included.",
+    ContentSummary:
+      "Tips for backpackers and students with estimated costs and travel hacks.",
   },
   {
     BlogTitle: "Explore Indian Culture: What Every Tourist Should Know",
     MetaTitle: "Guide to Indian Culture for Travelers",
-    MetaDescription: "Explore the diverse cultures of India and the dos and don’ts to follow while traveling.",
-    ContentSummary: "Cultural etiquette, food habits, dress codes, and how to interact respectfully with locals.",
+    MetaDescription:
+      "Explore the diverse cultures of India and the dos and don’ts to follow while traveling.",
+    ContentSummary:
+      "Cultural etiquette, food habits, dress codes, and how to interact respectfully with locals.",
   },
   {
     BlogTitle: "7 Scenic Train Routes in India You Must Experience",
     MetaTitle: "India’s Most Scenic Train Journeys",
-    MetaDescription: "From the Darjeeling Himalayan Railway to the Konkan Coast, discover India’s most beautiful train routes.",
-    ContentSummary: "Promotes your train booking section through experiential content.",
+    MetaDescription:
+      "From the Darjeeling Himalayan Railway to the Konkan Coast, discover India’s most beautiful train routes.",
+    ContentSummary:
+      "Promotes your train booking section through experiential content.",
   },
   {
     BlogTitle: "Hotel Booking Tips: What to Check Before You Book",
     MetaTitle: "Tips for Booking Hotels in India",
-    MetaDescription: "Learn how to book the right hotel in India with safety, amenities, and price in mind.",
-    ContentSummary: "Affiliate-linked blog offering useful suggestions and highlighting your site’s booking section.",
+    MetaDescription:
+      "Learn how to book the right hotel in India with safety, amenities, and price in mind.",
+    ContentSummary:
+      "Affiliate-linked blog offering useful suggestions and highlighting your site’s booking section.",
   },
   {
     BlogTitle: "Travel Insurance in India: Is It Worth It?",
     MetaTitle: "Should You Buy Travel Insurance for India?",
-    MetaDescription: "Explore the benefits of buying travel insurance for trips across India.",
-    ContentSummary: "A breakdown of when and why travel insurance is recommended, possibly linking to insurance services you offer.",
+    MetaDescription:
+      "Explore the benefits of buying travel insurance for trips across India.",
+    ContentSummary:
+      "A breakdown of when and why travel insurance is recommended, possibly linking to insurance services you offer.",
   },
   {
     BlogTitle: "Ride-Hailing in India: Compare Ola, Uber & Rapido",
     MetaTitle: "Best Ride Apps in India: Ola vs Uber vs Rapido",
-    MetaDescription: "Compare ride prices, service quality, and safety to choose the best ride app in India.",
-    ContentSummary: "Connects well with your upcoming ride comparison feature in the app.",
+    MetaDescription:
+      "Compare ride prices, service quality, and safety to choose the best ride app in India.",
+    ContentSummary:
+      "Connects well with your upcoming ride comparison feature in the app.",
   },
   {
     BlogTitle: "Explore India in 7 Days: A Quick Travel Itinerary",
     MetaTitle: "One-Week India Travel Plan for Beginners",
-    MetaDescription: "Only have 7 days in India? Here’s a complete itinerary to help you cover top spots efficiently.",
-    ContentSummary: "Combines flights, trains, and hotel info into one friendly guide.",
+    MetaDescription:
+      "Only have 7 days in India? Here’s a complete itinerary to help you cover top spots efficiently.",
+    ContentSummary:
+      "Combines flights, trains, and hotel info into one friendly guide.",
   },
   {
     BlogTitle: "How to Choose a Tour Package Online",
     MetaTitle: "Guide to Booking Tour Packages in India",
-    MetaDescription: "Looking for a complete vacation plan? Learn how to choose a tour package that fits your needs and budget.",
-    ContentSummary: "Introduces ExploreIndiaView’s future offerings for package tours.",
+    MetaDescription:
+      "Looking for a complete vacation plan? Learn how to choose a tour package that fits your needs and budget.",
+    ContentSummary:
+      "Introduces ExploreIndiaView’s future offerings for package tours.",
   },
   {
     BlogTitle: "Indian Street Food You Must Try",
     MetaTitle: "12 Must-Try Indian Street Foods",
-    MetaDescription: "From Delhi’s chaat to Kolkata’s rolls—here are the best street foods you can’t miss.",
-    ContentSummary: "Engaging foodie content for readers, possibly linking to travel suggestions.",
+    MetaDescription:
+      "From Delhi’s chaat to Kolkata’s rolls—here are the best street foods you can’t miss.",
+    ContentSummary:
+      "Engaging foodie content for readers, possibly linking to travel suggestions.",
   },
   {
     BlogTitle: "Top Indian Festivals to Plan Your Trip Around",
     MetaTitle: "Best Time to Visit India Based on Festivals",
-    MetaDescription: "Celebrate India’s vibrant festivals—from Diwali to Holi—with this cultural guide.",
-    ContentSummary: "Encourages users to time their bookings using your platform.",
+    MetaDescription:
+      "Celebrate India’s vibrant festivals—from Diwali to Holi—with this cultural guide.",
+    ContentSummary:
+      "Encourages users to time their bookings using your platform.",
   },
   {
     BlogTitle: "How to Stay Safe While Traveling in India",
     MetaTitle: "Travel Safety Tips for Visiting India",
-    MetaDescription: "Stay informed and safe with these must-know tips for solo and group travelers in India.",
-    ContentSummary: "Builds trust with your audience and encourages bookings from first-time travelers.",
+    MetaDescription:
+      "Stay informed and safe with these must-know tips for solo and group travelers in India.",
+    ContentSummary:
+      "Builds trust with your audience and encourages bookings from first-time travelers.",
   },
 ];
