@@ -27,7 +27,7 @@ export default function TabHeader({
 
   
   const handleLanguageChange = (lang: string) => {
-    i18n.changeLanguage(lang);
+    // i18n.changeLanguage(lang);
     setLangDropdownVisible(false);
   };
 
@@ -75,7 +75,7 @@ export default function TabHeader({
             onPress={() => setLangDropdownVisible((v) => !v)}
             style={styles.iconButton}
           >
-            <Ionicons name="language" size={28} color="#22223b" />
+            <Ionicons name="language" size={20} color="#22223b" />
             <Ionicons
               name={langDropdownVisible ? "chevron-up" : "chevron-down"}
               size={18}
@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
   },
   iconButton: {
     marginTop: 5,
+    alignItems:"center"
   },
   logoContainer: {
     flexDirection: "row",
