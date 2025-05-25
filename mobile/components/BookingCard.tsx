@@ -15,9 +15,8 @@ import { useRouter } from "expo-router";
 import { API_URL, RAZORPAY_KEY } from "@/assets/services/API";
 import axios from "axios";
 import RazorpayCheckout from "react-native-razorpay";
-import {ScratchCard} from "./ScratchCard";
+import { ScratchCard } from "./ScratchCard";
 import InquirySection from "./InquirySection";
-
 
 interface Props {
   PackageName: string;
@@ -174,7 +173,6 @@ export default function BookingCard({ props }: { props: Props }) {
           cashbackAmount={
             cashbackAmount !== null ? cashbackAmount.toString() : "10"
           }
-          
         />
       ) : (
         <View style={styles.card}>

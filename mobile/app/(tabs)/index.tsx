@@ -1,7 +1,11 @@
 import AffiliateServices from "@/components/AffiliateServices";
+import Blogs from "@/components/Blogs";
+import CabServices from "@/components/CabServices";
 import PackagesList from "@/components/PackagesList";
+import Partners from "@/components/Partners";
 import RechargeServices from "@/components/RechargeServices";
 import ServicesList from "@/components/ServicesList";
+import Shopping from "@/components/Shopping";
 import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 
@@ -11,15 +15,20 @@ export default function Home() {
       data={[]} // No data, just using header/footer
       ListEmptyComponent={() => (
         <>
+          <Shopping title="Shopping" />
+          <CabServices title="Cabs" />
+          <RechargeServices title="Recharge Services" />
+          <AffiliateServices title="Travel and Accomodation" />
           <ServicesList />
           <PackagesList />
-          <AffiliateServices title="Travel and Accomodation" />
-          <RechargeServices title="Recharge Services"/>
+          <Partners />
+          <Blogs />
         </>
       )}
       contentContainerStyle={{ paddingBottom: 20 }}
       showsVerticalScrollIndicator={false}
-      renderItem={undefined} />
+      renderItem={undefined}
+    />
   );
 }
 

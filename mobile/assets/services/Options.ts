@@ -1312,6 +1312,59 @@ export const OTHERSERVICES = [
   },
 ];
 
+export const SHOPPING = [
+  {
+    name: "Amazon",
+    image: "@/assets/images/amazon.png",
+    path: "",
+    PoweredBy: "Amazon",
+  },
+  {
+    name: "Flipkart",
+    image: "@/assets/images/flipkart.png",
+    path: "",
+    PoweredBy: "Flipkart",
+  },
+  {
+    name: "Myntra",
+    image: "@/assets/images/myntra.png",
+    path: "",
+    PoweredBy: "Myntra",
+  },
+  {
+    name: "Ajio",
+    image: "@/assets/images/ajio.png",
+    path: "",
+    PoweredBy: "Ajio",
+  },
+];
+export const CABSERVICES = [
+  {
+    name: "Uber",
+    image: "@/assets/images/uber.png",
+    path: "",
+    PoweredBy: "Uber",
+  },
+  {
+    name: "Ola",
+    image: "@/assets/images/ola.png",
+    path: "",
+    PoweredBy: "Ola",
+  },
+  {
+    name: "Rapido",
+    image: "@/assets/images/Rapido.png",
+    path: "",
+    PoweredBy: "Rapido",
+  },
+  {
+    name: "Zepto",
+    image: "@/assets/images/zepto.png",
+    path: "", 
+    PoweredBy: "Zepto",
+  },
+];
+
 export const RECHARGESERVICES = [
   {
     name: "Mobile Recharge",
