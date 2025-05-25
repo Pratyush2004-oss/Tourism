@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
   },
   imageWrapper: {
-    width: 75,
-    height: 75,
+    width: 60,
+    height: 60,
     borderRadius: 20,
     backgroundColor: "#e0e7ff",
     justifyContent: "center",
@@ -82,9 +82,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   image: {
-    width: "100%",
-    height: "100%",
-    borderRadius: 20,
+    width: "90%",
+    height: "90%",
+    borderRadius: 30,
   },
   name: {
     fontSize: 14,

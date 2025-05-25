@@ -18,7 +18,7 @@ const PARTNERS = [
 export default function Partners() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Our Partners</Text>
+      <Text style={styles.title}>Affiliate Partners</Text>
       <Text style={styles.subtitle}>We thank our partners for powering our services</Text>
       <FlatList
         data={PARTNERS}

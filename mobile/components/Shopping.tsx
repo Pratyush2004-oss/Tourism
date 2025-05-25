@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
   },
   imageWrapper: {
-    width: 75,
-    height: 75,
+    width: 50,
+    height: 50,
     borderRadius: 20,
     backgroundColor: "#e0e7ff",
     justifyContent: "center",

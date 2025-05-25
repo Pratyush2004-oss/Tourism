@@ -1,17 +1,18 @@
 import React from "react";
 import {
-    Dimensions,
-    ImageBackground,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View
+  Dimensions,
+  ImageBackground,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
+import RenderHTML from "react-native-render-html";
 
 // Dummy data and icons
 import { imageMap } from "@/assets/services/imageMap";
-import { PACKAGES } from "@/assets/services/Options";
+import { PACKAGES } from "@/assets/services/Text";
 import PackageCard from "@/components/PackageCard";
 import RajasthanMap from "@/components/RajasthanMaps";
 import { Ionicons } from "@expo/vector-icons";
@@ -29,139 +30,169 @@ export default function PackageDetailScreen() {
 
   if (!Package) return <Text>Package not found</Text>;
 
-  
-
   return (
     <>
-    <BackHeader />
-    <ScrollView style={styles.container}>
-      {/* Top Image with Title */}
-      <View style={styles.imageContainer}>
-        <ImageBackground
-          source={imageMap[Package.image] || require("@/assets/images/logo.png")}
-          style={styles.image}
-          imageStyle={styles.imageStyle}
-        >
-          <View style={styles.imageOverlay} />
-          <Text style={styles.imageTitle}>{Package.name}</Text>
-        </ImageBackground>
-      </View>
-
-      <View style={styles.contentRow}>
-        <View style={styles.leftCol}>
-          {/* Overview */}
-          {Package.Overview && Package.Overview.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>Overview</Text>
-              {Package.Overview.map((item, idx) => (
-                <Text style={styles.sectionText} key={idx}>
-                  {item}
-                </Text>
-              ))}
-            </>
-          )}
-
-          {/* Highlights */}
-          {Package.Highlights && Package.Highlights.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>Highlights</Text>
-              {Package.Highlights.map((item, idx) => (
-                <View style={styles.row} key={idx}>
-                  <Ionicons name="star" size={16} color="#9333ea" style={{ marginRight: 6 }} />
-                  <Text style={styles.sectionText}>{item}</Text>
-                </View>
-              ))}
-            </>
-          )}
-
-          {/* Itinerary */}
-          {Package.Itinerary && Package.Itinerary.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>Itinerary</Text>
-              {Package.Itinerary.map((item, idx) => (
-                <View key={idx} style={{ marginBottom: 8 }}>
-                  <View style={styles.row}>
-                    <Ionicons name="star" size={16} color="#9333ea" style={{ marginRight: 6 }} />
-                    <Text style={styles.itineraryTitle}>{item.name}</Text>
-                  </View>
-                  <Text style={styles.sectionText}>{item.description}</Text>
-                </View>
-              ))}
-            </>
-          )}
-
-          {/* Inclusions */}
-          {Package.Inclusion && Package.Inclusion.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>Inclusions</Text>
-              {Package.Inclusion.map((item, idx) => (
-                <View style={styles.row} key={idx}>
-                  <Ionicons name="star" size={16} color="#9333ea" style={{ marginRight: 6 }} />
-                  <Text style={styles.sectionText}>{item}</Text>
-                </View>
-              ))}
-            </>
-          )}
-
-          {/* Exclusions */}
-          {Package.Exclusion && Package.Exclusion.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>Exclusions</Text>
-              {Package.Exclusion.map((item, idx) => (
-                <View style={styles.row} key={idx}>
-                  <Ionicons name="star" size={16} color="#9333ea" style={{ marginRight: 6 }} />
-                  <Text style={styles.sectionText}>{item}</Text>
-                </View>
-              ))}
-            </>
-          )}
-
-          {/* FAQs */}
-          {Package.FAQs && Package.FAQs.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>FAQs</Text>
-              {Package.FAQs.map((item, idx) => (
-                <View key={idx} style={{ marginBottom: 8 }}>
-                  <View style={styles.row}>
-                    <Ionicons name="star" size={16} color="#9333ea" style={{ marginRight: 6 }} />
-                    <Text style={styles.itineraryTitle}>{item.name}</Text>
-                  </View>
-                  <Text style={styles.sectionText}>{item.description}</Text>
-                </View>
-              ))}
-            </>
-          )}
-
-          {/* Map */}
-          <RajasthanMap />
+      <BackHeader />
+      <ScrollView style={styles.container}>
+        {/* Top Image with Title */}
+        <View style={styles.imageContainer}>
+          <ImageBackground
+            source={
+              imageMap[Package.image] || require("@/assets/images/logo.png")
+            }
+            style={styles.image}
+            imageStyle={styles.imageStyle}
+          >
+            <View style={styles.imageOverlay} />
+            <Text style={styles.imageTitle}>{Package.name}</Text>
+          </ImageBackground>
         </View>
 
-        {/* Booking Card */}
-        <View style={styles.rightCol}>
-          <BookingCard
-                props={{
-                  PackageName: Package.name,
-                  PackageDays: Package.days ?? 0,
-                  PackagePrice: Package.Price ?? 0,
-                }}
-              />
-        </View>
-      </View>
+        <View style={styles.contentRow}>
+          <View style={styles.leftCol}>
+            {/* Overview */}
+            {Package.Overview && Package.Overview.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>Overview</Text>
+                {Package.Overview.map((item, idx) => (
+                  <Text style={styles.sectionText} key={idx}>
+                    {item}
+                  </Text>
+                ))}
+              </>
+            )}
 
-      {/* Carousel of other packages */}
-      <Text style={[styles.sectionTitle, { marginTop: 24, marginLeft: 20 }]}>Other Packages</Text>
-      <Carousel
-        width={width * 0.8}
-        height={180}
-        autoPlay
-        data={PACKAGES.filter((p) => p.__id !== packageId)}
-        scrollAnimationDuration={1200}
-        style={{ alignSelf: "center" }}
-        renderItem={({ item }) => (
-          <PackageCard pkg={item} expand={true}/>
-        )}
-      />
-    </ScrollView>
+            {/* Highlights */}
+            {Package.Highlights && Package.Highlights.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>Highlights</Text>
+                {Package.Highlights.map((item, idx) => (
+                  <View style={styles.row} key={idx}>
+                    <Ionicons
+                      name="star"
+                      size={16}
+                      color="#9333ea"
+                      style={{ marginRight: 6 }}
+                    />
+                    <Text style={styles.sectionText}>{item}</Text>
+                  </View>
+                ))}
+              </>
+            )}
+
+            {/* Itinerary */}
+            {Package.Itinerary && Package.Itinerary.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>Itinerary</Text>
+                {Package.Itinerary.map((item, idx) => (
+                  <View key={idx} style={{ marginBottom: 8 }}>
+                    <View style={styles.row}>
+                      <Ionicons
+                        name="star"
+                        size={16}
+                        color="#9333ea"
+                        style={{ marginRight: 6 }}
+                      />
+                      <Text style={styles.itineraryTitle}>{item.name}</Text>
+                    </View>
+                    {/* <Text style={styles.sectionText}>{item.description}</Text> */}
+                    <RenderHTML
+                      contentWidth={width}
+                      source={{ html: `<div>${item.description}</div>` }}
+                      baseStyle={styles.sectionText}
+                    />
+                  </View>
+                ))}
+              </>
+            )}
+
+            {/* Inclusions */}
+            {Package.Inclusion && Package.Inclusion.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>Inclusions</Text>
+                {Package.Inclusion.map((item, idx) => (
+                  <View style={styles.row} key={idx}>
+                    <Ionicons
+                      name="star"
+                      size={16}
+                      color="#9333ea"
+                      style={{ marginRight: 6 }}
+                    />
+                    <Text style={styles.sectionText}>{item}</Text>
+                  </View>
+                ))}
+              </>
+            )}
+
+            {/* Exclusions */}
+            {Package.Exclusion && Package.Exclusion.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>Exclusions</Text>
+                {Package.Exclusion.map((item, idx) => (
+                  <View style={styles.row} key={idx}>
+                    <Ionicons
+                      name="star"
+                      size={16}
+                      color="#9333ea"
+                      style={{ marginRight: 6 }}
+                    />
+                    <Text style={styles.sectionText}>{item}</Text>
+                  </View>
+                ))}
+              </>
+            )}
+
+            {/* FAQs */}
+            {Package.FAQs && Package.FAQs.length > 0 && (
+              <>
+                <Text style={styles.sectionTitle}>FAQs</Text>
+                {Package.FAQs.map((item, idx) => (
+                  <View key={idx} style={{ marginBottom: 8 }}>
+                    <View style={styles.row}>
+                      <Ionicons
+                        name="star"
+                        size={16}
+                        color="#9333ea"
+                        style={{ marginRight: 6 }}
+                      />
+                      <Text style={styles.itineraryTitle}>{item.name}</Text>
+                    </View>
+                    <Text style={styles.sectionText}>{item.description}</Text>
+                  </View>
+                ))}
+              </>
+            )}
+
+            {/* Map */}
+            <RajasthanMap />
+          </View>
+
+          {/* Booking Card */}
+          <View style={styles.rightCol}>
+            <BookingCard
+              props={{
+                PackageName: Package.name,
+                PackageDays: Package.days ?? 0,
+                PackagePrice: Package.Price ?? 0,
+              }}
+            />
+          </View>
+        </View>
+
+        {/* Carousel of other packages */}
+        <Text style={[styles.sectionTitle, { marginTop: 24, marginLeft: 20 }]}>
+          Other Packages
+        </Text>
+        <Carousel
+          width={width * 0.8}
+          height={180}
+          autoPlay
+          data={PACKAGES.filter((p) => p.__id !== packageId)}
+          scrollAnimationDuration={1200}
+          style={{ alignSelf: "center" }}
+          renderItem={({ item }) => <PackageCard pkg={item} expand={true} />}
+        />
+      </ScrollView>
     </>
   );
 }
@@ -225,6 +256,7 @@ const styles = StyleSheet.create({
   sectionText: {
     fontSize: 15,
     color: "#555",
+    fontWeight:"600",
     marginBottom: 6,
     textAlign: "justify",
   },
@@ -237,7 +269,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     alignItems: "center",
-    paddingEnd:12,
+    paddingEnd: 12,
     marginBottom: 4,
   },
   mapPlaceholder: {

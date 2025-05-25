@@ -30,6 +30,7 @@ export default function Index() {
 
     if (isSignedIn && isAuthScreen) router.replace("/(tabs)");
     if(!isSignedIn && isTabScreen) router.replace("/(auth)");
+    if(isSignedIn) router.replace("/(tabs)");
   }, [user, segments, token]);
   return (
     <View style={{ flex: 1, backgroundColor: "#fff" }}>

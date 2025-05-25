@@ -16,6 +16,7 @@ import {
 } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
 import BookingCard from "@/components/BookingCard";
+import BackHeader from "@/components/BackHeader";
 
 const { width } = Dimensions.get("window");
 
@@ -36,6 +37,8 @@ export default function CityPage() {
   }
 
   return (
+    <>
+    <BackHeader/>
     <ScrollView contentContainerStyle={styles.container}>
       {/* Banner/Carousel */}
       <View style={styles.carouselContainer}>
@@ -93,6 +96,7 @@ export default function CityPage() {
         </View>
       </View>
     </ScrollView>
+    </>
   );
 }
 

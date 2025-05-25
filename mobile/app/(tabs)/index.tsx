@@ -15,10 +15,10 @@ export default function Home() {
       data={[]} // No data, just using header/footer
       ListEmptyComponent={() => (
         <>
-          <Shopping title="Shopping" />
-          <CabServices title="Cabs" />
           <RechargeServices title="Recharge Services" />
           <AffiliateServices title="Travel and Accomodation" />
+          <Shopping title="Shopping" />
+          <CabServices title="Cabs" />
           <ServicesList />
           <PackagesList />
           <Partners />
