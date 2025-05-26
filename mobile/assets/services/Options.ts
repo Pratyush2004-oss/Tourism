@@ -1300,13 +1300,13 @@ export const OTHERSERVICES = [
   },
   {
     name: "Hotel Service",
-    image: "@/assets/images/hotel-1.jpg",
+    image: "@/assets/images/hotel1.jpg",
     path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fwww.makemytrip.com%2Fhotels",
     PoweredBy: "Make My Trip",
   },
   {
     name: "Cabs",
-    image: "@/assets/images/car.jpg",
+    image: "@/assets/images/cab.jpg",
     path: "https://m.uber.com/ul/", // Direct Uber booking link
     PoweredBy: "Uber",
   },

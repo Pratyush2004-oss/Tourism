@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -11,10 +11,23 @@ import {
 } from "react-native";
 import CountryPicker, { CountryCode } from "react-native-country-picker-modal";
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
+import { useRouter, useSegments } from "expo-router";
 import { useAuthStore } from "@/assets/store/auth.store";
 
 export default function LoginScreen() {
+    const segments = useSegments();
+  
+    const { token, user } = useAuthStore();
+  
+    // handle navigation based on auth state
+    useEffect(() => {
+      const isAuthScreen = segments[0] === "(auth)";
+      const isTabScreen = segments[0] === "(tabs)";
+      const isSignedIn = user && token;
+  
+      if (isSignedIn && isAuthScreen) router.replace("/(tabs)");
+      if(!isSignedIn && isTabScreen) router.replace("/(auth)");
+    }, [user, segments, token]);
   const [input, setInput] = useState({
     isoCode: "+91",
     mobile: "",

@@ -75,15 +75,15 @@ const styles = StyleSheet.create({
   imageWrapper: {
     width: 50,
     height: 50,
-    borderRadius: 20,
+    borderRadius: 35,
     backgroundColor: "#e0e7ff",
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 8,
   },
   image: {
-    width: "100%",
-    height: "100%",
+    width: "95%",
+    height: "95%",
     borderRadius: 20,
   },
   name: {

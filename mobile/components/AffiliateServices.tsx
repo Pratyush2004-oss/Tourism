@@ -77,9 +77,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
   },
   imageWrapper: {
-    width: 75,
-    height: 75,
-    borderRadius: 20,
+    width: 60,
+    height: 60,
+    borderRadius: 35,
     backgroundColor: "#e0e7ff",
     justifyContent: "center",
     alignItems: "center",
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-    borderRadius: 20,
+    borderRadius: 35,
   },
   name: {
     fontSize: 14,

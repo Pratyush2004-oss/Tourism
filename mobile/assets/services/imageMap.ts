@@ -54,6 +54,7 @@ export const imageMap: Record<string, any> = {
   "@/assets/images/bike1.jpg": require("@/assets/images/bike1.jpg"),
   "@/assets/images/bike2.jpg": require("@/assets/images/bike2.jpg"),
   "@/assets/images/car.jpg": require("@/assets/images/car.jpg"),
+  "@/assets/images/cab.jpg": require("@/assets/images/cab.jpg"),
 
   "@/assets/images/camel1.jpg": require("@/assets/images/camel1.jpg"),
 
@@ -66,6 +67,7 @@ export const imageMap: Record<string, any> = {
   "@/assets/images/train3.jpg": require("@/assets/images/train3.jpg"),
 
   "@/assets/images/hotel.jpg": require("@/assets/images/hotel.jpg"),
+  "@/assets/images/hotel1.jpg": require("@/assets/images/hotel1.jpg"),
   "@/assets/images/hotel-1.jpg": require("@/assets/images/hotel-1.jpg"),
   "@/assets/images/hotel-2.jpg": require("@/assets/images/hotel-2.jpg"),
 
@@ -83,6 +85,10 @@ export const imageMap: Record<string, any> = {
   "@/assets/images/zepto.png": require("@/assets/images/zepto.png"),
   "@/assets/images/uber.png": require("@/assets/images/uber.png"),
   "@/assets/images/ola.png": require("@/assets/images/ola.png"),
+
+  "@/assets/images/offer1.png": require("@/assets/images/offer1.png"),
+  "@/assets/images/offer2.png": require("@/assets/images/offer2.png"),
+  "@/assets/images/gift.png": require("@/assets/images/gift.png"),
 
   "@/assets/images/adventure1.jpg": require("@/assets/images/adventure1.jpg"),
   "@/assets/images/adventure2.jpg": require("@/assets/images/adventure2.jpg"),

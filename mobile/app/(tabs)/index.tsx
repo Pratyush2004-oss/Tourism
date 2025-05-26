@@ -1,6 +1,7 @@
 import AffiliateServices from "@/components/AffiliateServices";
 import Blogs from "@/components/Blogs";
 import CabServices from "@/components/CabServices";
+import OffersCarousel from "@/components/OfferSection";
 import PackagesList from "@/components/PackagesList";
 import Partners from "@/components/Partners";
 import RechargeServices from "@/components/RechargeServices";
@@ -22,6 +23,7 @@ export default function Home() {
           <ServicesList />
           <PackagesList />
           <Partners />
+          <OffersCarousel />
           <Blogs />
         </>
       )}

@@ -44,8 +44,8 @@ export default function RechargeServices({ title }: { title: string }) {
                     ? "tv-outline"
                     : "cash"
                 }
-                size={40}
-                color={Colors.GRAY}
+                size={35}
+                color={Colors.PRIMARY}
               />
             </View>
             <Text style={styles.name} numberOfLines={1} ellipsizeMode="tail">
@@ -85,9 +85,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 6,
   },
   imageWrapper: {
-    width: 75,
-    height: 75,
-    borderRadius: 20,
+    width: 60,
+    height: 60,
+    borderRadius: 35,
     backgroundColor: "#e0e7ff",
     justifyContent: "center",
     alignItems: "center",
