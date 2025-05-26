@@ -1,4 +1,5 @@
 import {
+  Dimensions,
   FlatList,
   Image,
   StyleSheet,
@@ -12,6 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Colors } from "@/constants/Colors";
 import AffiliateServices from "@/components/AffiliateServices";
 import RechargeServices from "@/components/RechargeServices";
+import OffersCarousel from "@/components/OfferSection";
 
 export default function Profile() {
   const { logout, user } = useAuthStore();
@@ -49,15 +51,13 @@ export default function Profile() {
             </View>
           </View>
 
-          {/* Recharge Services */}
-          <RechargeServices title={"Recharge Services"} />
-
           {/* Offers List */}
 
           {/* Navigation Pages */}
           <View></View>
 
           <AffiliateServices title={"Travel"} />
+          <OffersCarousel/>
           {/* Logout Button */}
           <TouchableOpacity
             style={styles.logoutButton}
@@ -72,11 +72,14 @@ export default function Profile() {
     />
   );
 }
-
+const {height} = Dimensions.get("window");
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 15,
+    minHeight: height - 150,
+    backgroundColor: "#f3f4f6",
+    paddingVertical: 10,
   },
   heading: {
     fontSize: 20,
@@ -147,6 +150,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 10,
     alignItems: "center",
+    marginTop:"auto"
   },
   logoutButtonText: {
     color: "#fff",

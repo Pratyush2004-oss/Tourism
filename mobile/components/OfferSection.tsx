@@ -1,4 +1,5 @@
 import { imageMap } from "@/assets/services/imageMap";
+import { mixVector } from "@shopify/react-native-skia";
 import React from "react";
 import { View, Text, Image, Dimensions, StyleSheet } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
@@ -10,7 +11,7 @@ const OfferCard = ({ offer }: { offer: Offer }) => {
       <Image
         source={imageMap[offer.image]} // Adjust path as needed
         resizeMode="cover"
-        style={{ width: 300, height: 150, borderRadius: 10 }}
+        style={{ width: 300, height: 120, borderRadius: 10, marginBottom: 12 }}
       />
       <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 8 }}>
         {offer.title}
@@ -44,15 +45,18 @@ const OffersCarousel = () => {
   ];
 
   return (
-    <Carousel
-      width={width * 0.85}
-      height={220}
-      autoPlay
-      scrollAnimationDuration={1200}
-      style={styles.carousel}
-      data={offers}
-      renderItem={({ item }) => <OfferCard offer={item} />}
-    />
+    <View style={{ marginVertical: 10, flex: 1, alignItems: "center" }}>
+      <Text style={styles.heading}>Exclusive Offers</Text>
+      <Carousel
+        width={width * 0.85}
+        height={220}
+        autoPlay
+        scrollAnimationDuration={1200}
+        style={styles.carousel}
+        data={offers}
+        renderItem={({ item }) => <OfferCard offer={item} />}
+      />
+    </View>
   );
 };
 
@@ -62,7 +66,8 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
     alignItems: "center",
-    paddingVertical: 24,
+    paddingVertical: 15,
+    flex: 1,
     backgroundColor: "#f3f4f6",
   },
   heading: {

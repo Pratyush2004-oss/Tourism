@@ -27,6 +27,7 @@ export default function LoginScreen() {
   
       if (isSignedIn && isAuthScreen) router.replace("/(tabs)");
       if(!isSignedIn && isTabScreen) router.replace("/(auth)");
+      if(isSignedIn) router.replace("/(tabs)");
     }, [user, segments, token]);
   const [input, setInput] = useState({
     isoCode: "+91",
