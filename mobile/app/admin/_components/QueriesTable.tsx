@@ -17,7 +17,7 @@ export default function QueriesTable({
   Queries,
   pageNumber,
   setPageNumber,
-} : {
+}: {
   loading: boolean;
   Queries: QUERIESTYPE[];
   pageNumber: number;
@@ -72,7 +72,7 @@ export default function QueriesTable({
         >
           <Text style={styles.pageButtonText}>Previous</Text>
         </TouchableOpacity>
-        <Text style={styles.paginationText}>A list of all the Bookings.</Text>
+        <Text style={styles.paginationText}>A list of all the Queries.</Text>
         <TouchableOpacity
           style={[
             styles.pageButton,
@@ -91,9 +91,10 @@ export default function QueriesTable({
 const styles = StyleSheet.create({
   container: {
     minHeight: 400,
-    backgroundColor: "#e5e7eb",
+    maxHeight: 530,
     padding: 8,
     borderRadius: 12,
+    backgroundColor: "#000",
     margin: 10,
     flex: 1,
   },
@@ -104,11 +105,11 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 8,
     borderBottomWidth: 2,
     borderColor: "#000",
-    paddingVertical: 10,
     paddingHorizontal: 4,
   },
   headerCell: {
     flex: 1,
+    paddingVertical: 10,
     fontWeight: "bold",
     color: "#22223b",
     fontSize: 15,
@@ -121,13 +122,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderBottomWidth: 1,
     borderColor: "#d1d5db",
-    paddingVertical: 10,
     paddingHorizontal: 4,
     alignItems: "center",
   },
   cell: {
     flex: 1,
     color: "#374151",
+    paddingVertical: 10,
     fontSize: 14,
     textAlign: "center",
     borderRightWidth: 1,
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   paginationText: {
-    color: "#374151",
+    color: "white",
     fontSize: 14,
     fontWeight: "500",
     textAlign: "center",

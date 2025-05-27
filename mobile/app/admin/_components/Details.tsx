@@ -54,18 +54,24 @@ export default function Details({ token }: { token: string }) {
   }));
 
   return (
-    <FlatList
-      data={data}
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.grid}
-      renderItem={({ item }) => (
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>{item.key}</Text>
-          <Text style={styles.cardValue}>{item.value}</Text>
-        </View>
-      )}
-    />
+    <>
+      <Text style={{ fontSize: 20, fontWeight: "bold", marginLeft: 16, marginVertical: 10 }}>
+        Details
+      </Text>
+      <FlatList
+        data={data}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.grid}
+        style={{ width: width - 32, maxHeight: 100 }}
+        renderItem={({ item }) => (
+          <View style={styles.card}>
+            <Text style={styles.cardTitle}>{item.key}</Text>
+            <Text style={styles.cardValue}>{item.value}</Text>
+          </View>
+        )}
+      />
+    </>
   );
 }
 
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
   grid: {
     paddingHorizontal: 16,
     justifyContent: "center",
-    height:100,
+    height: 100,
     backgroundColor: Colors.GRAY,
     borderRadius: 16,
   },
@@ -110,5 +116,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    maxHeight: 100,
   },
 });

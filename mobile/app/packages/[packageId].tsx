@@ -14,7 +14,6 @@ import RenderHTML from "react-native-render-html";
 import { imageMap } from "@/assets/services/imageMap";
 import { PACKAGES } from "@/assets/services/Text";
 import PackageCard from "@/components/PackageCard";
-import RajasthanMap from "@/components/RajasthanMaps";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams } from "expo-router";
 import BookingCard from "@/components/BookingCard";
@@ -163,8 +162,6 @@ export default function PackageDetailScreen() {
               </>
             )}
 
-            {/* Map */}
-            <RajasthanMap />
           </View>
 
           {/* Booking Card */}

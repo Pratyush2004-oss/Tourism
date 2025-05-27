@@ -8,6 +8,7 @@ import {
   Image,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from "react-native";
 import { SceneMap, TabBar, TabView } from "react-native-tab-view";
@@ -25,6 +26,9 @@ export default function AdminScreen() {
   const [pageNumber, setpageNumber] = useState(1);
   const [queriesPageNumber, setqueriesPageNumber] = useState(1);
   const [loading, setloading] = useState(false);
+  const [selectedTab, setSelectedTab] = useState<"bookings" | "queries">(
+    "bookings"
+  );
   const [bookings, setbookings] = useState([]);
   const [index, setIndex] = useState(0);
   const [routes] = useState([
@@ -93,49 +97,64 @@ export default function AdminScreen() {
     );
   }
 
-  const renderScene = SceneMap({
-    bookings: () => (
-      <BookingTable
-        loading={loading}
-        bookings={bookings}
-        pageNumber={pageNumber}
-        setpageNumber={setpageNumber}
-      />
-    ),
-    queries: () => (
-      <QueriesTable
-        loading={loading}
-        Queries={Queries}
-        pageNumber={queriesPageNumber}
-        setPageNumber={setqueriesPageNumber}
-      />
-    ),
-  });
-
   return (
     <>
       <BackHeader />
+      <Details token={token as string} />
       <View style={styles.container}>
-        {/* Details section only takes its own height */}
-        <View style={styles.detailsWrapper}>
-          <Details token={token || ""} />
+        {/* Header */}
+        <View style={styles.tabButtons}>
+          <TouchableOpacity
+            style={[
+              styles.tabButton,
+              selectedTab === "bookings" && styles.tabButtonActive,
+            ]}
+            onPress={() => setSelectedTab("bookings")}
+          >
+            <Text
+              style={[
+                styles.tabButtonText,
+                selectedTab === "bookings" && styles.tabButtonTextActive,
+              ]}
+            >
+              Bookings
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.tabButton,
+              selectedTab === "queries" && styles.tabButtonActive,
+            ]}
+            onPress={() => setSelectedTab("queries")}
+          >
+            <Text
+              style={[
+                styles.tabButtonText,
+                selectedTab === "queries" && styles.tabButtonTextActive,
+              ]}
+            >
+              Queries
+            </Text>
+          </TouchableOpacity>
         </View>
-        {/* TabView fills the rest */}
-        <View style={styles.tabViewWrapper}>
-          <TabView
-            navigationState={{ index, routes }}
-            renderScene={renderScene}
-            onIndexChange={setIndex}
-            initialLayout={{ width }}
-            renderTabBar={(props) => (
-              <TabBar
-                {...props}
-                indicatorStyle={{ backgroundColor: "#10b981" }}
-                style={styles.tabBar}
-              />
-            )}
-            style={styles.tabView}
-          />
+
+        {/* Content */}
+        <View style={{ flex: 1 }}>
+          {selectedTab === "bookings" ? (
+            <BookingTable
+              bookings={bookings}
+              pageNumber={pageNumber}
+              setpageNumber={setpageNumber}
+              loading={loading}
+            />
+          ) : (
+            <QueriesTable
+              Queries={Queries}
+              pageNumber={queriesPageNumber}
+              setPageNumber={setqueriesPageNumber}
+              loading={loading}
+            />
+          )}
         </View>
       </View>
     </>
@@ -146,10 +165,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 16,
-    backgroundColor: Colors.WHITE,
+    backgroundColor: "#fff",
+  },
+  tabButtons: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 8,
+    marginTop: 8,
+  },
+  tabButton: {
+    paddingVertical: 10,
+    paddingHorizontal: 28,
+    backgroundColor: "#e5e7eb",
+    borderRadius: 8,
+    marginHorizontal: 8,
+  },
+  tabButtonActive: {
+    backgroundColor: "#10b981",
+  },
+  tabButtonText: {
+    color: "#22223b",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  tabButtonTextActive: {
+    color: "#fff",
   },
   detailsWrapper: {
     // No flex, just takes its own height
+    height: 100,  
     paddingHorizontal: 8,
     marginBottom: 8,
   },

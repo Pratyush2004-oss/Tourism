@@ -57,13 +57,13 @@ export default function BookingTable({
     <View style={styles.container}>
       {/* Table Header */}
       <View style={styles.tableHeader}>
-        <Text style={[styles.headerCell, { flex: 2  }]}>Package Name</Text>
-        <Text style={styles.headerCell}>Days</Text>
-        <Text style={styles.headerCell}>Start Date</Text>
-        <Text style={styles.headerCell}>People</Text>
-        <Text style={styles.headerCell}>Mobile</Text>
-        <Text style={styles.headerCell}>Amount</Text>
-        <Text style={styles.headerCell}>Payment</Text>
+        <Text style={[styles.headerCell, { flex: 2, borderRightWidth:1  }]}>Package Name</Text>
+        <Text style={[styles.headerCell, {borderRightWidth:1}]}>Days</Text>
+        <Text style={[styles.headerCell, {borderRightWidth:1}]}>Start Date</Text>
+        <Text style={[styles.headerCell, {borderRightWidth:1}]}>People</Text>
+        <Text style={[styles.headerCell, {borderRightWidth:1}]}>Mobile</Text>
+        <Text style={[styles.headerCell, {borderRightWidth:1}]}>Amount</Text>
+        <Text style={[styles.headerCell, {borderRightWidth:1}]}>Payment</Text>
       </View>
       {/* Table Body */}
       <FlatList
@@ -76,18 +76,18 @@ export default function BookingTable({
         }
         renderItem={({ item }) => (
           <View style={styles.row}>
-            <View style={[styles.cell, { flex: 2, alignItems: "flex-start" }]}>
+            <View style={[styles.cell, { flex: 2, borderRightWidth: 1 }]}>
               <Text style={[styles.boldText, styles.cell]}>
                 {item.PackageName}
               </Text>
               {Array.isArray(item.PlaceList) && item.PlaceList.length > 0 && (
-                <Text style={styles.subText}>
+                <Text style={styles.subText} numberOfLines={2}>
                   Places: {item.PlaceList.join(", ")}
                 </Text>
               )}
               {Array.isArray(item.AdventureList) &&
                 item.AdventureList.length > 0 && (
-                  <Text style={styles.subText}>
+                  <Text style={styles.subText} numberOfLines={2}>
                     Adventures: {item.AdventureList.join(", ")}
                   </Text>
                 )}
@@ -147,12 +147,14 @@ export default function BookingTable({
 
 const styles = StyleSheet.create({
   container: {
-    minHeight: 400,
+    minHeight: 300,
+    maxHeight: 530,
     backgroundColor: "#000",
     padding: 8,
     borderRadius: 12,
     margin: 10,
     flex: 1,
+    overflowX:"scroll",
   },
   tableHeader: {
     flexDirection: "row",
@@ -161,16 +163,15 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 8,
     borderBottomWidth: 2,
     borderColor: "#000",
-    paddingVertical: 10,
     paddingHorizontal: 4,
   },
   headerCell: {
     flex: 1,
+    paddingVertical: 8,
     fontWeight: "bold",
     color: "#22223b",
     fontSize: 12,
     textAlign: "center",
-    borderRightWidth: 1,
     borderColor: "#000",
   },
   row: {
@@ -178,16 +179,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderBottomWidth: 1,
     borderColor: "#d1d5db",
-    paddingVertical: 10,
     paddingHorizontal: 4,
     alignItems: "center",
   },
   cell: {
     flex: 1,
     color: "#374151",
+    paddingVertical:8,
     fontSize: 10,
     textAlign: "center",
-    borderColor: "#e5e7eb",
+    borderColor: "#000",
     paddingHorizontal: 2,
     justifyContent: "center",
   },
@@ -279,7 +280,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   paginationText: {
-    color: "#374151",
+    color: "white",
     fontSize: 14,
     fontWeight: "500",
     textAlign: "center",

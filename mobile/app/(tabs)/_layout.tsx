@@ -1,10 +1,11 @@
+import { useAuthStore } from "@/assets/store/auth.store";
 import ChatBot from "@/components/Chatbot";
 import Sidebar from "@/components/Sidebar"; // <-- import Sidebar
 import TabHeader from "@/components/TabHeader";
 import { Colors } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
-import { Tabs, useRouter } from "expo-router";
-import React, { useState } from "react";
+import { Tabs, useRouter, useSegments } from "expo-router";
+import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -12,6 +13,14 @@ export default function TabLayout() {
   const insets = useSafeAreaInsets();
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const router = useRouter();
+  const segments = useSegments();
+  const { user, token } = useAuthStore();
+  useEffect(() => {
+    const isTabScreen = segments[0] === "(tabs)";
+    const isSignedIn = user && token;
+
+    if (!isSignedIn && isTabScreen) router.replace("/(auth)");
+  }, [user, segments, token]);
 
   return (
     <View style={{ flex: 1 }}>
