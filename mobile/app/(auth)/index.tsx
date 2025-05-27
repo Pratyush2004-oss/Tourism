@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Platform,
   Pressable,
+  KeyboardAvoidingView,
 } from "react-native";
 import CountryPicker, { CountryCode } from "react-native-country-picker-modal";
 import { Ionicons } from "@expo/vector-icons";
@@ -15,28 +16,27 @@ import { useRouter, useSegments } from "expo-router";
 import { useAuthStore } from "@/assets/store/auth.store";
 
 export default function LoginScreen() {
-    const segments = useSegments();
-  
-    const { token, user } = useAuthStore();
-  
-    // handle navigation based on auth state
-    useEffect(() => {
-      const isSignedIn = user && token;
-      const isAuthScreen = segments[0] === "(auth)";
-      if (isSignedIn && isAuthScreen) router.replace("/(tabs)");
-      // If user is signed in and on auth screen, redirect to tabs
-      else if (!isSignedIn && !isAuthScreen) router.replace("/(auth)");
+  const segments = useSegments();
 
-    }, [user, segments, token]);
+  const { token, user } = useAuthStore();
+
+  // handle navigation based on auth state
+  useEffect(() => {
+    const isSignedIn = user && token;
+    const isAuthScreen = segments[0] === "(auth)";
+    if (isSignedIn && isAuthScreen) router.replace("/(tabs)");
+    // If user is signed in and on auth screen, redirect to tabs
+    else if (!isSignedIn && !isAuthScreen) router.replace("/(auth)");
+  }, [user, segments, token]);
   const [input, setInput] = useState({
     isoCode: "+91",
     mobile: "",
     password: "",
   });
+  const [showPassowrd, setshowPassowrd] = useState(false);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const [countryCode, setCountryCode] =
-    useState<CountryCode>("IN");
+  const [countryCode, setCountryCode] = useState<CountryCode>("IN");
   const [showCountryPicker, setShowCountryPicker] = useState(false);
 
   interface Country {
@@ -50,89 +50,100 @@ export default function LoginScreen() {
     setInput({ ...input, isoCode: `+${country.callingCode[0]}` });
     setShowCountryPicker(false);
   };
-  const {login,error } = useAuthStore();
+  const { login, error } = useAuthStore();
 
   const handleLogin = async () => {
     setLoading(true);
     try {
       // Replace this with your actual login logic
       await login(input);
-
     } catch (e) {
-      console.log(e)
+      console.log(e);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.card}>
-        <Text style={styles.title}>Login</Text>
-        {error ? <Text style={styles.error}>{error}</Text> : null}
-        {/* Mobile Number */}
-        <Text style={styles.label}>Mobile</Text>
-        <View style={styles.row}>
+    <KeyboardAvoidingView 
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <Text style={styles.title}>Login</Text>
+          {error ? <Text style={styles.error}>{error}</Text> : null}
+          {/* Mobile Number */}
+          <Text style={styles.label}>Mobile</Text>
+          <View style={styles.row}>
+            <TouchableOpacity
+              style={styles.countryPicker}
+              onPress={() => setShowCountryPicker(true)}
+            >
+              <Text style={styles.countryText}>{input.isoCode}</Text>
+            </TouchableOpacity>
+            <CountryPicker
+              withFilter
+              withFlag
+              withCallingCode
+              withEmoji
+              countryCode={countryCode}
+              visible={showCountryPicker}
+              onSelect={handleCountrySelect}
+              onClose={() => setShowCountryPicker(false)}
+            />
+            <TextInput
+              style={[styles.input, { flex: 1 }]}
+              keyboardType="number-pad"
+              maxLength={10}
+              placeholder="Enter Mobile Number"
+              value={input.mobile}
+              onChangeText={(text) => setInput({ ...input, mobile: text })}
+            />
+          </View>
+          {/* Password */}
+          <Text style={styles.label}>Password</Text>
+          <View>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter Password"
+              secureTextEntry={!showPassowrd}
+              value={input.password}
+              onChangeText={(text) => setInput({ ...input, password: text })}
+            />
+            <Pressable
+              style={styles.showPassword}
+              onPress={() => setshowPassowrd(!showPassowrd)}
+            >
+              <Ionicons
+                name={showPassowrd ? "eye-off-outline" : "eye-outline"}
+                size={24}
+                color="black"
+              />
+            </Pressable>
+          </View>
+          {/* Login Button */}
           <TouchableOpacity
-            style={styles.countryPicker}
-            onPress={() => setShowCountryPicker(true)}
+            style={styles.button}
+            onPress={handleLogin}
+            disabled={loading}
           >
-            <Text style={styles.countryText}>{input.isoCode}</Text>
+            {loading ? (
+              <ActivityIndicator color="#fff" />
+            ) : (
+              <Text style={styles.buttonText}>Login</Text>
+            )}
           </TouchableOpacity>
-          <CountryPicker
-            withFilter
-            withFlag
-            withCallingCode
-            withEmoji
-            countryCode={countryCode}
-            visible={showCountryPicker}
-            onSelect={handleCountrySelect}
-            onClose={() => setShowCountryPicker(false)}
-          />
-          <TextInput
-            style={[styles.input, { flex: 1 }]}
-            keyboardType="number-pad"
-            maxLength={10}
-            placeholder="Enter Mobile Number"
-            value={input.mobile}
-            onChangeText={(text) => setInput({ ...input, mobile: text })}
-          />
-        </View>
-        {/* Password */}
-        <Text style={styles.label}>Password</Text>
-        <View>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter Password"
-            secureTextEntry
-            value={input.password}
-            onChangeText={(text) => setInput({ ...input, password: text })}
-          />
-          <Pressable style={styles.showPassword}>
-            <Ionicons name="eye-outline" size={24} color="black" />
-          </Pressable>
-        </View>
-        {/* Login Button */}
-        <TouchableOpacity
-          style={styles.button}
-          onPress={handleLogin}
-          disabled={loading}
-        >
-          {loading ? (
-            <ActivityIndicator color="#fff" />
-          ) : (
-            <Text style={styles.buttonText}>Login</Text>
-          )}
-        </TouchableOpacity>
-        {/* Signup Link */}
-        <View style={styles.signupContainer}>
-          <Text style={styles.signupText}>Don't have an account? </Text>
-          <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
-            <Text style={styles.signupLink}>Sign Up</Text>
-          </TouchableOpacity>
+          {/* Signup Link */}
+          <View style={styles.signupContainer}>
+            <Text style={styles.signupText}>Don't have an account? </Text>
+            <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
+              <Text style={styles.signupLink}>Sign Up</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 

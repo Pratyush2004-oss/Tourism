@@ -80,6 +80,8 @@ export const imageMap: Record<string, any> = {
 
   "@/assets/images/offer1.png": require("@/assets/images/offer1.png"),
   "@/assets/images/gift.png": require("@/assets/images/gift.png"),
+  "@/assets/images/gift.jpg": require("@/assets/images/gift.jpg"),
+  "@/assets/images/gift1.jpg": require("@/assets/images/gift1.jpg"),
 
   "@/assets/images/adventure1.jpg": require("@/assets/images/adventure1.jpg"),
   "@/assets/images/adventure2.jpg": require("@/assets/images/adventure2.jpg"),

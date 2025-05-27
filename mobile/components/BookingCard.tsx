@@ -186,7 +186,7 @@ export default function BookingCard({ props }: { props: Props }) {
             <Text style={styles.label}>People</Text>
             <View style={styles.counterRow}>
               <TouchableOpacity
-                disabled={input.people <= 1}
+                disabled={input.people <= 2}
                 onPress={() =>
                   setInput((prev) => ({
                     ...prev,

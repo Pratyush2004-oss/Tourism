@@ -112,8 +112,8 @@ const styles = StyleSheet.create({
     width: 90,
   },
   circle: {
-    width: 70,
-    height: 70,
+    width: 60,
+    height: 60,
     borderRadius: 35,
     backgroundColor: "#e0e7ff",
     justifyContent: "center",

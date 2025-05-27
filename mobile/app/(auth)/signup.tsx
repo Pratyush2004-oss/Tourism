@@ -11,6 +11,8 @@ import {
   Alert,
   ScrollView,
   Pressable,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import CountryPicker from "react-native-country-picker-modal";
 import type { CountryCode } from "react-native-country-picker-modal";
@@ -26,6 +28,7 @@ export default function SignupScreen() {
   const [countryCode, setCountryCode] = useState<CountryCode>("IN");
   const [country, setCountry] = useState<Country | null>(null);
   const [withCountryNameButton] = useState(false);
+  const [showPassowrd, setshowPassowrd] = useState(false);
   const [withFlag] = useState(true);
   const [withCallingCode] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -72,7 +75,9 @@ export default function SignupScreen() {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    style={styles.container}>
       <View style={styles.card}>
         <Text style={styles.title}>Sign Up</Text>
         {error ? <Text style={styles.error}>{error}</Text> : null}
@@ -107,20 +112,19 @@ export default function SignupScreen() {
           />
         </View>
         {/* Password */}
-        {/* Password */}
-                <Text style={styles.label}>Password</Text>
-                <View>
-                  <TextInput
-                    style={styles.input}
-                    placeholder="Enter Password"
-                    secureTextEntry
-                    value={input.password}
-                    onChangeText={(text) => setInput({ ...input, password: text })}
-                  />
-                  <Pressable style={styles.showPassword}>
-                    <Ionicons name="eye-outline" size={24} color="black" />
-                  </Pressable>
-                </View>
+        <Text style={styles.label}>Password</Text>
+        <View>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter Password"
+            secureTextEntry={!showPassowrd}
+            value={input.password}
+            onChangeText={(text) => setInput({ ...input, password: text })}
+          />
+          <Pressable style={styles.showPassword} onPress={() => setshowPassowrd(!showPassowrd)}>
+            <Ionicons name={showPassowrd ? "eye-off-outline" : "eye-outline"} size={24} color="black" />
+          </Pressable>
+        </View>
         {/* Submit */}
         <TouchableOpacity
           style={styles.button}
@@ -148,13 +152,13 @@ export default function SignupScreen() {
           </Text>
         </Text>
       </View>
-    </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
     backgroundColor: "#f3f4f6",
     justifyContent: "center",
     alignItems: "center",

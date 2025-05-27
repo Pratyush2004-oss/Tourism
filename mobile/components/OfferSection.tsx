@@ -1,5 +1,4 @@
 import { imageMap } from "@/assets/services/imageMap";
-import { mixVector } from "@shopify/react-native-skia";
 import React from "react";
 import { View, Text, Image, Dimensions, StyleSheet } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
@@ -33,13 +32,13 @@ const OffersCarousel = () => {
       id: 1,
       title: "10% Discount",
       description: "Get 10% discount on all bookings",
-      image: "@/assets/images/offer1.png", // Replace with actual image URL
+      image: "@/assets/images/gift1.jpg", // Replace with actual image URL
     },
     {
       id: 2,
       title: "Upto 400 Rupees Cashback",
       description: "Get upto 400 rupees cashback on package bookings",
-      image: "@/assets/images/gift.png",
+      image: "@/assets/images/gift.jpg",
     },
     // Add more offers here
   ];

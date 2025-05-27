@@ -55,7 +55,7 @@ export default function BookingsScreen() {
       <View style={styles.carouselContainer}>
         <Carousel
           width={width}
-          height={180}
+          height={150}
           data={CAROUSELIMAGE}
           autoPlay
           scrollAnimationDuration={1200}

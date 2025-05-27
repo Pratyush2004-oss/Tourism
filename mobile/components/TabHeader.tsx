@@ -23,9 +23,16 @@ export default function TabHeader({
   const { isAdmin } = useAuthStore();
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [langDropdownVisible, setLangDropdownVisible] = useState(false);
+  const { logout } = useAuthStore();
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  
+  const handleLogout = () => {
+    logout();
+    router.push("/(auth)");
+    setDropdownVisible(false);
+  };
+
   const handleLanguageChange = (lang: string) => {
     // i18n.changeLanguage(lang);
     setLangDropdownVisible(false);
@@ -40,9 +47,7 @@ export default function TabHeader({
     setDropdownVisible(false);
     // Handle navigation or actions here
     if (option === "profile") router.push("/profile");
-    if (option === "logout") {
-      /* handle logout */
-    }
+    if (option === "logout") handleLogout();
   };
   return (
     <View style={styles.header}>
@@ -162,7 +167,7 @@ const styles = StyleSheet.create({
   },
   iconButton: {
     marginTop: 5,
-    alignItems:"center"
+    alignItems: "center",
   },
   logoContainer: {
     flexDirection: "row",

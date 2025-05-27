@@ -19,6 +19,7 @@ import {
   Image as SkImageComponent,
   useImage,
 } from "@shopify/react-native-skia";
+import { useRouter } from "expo-router";
 
 type PROPS = {
   style: StyleProp<ViewStyle>;
@@ -30,9 +31,15 @@ const ScratchCardData: React.FC<PROPS> = ({ style, image, children }) => {
   const [isMove, setisMove] = useState(false);
   const [isScratched, setisScratched] = useState(false);
   const path = useRef(Skia.Path.Make());
+  const router = useRouter();
   const handleTouchEnd = () => {
     if (isMove) {
       setisScratched(true);
+
+      setTimeout(() => {
+        
+      }, 2000);
+      router.push("/bookings");
     }
   };
   return (

@@ -384,7 +384,7 @@ export default function ChatBot() {
 const styles = StyleSheet.create({
   fab: {
     position: "absolute",
-    bottom: 100,
+    bottom: 120,
     right: 20,
     backgroundColor: "#fb923c",
     width: 50,
