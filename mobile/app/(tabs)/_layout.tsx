@@ -40,9 +40,9 @@ export default function TabLayout() {
           headerShadowVisible: false,
           tabBarStyle: {
             borderTopWidth: 1,
-            padding: 15,
+            padding: 10,
             paddingBottom: insets.bottom,
-            height: 60 + insets.bottom,
+            height: 50 + insets.bottom,
           },
         }}
       >
