@@ -14,6 +14,7 @@ import { Colors } from "@/constants/Colors";
 import AffiliateServices from "@/components/AffiliateServices";
 import RechargeServices from "@/components/RechargeServices";
 import OffersCarousel from "@/components/OfferSection";
+import CashbackList from "@/components/CashbackList";
 
 export default function Profile() {
   const { logout, user } = useAuthStore();
@@ -51,10 +52,9 @@ export default function Profile() {
             </View>
           </View>
 
-          {/* Offers List */}
+          {/* Cashback list */}
+          <CashbackList/>
 
-          {/* Navigation Pages */}
-          <View></View>
 
           <AffiliateServices title={"Travel"} />
           <OffersCarousel/>

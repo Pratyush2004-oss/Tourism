@@ -57,7 +57,8 @@ export const signUp = async (req, res, next) => {
                 fullname: newUser.fullname,
                 mobile: newUser.mobile,
                 isVerified: newUser.isVerified,
-                CashbackAmount: newUser.CashbackAmount
+                CashbackAmount: newUser.CashbackAmount,
+                CashbackDetail: newUser.CashbackDetail
             },
             token, // Send the token back to the client
         });
@@ -206,7 +207,8 @@ export const signIn = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
-                CashbackAmount: user.CashbackAmount
+                CashbackAmount: user.CashbackAmount,
+                CashbackDetail: user.CashbackDetail
             },
             token, // Send the token back to the client
         });
@@ -230,7 +232,8 @@ export const checkAuth = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
-                CashbackAmount: user.CashbackAmount
+                CashbackAmount: user.CashbackAmount,
+                CashbackDetail: user.CashbackDetail
             },
         });
     } catch (error) {
@@ -251,7 +254,8 @@ export const checkAdmin = async (req, res, next) => {
                 fullname: user.fullname,
                 mobile: user.mobile,
                 isVerified: user.isVerified,
-                CashbackAmount: user.CashbackAmount
+                CashbackAmount: user.CashbackAmount,
+                CashbackDetail: user.CashbackDetail
             },
         });
     }
@@ -274,7 +278,6 @@ export const getAllUsers = async (req, res, next) => {
         next(error);
     }
 }
-
 
 // Add cashback controller by admin
 export const addCashback = async (req, res, next) => {

@@ -1,24 +1,20 @@
 import { API_URL } from "@/assets/services/API"; // Adjust path as needed
 import { useAuthStore } from "@/assets/store/auth.store"; // Adjust path as needed
+import CashbackPage from "@/components/AddCashbackDialog";
+import BackHeader from "@/components/BackHeader";
+import { Colors } from "@/constants/Colors";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
-  Dimensions,
-  FlatList,
   Image,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
-import { SceneMap, TabBar, TabView } from "react-native-tab-view";
 import BookingTable from "./_components/BookingTable"; // Use the BookingTable provided earlier
 import Details from "./_components/Details"; // Use the Details component provided earlier
 import QueriesTable from "./_components/QueriesTable"; // Use the QueriesTable provided earlier
-import { Colors } from "@/constants/Colors";
-import BackHeader from "@/components/BackHeader";
-
-const { width } = Dimensions.get("window");
 
 export default function AdminScreen() {
   const { isAdmin, token } = useAuthStore();
@@ -30,11 +26,6 @@ export default function AdminScreen() {
     "bookings"
   );
   const [bookings, setbookings] = useState([]);
-  const [index, setIndex] = useState(0);
-  const [routes] = useState([
-    { key: "bookings", title: "Bookings" },
-    { key: "queries", title: "Queries" },
-  ]);
 
   // Fetch Queries
   const fetchQueries = async () => {
@@ -101,6 +92,7 @@ export default function AdminScreen() {
     <>
       <BackHeader />
       <Details token={token as string} />
+      <CashbackPage token={token as string} />
       <View style={styles.container}>
         {/* Header */}
         <View style={styles.tabButtons}>
@@ -193,7 +185,7 @@ const styles = StyleSheet.create({
   },
   detailsWrapper: {
     // No flex, just takes its own height
-    height: 100,  
+    height: 100,
     paddingHorizontal: 8,
     marginBottom: 8,
   },

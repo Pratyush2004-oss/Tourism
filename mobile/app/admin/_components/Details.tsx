@@ -63,7 +63,7 @@ export default function Details({ token }: { token: string }) {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.grid}
-        style={{ width: width - 32, maxHeight: 100 }}
+        style={{ width: width , maxHeight: 100 }}
         renderItem={({ item }) => (
           <View style={styles.card}>
             <Text style={styles.cardTitle}>{item.key}</Text>
@@ -78,6 +78,7 @@ export default function Details({ token }: { token: string }) {
 const styles = StyleSheet.create({
   grid: {
     paddingHorizontal: 16,
+    marginHorizontal:"auto",
     justifyContent: "center",
     height: 100,
     backgroundColor: Colors.GRAY,
@@ -86,6 +87,7 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     margin: 8,
+    minWidth:90,
     paddingVertical: 20,
     paddingHorizontal: 10,
     backgroundColor: "#fff",
