@@ -27,6 +27,12 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
+    CashbackDetail: [
+        { 
+            amount: Number,
+            date: Date
+         }
+    ]
 }, { timestamps: true });
 
 userSchema.pre('save', async function (next) {

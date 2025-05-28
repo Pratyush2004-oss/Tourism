@@ -1,4 +1,5 @@
 import { RECHARGESERVICES } from "@/assets/services/Options";
+import { useAuthStore } from "@/assets/store/auth.store";
 import { Colors } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
@@ -12,11 +13,12 @@ import {
 } from "react-native";
 
 export default function RechargeServices({ title }: { title: string }) {
-  const handlePress = (url: string) => {
-    if (url) {
-      Linking.openURL(url);
-    }
-  };
+  const { user } = useAuthStore();
+    const handlePress = (url: string) => {
+      if (url) {
+        Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
+      }
+    };
 
   return (
     <View style={styles.container}>

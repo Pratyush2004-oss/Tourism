@@ -10,11 +10,13 @@ import {
 import React from "react";
 import { OTHERSERVICES } from "@/assets/services/Options";
 import { imageMap } from "@/assets/services/imageMap"; // Make sure this exists
+import { useAuthStore } from "@/assets/store/auth.store";
 
-export default function AffiliateServices({title} : {title: string}) {
+export default function AffiliateServices({ title }: { title: string }) {
+  const { user } = useAuthStore();
   const handlePress = (url: string) => {
     if (url) {
-      Linking.openURL(url);
+      Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
     }
   };
 

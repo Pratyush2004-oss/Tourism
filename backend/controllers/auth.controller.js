@@ -260,3 +260,42 @@ export const checkAdmin = async (req, res, next) => {
         next(error);
     }
 }
+
+// Get all users whenever user type part of their mobile number
+export const getAllUsers = async (req, res, next) => {
+    try {
+        const users = await User.find({}, 'fullname mobile isVerified CashbackAmount CashbackDetail'); 
+        if (!users || users.length === 0) {
+            return res.status(404).json({ message: "No users found" });
+        }
+        return res.status(200).json({ users });
+    } catch (error) {
+        console.log("Error in getAllUsers controller:", error);
+        next(error);
+    }
+}
+
+
+// Add cashback controller by admin
+export const addCashback = async (req, res, next) => {
+    try {
+        const { mobile, CashbackAmount } = req.body;
+        if (!mobile || !CashbackAmount) {
+            return res.status(400).json({ message: "Mobile number and Cashback Amount are required" });
+        }
+        const user = await User.findOne({ mobile });
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        user.CashbackAmount += CashbackAmount;
+        user.CashbackDetail.push({
+            amount: CashbackAmount,
+            date: new Date()
+        });
+        await user.save();
+        return res.status(200).json({ message: "Cashback added successfully" });
+    } catch (error) {
+        console.log("Error in addCashback controller:", error);
+        next(error);
+    }
+}

@@ -1369,7 +1369,7 @@ export const RECHARGESERVICES = [
   {
     name: "Mobile Recharge",
     icon: "mobile",
-    path: "https://www.amazon.in/hfc/bill/mobile", // Amazon Pay Mobile Recharge
+    path: "https://amzn.to/4kzSLLV", // Amazon Pay Mobile Recharge
     PoweredBy: "Amazon Pay",
   },
   {
