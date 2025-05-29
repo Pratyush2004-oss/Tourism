@@ -17,7 +17,7 @@ export default function CashbackList() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cashback List</Text>
+      <Text style={styles.title}>Cashbacks</Text>
       <FlatList
         data={cashbackData}
         renderItem={({ item, index }) => (
