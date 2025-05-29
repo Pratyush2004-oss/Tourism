@@ -14,6 +14,7 @@ import {
 } from "@/assets/services/Options";
 import { imageMap } from "@/assets/services/imageMap"; // <-- Make sure this exists
 import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 function ServiceCircle({
   label,
@@ -21,17 +22,21 @@ function ServiceCircle({
   onPress,
 }: {
   label: string;
-  image: string;
+  image?: string;
   onPress?: () => void;
 }) {
   return (
     <View style={styles.circleWrapper}>
       <TouchableOpacity style={styles.circle} onPress={onPress}>
-        <Image
-          source={imageMap[image] || require("@/assets/images/logo.png")}
-          style={styles.circleImage}
-          resizeMode="cover"
-        />
+        {image ? (
+          <Image
+            source={imageMap[image] || require("@/assets/images/logo.png")}
+            style={styles.circleImage}
+            resizeMode="cover"
+          />
+        ) : (
+          <Ionicons name="add" size={32} color="#22223b" />
+        )}
       </TouchableOpacity>
       <Text style={styles.circleText} numberOfLines={1} ellipsizeMode="tail">
         {label}
@@ -65,6 +70,12 @@ export default function ServicesList() {
         )}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ marginBottom: 12 }}
+        ListFooterComponent={
+          <ServiceCircle
+            label="Create Own Package"
+            onPress={() => router.push("/(tabs)/createCustomPackage")}
+          />
+        }
       />
 
       <Text style={styles.heading}>Other Services</Text>

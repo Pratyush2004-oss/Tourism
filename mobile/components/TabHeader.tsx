@@ -1,16 +1,16 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Pressable,
-} from "react-native";
-import React, { useState } from "react";
+import { useAuthStore } from "@/assets/store/auth.store";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import { useAuthStore } from "@/assets/store/auth.store";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function TabHeader({
   onSidebarPress,
@@ -20,7 +20,6 @@ export default function TabHeader({
   onProfilePress?: () => void;
 }) {
   const router = useRouter();
-  const { isAdmin } = useAuthStore();
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [langDropdownVisible, setLangDropdownVisible] = useState(false);
   const { logout } = useAuthStore();
@@ -127,14 +126,6 @@ export default function TabHeader({
               >
                 <Text style={styles.dropdownText}>Profile</Text>
               </TouchableOpacity>
-              {isAdmin && (
-                <TouchableOpacity
-                  style={styles.dropdownItem}
-                  onPress={() => router.push("/admin")}
-                >
-                  <Text style={styles.dropdownText}>Admin</Text>
-                </TouchableOpacity>
-              )}
               <TouchableOpacity
                 style={styles.dropdownItem}
                 onPress={() => handleMenuOption("T&C")}
