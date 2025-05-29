@@ -1,14 +1,4 @@
 import {
-  Image,
-  StyleProp,
-  StyleSheet,
-  Text,
-  View,
-  ViewStyle,
-} from "react-native";
-import React, { useRef, useState } from "react";
-import {
-  AnimatedProps,
   Canvas,
   Group,
   Mask,
@@ -17,9 +7,18 @@ import {
   Skia,
   SkImage,
   Image as SkImageComponent,
-  useImage,
+  useImage
 } from "@shopify/react-native-skia";
 import { useRouter } from "expo-router";
+import React, { useRef, useState } from "react";
+import {
+  Image,
+  StyleProp,
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+} from "react-native";
 
 type PROPS = {
   style: StyleProp<ViewStyle>;
@@ -38,7 +37,7 @@ const ScratchCardData: React.FC<PROPS> = ({ style, image, children }) => {
 
       setTimeout(() => {
         
-      }, 2000);
+      }, 5000);
       router.push("/bookings");
     }
   };

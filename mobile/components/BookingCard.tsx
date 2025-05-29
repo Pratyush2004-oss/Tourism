@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from "react";
+import { API_URL, RAZORPAY_KEY } from "@/assets/services/API";
+import { useAuthStore } from "@/assets/store/auth.store";
+import { Ionicons } from "@expo/vector-icons";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import axios from "axios";
+import { useRouter } from "expo-router";
+import React, { useEffect, useState } from "react";
 import {
-  View,
+  Alert,
+  Platform,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
-  Button as RNButton,
-  Platform,
-  Alert,
+  View
 } from "react-native";
-import DateTimePicker from "@react-native-community/datetimepicker";
-import { Ionicons } from "@expo/vector-icons";
-import { useAuthStore } from "@/assets/store/auth.store";
-import { useRouter } from "expo-router";
-import { API_URL, RAZORPAY_KEY } from "@/assets/services/API";
-import axios from "axios";
 import RazorpayCheckout from "react-native-razorpay";
-import { ScratchCard } from "./ScratchCard";
 import InquirySection from "./InquirySection";
+import { ScratchCard } from "./ScratchCard";
 
 interface Props {
   PackageName: string;
