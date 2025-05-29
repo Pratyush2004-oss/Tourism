@@ -2,10 +2,6 @@ import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
 import React from 'react';
 
 const PARTNERS = [
-  { name: "Ola", image: require("@/assets/images/ola.png") },
-  { name: "Uber", image: require("@/assets/images/uber.png") },
-  { name: "Zepto", image: require("@/assets/images/zepto.png") },
-  { name: "Rapido", image: require("@/assets/images/Rapido.png") },
   { name: "Amazon", image: require("@/assets/images/amazon.png") },
   { name: "Flipkart", image: require("@/assets/images/flipkart.png") },
   { name: "Ajio", image: require("@/assets/images/ajio.png") },
