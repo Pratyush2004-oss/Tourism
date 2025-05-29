@@ -1334,7 +1334,7 @@ export const SHOPPING = [
   {
     name: "Ajio",
     image: "@/assets/images/ajio.png",
-    path: "",
+    path: "https://linksredirect.com/?cid=230828&source=linkkit&url=https%3A%2F%2Fajiogram.ajio.com%2F",
     PoweredBy: "Ajio",
   },
 ];
@@ -1375,7 +1375,7 @@ export const RECHARGESERVICES = [
   {
     name: "Electricity",
     icon: "electricity",
-    path: "https://www.amazon.in/hfc/bill/electricity", // Amazon Pay Electricity
+    path: "https://amzn.to/3Hdu8Gy", // Amazon Pay Electricity
     PoweredBy: "Amazon Pay",
   },
   {

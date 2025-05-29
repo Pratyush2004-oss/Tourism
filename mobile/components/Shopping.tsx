@@ -12,13 +12,13 @@ import { SHOPPING } from "@/assets/services/Options";
 import { imageMap } from "@/assets/services/imageMap"; // Make sure this exists
 import { useAuthStore } from "@/assets/store/auth.store";
 
-export default function Shopping({title} : {title: string}) {
+export default function Shopping({ title }: { title: string }) {
   const { user } = useAuthStore();
-    const handlePress = (url: string) => {
-      if (url) {
-        Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
-      }
-    };
+  const handlePress = (url: string) => {
+    if (url) {
+      Linking.openURL(`${url}&subid=${user?.mobile || ""}`);
+    }
+  };
 
   return (
     <View style={styles.container}>

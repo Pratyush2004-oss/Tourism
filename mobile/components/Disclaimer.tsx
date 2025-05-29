@@ -1,33 +1,100 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import Blogs from "./Blogs";
 
 export default function Disclaimer() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.card}>
         <Text style={styles.heading}>
-          <Text role="img" aria-label="scroll">📜 </Text>
+          <Text role="img" aria-label="scroll">
+            📜{" "}
+          </Text>
           Disclaimer
         </Text>
         <Text style={styles.paragraph}>
-          ExploreIndiaView is a travel information platform designed to inspire and assist users in planning memorable trips across India. While we strive to maintain accurate and updated information related to destinations, itineraries, pricing, and experiences, we do not guarantee the completeness, reliability, or availability of any service, vendor, or travel product mentioned on our website or mobile app.
+          Explore India View is a platform that provides access to third-party
+          services, including travel booking, recharges, hotel reservations, and
+          shopping offers via affiliate links. We do not own or operate these
+          services and are not responsible for service delivery, delays,
+          cancellations, or payments processed by third-party platforms such as
+          Amazon, Flipkart, IRCTC, Meesho, Ola, Uber, etc
           {"\n\n"}
-          We are not responsible for any delays, cancellations, or disruptions caused by third-party service providers including but not limited to transport operators, hotels, travel agencies, or government decisions. Users are advised to verify details directly with the concerned vendors before making bookings or travel decisions.
+          All content, offers, prices, and availability are subject to change
+          and may vary on the respective partner websites. Cashback and rewards
+          are subject to verification and confirmation from our affiliate
+          partners. Explore India View shall not be held liable for any disputes
+          or losses arising from transactions made on partner platforms
         </Text>
+
+        {/* Terms and Conditions */}
         <Text style={styles.subheading}>
-          <Text role="img" aria-label="briefcase">💼 </Text>
-          Affiliate Disclosure
+          <Text role="img" aria-label="briefcase">
+            💼{" "}
+          </Text>
+          Terms and Conditions
         </Text>
         <Text style={styles.paragraph}>
-          Some of the links and recommendations on ExploreIndiaView may be affiliate links. This means that if you click on these links and make a purchase or booking (such as through RailYatri, MakeMyTrip, Goibibo, Amazon, EarnKaro, Cuelinks, etc.), we may earn a small commission at no additional cost to you.
+          1. Acceptance of Terms {"\n"}
+          By using our app or website, you agree to these Terms & Conditions. If
+          you do not agree, please refrain from using our services. {"\n\n"}
+          2. Links and Offers {"\n"}
+          Explore India View shares affiliate links for train tickets, hotel
+          bookings, flights, recharges, and shopping offers. When users make a
+          purchase or transaction through these links, we may earn a commission.
           {"\n\n"}
-          These commissions help us maintain and improve the website and continue to offer valuable travel content and tools free of charge.
+          3. Cashback Rewards {"\n"}
+          Users may be eligible for cashback or rewards on successful, verified
+          transactions. The reward process may take 30-90 days, depending on the
+          affiliate platform's confirmation. {"\n\n"}
+          4. Acceptance of Terms {"\n"}
+          By using our app or website, you agree to these Terms & Conditions. If
+          you do not agree, please refrain from using our services. {"\n\n"}
+          5. User Data & Tracking {"\n"}
+          We use SubID tracking and may store transaction IDs or device details
+          to identify users eligible for rewards. All data is handled securely
+          and per our Privacy Policy. {"\n\n"}
+          6. Limitation of Liability {"\n"}
+          By using our app or website, you agree to these Terms & Conditions. If
+          you do not agree, please refrain from using our services.{"\n\n"}
+          7. Modifications {"\n"}
+          We reserve the right to modify these terms at any time. Updated terms
+          will be posted on the app/website.{"\n\n"}
           {"\n\n"}
-          We only promote or recommend products/services that we genuinely believe offer value to our users. However, we encourage you to perform your own research before making any purchase or booking decisions.
+        </Text>
+
+        {/* Privacy Policy */}
+        <Text style={[styles.subheading, {marginTop: -50}]}>
+          <Text role="img" aria-label="briefcase">
+            💼{" "}
+          </Text>
+          Privacy Policy
         </Text>
         <Text style={styles.paragraph}>
-          By using ExploreIndiaView, you agree to our Terms &amp; Conditions, Privacy Policy, and the above disclaimers.
+          1. Information we collect {"\n"}
+          We collect basic user data such as name, email, mobile number, device
+          ID, and transaction IDs (if provided). This helps us track offers and
+          reward eligibility. {"\n\n"}
+          2. How we use your information {"\n"}- To track affiliate transactions
+          via SubID {"\n"}- To communicate about rewards, offers, and app {"\t"}
+          updates {"\n"}- To improve app features and user experienc
+          {"\n\n"}
+          3. Data Sharing {"\n"}
+          We do not sell your personal data. We may share it with trusted
+          partners (e.g., affiliate networks) for transaction verification and
+          cashback processing. {"\n\n"}
+          4. Cookies and Analytics {"\n"}
+          We may use cookies and analytics tools to understand user behavior and
+          improve our services.{"\n\n"}
+          5. Security {"\n"}
+          We use industry-standard security measures to protect your data from
+          unauthorized access or disclosure {"\n\n"}
+          6. Your Rights {"\n"}
+          You can request access, correction, or deletion of your data by
+          emailing us.{"\n\n"}
+          7. Contact {"\n"}
+          For privacy concerns and related queries, email us at:
+          support@exploreindiaview.com
+          {"\n\n"}
         </Text>
       </View>
     </ScrollView>
@@ -37,9 +104,8 @@ export default function Disclaimer() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    height:"auto",
+    height: "auto",
     alignItems: "center",
-    paddingBottom: 20,
     paddingHorizontal: 4,
   },
   card: {
@@ -58,22 +124,21 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "#1e293b",
-    marginBottom: 12,
+    marginVertical: 5,
     textAlign: "center",
   },
   subheading: {
     fontSize: 19,
+    marginVertical:10,
+    textAlign: "center",
     fontWeight: "700",
     color: "#334155",
-    marginTop: 15,
-    marginBottom: 10,
-    textAlign: "center",
   },
   paragraph: {
     fontSize: 15,
+    marginVertical: 15,
     color: "#374151",
     fontWeight: "500",
-    marginBottom: 12,
     lineHeight: 18,
     textAlign: "justify",
   },

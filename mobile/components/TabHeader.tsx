@@ -48,6 +48,7 @@ export default function TabHeader({
     // Handle navigation or actions here
     if (option === "profile") router.push("/profile");
     if (option === "logout") handleLogout();
+    if (option === "T&C") router.push("/disclaimer")
   };
   return (
     <View style={styles.header}>
@@ -134,6 +135,12 @@ export default function TabHeader({
                   <Text style={styles.dropdownText}>Admin</Text>
                 </TouchableOpacity>
               )}
+              <TouchableOpacity
+                style={styles.dropdownItem}
+                onPress={() => handleMenuOption("T&C")}
+              >
+                <Text style={styles.dropdownText}>T&C</Text>
+              </TouchableOpacity>
               <TouchableOpacity
                 style={styles.dropdownItem}
                 onPress={() => handleMenuOption("logout")}
