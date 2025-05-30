@@ -16,9 +16,9 @@ const generateToken = (userId) => {
 // SignUp controller
 export const signUp = async (req, res, next) => {
     try {
-        const { fullname, password, mobile } = req.body;
+        const { fullname, password, mobile, question, answer } = req.body;
 
-        if (!fullname || !password || !mobile) {
+        if (!fullname || !password || !mobile || !question || !answer) {
             return res.status(400).json({ message: "All fields are required" });
         }
 
@@ -32,6 +32,10 @@ export const signUp = async (req, res, next) => {
             fullname,
             password,
             mobile,
+            verification: {
+                question,
+                answer,
+            },
             isVerified: true, // Set to true for new users
         });
 
@@ -172,6 +176,23 @@ export const resendOTP = async (req, res, next) => {
 // reset password controller to-do
 export const resetPassword = async (req, res, next) => {
     try {
+        const {mobile, password, question, answer} = req.body;
+        if (!mobile || !password || !question || !answer) {
+            return res.status(400).json({ message: "All fields are required" });
+        }
+        // check if user exists
+        const user = await User.findOne({ mobile });
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        // check if security question and answer match
+        if (user.verification.question !== question || user.verification.answer !== answer) {
+            return res.status(400).json({ message: "Security question or answer is incorrect" });
+        }
+        // update password
+        user.password = password; // Assuming password is hashed in the User model's pre-save hook
+        await user.save();
+        return res.status(200).json({ message: "Password reset successfully" });
 
     } catch (error) {
         console.log("Error in resetPassword controller:", error);
@@ -247,8 +268,13 @@ export const checkAdmin = async (req, res, next) => {
     try {
         const user = req.user;
 
+        if (!user) {
+            return res.status(401).json({ message: "Unauthorized" });
+        }
+
         return res.status(200).json({
             message: "Admin is authenticated",
+            isAdmin:true,
             user: {
                 id: user._id,
                 fullname: user.fullname,

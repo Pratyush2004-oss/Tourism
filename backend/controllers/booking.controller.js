@@ -77,6 +77,10 @@ export const verifyPayment = async (req, res, next) => {
             const cashbackPercentage = (Math.random() * (0.1 - 0.01) + 0.01); // Generate a random number between 0.01 and 0.1
             const cashbackAmount = Math.floor(PackagePrice * cashbackPercentage); // Calculate cashback and limit to 2 decimal places
             userToUpdate.CashbackAmount += parseInt(cashbackAmount); // Ensure it's added as a number
+            userToUpdate.CashbackDetail.push({
+                amount: parseInt(cashbackAmount),
+                date: new Date()
+            });
             await userToUpdate.save();
             await newBooking.save();
             return res.status(200).json({ message: "Payment Verified", CashbackAmount: parseInt(cashbackAmount) });

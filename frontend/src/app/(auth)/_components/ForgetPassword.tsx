@@ -17,20 +17,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Loader } from "lucide-react";
 import Link from "next/link";
 import { useAuthStore } from "@/store/auth.store";
-import { UserInput } from "@/services/types";
+import { ResetInput } from "@/services/types";
 import { useRouter } from "next/navigation";
-function SignIn() {
-  const [input, setinput] = useState<UserInput>({
-    fullname: "",
+function ResetPassword() {
+  const [input, setinput] = useState<ResetInput>({
     isoCode: "",
     mobile: "",
     password: "",
     answer: "",
-    question:""
+    question: "",
   });
   const [loading, setloading] = useState<boolean>(false);
   const countries = getCountries();
-  const { signup, error } = useAuthStore();
+  const { resetPassword, error } = useAuthStore();
   const router = useRouter();
 
   const handleCountryChange = (country: any) => {
@@ -45,9 +44,9 @@ function SignIn() {
     e.preventDefault();
     try {
       setloading(true);
-      const res = await signup(input);
+      const res = await resetPassword(input);
       if (res) {
-        router.replace("/");
+        router.replace("/login");
       }
     } catch (error) {
     } finally {
@@ -59,7 +58,7 @@ function SignIn() {
     <div className="flex flex-col items-center justify-center h-[calc(100vh-7rem)] bg-gray-100">
       <div className="p-6 bg-white rounded-lg shadow-md w-full max-w-sm ">
         <h1 className="text-3xl font-bold mb-4 text-center border-b-4 border-blue-100">
-          "Sign Up"
+          Forget password
         </h1>
         <>
           <form onSubmit={handleSubmit} className="flex flex-col ">
@@ -68,21 +67,6 @@ function SignIn() {
                 {error}
               </div>
             )}
-            {/* Name */}
-            <div className="mb-4 flex flex-col gap-1">
-              <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Name
-              </Label>
-              <Input
-                type="text"
-                required
-                placeholder="Enter Name"
-                value={input.fullname}
-                onChange={(e) =>
-                  setinput({ ...input, fullname: e.target.value })
-                }
-              />
-            </div>
             {/* Mobile */}
             <div className="mb-4 flex flex-col gap-1">
               <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
@@ -117,35 +101,24 @@ function SignIn() {
                 />
               </div>
             </div>
-            {/* Password */}
-            <div className="mb-4 flex flex-col gap-1">
-              <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Password
-              </Label>
-              <Input
-                type="password"
-                required
-                pattern=".{8,}"
-                title="Password must be at least 8 characters long"
-                value={input.password}
-                onChange={(e) =>
-                  setinput({ ...input, password: e.target.value })
-                }
-                placeholder="Enter Password"
-              />
-            </div>
             {/* Security Question select dialog */}
             <div className="mb-4 flex flex-col gap-1">
               <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                 Security Question
               </Label>
-              <Select onValueChange={(value) => setinput({ ...input, question: value })}>
+              <Select
+                onValueChange={(value) =>
+                  setinput({ ...input, question: value })
+                }
+              >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a security question" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="pet">What is your pet's name?</SelectItem>
+                    <SelectItem value="pet">
+                      What is your pet's name?
+                    </SelectItem>
                     <SelectItem value="school">
                       What was the name of your first school?
                     </SelectItem>
@@ -169,6 +142,23 @@ function SignIn() {
                 placeholder="Enter Security Answer"
               />
             </div>
+            {/* Password */}
+            <div className="mb-4 flex flex-col gap-1">
+              <Label className="text-sm ml-1 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                New Password
+              </Label>
+              <Input
+                type="password"
+                required
+                pattern=".{8,}"
+                title="Password must be at least 8 characters long"
+                value={input.password}
+                onChange={(e) =>
+                  setinput({ ...input, password: e.target.value })
+                }
+                placeholder="Enter Password"
+              />
+            </div>
             <Button
               disabled={loading}
               type="submit"
@@ -183,8 +173,8 @@ function SignIn() {
               )}
             </Button>
           </form>
-          <div className="mt-4 text-center text-sm text-gray-600">
-            Already have an account?{" "}
+          <div className="mt-4 text-end text-sm text-gray-600 flex gap-1 justify-end">
+            <p>Go to </p>
             <Link href="/login" className="text-blue-500 hover:underline">
               Sign In
             </Link>
@@ -195,4 +185,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default ResetPassword;

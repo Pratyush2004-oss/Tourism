@@ -32,7 +32,17 @@ const userSchema = new mongoose.Schema({
             amount: Number,
             date: Date
          }
-    ]
+    ],
+    verification: {
+        question: {
+            type: String,
+            required: true,
+        },
+        answer: {
+            type: String,
+            required: true,
+        }
+    }
 }, { timestamps: true });
 
 userSchema.pre('save', async function (next) {
