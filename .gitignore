@@ -17,6 +17,7 @@ node_modules
 /out/
 text.txt
 
+
 # production
 /build
 
