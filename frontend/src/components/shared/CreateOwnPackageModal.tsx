@@ -194,7 +194,7 @@ function CreateOwnPackageModal({ title }: { title: string }) {
           <Button
             variant={"secondary"}
             onClick={() => router.push("/login")}
-            className="w-1/2 mx-auto bg-gradient-to-r from-emerald-500 to-teal-400 cursor-pointer justify-self-center"
+            className="sm:w-1/2 mx-auto bg-gradient-to-r from-emerald-500 to-teal-400 cursor-pointer justify-self-center"
           >
             Please Login to create your own package
           </Button>
